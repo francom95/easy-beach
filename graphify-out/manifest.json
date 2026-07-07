@@ -1,0 +1,122 @@
+{
+  "docs/etapas/00-indice.md": {
+    "mtime": 1783444650.0155733,
+    "ast_hash": "c2bec3856702584d13a86bea017dbf87",
+    "semantic_hash": "c2bec3856702584d13a86bea017dbf87"
+  },
+  "docs/etapas/01-vision-alcance-glosario.md": {
+    "mtime": 1783444647.0354693,
+    "ast_hash": "d7eb11aea730c3d0ef6ef98301afc475",
+    "semantic_hash": "d7eb11aea730c3d0ef6ef98301afc475"
+  },
+  "docs/etapas/02-arquitectura-multitenant.md": {
+    "mtime": 1783444401.337723,
+    "ast_hash": "a27dcbe15470935e81a0a125c991cc68",
+    "semantic_hash": "a27dcbe15470935e81a0a125c991cc68"
+  },
+  "docs/etapas/03-modelo-de-datos.md": {
+    "mtime": 1783444440.1171837,
+    "ast_hash": "669b9e9123468616eefb341a73a8a1b0",
+    "semantic_hash": "669b9e9123468616eefb341a73a8a1b0"
+  },
+  "docs/etapas/04-contratos-api.md": {
+    "mtime": 1783444460.0390341,
+    "ast_hash": "ac9ee7d35707cd2242a13ce680117da4",
+    "semantic_hash": "ac9ee7d35707cd2242a13ce680117da4"
+  },
+  "docs/etapas/05-seguridad-roles.md": {
+    "mtime": 1783444481.7846668,
+    "ast_hash": "ffeb24aa9dd3a7db5868f0ae91ca82b2",
+    "semantic_hash": "ffeb24aa9dd3a7db5868f0ae91ca82b2"
+  },
+  "docs/etapas/06-identidad-visual-design-system.md": {
+    "mtime": 1783444307.790131,
+    "ast_hash": "f5e0a3440bd59ce17502a1a351d79953",
+    "semantic_hash": "f5e0a3440bd59ce17502a1a351d79953"
+  },
+  "docs/etapas/07-ux-ui-mobile.md": {
+    "mtime": 1783444630.8602993,
+    "ast_hash": "06e99dbf3f8ab53521db77e2a30318df",
+    "semantic_hash": "06e99dbf3f8ab53521db77e2a30318df"
+  },
+  "docs/etapas/08-ux-ui-web-paneles.md": {
+    "mtime": 1783444590.4388592,
+    "ast_hash": "c42cf9ed961e9cc63a6d9ebe8d291c15",
+    "semantic_hash": "c42cf9ed961e9cc63a6d9ebe8d291c15"
+  },
+  "docs/etapas/09-backend-fundacional.md": {
+    "mtime": 1783408813.6377077,
+    "ast_hash": "e6d9075a559a3015a1b867795a7530e1",
+    "semantic_hash": "e6d9075a559a3015a1b867795a7530e1"
+  },
+  "docs/etapas/10-backend-super-admin.md": {
+    "mtime": 1783444371.5940151,
+    "ast_hash": "90ed107527a2eb876e43100da9bf825f",
+    "semantic_hash": "90ed107527a2eb876e43100da9bf825f"
+  },
+  "docs/etapas/11-backend-catalogo-ubicaciones.md": {
+    "mtime": 1783444502.6871672,
+    "ast_hash": "e25a409b6d504b02495634f2512f8afc",
+    "semantic_hash": "e25a409b6d504b02495634f2512f8afc"
+  },
+  "docs/etapas/12-backend-estadia-activa.md": {
+    "mtime": 1783444527.5814307,
+    "ast_hash": "398c8e9df640515e1c24593c2a9cc06c",
+    "semantic_hash": "398c8e9df640515e1c24593c2a9cc06c"
+  },
+  "docs/etapas/13-backend-pedidos.md": {
+    "mtime": 1783444568.4279964,
+    "ast_hash": "98d375899517aec418180af8e94555c3",
+    "semantic_hash": "98d375899517aec418180af8e94555c3"
+  },
+  "docs/etapas/14-backend-carpero-promociones.md": {
+    "mtime": 1783408910.0628607,
+    "ast_hash": "ec53ef998c37a47179a1814ba6539486",
+    "semantic_hash": "ec53ef998c37a47179a1814ba6539486"
+  },
+  "docs/etapas/15-backend-reportes.md": {
+    "mtime": 1783408925.946784,
+    "ast_hash": "8da3f926f9f8101d58ae0467ee9fe245",
+    "semantic_hash": "8da3f926f9f8101d58ae0467ee9fe245"
+  },
+  "docs/etapas/16-mobile-app-cliente.md": {
+    "mtime": 1783444634.2155704,
+    "ast_hash": "f8fb2280540662de182897aacc2a6325",
+    "semantic_hash": "f8fb2280540662de182897aacc2a6325"
+  },
+  "docs/etapas/17-web-panel-operativo-admin.md": {
+    "mtime": 1783444610.9302232,
+    "ast_hash": "946491a6b02bd921d769443ffaa3277a",
+    "semantic_hash": "946491a6b02bd921d769443ffaa3277a"
+  },
+  "docs/etapas/18-web-panel-super-admin.md": {
+    "mtime": 1783408975.5504816,
+    "ast_hash": "1a7b3aed3a30af9aa815c98614287156",
+    "semantic_hash": "1a7b3aed3a30af9aa815c98614287156"
+  },
+  "docs/etapas/19-qa-seeds-demo.md": {
+    "mtime": 1783444665.4862666,
+    "ast_hash": "01b6939f8689b01d6922de44ab172e4b",
+    "semantic_hash": "01b6939f8689b01d6922de44ab172e4b"
+  },
+  "docs/etapas/20-infra-deploy.md": {
+    "mtime": 1783409013.812636,
+    "ast_hash": "1c7c246015da1eb603544e6bdf312ddb",
+    "semantic_hash": "1c7c246015da1eb603544e6bdf312ddb"
+  },
+  ".claude/settings.json": {
+    "mtime": 1783414517.259598,
+    "ast_hash": "b5285ecc2d5da5c552167a9ec9288ccb",
+    "semantic_hash": "b5285ecc2d5da5c552167a9ec9288ccb"
+  },
+  "CLAUDE.md": {
+    "mtime": 1783414517.242754,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": "8a6643a420fdad6bfb583523bc6cef16"
+  },
+  "docs/especificacion/01-vision-alcance-glosario.md": {
+    "mtime": 1783444267.684366,
+    "ast_hash": "7ba20fd26dfdd91bf0feea986f6ec25a",
+    "semantic_hash": "7ba20fd26dfdd91bf0feea986f6ec25a"
+  }
+}

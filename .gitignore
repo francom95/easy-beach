@@ -1,0 +1,18 @@
+# graphify: machine-specific paths and regenerable cache (not portable across machines)
+graphify-out/.graphify_python
+graphify-out/.graphify_root
+graphify-out/cache/
+
+# Secrets / env files (Mercado Pago credentials, DB creds, etc. once they exist)
+.env
+.env.*
+*.pem
+*.key
+
+# OS cruft
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
