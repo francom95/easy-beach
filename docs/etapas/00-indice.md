@@ -42,9 +42,9 @@ la facturación operativa en temporada.
 |---|---|---|---|
 | 01 | ✅ [Visión, alcance MVP y glosario de dominio](01-vision-alcance-glosario.md) | sonnet | — |
 | 02 | ✅ [Arquitectura general y estrategia multitenant](02-arquitectura-multitenant.md) | fable | 01 |
-| 03 | [Modelo de datos (MySQL)](03-modelo-de-datos.md) | opus | 01, 02 |
-| 04 | [Convenciones y contratos de API REST](04-contratos-api.md) | opus | 02, 03 |
-| 05 | [Seguridad, autenticación, roles y permisos](05-seguridad-roles.md) | opus | 02, 03 |
+| 03 | ✅ [Modelo de datos (MySQL)](03-modelo-de-datos.md) | opus | 01, 02 |
+| 04 | ✅ [Convenciones y contratos de API REST](04-contratos-api.md) | opus | 02, 03 |
+| 05 | ✅ [Seguridad, autenticación, roles y permisos](05-seguridad-roles.md) | opus | 02, 03 |
 | 06 | [Identidad visual y sistema de diseño](06-identidad-visual-design-system.md) | claude design | 01 |
 | 07 | [Diseño UX/UI app mobile (cliente)](07-ux-ui-mobile.md) | claude design | 01, 06 |
 | 08 | [Diseño UX/UI web (paneles)](08-ux-ui-web-paneles.md) | claude design | 01, 06 |

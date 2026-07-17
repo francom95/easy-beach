@@ -4,6 +4,15 @@
 - **Modelo ejecutor:** opus
 - **Tipo:** especificación (documento, sin código)
 - **Depende de:** 01, 02
+- **Estado: ✅ EJECUTADA** — entregable en
+  [`docs/especificacion/03-modelo-de-datos.md`](../especificacion/03-modelo-de-datos.md):
+  ER completo (Mermaid), diccionario de datos por tabla, máquinas de estado
+  (estadía, pedido, pago, servicio, suscripción), estrategia de índices,
+  matriz feature→tablas y plan de migraciones Flyway. Decisiones clave:
+  PK `BIGINT` + `public_id` ULID en recursos expuestos; unicidad de estadía
+  activa por `(balneario_id, activa_uk)` a nivel DB; precio congelado por
+  variante en `pedido_item`; tokens OAuth de MP cifrados en
+  `balneario_mp_credencial`.
 
 ## Objetivo
 

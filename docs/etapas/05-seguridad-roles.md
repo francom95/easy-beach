@@ -4,6 +4,14 @@
 - **Modelo ejecutor:** opus
 - **Tipo:** especificación (documento, sin código)
 - **Depende de:** 02, 03
+- **Estado: ✅ EJECUTADA** — entregable en
+  [`docs/especificacion/05-seguridad-roles.md`](../especificacion/05-seguridad-roles.md):
+  autenticación JWT RS256 + refresh rotativo (TTL por rol), matriz de permisos
+  cerrada, aislamiento multitenant en 3 capas, seguridad de pagos MP (firma de
+  webhook + custodia de tokens OAuth cifrados), protección de datos,
+  endurecimiento de API, 12 amenazas STRIDE con mitigación por etapa, y
+  checklist de verificación para la etapa 19. Cierra el bloque de
+  especificación (01–05).
 
 ## Objetivo
 

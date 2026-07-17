@@ -1,0 +1,1445 @@
+openapi: 3.0.3
+info:
+  title: EasyBeach API
+  version: "1.0.0"
+  description: >
+    API REST de EasyBeach — plataforma SaaS multibalneario. Contrato del MVP
+    (etapa 04). Convenciones normativas en
+    docs/especificacion/04-contratos-api.md. Multitenant por `balneario_id`
+    (ADR-001): el tenant de staff sale del JWT; el de recursos públicos, del
+    path; el de operaciones de cliente, de la estadía validada en servidor.
+servers:
+  - url: https://api.easybeach.com.ar
+    description: Producción
+  - url: https://staging.api.easybeach.com.ar
+    description: Staging
+
+tags:
+  - name: Auth
+    description: Registro, login, refresh (cliente y staff)
+  - name: Público
+    description: Sin autenticación; balneario explícito en el path
+  - name: Estadía
+    description: Ciclo de vida de la estadía del cliente
+  - name: Pedidos
+    description: Carrito → pedido, estados, cancelación
+  - name: Pagos
+    description: Mercado Pago Checkout API (marketplace) y webhook
+  - name: Servicios
+    description: Solicitudes de servicio al carpero
+  - name: Operativo
+    description: Staff — colas, transiciones, validación de estadías
+  - name: Admin
+    description: Admin de balneario — ABM y configuración
+  - name: SuperAdmin
+    description: Super Admin — balnearios, planes, temporadas
+  - name: TiempoReal
+    description: Canales SSE (fallback por polling en los GET de estado)
+
+security:
+  - bearerAuth: []
+
+paths:
+
+  # ─────────────────────────── AUTH ───────────────────────────
+  /api/v1/auth/registro:
+    post:
+      tags: [Auth]
+      summary: Registro de cliente
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/RegistroClienteRequest' }
+      responses:
+        '201':
+          description: Cliente creado
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/TokenResponse' }
+        '409': { $ref: '#/components/responses/Conflicto' }
+        '422': { $ref: '#/components/responses/ErrorValidacion' }
+
+  /api/v1/auth/login:
+    post:
+      tags: [Auth]
+      summary: Login (cliente o staff)
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/LoginRequest' }
+      responses:
+        '200':
+          description: Autenticado
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/TokenResponse' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '429': { $ref: '#/components/responses/RateLimit' }
+
+  /api/v1/auth/refresh:
+    post:
+      tags: [Auth]
+      summary: Renovar access token
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/RefreshRequest' }
+      responses:
+        '200':
+          description: Token renovado
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/TokenResponse' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+
+  /api/v1/auth/logout:
+    post:
+      tags: [Auth]
+      summary: Cerrar sesión (revoca refresh token)
+      responses:
+        '204': { description: Sesión cerrada }
+
+  # ─────────────────────────── PÚBLICO ───────────────────────────
+  /api/v1/balnearios:
+    get:
+      tags: [Público]
+      summary: Listado de balnearios operativos (temporada vigente)
+      security: []
+      parameters:
+        - { $ref: '#/components/parameters/Page' }
+        - { $ref: '#/components/parameters/Size' }
+      responses:
+        '200':
+          description: Balnearios activos
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/Pagina'
+                  - type: object
+                    properties:
+                      content:
+                        type: array
+                        items: { $ref: '#/components/schemas/BalnearioResumen' }
+
+  /api/v1/balnearios/{slug}:
+    get:
+      tags: [Público]
+      summary: Detalle de un balneario
+      security: []
+      parameters:
+        - { $ref: '#/components/parameters/Slug' }
+      responses:
+        '200':
+          description: Balneario
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/BalnearioDetalle' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+
+  /api/v1/balnearios/{balnearioId}/branding:
+    get:
+      tags: [Público]
+      summary: Theme white-label completo (ADR-005)
+      description: Consumido antes del login; cacheable por ETag.
+      security: []
+      parameters:
+        - { $ref: '#/components/parameters/BalnearioId' }
+      responses:
+        '200':
+          description: Configuración visual
+          headers:
+            ETag: { schema: { type: string }, description: Versión del theme }
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Branding' }
+        '304': { description: Sin cambios (ETag coincide) }
+
+  /api/v1/balnearios/{balnearioId}/menu:
+    get:
+      tags: [Público]
+      summary: Menú público (categorías + productos disponibles + variantes + promos)
+      description: Endpoint más consultado; resuelve la pantalla de menú en una sola llamada.
+      security: []
+      parameters:
+        - { $ref: '#/components/parameters/BalnearioId' }
+      responses:
+        '200':
+          description: Menú
+          headers:
+            ETag: { schema: { type: string } }
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Menu' }
+
+  /api/v1/balnearios/{balnearioId}/promociones:
+    get:
+      tags: [Público]
+      summary: Promociones vigentes del balneario
+      security: []
+      parameters:
+        - { $ref: '#/components/parameters/BalnearioId' }
+      responses:
+        '200':
+          description: Promociones vigentes
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/PromocionPublica' }
+
+  # ─────────────────────────── ESTADÍA ───────────────────────────
+  /api/v1/balnearios/{balnearioId}/estadias:
+    post:
+      tags: [Estadía]
+      summary: Solicitar apertura de estadía (queda PENDIENTE_VALIDACION)
+      parameters:
+        - { $ref: '#/components/parameters/BalnearioId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SolicitudEstadiaRequest' }
+      responses:
+        '201':
+          description: Solicitud creada; espera validación del carpero
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Estadia' }
+        '409':
+          description: Ya existe una estadía activa/pendiente de este cliente en este balneario
+          content:
+            application/problem+json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '422': { $ref: '#/components/responses/ErrorValidacion' }
+
+  /api/v1/balnearios/{balnearioId}/estadias/actual:
+    get:
+      tags: [Estadía]
+      summary: Mi estadía actual (activa o pendiente) en este balneario
+      parameters:
+        - { $ref: '#/components/parameters/BalnearioId' }
+      responses:
+        '200':
+          description: Estadía actual
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Estadia' }
+        '404': { description: No hay estadía actual en este balneario }
+
+  /api/v1/estadias/mias:
+    get:
+      tags: [Estadía]
+      summary: Todas mis estadías activas/pendientes (cross-balneario)
+      responses:
+        '200':
+          description: Estadías del cliente
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Estadia' }
+
+  /api/v1/estadias/{estadiaId}:
+    get:
+      tags: [Estadía]
+      summary: Detalle de una estadía
+      parameters:
+        - { $ref: '#/components/parameters/EstadiaId' }
+      responses:
+        '200':
+          description: Estadía
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/EstadiaDetalle' }
+        '403': { $ref: '#/components/responses/Prohibido' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+
+  /api/v1/estadias/{estadiaId}/ubicacion:
+    patch:
+      tags: [Estadía]
+      summary: Cambiar ubicación dentro del balneario (preserva historial)
+      parameters:
+        - { $ref: '#/components/parameters/EstadiaId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CambioUbicacionRequest' }
+      responses:
+        '200':
+          description: Ubicación actualizada
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Estadia' }
+        '409': { description: La estadía no está ACTIVA }
+
+  /api/v1/estadias/{estadiaId}/cierre:
+    post:
+      tags: [Estadía]
+      summary: Cerrar la estadía (con resumen de consumo)
+      parameters:
+        - { $ref: '#/components/parameters/EstadiaId' }
+      responses:
+        '200':
+          description: Estadía cerrada con resumen
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ResumenEstadia' }
+        '409':
+          description: No se puede cerrar con pedidos en curso
+          content:
+            application/problem+json:
+              schema: { $ref: '#/components/schemas/Error' }
+
+  # ─────────────────────────── PEDIDOS ───────────────────────────
+  /api/v1/estadias/{estadiaId}/pedidos:
+    post:
+      tags: [Pedidos]
+      summary: Crear pedido desde el carrito (idempotente)
+      description: >
+        Requiere estadía ACTIVA. El servidor recalcula precios (variantes) y
+        promociones; el total del cliente es ignorado. El header
+        `Idempotency-Key` evita duplicar pedido y cobro ante reintentos.
+      parameters:
+        - { $ref: '#/components/parameters/EstadiaId' }
+        - { $ref: '#/components/parameters/IdempotencyKey' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CrearPedidoRequest' }
+            examples:
+              simple:
+                value:
+                  items:
+                    - { productoId: 42, varianteId: 118, cantidad: 2 }
+                    - { productoId: 57, varianteId: null, cantidad: 1 }
+      responses:
+        '201':
+          description: Pedido creado (estado CREADO/PAGO_PENDIENTE)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Pedido' }
+        '409':
+          description: Estadía no ACTIVA o reintento con misma clave y payload distinto
+          content:
+            application/problem+json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '422':
+          description: Producto/variante inexistente o no disponible
+          content:
+            application/problem+json:
+              schema: { $ref: '#/components/schemas/Error' }
+    get:
+      tags: [Pedidos]
+      summary: Listar pedidos de la estadía
+      parameters:
+        - { $ref: '#/components/parameters/EstadiaId' }
+      responses:
+        '200':
+          description: Pedidos
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Pedido' }
+
+  /api/v1/pedidos/{pedidoId}:
+    get:
+      tags: [Pedidos]
+      summary: Detalle de pedido con historial de estados
+      parameters:
+        - { $ref: '#/components/parameters/PedidoId' }
+      responses:
+        '200':
+          description: Pedido con ítems y eventos
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PedidoDetalle' }
+        '403': { $ref: '#/components/responses/Prohibido' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+
+  /api/v1/pedidos/{pedidoId}/cancelacion:
+    post:
+      tags: [Pedidos]
+      summary: Cancelar pedido (cliente, solo en estados tempranos)
+      parameters:
+        - { $ref: '#/components/parameters/PedidoId' }
+      responses:
+        '200':
+          description: Pedido cancelado
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Pedido' }
+        '409': { description: El estado actual no permite cancelación por el cliente }
+
+  # ─────────────────────────── PAGOS ───────────────────────────
+  /api/v1/pedidos/{pedidoId}/pago:
+    get:
+      tags: [Pagos]
+      summary: Estado del pago del pedido (fallback de polling)
+      parameters:
+        - { $ref: '#/components/parameters/PedidoId' }
+      responses:
+        '200':
+          description: Estado de pago
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Pago' }
+    post:
+      tags: [Pagos]
+      summary: Iniciar (o reintentar) el pago del pedido
+      description: >
+        Crea el pago en Mercado Pago contra la cuenta del balneario
+        (`application_fee = 0`) con el `card_token` tokenizado por el SDK de MP
+        en el dispositivo. EasyBeach nunca recibe datos de tarjeta.
+      parameters:
+        - { $ref: '#/components/parameters/PedidoId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/IniciarPagoRequest' }
+      responses:
+        '202':
+          description: Pago creado; resultado llega por webhook/SSE
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Pago' }
+        '409': { description: El pedido no admite pago en su estado actual }
+
+  /api/v1/webhooks/mercadopago:
+    post:
+      tags: [Pagos]
+      summary: Receptor del webhook de Mercado Pago
+      description: >
+        Público pero autenticado por firma (`x-signature`). Idempotente por
+        `payment_id`. Ante cada notificación se reconsulta el pago a MP antes
+        de mover el pedido (ADR-004). Siempre responde 200 rápido.
+      security: []
+      parameters:
+        - name: x-signature
+          in: header
+          required: true
+          schema: { type: string }
+        - name: x-request-id
+          in: header
+          required: false
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/MercadoPagoWebhook' }
+      responses:
+        '200': { description: Notificación recibida (procesamiento asíncrono) }
+        '401': { description: Firma inválida }
+
+  # ─────────────────────────── SERVICIOS ───────────────────────────
+  /api/v1/estadias/{estadiaId}/solicitudes-servicio:
+    post:
+      tags: [Servicios]
+      summary: Crear solicitud de servicio al carpero
+      parameters:
+        - { $ref: '#/components/parameters/EstadiaId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CrearSolicitudServicioRequest' }
+      responses:
+        '201':
+          description: Solicitud creada
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SolicitudServicio' }
+    get:
+      tags: [Servicios]
+      summary: Listar solicitudes de servicio de la estadía
+      parameters:
+        - { $ref: '#/components/parameters/EstadiaId' }
+      responses:
+        '200':
+          description: Solicitudes
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/SolicitudServicio' }
+
+  # ─────────────────────────── OPERATIVO (STAFF) ───────────────────────────
+  /api/v1/operativo/pedidos:
+    get:
+      tags: [Operativo]
+      summary: Cola de pedidos del balneario (staff)
+      description: Tenant tomado del JWT del staff. Solo pedidos pagados/confirmados en adelante.
+      parameters:
+        - name: estado
+          in: query
+          schema: { $ref: '#/components/schemas/EstadoPedido' }
+      responses:
+        '200':
+          description: Cola ordenada por antigüedad
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/PedidoOperativo' }
+
+  /api/v1/operativo/pedidos/{pedidoId}/transicion:
+    post:
+      tags: [Operativo]
+      summary: Transicionar el estado de un pedido
+      parameters:
+        - { $ref: '#/components/parameters/PedidoId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/TransicionPedidoRequest' }
+      responses:
+        '200':
+          description: Estado actualizado
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Pedido' }
+        '409':
+          description: Transición inválida para el estado actual
+          content:
+            application/problem+json:
+              schema: { $ref: '#/components/schemas/Error' }
+
+  /api/v1/operativo/solicitudes-servicio:
+    get:
+      tags: [Operativo]
+      summary: Cola de solicitudes de servicio (carpero)
+      parameters:
+        - name: estado
+          in: query
+          schema: { $ref: '#/components/schemas/EstadoSolicitud' }
+      responses:
+        '200':
+          description: Solicitudes
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/SolicitudServicio' }
+
+  /api/v1/operativo/solicitudes-servicio/{solicitudId}/transicion:
+    post:
+      tags: [Operativo]
+      summary: Transicionar una solicitud de servicio
+      parameters:
+        - name: solicitudId
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/TransicionSolicitudRequest' }
+      responses:
+        '200':
+          description: Actualizada
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SolicitudServicio' }
+
+  /api/v1/operativo/estadias/pendientes:
+    get:
+      tags: [Operativo]
+      summary: Bandeja de validación — estadías PENDIENTE_VALIDACION del balneario
+      responses:
+        '200':
+          description: Solicitudes de apertura pendientes
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Estadia' }
+
+  /api/v1/operativo/estadias/{estadiaId}/validacion:
+    post:
+      tags: [Operativo]
+      summary: Validar o rechazar la apertura de una estadía (carpero)
+      parameters:
+        - { $ref: '#/components/parameters/EstadiaId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ValidacionEstadiaRequest' }
+      responses:
+        '200':
+          description: Estadía validada (ACTIVA) o rechazada (RECHAZADA)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Estadia' }
+        '409': { description: La estadía no está PENDIENTE_VALIDACION }
+
+  # ─────────────────────────── ADMIN BALNEARIO ───────────────────────────
+  /api/v1/admin/categorias:
+    get:
+      tags: [Admin]
+      summary: Listar categorías
+      responses: { '200': { description: Categorías, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/Categoria' } } } } } }
+    post:
+      tags: [Admin]
+      summary: Crear categoría
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/CategoriaInput' } } } }
+      responses: { '201': { description: Creada, content: { application/json: { schema: { $ref: '#/components/schemas/Categoria' } } } } }
+
+  /api/v1/admin/categorias/{id}:
+    patch:
+      tags: [Admin]
+      summary: Editar categoría
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/CategoriaInput' } } } }
+      responses: { '200': { description: Actualizada, content: { application/json: { schema: { $ref: '#/components/schemas/Categoria' } } } } }
+    delete:
+      tags: [Admin]
+      summary: Borrar categoría (soft-delete; falla si tiene productos)
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      responses: { '204': { description: Borrada }, '409': { description: Tiene productos asociados } }
+
+  /api/v1/admin/productos:
+    get:
+      tags: [Admin]
+      summary: Listar productos
+      responses: { '200': { description: Productos, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/Producto' } } } } } }
+    post:
+      tags: [Admin]
+      summary: Crear producto
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/ProductoInput' } } } }
+      responses: { '201': { description: Creado, content: { application/json: { schema: { $ref: '#/components/schemas/Producto' } } } } }
+
+  /api/v1/admin/productos/{id}:
+    patch:
+      tags: [Admin]
+      summary: Editar producto
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/ProductoInput' } } } }
+      responses: { '200': { description: Actualizado, content: { application/json: { schema: { $ref: '#/components/schemas/Producto' } } } } }
+    delete:
+      tags: [Admin]
+      summary: Borrar producto (soft-delete)
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      responses: { '204': { description: Borrado } }
+
+  /api/v1/admin/productos/{id}/disponibilidad:
+    patch:
+      tags: [Admin]
+      summary: Encender/apagar disponibilidad del producto (inmediato)
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [disponible]
+              properties: { disponible: { type: boolean } }
+      responses: { '200': { description: Actualizada, content: { application/json: { schema: { $ref: '#/components/schemas/Producto' } } } } }
+
+  /api/v1/admin/productos/{id}/variantes:
+    post:
+      tags: [Admin]
+      summary: Agregar variante a un producto
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/VarianteInput' } } } }
+      responses: { '201': { description: Creada, content: { application/json: { schema: { $ref: '#/components/schemas/Variante' } } } } }
+
+  /api/v1/admin/variantes/{id}:
+    patch:
+      tags: [Admin]
+      summary: Editar variante
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/VarianteInput' } } } }
+      responses: { '200': { description: Actualizada, content: { application/json: { schema: { $ref: '#/components/schemas/Variante' } } } } }
+    delete:
+      tags: [Admin]
+      summary: Borrar variante (soft-delete)
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      responses: { '204': { description: Borrada } }
+
+  /api/v1/admin/ubicaciones:
+    get:
+      tags: [Admin]
+      summary: Listar ubicaciones
+      responses: { '200': { description: Ubicaciones, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/Ubicacion' } } } } } }
+    post:
+      tags: [Admin]
+      summary: Crear ubicación
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/UbicacionInput' } } } }
+      responses: { '201': { description: Creada, content: { application/json: { schema: { $ref: '#/components/schemas/Ubicacion' } } } } }
+
+  /api/v1/admin/ubicaciones/{id}:
+    patch:
+      tags: [Admin]
+      summary: Editar ubicación
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/UbicacionInput' } } } }
+      responses: { '200': { description: Actualizada, content: { application/json: { schema: { $ref: '#/components/schemas/Ubicacion' } } } } }
+    delete:
+      tags: [Admin]
+      summary: Borrar ubicación (falla si tiene estadía activa)
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      responses: { '204': { description: Borrada }, '409': { description: Ubicación con estadía activa } }
+
+  /api/v1/admin/promociones:
+    get:
+      tags: [Admin]
+      summary: Listar promociones
+      responses: { '200': { description: Promociones, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/Promocion' } } } } } }
+    post:
+      tags: [Admin]
+      summary: Crear promoción (por tipo)
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/PromocionInput' } } } }
+      responses: { '201': { description: Creada, content: { application/json: { schema: { $ref: '#/components/schemas/Promocion' } } } } }
+
+  /api/v1/admin/promociones/{id}:
+    patch:
+      tags: [Admin]
+      summary: Editar / activar-desactivar promoción
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/PromocionInput' } } } }
+      responses: { '200': { description: Actualizada, content: { application/json: { schema: { $ref: '#/components/schemas/Promocion' } } } } }
+    delete:
+      tags: [Admin]
+      summary: Borrar promoción (soft-delete)
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      responses: { '204': { description: Borrada } }
+
+  /api/v1/admin/usuarios:
+    get:
+      tags: [Admin]
+      summary: Listar staff del balneario
+      responses: { '200': { description: Staff, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/UsuarioStaff' } } } } } }
+    post:
+      tags: [Admin]
+      summary: Alta de usuario staff (carpero/operador/admin)
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/UsuarioStaffInput' } } } }
+      responses: { '201': { description: Creado, content: { application/json: { schema: { $ref: '#/components/schemas/UsuarioStaff' } } } } }
+
+  /api/v1/admin/usuarios/{id}:
+    delete:
+      tags: [Admin]
+      summary: Baja de usuario staff
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      responses: { '204': { description: Dado de baja } }
+
+  /api/v1/admin/configuracion-visual:
+    get:
+      tags: [Admin]
+      summary: Leer configuración visual (theme completo)
+      responses: { '200': { description: Config, content: { application/json: { schema: { $ref: '#/components/schemas/Branding' } } } } }
+    put:
+      tags: [Admin]
+      summary: Actualizar theme white-label completo
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/BrandingInput' } } } }
+      responses:
+        '200': { description: Actualizado, content: { application/json: { schema: { $ref: '#/components/schemas/Branding' } } } }
+        '422': { description: Tokens inválidos o contraste insuficiente }
+
+  /api/v1/admin/mercadopago:
+    get:
+      tags: [Admin]
+      summary: Estado de la vinculación con Mercado Pago
+      responses: { '200': { description: Estado, content: { application/json: { schema: { $ref: '#/components/schemas/EstadoVinculacionMP' } } } } }
+
+  /api/v1/admin/mercadopago/oauth:
+    post:
+      tags: [Admin]
+      summary: Iniciar vinculación OAuth (devuelve URL de autorización de MP)
+      responses:
+        '200':
+          description: URL de autorización
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: { authorizationUrl: { type: string, format: uri } }
+
+  /api/v1/admin/mercadopago/oauth/callback:
+    get:
+      tags: [Admin]
+      summary: Callback OAuth de Mercado Pago (intercambia code por tokens)
+      security: []
+      parameters:
+        - { name: code, in: query, required: true, schema: { type: string } }
+        - { name: state, in: query, required: true, schema: { type: string } }
+      responses:
+        '200': { description: Cuenta vinculada }
+        '400': { description: Code/state inválido }
+
+  /api/v1/admin/reportes/{tipo}:
+    get:
+      tags: [Admin]
+      summary: Reporte del balneario por rango de fechas
+      parameters:
+        - { name: tipo, in: path, required: true, schema: { type: string, enum: [ventas, productos, promociones, estadias, servicios] } }
+        - { name: desde, in: query, required: true, schema: { type: string, format: date } }
+        - { name: hasta, in: query, required: true, schema: { type: string, format: date } }
+        - { name: formato, in: query, schema: { type: string, enum: [json, csv], default: json } }
+      responses:
+        '200':
+          description: Reporte
+          content:
+            application/json: { schema: { $ref: '#/components/schemas/Reporte' } }
+            text/csv: { schema: { type: string } }
+
+  /api/v1/admin/dashboard:
+    get:
+      tags: [Admin]
+      summary: KPIs del día (facturación, pedidos, ticket promedio, pedidos en curso)
+      responses: { '200': { description: KPIs, content: { application/json: { schema: { $ref: '#/components/schemas/DashboardKpis' } } } } }
+
+  # ─────────────────────────── SUPER ADMIN ───────────────────────────
+  /api/v1/super-admin/balnearios:
+    get:
+      tags: [SuperAdmin]
+      summary: Listar balnearios (todos los estados)
+      responses: { '200': { description: Balnearios, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/BalnearioDetalle' } } } } } }
+    post:
+      tags: [SuperAdmin]
+      summary: Alta de balneario (crea su primer admin)
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/BalnearioInput' } } } }
+      responses: { '201': { description: Creado, content: { application/json: { schema: { $ref: '#/components/schemas/BalnearioDetalle' } } } } }
+
+  /api/v1/super-admin/balnearios/{id}:
+    patch:
+      tags: [SuperAdmin]
+      summary: Editar balneario
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/BalnearioInput' } } } }
+      responses: { '200': { description: Actualizado, content: { application/json: { schema: { $ref: '#/components/schemas/BalnearioDetalle' } } } } }
+
+  /api/v1/super-admin/balnearios/{id}/suspension:
+    post:
+      tags: [SuperAdmin]
+      summary: Suspender balneario (efecto operativo inmediato)
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      responses: { '200': { description: Suspendido, content: { application/json: { schema: { $ref: '#/components/schemas/BalnearioDetalle' } } } } }
+
+  /api/v1/super-admin/balnearios/{id}/activacion:
+    post:
+      tags: [SuperAdmin]
+      summary: Reactivar balneario
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      responses: { '200': { description: Activado, content: { application/json: { schema: { $ref: '#/components/schemas/BalnearioDetalle' } } } } }
+
+  /api/v1/super-admin/balnearios/{id}/suscripciones:
+    post:
+      tags: [SuperAdmin]
+      summary: Suscribir un balneario a un plan por temporada
+      parameters: [ { $ref: '#/components/parameters/IdPath' } ]
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/SuscripcionInput' } } } }
+      responses: { '201': { description: Suscripción creada, content: { application/json: { schema: { $ref: '#/components/schemas/Suscripcion' } } } } }
+
+  /api/v1/super-admin/planes:
+    get:
+      tags: [SuperAdmin]
+      summary: Listar planes
+      responses: { '200': { description: Planes, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/Plan' } } } } } }
+    post:
+      tags: [SuperAdmin]
+      summary: Crear plan
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/PlanInput' } } } }
+      responses: { '201': { description: Creado, content: { application/json: { schema: { $ref: '#/components/schemas/Plan' } } } } }
+
+  /api/v1/super-admin/temporadas:
+    get:
+      tags: [SuperAdmin]
+      summary: Listar temporadas
+      responses: { '200': { description: Temporadas, content: { application/json: { schema: { type: array, items: { $ref: '#/components/schemas/Temporada' } } } } } }
+    post:
+      tags: [SuperAdmin]
+      summary: Crear temporada
+      requestBody: { required: true, content: { application/json: { schema: { $ref: '#/components/schemas/TemporadaInput' } } } }
+      responses: { '201': { description: Creada, content: { application/json: { schema: { $ref: '#/components/schemas/Temporada' } } } } }
+
+  # ─────────────────────────── TIEMPO REAL (SSE) ───────────────────────────
+  /api/v1/stream/cliente:
+    get:
+      tags: [TiempoReal]
+      summary: Canal SSE del cliente (estadía validada, pago, estado de pedido)
+      description: >
+        `text/event-stream`. Eventos: `estadia.validada`, `pago.resultado`,
+        `pedido.estado`, `servicio.estado`. Reconexión con `Last-Event-ID`.
+        Fallback: los GET de estado son la fuente de verdad (ADR-003).
+      responses:
+        '200':
+          description: Stream de eventos
+          content:
+            text/event-stream:
+              schema: { type: string }
+
+  /api/v1/stream/operativo:
+    get:
+      tags: [TiempoReal]
+      summary: Canal SSE del staff (pedido nuevo, servicio nuevo, solicitud de estadía)
+      description: 'Eventos: `pedido.nuevo`, `servicio.nuevo`, `estadia.solicitud`. Tenant del JWT.'
+      responses:
+        '200':
+          description: Stream de eventos
+          content:
+            text/event-stream:
+              schema: { type: string }
+
+# ─────────────────────────── COMPONENTS ───────────────────────────
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  parameters:
+    Page: { name: page, in: query, schema: { type: integer, minimum: 0, default: 0 } }
+    Size: { name: size, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 20 } }
+    Slug: { name: slug, in: path, required: true, schema: { type: string } }
+    BalnearioId: { name: balnearioId, in: path, required: true, schema: { type: integer, format: int64 } }
+    EstadiaId: { name: estadiaId, in: path, required: true, schema: { type: string }, description: public_id (ULID) }
+    PedidoId: { name: pedidoId, in: path, required: true, schema: { type: string }, description: public_id (ULID) }
+    IdPath: { name: id, in: path, required: true, schema: { type: integer, format: int64 } }
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema: { type: string, maxLength: 80 }
+      description: Clave única del cliente; reintentos con la misma clave no duplican el pedido.
+
+  responses:
+    NoAutenticado:
+      description: Credenciales ausentes o inválidas
+      content: { application/problem+json: { schema: { $ref: '#/components/schemas/Error' } } }
+    Prohibido:
+      description: Autenticado pero sin permiso (rol o tenant ajeno)
+      content: { application/problem+json: { schema: { $ref: '#/components/schemas/Error' } } }
+    NoEncontrado:
+      description: Recurso inexistente o de otro balneario (no se revela cuál)
+      content: { application/problem+json: { schema: { $ref: '#/components/schemas/Error' } } }
+    Conflicto:
+      description: Conflicto de estado (ej. email ya registrado)
+      content: { application/problem+json: { schema: { $ref: '#/components/schemas/Error' } } }
+    ErrorValidacion:
+      description: Datos inválidos
+      content: { application/problem+json: { schema: { $ref: '#/components/schemas/Error' } } }
+    RateLimit:
+      description: Demasiadas solicitudes
+      content: { application/problem+json: { schema: { $ref: '#/components/schemas/Error' } } }
+
+  schemas:
+    Error:
+      type: object
+      description: RFC 7807 Problem Details + `code` de negocio estable.
+      properties:
+        type: { type: string, format: uri, example: "about:blank" }
+        title: { type: string, example: "Conflicto de estado" }
+        status: { type: integer, example: 409 }
+        detail: { type: string }
+        instance: { type: string }
+        code: { type: string, example: "ESTADIA_DUPLICADA" }
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              campo: { type: string }
+              mensaje: { type: string }
+
+    Pagina:
+      type: object
+      properties:
+        page: { type: integer }
+        size: { type: integer }
+        totalElements: { type: integer, format: int64 }
+        totalPages: { type: integer }
+
+    # Auth
+    RegistroClienteRequest:
+      type: object
+      required: [email, password, nombre]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string, format: password, minLength: 8 }
+        nombre: { type: string }
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string, format: password }
+    RefreshRequest:
+      type: object
+      required: [refreshToken]
+      properties:
+        refreshToken: { type: string }
+    TokenResponse:
+      type: object
+      properties:
+        accessToken: { type: string }
+        refreshToken: { type: string }
+        tokenType: { type: string, example: Bearer }
+        expiresIn: { type: integer, description: segundos }
+        usuario: { $ref: '#/components/schemas/UsuarioActual' }
+    UsuarioActual:
+      type: object
+      properties:
+        publicId: { type: string }
+        nombre: { type: string }
+        tipo: { type: string, enum: [CLIENTE, STAFF, SUPER_ADMIN] }
+        rol: { type: string, nullable: true, enum: [CLIENTE, CARPERO, OPERADOR, ADMIN_BALNEARIO, SUPER_ADMIN] }
+        balnearioId: { type: integer, format: int64, nullable: true }
+
+    # Balneario / branding
+    BalnearioResumen:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        slug: { type: string }
+        nombre: { type: string }
+        logoUrl: { type: string, nullable: true }
+        portadaUrl: { type: string, nullable: true }
+    BalnearioDetalle:
+      allOf:
+        - $ref: '#/components/schemas/BalnearioResumen'
+        - type: object
+          properties:
+            emailContacto: { type: string }
+            telefono: { type: string, nullable: true }
+            estado: { type: string, enum: [ACTIVO, SUSPENDIDO] }
+            operativo: { type: boolean, description: ACTIVO y con suscripción vigente }
+    BalnearioInput:
+      type: object
+      required: [nombre, slug, emailContacto, adminEmail]
+      properties:
+        nombre: { type: string }
+        slug: { type: string }
+        emailContacto: { type: string, format: email }
+        telefono: { type: string }
+        adminEmail: { type: string, format: email, description: Email del primer admin del balneario }
+    Branding:
+      type: object
+      properties:
+        themeVersion: { type: integer }
+        tokens:
+          type: object
+          additionalProperties: true
+          example: { "color.primary": "#0A84FF", "color.surface": "#FFFFFF", "typography.family": "Nunito" }
+        logoUrl: { type: string, nullable: true }
+        portadaUrl: { type: string, nullable: true }
+        splashUrl: { type: string, nullable: true }
+    BrandingInput:
+      allOf:
+        - $ref: '#/components/schemas/Branding'
+
+    # Menú
+    Menu:
+      type: object
+      properties:
+        categorias:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: integer, format: int64 }
+              nombre: { type: string }
+              orden: { type: integer }
+              productos:
+                type: array
+                items: { $ref: '#/components/schemas/ProductoPublico' }
+        promociones:
+          type: array
+          items: { $ref: '#/components/schemas/PromocionPublica' }
+    ProductoPublico:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        nombre: { type: string }
+        descripcion: { type: string, nullable: true }
+        precioBase: { type: string, description: decimal ARS, example: "1500.00" }
+        fotoUrl: { type: string, nullable: true }
+        variantes:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: integer, format: int64 }
+              nombre: { type: string }
+              precio: { type: string, example: "1800.00" }
+    PromocionPublica:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        nombre: { type: string }
+        tipo: { type: string, enum: [DESCUENTO_PORCENTUAL, COMBO, HAPPY_HOUR] }
+        valor: { type: string }
+        vigenciaHasta: { type: string, format: date, nullable: true }
+
+    # Estadía
+    SolicitudEstadiaRequest:
+      type: object
+      required: [ubicacionId]
+      properties:
+        ubicacionId: { type: integer, format: int64 }
+    CambioUbicacionRequest:
+      type: object
+      required: [ubicacionId]
+      properties:
+        ubicacionId: { type: integer, format: int64 }
+    EstadoEstadia:
+      type: string
+      enum: [PENDIENTE_VALIDACION, ACTIVA, RECHAZADA, CERRADA, CERRADA_POR_SISTEMA, EXPIRADA]
+    Estadia:
+      type: object
+      properties:
+        publicId: { type: string }
+        balnearioId: { type: integer, format: int64 }
+        estado: { $ref: '#/components/schemas/EstadoEstadia' }
+        ubicacion: { $ref: '#/components/schemas/Ubicacion' }
+        fechaSolicitud: { type: string, format: date-time }
+        fechaValidacion: { type: string, format: date-time, nullable: true }
+        fechaCierre: { type: string, format: date-time, nullable: true }
+    EstadiaDetalle:
+      allOf:
+        - $ref: '#/components/schemas/Estadia'
+        - type: object
+          properties:
+            cantidadPedidos: { type: integer }
+            consumoTotal: { type: string, description: decimal ARS }
+    ResumenEstadia:
+      type: object
+      properties:
+        publicId: { type: string }
+        cantidadPedidos: { type: integer }
+        consumoTotal: { type: string }
+        fechaCierre: { type: string, format: date-time }
+
+    # Pedido
+    CrearPedidoRequest:
+      type: object
+      required: [items]
+      properties:
+        items:
+          type: array
+          minItems: 1
+          items:
+            type: object
+            required: [productoId, cantidad]
+            properties:
+              productoId: { type: integer, format: int64 }
+              varianteId: { type: integer, format: int64, nullable: true }
+              cantidad: { type: integer, minimum: 1 }
+    EstadoPedido:
+      type: string
+      enum: [CREADO, PAGO_PENDIENTE, CONFIRMADO, EN_PREPARACION, EN_CAMINO, ENTREGADO, PAGO_RECHAZADO, CANCELADO]
+    Pedido:
+      type: object
+      properties:
+        publicId: { type: string }
+        estadiaId: { type: string }
+        estado: { $ref: '#/components/schemas/EstadoPedido' }
+        subtotal: { type: string }
+        descuentoTotal: { type: string }
+        total: { type: string }
+        creadoEn: { type: string, format: date-time }
+    PedidoItem:
+      type: object
+      properties:
+        nombreProducto: { type: string }
+        nombreVariante: { type: string, nullable: true }
+        precioUnitario: { type: string }
+        cantidad: { type: integer }
+        subtotalLinea: { type: string }
+    PedidoEvento:
+      type: object
+      properties:
+        estadoAnterior: { type: string, nullable: true }
+        estadoNuevo: { type: string }
+        actorTipo: { type: string }
+        motivo: { type: string, nullable: true }
+        fecha: { type: string, format: date-time }
+    PedidoDetalle:
+      allOf:
+        - $ref: '#/components/schemas/Pedido'
+        - type: object
+          properties:
+            ubicacion: { $ref: '#/components/schemas/Ubicacion' }
+            items: { type: array, items: { $ref: '#/components/schemas/PedidoItem' } }
+            historial: { type: array, items: { $ref: '#/components/schemas/PedidoEvento' } }
+            pago: { $ref: '#/components/schemas/Pago' }
+    PedidoOperativo:
+      type: object
+      properties:
+        publicId: { type: string }
+        estado: { $ref: '#/components/schemas/EstadoPedido' }
+        ubicacion: { $ref: '#/components/schemas/Ubicacion' }
+        total: { type: string }
+        antiguedadSegundos: { type: integer }
+        items: { type: array, items: { $ref: '#/components/schemas/PedidoItem' } }
+    TransicionPedidoRequest:
+      type: object
+      required: [nuevoEstado]
+      properties:
+        nuevoEstado: { $ref: '#/components/schemas/EstadoPedido' }
+        motivo: { type: string, nullable: true, description: Obligatorio al cancelar }
+
+    # Pago
+    EstadoPago:
+      type: string
+      enum: [PENDIENTE, APROBADO, RECHAZADO, REEMBOLSADO]
+    IniciarPagoRequest:
+      type: object
+      required: [cardToken]
+      properties:
+        cardToken: { type: string, description: Token generado por el SDK de MP en el dispositivo }
+        cuotas: { type: integer, default: 1 }
+        metodoPago: { type: string, nullable: true }
+    Pago:
+      type: object
+      properties:
+        estado: { $ref: '#/components/schemas/EstadoPago' }
+        monto: { type: string }
+        mpPaymentId: { type: string, nullable: true }
+        detalle: { type: string, nullable: true }
+    MercadoPagoWebhook:
+      type: object
+      description: Payload de notificación de MP (forma simplificada).
+      properties:
+        type: { type: string, example: payment }
+        action: { type: string, example: payment.updated }
+        data:
+          type: object
+          properties: { id: { type: string, description: payment_id } }
+
+    # Servicios
+    EstadoSolicitud:
+      type: string
+      enum: [PENDIENTE, EN_CURSO, RESUELTA, CANCELADA]
+    CrearSolicitudServicioRequest:
+      type: object
+      required: [tipoServicioId]
+      properties:
+        tipoServicioId: { type: integer, format: int64 }
+        nota: { type: string, nullable: true }
+    SolicitudServicio:
+      type: object
+      properties:
+        publicId: { type: string }
+        tipoServicio: { type: string }
+        estado: { $ref: '#/components/schemas/EstadoSolicitud' }
+        ubicacion: { $ref: '#/components/schemas/Ubicacion' }
+        nota: { type: string, nullable: true }
+        creadaEn: { type: string, format: date-time }
+    TransicionSolicitudRequest:
+      type: object
+      required: [nuevoEstado]
+      properties:
+        nuevoEstado: { $ref: '#/components/schemas/EstadoSolicitud' }
+
+    # Operativo — validación
+    ValidacionEstadiaRequest:
+      type: object
+      required: [decision]
+      properties:
+        decision: { type: string, enum: [VALIDAR, RECHAZAR] }
+        motivo: { type: string, nullable: true }
+
+    # Catálogo (admin)
+    Categoria:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        nombre: { type: string }
+        orden: { type: integer }
+        activa: { type: boolean }
+    CategoriaInput:
+      type: object
+      required: [nombre]
+      properties:
+        nombre: { type: string }
+        orden: { type: integer }
+        activa: { type: boolean, default: true }
+    Producto:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        categoriaId: { type: integer, format: int64 }
+        nombre: { type: string }
+        descripcion: { type: string, nullable: true }
+        precioBase: { type: string }
+        fotoUrl: { type: string, nullable: true }
+        disponible: { type: boolean }
+        orden: { type: integer }
+        variantes: { type: array, items: { $ref: '#/components/schemas/Variante' } }
+    ProductoInput:
+      type: object
+      required: [categoriaId, nombre, precioBase]
+      properties:
+        categoriaId: { type: integer, format: int64 }
+        nombre: { type: string }
+        descripcion: { type: string }
+        precioBase: { type: string }
+        fotoUrl: { type: string }
+        disponible: { type: boolean, default: true }
+        orden: { type: integer }
+    Variante:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        nombre: { type: string }
+        precio: { type: string }
+        disponible: { type: boolean }
+        orden: { type: integer }
+    VarianteInput:
+      type: object
+      required: [nombre, precio]
+      properties:
+        nombre: { type: string }
+        precio: { type: string }
+        disponible: { type: boolean, default: true }
+        orden: { type: integer }
+    Ubicacion:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        tipo: { type: string, enum: [CARPA, SOMBRILLA, MESA, SECTOR] }
+        identificador: { type: string, example: "Carpa 12" }
+        estado: { type: string, enum: [ACTIVA, INACTIVA] }
+    UbicacionInput:
+      type: object
+      required: [tipo, identificador]
+      properties:
+        tipo: { type: string, enum: [CARPA, SOMBRILLA, MESA, SECTOR] }
+        identificador: { type: string }
+        estado: { type: string, enum: [ACTIVA, INACTIVA], default: ACTIVA }
+
+    # Promociones (admin)
+    Promocion:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        nombre: { type: string }
+        tipo: { type: string, enum: [DESCUENTO_PORCENTUAL, COMBO, HAPPY_HOUR] }
+        estado: { type: string, enum: [ACTIVA, INACTIVA] }
+        valor: { type: string }
+        vigenciaDesde: { type: string, format: date, nullable: true }
+        vigenciaHasta: { type: string, format: date, nullable: true }
+        franjaHoraDesde: { type: string, nullable: true, example: "18:00" }
+        franjaHoraHasta: { type: string, nullable: true, example: "20:00" }
+        diasSemana: { type: string, nullable: true, example: "LUN,MAR,MIE" }
+        alcance:
+          type: array
+          items:
+            type: object
+            properties:
+              tipoAlcance: { type: string, enum: [PRODUCTO, CATEGORIA] }
+              referenciaId: { type: integer, format: int64 }
+        comboItems:
+          type: array
+          items:
+            type: object
+            properties:
+              productoId: { type: integer, format: int64 }
+              cantidad: { type: integer }
+    PromocionInput:
+      allOf:
+        - $ref: '#/components/schemas/Promocion'
+
+    # Staff (admin)
+    UsuarioStaff:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        nombre: { type: string }
+        email: { type: string }
+        rol: { type: string, enum: [CARPERO, OPERADOR, ADMIN_BALNEARIO] }
+        estado: { type: string, enum: [ACTIVO, BAJA] }
+    UsuarioStaffInput:
+      type: object
+      required: [nombre, email, rol]
+      properties:
+        nombre: { type: string }
+        email: { type: string, format: email }
+        rol: { type: string, enum: [CARPERO, OPERADOR, ADMIN_BALNEARIO] }
+
+    # MP vinculación
+    EstadoVinculacionMP:
+      type: object
+      properties:
+        estado: { type: string, enum: [VINCULADA, DESVINCULADA, EXPIRADA] }
+        mpUserId: { type: string, nullable: true }
+        vinculadaEn: { type: string, format: date-time, nullable: true }
+
+    # Reportes
+    Reporte:
+      type: object
+      properties:
+        tipo: { type: string }
+        desde: { type: string, format: date }
+        hasta: { type: string, format: date }
+        filas: { type: array, items: { type: object, additionalProperties: true } }
+    DashboardKpis:
+      type: object
+      properties:
+        facturacionHoy: { type: string }
+        pedidosHoy: { type: integer }
+        ticketPromedio: { type: string }
+        pedidosEnCurso: { type: integer }
+
+    # Super Admin
+    Plan:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        nombre: { type: string }
+        descripcion: { type: string, nullable: true }
+        precio: { type: string }
+        activo: { type: boolean }
+    PlanInput:
+      type: object
+      required: [nombre, precio]
+      properties:
+        nombre: { type: string }
+        descripcion: { type: string }
+        precio: { type: string }
+        activo: { type: boolean, default: true }
+    Temporada:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        nombre: { type: string }
+        fechaInicio: { type: string, format: date }
+        fechaFin: { type: string, format: date }
+        estado: { type: string, enum: [PLANIFICADA, EN_CURSO, CERRADA] }
+    TemporadaInput:
+      type: object
+      required: [nombre, fechaInicio, fechaFin]
+      properties:
+        nombre: { type: string }
+        fechaInicio: { type: string, format: date }
+        fechaFin: { type: string, format: date }
+    Suscripcion:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        balnearioId: { type: integer, format: int64 }
+        planId: { type: integer, format: int64 }
+        temporadaId: { type: integer, format: int64 }
+        estado: { type: string, enum: [PENDIENTE, ACTIVA, SUSPENDIDA, FINALIZADA] }
+    SuscripcionInput:
+      type: object
+      required: [planId, temporadaId]
+      properties:
+        planId: { type: integer, format: int64 }
+        temporadaId: { type: integer, format: int64 }

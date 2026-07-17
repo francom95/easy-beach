@@ -4,6 +4,13 @@
 - **Modelo ejecutor:** opus
 - **Tipo:** especificación (documento, sin código)
 - **Depende de:** 02, 03
+- **Estado: ✅ EJECUTADA** — entregables:
+  [`docs/especificacion/04-contratos-api.md`](../especificacion/04-contratos-api.md)
+  (convenciones + matriz endpoint→rol + matriz pantalla→endpoints) y la
+  **spec OpenAPI 3.0.3** en [`docs/api/openapi.yaml`](../api/openapi.yaml)
+  (55 endpoints, 59 schemas, validada con `openapi-spec-validator`). Cubre
+  público/cliente, estadía, pedidos, pagos MP + webhook, servicios, operativo
+  (incl. validación de estadías), admin, super admin y canales SSE.
 
 ## Objetivo
 
