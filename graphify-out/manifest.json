@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1784321572.7239594,
-    "ast_hash": "fbc5834f6e626b0e49cea859555de23d",
-    "semantic_hash": "fbc5834f6e626b0e49cea859555de23d"
+    "mtime": 1784917225.9411087,
+    "ast_hash": "009c70b1eb38d22f12396f2ded19d859",
+    "semantic_hash": "009c70b1eb38d22f12396f2ded19d859"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -35,9 +35,9 @@
     "semantic_hash": "552be49e4a752d1a8dab3d2f77fa1a74"
   },
   "docs/etapas/07-ux-ui-mobile.md": {
-    "mtime": 1783444630.8602993,
-    "ast_hash": "06e99dbf3f8ab53521db77e2a30318df",
-    "semantic_hash": "06e99dbf3f8ab53521db77e2a30318df"
+    "mtime": 1784917218.1782513,
+    "ast_hash": "b328b11b8a530a740e6e5a60891076ed",
+    "semantic_hash": "b328b11b8a530a740e6e5a60891076ed"
   },
   "docs/etapas/08-ux-ui-web-paneles.md": {
     "mtime": 1783444590.4388592,
@@ -203,5 +203,35 @@
     "mtime": 1784321390.3952854,
     "ast_hash": "bb698451e173e455c7c36e8319f8b85b",
     "semantic_hash": "bb698451e173e455c7c36e8319f8b85b"
+  },
+  "docs/design/easybeach-etapa-07-completa/project/support.js": {
+    "mtime": 1784917160.2311342,
+    "ast_hash": "450f2a9297cd55032eb905780de3016b",
+    "semantic_hash": "450f2a9297cd55032eb905780de3016b"
+  },
+  "docs/design/easybeach-etapa-07-completa/README.md": {
+    "mtime": 1784917159.155316,
+    "ast_hash": "1803fbdca63795600850a46fb2f3f04a",
+    "semantic_hash": "1803fbdca63795600850a46fb2f3f04a"
+  },
+  "docs/design/easybeach-etapa-07-completa/project/EasyBeach Etapa 07.dc.html": {
+    "mtime": 1784917160.0182126,
+    "ast_hash": "0dcb6835f5a10d152a9af6ca9afaf0b6",
+    "semantic_hash": "0dcb6835f5a10d152a9af6ca9afaf0b6"
+  },
+  "docs/design/easybeach-etapa-07-completa/project/uploads/01-vision-alcance-glosario.md": {
+    "mtime": 1784917160.4107056,
+    "ast_hash": "7ba20fd26dfdd91bf0feea986f6ec25a",
+    "semantic_hash": "7ba20fd26dfdd91bf0feea986f6ec25a"
+  },
+  "docs/design/easybeach-etapa-07-completa/project/uploads/07-ux-ui-mobile.md": {
+    "mtime": 1784917160.479324,
+    "ast_hash": "06e99dbf3f8ab53521db77e2a30318df",
+    "semantic_hash": "06e99dbf3f8ab53521db77e2a30318df"
+  },
+  "docs/design/easybeach-etapa-07-completa/project/uploads/EasyBeach Etapa 06.dc.html": {
+    "mtime": 1784917160.5362096,
+    "ast_hash": "a95ddb487508cfc1867f4152a4393f8c",
+    "semantic_hash": "a95ddb487508cfc1867f4152a4393f8c"
   }
 }

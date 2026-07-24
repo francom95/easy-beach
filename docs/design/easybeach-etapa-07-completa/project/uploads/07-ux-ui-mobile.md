@@ -4,10 +4,6 @@
 - **Modelo ejecutor:** claude design (diseño visual — se hace a mano)
 - **Tipo:** diseño
 - **Depende de:** 01, 06
-- **Estado: ✅ EJECUTADA** — entregable en
-  [`docs/design/easybeach-etapa-07-completa/`](../design/easybeach-etapa-07-completa/)
-  (prototipo de 32 pantallas, s01–s32, cubriendo los 10 flujos + tab bar de
-  navegación; flujo home→pedido confirmado en 4 taps; test white-label OK).
 
 ## Objetivo
 
