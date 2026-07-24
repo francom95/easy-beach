@@ -4,12 +4,6 @@
 - **Modelo ejecutor:** claude design (diseño visual — se hace a mano)
 - **Tipo:** diseño
 - **Depende de:** 01, 06
-- **Estado: ✅ EJECUTADA** — entregable en
-  [`docs/design/easybeach-panel-operativo/`](../design/easybeach-panel-operativo/)
-  (los tres paneles: operativo con cola de pedidos/servicios y bandeja de
-  validación de estadías, admin de balneario con dashboard/ABMs/preview en
-  vivo del theme/vinculación Mercado Pago, y Super Admin; más onboarding del
-  balneario nuevo hacia su primer menú publicado).
 
 ## Objetivo
 

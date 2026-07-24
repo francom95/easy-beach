@@ -87,7 +87,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 10,
       "norm_label": "etapa 09 \u2014 backend fundacional",
       "id": "docs_etapas_09_backend_fundacional_etapa_09"
     },
@@ -100,7 +100,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 11,
       "norm_label": "etapa 14 \u2014 backend servicios al carpero y promociones",
       "id": "docs_etapas_14_backend_carpero_promociones_etapa_14"
     },
@@ -113,7 +113,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 1,
       "norm_label": "solicitud de servicio al carpero (implementacion)",
       "id": "docs_etapas_14_backend_carpero_promociones_solicitud_servicio"
     },
@@ -126,7 +126,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 22,
+      "community": 20,
       "norm_label": "promociones basicas (descuento %, combo, happy hour)",
       "id": "docs_etapas_14_backend_carpero_promociones_promociones_basicas"
     },
@@ -139,7 +139,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 11,
       "norm_label": "etapa 15 \u2014 backend reportes basicos",
       "id": "docs_etapas_15_backend_reportes_etapa_15"
     },
@@ -152,7 +152,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "endpoint resumen de kpis para dashboard",
       "id": "docs_etapas_15_backend_reportes_kpis_dashboard"
     },
@@ -165,7 +165,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 6,
       "norm_label": "etapa 18 \u2014 web: panel super admin",
       "id": "docs_etapas_18_web_panel_super_admin_etapa_18"
     },
@@ -178,7 +178,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 10,
       "norm_label": "etapa 20 \u2014 infraestructura, deploy y observabilidad",
       "id": "docs_etapas_20_infra_deploy_etapa_20"
     },
@@ -192,7 +192,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
+      "community": 21,
       "norm_label": "estacionalidad de la infraestructura",
       "id": "docs_etapas_20_infra_deploy_estacionalidad"
     },
@@ -205,7 +205,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "easybeach",
       "id": "docs_especificacion_01_vision_alcance_glosario_easybeach"
     },
@@ -218,7 +218,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "objetivo rector (vender mas)",
       "id": "docs_especificacion_01_vision_alcance_glosario_objetivo_rector"
     },
@@ -231,7 +231,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "mercado pago marketplace (application_fee=0)",
       "id": "docs_especificacion_01_vision_alcance_glosario_mercado_pago_marketplace"
     },
@@ -244,7 +244,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "mercado pago checkout api",
       "id": "docs_especificacion_01_vision_alcance_glosario_checkout_api"
     },
@@ -257,7 +257,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "vinculacion oauth cuenta mp del balneario",
       "id": "docs_especificacion_01_vision_alcance_glosario_oauth_vinculacion_mp"
     },
@@ -309,7 +309,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "producto con variantes",
       "id": "docs_especificacion_01_vision_alcance_glosario_producto_variantes"
     },
@@ -322,7 +322,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "theming white-label total",
       "id": "docs_especificacion_01_vision_alcance_glosario_theming_white_label"
     },
@@ -374,7 +374,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "pedido",
       "id": "docs_especificacion_01_vision_alcance_glosario_pedido"
     },
@@ -387,7 +387,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "pago",
       "id": "docs_especificacion_01_vision_alcance_glosario_pago"
     },
@@ -413,7 +413,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 10,
+      "community": 8,
       "norm_label": "promocion / combo",
       "id": "docs_especificacion_01_vision_alcance_glosario_promocion_combo"
     },
@@ -426,7 +426,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 9,
       "norm_label": "temporada / plan",
       "id": "docs_especificacion_01_vision_alcance_glosario_temporada_plan"
     },
@@ -452,7 +452,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "actor: operador de barra/cocina",
       "id": "docs_especificacion_01_vision_alcance_glosario_operador_actor"
     },
@@ -478,7 +478,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 9,
       "norm_label": "actor: super admin",
       "id": "docs_especificacion_01_vision_alcance_glosario_super_admin_actor"
     },
@@ -491,7 +491,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 10,
+      "community": 8,
       "norm_label": "alcance mvp explicito",
       "id": "docs_especificacion_01_vision_alcance_glosario_alcance_mvp"
     },
@@ -504,7 +504,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "webhook de mercado pago",
       "id": "docs_especificacion_01_vision_alcance_glosario_webhook_mercado_pago"
     },
@@ -517,100 +517,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "etapa 01 documento",
       "id": "docs_etapas_01_vision_alcance_glosario_etapa"
-    },
-    {
-      "label": "Etapa 08 documento",
-      "file_type": "document",
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 4,
-      "norm_label": "etapa 08 documento",
-      "id": "docs_etapas_08_ux_ui_web_paneles_etapa"
-    },
-    {
-      "label": "Panel operativo (barra/cocina/carpero)",
-      "file_type": "concept",
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 4,
-      "norm_label": "panel operativo (barra/cocina/carpero)",
-      "id": "docs_etapas_08_ux_ui_web_paneles_panel_operativo"
-    },
-    {
-      "label": "Bandeja de validaci\u00f3n de estad\u00edas (UI)",
-      "file_type": "concept",
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 4,
-      "norm_label": "bandeja de validacion de estadias (ui)",
-      "id": "docs_etapas_08_ux_ui_web_paneles_bandeja_validacion_estadias"
-    },
-    {
-      "label": "Panel admin de balneario",
-      "file_type": "concept",
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 4,
-      "norm_label": "panel admin de balneario",
-      "id": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario"
-    },
-    {
-      "label": "Configuraci\u00f3n visual con preview en vivo",
-      "file_type": "concept",
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 4,
-      "norm_label": "configuracion visual con preview en vivo",
-      "id": "docs_etapas_08_ux_ui_web_paneles_configuracion_visual_preview"
-    },
-    {
-      "label": "Estado de vinculaci\u00f3n con Mercado Pago (UI)",
-      "file_type": "concept",
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 4,
-      "norm_label": "estado de vinculacion con mercado pago (ui)",
-      "id": "docs_etapas_08_ux_ui_web_paneles_estado_vinculacion_mp"
-    },
-    {
-      "label": "Panel Super Admin",
-      "file_type": "concept",
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 4,
-      "norm_label": "panel super admin",
-      "id": "docs_etapas_08_ux_ui_web_paneles_panel_super_admin"
     },
     {
       "label": "Etapa 10 documento",
@@ -621,7 +530,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "etapa 10 documento",
       "id": "docs_etapas_10_backend_super_admin_etapa"
     },
@@ -634,7 +543,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "abm de balnearios",
       "id": "docs_etapas_10_backend_super_admin_abm_balnearios"
     },
@@ -647,7 +556,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "vinculacion de mercado pago por balneario (oauth) - backend",
       "id": "docs_etapas_10_backend_super_admin_vinculacion_mp_oauth"
     },
@@ -660,7 +569,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "endpoints de configuracion visual (theme completo)",
       "id": "docs_etapas_10_backend_super_admin_config_visual_endpoints"
     },
@@ -673,7 +582,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "endpoint publico de branding",
       "id": "docs_etapas_10_backend_super_admin_endpoint_branding_publico"
     },
@@ -686,7 +595,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "planes y temporadas",
       "id": "docs_etapas_10_backend_super_admin_planes_temporadas"
     },
@@ -699,7 +608,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "listado publico de balnearios activos",
       "id": "docs_etapas_10_backend_super_admin_listado_publico_balnearios"
     },
@@ -855,7 +764,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 1,
       "norm_label": "etapa 13 documento",
       "id": "docs_etapas_13_backend_pedidos_etapa"
     },
@@ -881,7 +790,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 1,
       "norm_label": "precios e items congelados (historico inmutable sobre variante)",
       "id": "docs_etapas_13_backend_pedidos_precios_congelados"
     },
@@ -894,7 +803,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "mercado pago marketplace (pago del pedido)",
       "id": "docs_etapas_13_backend_pedidos_mercado_pago_marketplace"
     },
@@ -907,7 +816,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 1,
       "norm_label": "recepcion del webhook mp (aprobado/rechazado)",
       "id": "docs_etapas_13_backend_pedidos_webhook_mp_recepcion"
     },
@@ -920,7 +829,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 1,
       "norm_label": "maquina de estados completa del pedido (etapa 13)",
       "id": "docs_etapas_13_backend_pedidos_maquina_estados_pedido"
     },
@@ -933,7 +842,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 1,
       "norm_label": "colas operativas por balneario",
       "id": "docs_etapas_13_backend_pedidos_colas_operativas"
     },
@@ -946,7 +855,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 1,
       "norm_label": "tiempo real: notificacion de cambio de estado",
       "id": "docs_etapas_13_backend_pedidos_tiempo_real_notificacion"
     },
@@ -959,7 +868,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 1,
       "norm_label": "aplicacion de promociones en el pedido",
       "id": "docs_etapas_13_backend_pedidos_aplicacion_promociones"
     },
@@ -972,7 +881,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "test de idempotencia de pedido",
       "id": "docs_etapas_13_backend_pedidos_idempotencia_test"
     },
@@ -985,7 +894,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "etapa 16 documento",
       "id": "docs_etapas_16_mobile_app_cliente_etapa"
     },
@@ -998,7 +907,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "base tecnica react native",
       "id": "docs_etapas_16_mobile_app_cliente_base_tecnica"
     },
@@ -1011,7 +920,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "theming dinamico multibalneario en runtime",
       "id": "docs_etapas_16_mobile_app_cliente_theming_dinamico_runtime"
     },
@@ -1024,7 +933,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "pago in-app via mercado pago checkout api (mobile)",
       "id": "docs_etapas_16_mobile_app_cliente_flujo_pago_mp_inapp"
     },
@@ -1037,7 +946,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "tolerancia a conectividad de playa (offline)",
       "id": "docs_etapas_16_mobile_app_cliente_tolerancia_offline"
     },
@@ -1050,7 +959,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "notificaciones push",
       "id": "docs_etapas_16_mobile_app_cliente_notificaciones_push"
     },
@@ -1063,7 +972,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "etapa 17 documento",
       "id": "docs_etapas_17_web_panel_operativo_admin_etapa"
     },
@@ -1076,7 +985,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "panel operativo (construccion)",
       "id": "docs_etapas_17_web_panel_operativo_admin_panel_operativo_build"
     },
@@ -1089,7 +998,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "bandeja de validacion de estadias (construccion)",
       "id": "docs_etapas_17_web_panel_operativo_admin_bandeja_validacion_build"
     },
@@ -1102,7 +1011,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "panel admin de balneario (construccion)",
       "id": "docs_etapas_17_web_panel_operativo_admin_panel_admin_build"
     },
@@ -1115,7 +1024,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "preview en vivo del theme (mismos tokens que mobile)",
       "id": "docs_etapas_17_web_panel_operativo_admin_theme_preview_vivo"
     },
@@ -1128,7 +1037,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 1,
       "norm_label": "vinculacion cuenta mp (ui panel admin)",
       "id": "docs_etapas_17_web_panel_operativo_admin_vinculacion_mp_ui"
     },
@@ -1141,7 +1050,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "etapa 19 documento",
       "id": "docs_etapas_19_qa_seeds_demo_etapa"
     },
@@ -1154,7 +1063,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "suite e2e de flujos criticos",
       "id": "docs_etapas_19_qa_seeds_demo_suite_e2e"
     },
@@ -1167,7 +1076,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "pago via mercado pago (sandbox) - testing",
       "id": "docs_etapas_19_qa_seeds_demo_pago_sandbox_mp"
     },
@@ -1180,7 +1089,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "testing de seguridad cross-tenant",
       "id": "docs_etapas_19_qa_seeds_demo_testing_seguridad_cross_tenant"
     },
@@ -1193,7 +1102,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "testing de concurrencia",
       "id": "docs_etapas_19_qa_seeds_demo_testing_concurrencia"
     },
@@ -1206,7 +1115,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "seeds y datos demo (balnearios ficticios)",
       "id": "docs_etapas_19_qa_seeds_demo_seeds_datos_demo"
     },
@@ -1219,7 +1128,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 1,
       "norm_label": "prueba de carga basica (sabado de enero)",
       "id": "docs_etapas_19_qa_seeds_demo_prueba_carga"
     },
@@ -1232,7 +1141,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 12,
       "norm_label": "graphify knowledge graph workflow",
       "id": "claude_md_graphify_workflow"
     },
@@ -1245,7 +1154,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "adr-001: multitenancy \u2014 base compartida con balneario_id",
       "id": "docs_adr_adr_001_multitenancy_base_compartida_multitenancy"
     },
@@ -1258,7 +1167,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "discriminador balneario_id",
       "id": "docs_adr_adr_001_multitenancy_base_compartida_balneario_id"
     },
@@ -1271,7 +1180,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "tenantcontext request-scoped",
       "id": "docs_adr_adr_001_multitenancy_base_compartida_tenantcontext"
     },
@@ -1284,7 +1193,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "hibernate @filter / @tenantscoped",
       "id": "docs_adr_adr_001_multitenancy_base_compartida_hibernate_filter"
     },
@@ -1297,7 +1206,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "regla archunit @tenantscoped + bateria cross-tenant",
       "id": "docs_adr_adr_001_multitenancy_base_compartida_archunit_tenant_test"
     },
@@ -1310,7 +1219,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "opcion: schema por tenant (descartada)",
       "id": "docs_adr_adr_001_multitenancy_base_compartida_schema_por_tenant"
     },
@@ -1323,7 +1232,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "opcion: base por tenant (descartada)",
       "id": "docs_adr_adr_001_multitenancy_base_compartida_base_por_tenant"
     },
@@ -1336,7 +1245,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "adr-002: monolito modular por capas",
       "id": "docs_adr_adr_002_monolito_modular_monolito_modular"
     },
@@ -1349,7 +1258,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "opcion: microservicios (descartada)",
       "id": "docs_adr_adr_002_monolito_modular_microservicios"
     },
@@ -1362,7 +1271,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 3,
       "norm_label": "eventos de dominio in-process (applicationeventpublisher)",
       "id": "docs_adr_adr_002_monolito_modular_eventos_dominio"
     },
@@ -1375,7 +1284,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "reglas de dependencia entre modulos (archunit)",
       "id": "docs_adr_adr_002_monolito_modular_reglas_dependencia"
     },
@@ -1388,7 +1297,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "adr-003: tiempo real \u2014 sse con fallback polling",
       "id": "docs_adr_adr_003_tiempo_real_sse_sse"
     },
@@ -1401,7 +1310,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "opcion: polling puro (descartada como unico canal)",
       "id": "docs_adr_adr_003_tiempo_real_sse_polling_puro"
     },
@@ -1414,7 +1323,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "opcion: websocket/stomp (descartada)",
       "id": "docs_adr_adr_003_tiempo_real_sse_websocket_stomp"
     },
@@ -1427,7 +1336,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "sseemitter de spring",
       "id": "docs_adr_adr_003_tiempo_real_sse_sseemitter"
     },
@@ -1440,7 +1349,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "reconexion last-event-id + heartbeat",
       "id": "docs_adr_adr_003_tiempo_real_sse_last_event_id"
     },
@@ -1453,7 +1362,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "adr-004: mercado pago checkout api \u2014 marketplace sin comision",
       "id": "docs_adr_adr_004_pagos_mercadopago_marketplace_checkout_api"
     },
@@ -1466,7 +1375,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "oauth vinculacion mp del balneario",
       "id": "docs_adr_adr_004_pagos_mercadopago_marketplace_oauth_vinculacion"
     },
@@ -1479,7 +1388,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "webhook payment.updated + verificacion server-to-server",
       "id": "docs_adr_adr_004_pagos_mercadopago_marketplace_webhook"
     },
@@ -1492,7 +1401,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "idempotencia doble (pedido + webhook)",
       "id": "docs_adr_adr_004_pagos_mercadopago_marketplace_idempotencia_doble"
     },
@@ -1505,7 +1414,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "job de reconciliacion de pagos pendientes",
       "id": "docs_adr_adr_004_pagos_mercadopago_marketplace_reconciliacion"
     },
@@ -1518,7 +1427,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "maquina de estados pago\u2194pedido",
       "id": "docs_adr_adr_004_pagos_mercadopago_marketplace_maquina_estados"
     },
@@ -1531,7 +1440,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "application_fee = 0 constante del servidor",
       "id": "docs_adr_adr_004_pagos_mercadopago_marketplace_application_fee_cero"
     },
@@ -1544,7 +1453,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "adr-005: theming white-label runtime servido por api",
       "id": "docs_adr_adr_005_theming_runtime_theming_runtime"
     },
@@ -1557,7 +1466,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "opcion: builds white-label por balneario (descartada)",
       "id": "docs_adr_adr_005_theming_runtime_builds_white_label"
     },
@@ -1570,7 +1479,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "contrato de tokens de theming (versionado)",
       "id": "docs_adr_adr_005_theming_runtime_contrato_tokens"
     },
@@ -1583,7 +1492,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "endpoint publico get /balnearios/{id}/branding",
       "id": "docs_adr_adr_005_theming_runtime_endpoint_branding"
     },
@@ -1596,7 +1505,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "themeprovider raiz (runtime)",
       "id": "docs_adr_adr_005_theming_runtime_themeprovider"
     },
@@ -1609,7 +1518,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "cache local + revalidacion etag / offline",
       "id": "docs_adr_adr_005_theming_runtime_cache_offline"
     },
@@ -1622,7 +1531,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "easybeach api \u2014 openapi 3.0.3 spec",
       "id": "docs_api_openapi_doc"
     },
@@ -1635,7 +1544,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "endpoint group: auth",
       "id": "docs_api_openapi_auth"
     },
@@ -1648,7 +1557,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "endpoint group: publico",
       "id": "docs_api_openapi_publico"
     },
@@ -1661,7 +1570,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "endpoint group: estadia",
       "id": "docs_api_openapi_estadia"
     },
@@ -1674,7 +1583,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "endpoint group: pedidos",
       "id": "docs_api_openapi_pedidos"
     },
@@ -1687,7 +1596,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "endpoint group: pagos",
       "id": "docs_api_openapi_pagos"
     },
@@ -1700,7 +1609,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "endpoint group: servicios",
       "id": "docs_api_openapi_servicios"
     },
@@ -1713,7 +1622,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 15,
+      "community": 13,
       "norm_label": "endpoint group: operativo",
       "id": "docs_api_openapi_operativo"
     },
@@ -1726,7 +1635,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "endpoint group: admin balneario",
       "id": "docs_api_openapi_admin"
     },
@@ -1739,7 +1648,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "endpoint group: superadmin",
       "id": "docs_api_openapi_superadmin"
     },
@@ -1752,7 +1661,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "endpoint group: tiemporeal (sse)",
       "id": "docs_api_openapi_tiemporeal"
     },
@@ -1765,7 +1674,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "claude design handoff bundle readme (etapa 06)",
       "id": "docs_design_easybeach_sistema_de_theming_white_label_1_identidad_de_plat_readme_doc"
     },
@@ -1778,7 +1687,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "easybeach etapa 06.dc.html (prototipo primario)",
       "id": "docs_design_easybeach_sistema_de_theming_white_label_1_identidad_de_plat_readme_prototype_html"
     },
@@ -1791,7 +1700,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "etapa 02 \u2014 arquitectura general y estrategia multitenant (documento)",
       "id": "docs_especificacion_02_arquitectura_general_doc"
     },
@@ -1804,7 +1713,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "diagrama de contexto c4 nivel 1",
       "id": "docs_especificacion_02_arquitectura_general_c4_contexto"
     },
@@ -1817,7 +1726,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: platform",
       "id": "docs_especificacion_02_arquitectura_general_modulo_platform"
     },
@@ -1830,7 +1739,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: identity",
       "id": "docs_especificacion_02_arquitectura_general_modulo_identity"
     },
@@ -1843,7 +1752,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: branding",
       "id": "docs_especificacion_02_arquitectura_general_modulo_branding"
     },
@@ -1856,7 +1765,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: catalog",
       "id": "docs_especificacion_02_arquitectura_general_modulo_catalog"
     },
@@ -1869,7 +1778,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: stay",
       "id": "docs_especificacion_02_arquitectura_general_modulo_stay"
     },
@@ -1882,7 +1791,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: ordering",
       "id": "docs_especificacion_02_arquitectura_general_modulo_ordering"
     },
@@ -1895,7 +1804,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "modulo backend: payments",
       "id": "docs_especificacion_02_arquitectura_general_modulo_payments"
     },
@@ -1908,7 +1817,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: concierge",
       "id": "docs_especificacion_02_arquitectura_general_modulo_concierge"
     },
@@ -1921,7 +1830,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: promotions",
       "id": "docs_especificacion_02_arquitectura_general_modulo_promotions"
     },
@@ -1934,7 +1843,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: reporting",
       "id": "docs_especificacion_02_arquitectura_general_modulo_reporting"
     },
@@ -1947,7 +1856,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "modulo backend: shared",
       "id": "docs_especificacion_02_arquitectura_general_modulo_shared"
     },
@@ -1960,7 +1869,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 3,
       "norm_label": "eventos de dominio (contrato interno)",
       "id": "docs_especificacion_02_arquitectura_general_eventos_de_dominio"
     },
@@ -1973,7 +1882,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "decisiones transversales (versionado, errores, paginacion, moneda)",
       "id": "docs_especificacion_02_arquitectura_general_decisiones_transversales"
     },
@@ -1986,7 +1895,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "supuestos de escala ano 1",
       "id": "docs_especificacion_02_arquitectura_general_supuestos_escala"
     },
@@ -1999,7 +1908,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "riesgos principales y mitigacion",
       "id": "docs_especificacion_02_arquitectura_general_riesgos"
     },
@@ -2012,7 +1921,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "arquitectura frontend (mobile + web paneles)",
       "id": "docs_especificacion_02_arquitectura_general_arquitectura_frontend"
     },
@@ -2025,7 +1934,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "etapa 03 \u2014 modelo de datos mysql (documento)",
       "id": "docs_especificacion_03_modelo_de_datos_doc"
     },
@@ -2038,7 +1947,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "convenciones normativas del modelo de datos",
       "id": "docs_especificacion_03_modelo_de_datos_convenciones"
     },
@@ -2051,7 +1960,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "tabla balneario",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_balneario"
     },
@@ -2064,7 +1973,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "tabla configuracion_visual",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_configuracion_visual"
     },
@@ -2077,7 +1986,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla plan",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_plan"
     },
@@ -2090,7 +1999,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla temporada",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_temporada"
     },
@@ -2103,7 +2012,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla suscripcion_temporada",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_suscripcion_temporada"
     },
@@ -2116,7 +2025,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla usuario",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_usuario"
     },
@@ -2129,7 +2038,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla rol",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_rol"
     },
@@ -2142,7 +2051,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 21,
+      "community": 19,
       "norm_label": "tabla usuario_balneario_rol",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_usuario_balneario_rol"
     },
@@ -2155,7 +2064,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla ubicacion",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_ubicacion"
     },
@@ -2168,7 +2077,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla categoria_menu",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_categoria_menu"
     },
@@ -2181,7 +2090,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla producto",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_producto"
     },
@@ -2194,7 +2103,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla producto_variante",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_producto_variante"
     },
@@ -2207,7 +2116,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "tabla estadia",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_estadia"
     },
@@ -2220,7 +2129,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 15,
       "norm_label": "tabla estadia_ubicacion_historial",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_estadia_ubicacion_historial"
     },
@@ -2233,7 +2142,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "tabla pedido",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_pedido"
     },
@@ -2246,7 +2155,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla pedido_item",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_pedido_item"
     },
@@ -2259,7 +2168,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla pedido_evento",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_pedido_evento"
     },
@@ -2272,7 +2181,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "tabla balneario_mp_credencial",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_balneario_mp_credencial"
     },
@@ -2285,7 +2194,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "tabla pedido_pago",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_pedido_pago"
     },
@@ -2298,7 +2207,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "tabla mp_webhook_notificacion",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_mp_webhook_notificacion"
     },
@@ -2311,7 +2220,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla tipo_servicio",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_tipo_servicio"
     },
@@ -2324,7 +2233,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla solicitud_servicio",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_solicitud_servicio"
     },
@@ -2337,7 +2246,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "tabla promocion",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_promocion"
     },
@@ -2350,7 +2259,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 17,
       "norm_label": "tabla promocion_alcance",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_promocion_alcance"
     },
@@ -2363,7 +2272,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 20,
+      "community": 18,
       "norm_label": "tabla promocion_combo_item",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_promocion_combo_item"
     },
@@ -2376,7 +2285,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 18,
+      "community": 16,
       "norm_label": "tabla pedido_promocion",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_pedido_promocion"
     },
@@ -2389,7 +2298,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 16,
+      "community": 14,
       "norm_label": "tabla auditoria_plataforma",
       "id": "docs_especificacion_03_modelo_de_datos_tabla_auditoria_plataforma"
     },
@@ -2402,7 +2311,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "maquina de estados: pedido",
       "id": "docs_especificacion_03_modelo_de_datos_maquina_estados_pedido"
     },
@@ -2415,7 +2324,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "maquina de estados: pago",
       "id": "docs_especificacion_03_modelo_de_datos_maquina_estados_pago"
     },
@@ -2428,7 +2337,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "maquina de estados: solicitud de servicio",
       "id": "docs_especificacion_03_modelo_de_datos_maquina_estados_solicitud_servicio"
     },
@@ -2441,7 +2350,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "maquina de estados: suscripcion de temporada",
       "id": "docs_especificacion_03_modelo_de_datos_maquina_estados_suscripcion"
     },
@@ -2454,7 +2363,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "estrategia de indices",
       "id": "docs_especificacion_03_modelo_de_datos_estrategia_indices"
     },
@@ -2467,7 +2376,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "plan de migraciones flyway",
       "id": "docs_especificacion_03_modelo_de_datos_plan_migraciones_flyway"
     },
@@ -2480,7 +2389,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "etapa 04 \u2014 convenciones y contratos de api rest (documento)",
       "id": "docs_especificacion_04_contratos_api_doc"
     },
@@ -2493,7 +2402,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "convenciones generales de api (versionado, codigos, rfc 7807)",
       "id": "docs_especificacion_04_contratos_api_convenciones"
     },
@@ -2506,7 +2415,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "idempotencia (header idempotency-key)",
       "id": "docs_especificacion_04_contratos_api_idempotencia"
     },
@@ -2519,7 +2428,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "flujo critico: crear pedido",
       "id": "docs_especificacion_04_contratos_api_flujo_crear_pedido"
     },
@@ -2532,7 +2441,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "matriz endpoint \u2192 rol",
       "id": "docs_especificacion_04_contratos_api_matriz_endpoint_rol"
     },
@@ -2545,7 +2454,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "matriz pantalla \u2192 endpoints",
       "id": "docs_especificacion_04_contratos_api_matriz_pantalla_endpoints"
     },
@@ -2558,7 +2467,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "contrato de canales de tiempo real (sse)",
       "id": "docs_especificacion_04_contratos_api_tiempo_real_contrato"
     },
@@ -2571,7 +2480,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "etapa 05 \u2014 seguridad, autenticacion, roles y permisos (documento)",
       "id": "docs_especificacion_05_seguridad_roles_doc"
     },
@@ -2584,7 +2493,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 3,
       "norm_label": "autenticacion jwt access + refresh (rs256)",
       "id": "docs_especificacion_05_seguridad_roles_jwt_access_refresh"
     },
@@ -2597,7 +2506,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "matriz de roles y permisos (cerrada)",
       "id": "docs_especificacion_05_seguridad_roles_matriz_roles_permisos"
     },
@@ -2610,7 +2519,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "aislamiento multitenant como control de seguridad",
       "id": "docs_especificacion_05_seguridad_roles_aislamiento_multitenant_seguridad"
     },
@@ -2623,7 +2532,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "seguridad de pagos mercado pago (firma webhook + custodia oauth)",
       "id": "docs_especificacion_05_seguridad_roles_seguridad_pagos"
     },
@@ -2636,7 +2545,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "proteccion de datos (privacidad, argon2id, logs)",
       "id": "docs_especificacion_05_seguridad_roles_proteccion_datos"
     },
@@ -2649,7 +2558,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "endurecimiento de la api (rate limiting, cors, validacion)",
       "id": "docs_especificacion_05_seguridad_roles_endurecimiento_api"
     },
@@ -2662,7 +2571,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "amenazas y mitigaciones (stride liviano)",
       "id": "docs_especificacion_05_seguridad_roles_stride_amenazas"
     },
@@ -2675,7 +2584,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "etapa 02 (plan) \u2014 arquitectura general y estrategia multitenant",
       "id": "docs_etapas_02_arquitectura_multitenant_doc"
     },
@@ -2688,7 +2597,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 0,
       "norm_label": "etapa 03 (plan) \u2014 modelo de datos (mysql)",
       "id": "docs_etapas_03_modelo_de_datos_doc"
     },
@@ -2701,7 +2610,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "etapa 04 (plan) \u2014 convenciones y contratos de api rest",
       "id": "docs_etapas_04_contratos_api_doc"
     },
@@ -2714,7 +2623,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 0,
       "norm_label": "etapa 05 (plan) \u2014 seguridad, autenticacion, roles y permisos",
       "id": "docs_etapas_05_seguridad_roles_doc"
     },
@@ -2727,7 +2636,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "etapa 06 (plan) \u2014 identidad visual y sistema de diseno",
       "id": "docs_etapas_06_identidad_visual_design_system_doc"
     },
@@ -2740,7 +2649,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "contrato de tokens v1.0 (26 tokens)",
       "id": "docs_etapas_06_identidad_visual_design_system_contrato_tokens_v1"
     },
@@ -2753,7 +2662,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "test white-label (ninguna marca easybeach dentro de la estadia)",
       "id": "docs_etapas_06_identidad_visual_design_system_test_white_label"
     },
@@ -2766,7 +2675,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "ejemplos de theming: costa nena / marea / brava",
       "id": "docs_etapas_06_identidad_visual_design_system_theme_examples"
     },
@@ -2779,7 +2688,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "design system base neutro (estructura vs. estetica)",
       "id": "docs_etapas_06_identidad_visual_design_system_design_system_neutro"
     },
@@ -2792,126 +2701,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 2,
       "norm_label": "estrategia de accesibilidad aa/aaa-playa (derivacion oklch)",
       "id": "docs_etapas_06_identidad_visual_design_system_accesibilidad_oklch"
-    },
-    {
-      "label": "Plan de ejecuci\u00f3n EasyBeach por etapas",
-      "file_type": "document",
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "docs_etapas_00_indice_plan_ejecucion",
-      "community": 2,
-      "norm_label": "plan de ejecucion easybeach por etapas"
-    },
-    {
-      "label": "EasyBeach (SaaS multibalneario)",
-      "file_type": "concept",
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "docs_etapas_00_indice_easybeach",
-      "community": 2,
-      "norm_label": "easybeach (saas multibalneario)"
-    },
-    {
-      "label": "Objetivo rector: que los balnearios vendan m\u00e1s",
-      "file_type": "concept",
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "docs_etapas_00_indice_objetivo_rector",
-      "community": 2,
-      "norm_label": "objetivo rector: que los balnearios vendan mas"
-    },
-    {
-      "label": "Stack tecnol\u00f3gico (Spring Boot, React Native, Next.js)",
-      "file_type": "concept",
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "docs_etapas_00_indice_stack_tecnologico",
-      "community": 2,
-      "norm_label": "stack tecnologico (spring boot, react native, next.js)"
-    },
-    {
-      "label": "Theming white-label total por balneario",
-      "file_type": "concept",
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "docs_etapas_00_indice_white_label",
-      "community": 2,
-      "norm_label": "theming white-label total por balneario"
-    },
-    {
-      "label": "Pagos in-app Mercado Pago Checkout API (marketplace)",
-      "file_type": "concept",
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "docs_etapas_00_indice_mercado_pago",
-      "community": 2,
-      "norm_label": "pagos in-app mercado pago checkout api (marketplace)"
-    },
-    {
-      "label": "Modelo ejecutor por etapa (fable/opus/sonnet/haiku/claude design)",
-      "file_type": "concept",
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "docs_etapas_00_indice_modelo_ejecutor",
-      "community": 2,
-      "norm_label": "modelo ejecutor por etapa (fable/opus/sonnet/haiku/claude design)"
-    },
-    {
-      "label": "Hitos (Especificaci\u00f3n, Backend MVP, Producto MVP, Go-live)",
-      "file_type": "concept",
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "docs_etapas_00_indice_hitos",
-      "community": 2,
-      "norm_label": "hitos (especificacion, backend mvp, producto mvp, go-live)"
-    },
-    {
-      "label": "Paralelismo dise\u00f1o (06-08) y backend (09-15)",
-      "file_type": "concept",
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "docs_etapas_00_indice_paralelismo_diseno_backend",
-      "community": 2,
-      "norm_label": "paralelismo diseno (06-08) y backend (09-15)"
     },
     {
       "label": "Etapa 07 \u2014 Dise\u00f1o UX/UI app mobile (cliente)",
@@ -2922,9 +2714,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_etapa",
-      "community": 2,
-      "norm_label": "etapa 07 \u2014 diseno ux/ui app mobile (cliente)"
+      "community": 7,
+      "norm_label": "etapa 07 \u2014 diseno ux/ui app mobile (cliente)",
+      "id": "docs_etapas_07_ux_ui_mobile_etapa"
     },
     {
       "label": "Entregable Etapa 07: prototipo de 32 pantallas (s01\u2013s32)",
@@ -2935,9 +2727,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_entregable_completo",
-      "community": 2,
-      "norm_label": "entregable etapa 07: prototipo de 32 pantallas (s01\u2013s32)"
+      "community": 7,
+      "norm_label": "entregable etapa 07: prototipo de 32 pantallas (s01\u2013s32)",
+      "id": "docs_etapas_07_ux_ui_mobile_entregable_completo"
     },
     {
       "label": "App mobile cliente (React Native)",
@@ -2948,9 +2740,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_app_cliente",
-      "community": 2,
-      "norm_label": "app mobile cliente (react native)"
+      "community": 7,
+      "norm_label": "app mobile cliente (react native)",
+      "id": "docs_etapas_07_ux_ui_mobile_app_cliente"
     },
     {
       "label": "Onboarding y selecci\u00f3n de balneario",
@@ -2961,9 +2753,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_onboarding_seleccion_balneario",
-      "community": 2,
-      "norm_label": "onboarding y seleccion de balneario"
+      "community": 7,
+      "norm_label": "onboarding y seleccion de balneario",
+      "id": "docs_etapas_07_ux_ui_mobile_onboarding_seleccion_balneario"
     },
     {
       "label": "Transici\u00f3n white-label al confirmar balneario",
@@ -2974,9 +2766,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_transicion_white_label",
-      "community": 2,
-      "norm_label": "transicion white-label al confirmar balneario"
+      "community": 7,
+      "norm_label": "transicion white-label al confirmar balneario",
+      "id": "docs_etapas_07_ux_ui_mobile_transicion_white_label"
     },
     {
       "label": "Apertura de estad\u00eda validada por carpero",
@@ -2987,9 +2779,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_apertura_estadia",
-      "community": 2,
-      "norm_label": "apertura de estadia validada por carpero"
+      "community": 7,
+      "norm_label": "apertura de estadia validada por carpero",
+      "id": "docs_etapas_07_ux_ui_mobile_apertura_estadia"
     },
     {
       "label": "Home de estad\u00eda activa",
@@ -3000,9 +2792,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_home_estadia",
-      "community": 2,
-      "norm_label": "home de estadia activa"
+      "community": 7,
+      "norm_label": "home de estadia activa",
+      "id": "docs_etapas_07_ux_ui_mobile_home_estadia"
     },
     {
       "label": "Men\u00fa y producto (categor\u00edas, cards, variantes)",
@@ -3013,9 +2805,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_menu_producto",
-      "community": 2,
-      "norm_label": "menu y producto (categorias, cards, variantes)"
+      "community": 7,
+      "norm_label": "menu y producto (categorias, cards, variantes)",
+      "id": "docs_etapas_07_ux_ui_mobile_menu_producto"
     },
     {
       "label": "Carrito, pago Mercado Pago y confirmaci\u00f3n",
@@ -3026,9 +2818,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_carrito_pago_confirmacion",
-      "community": 2,
-      "norm_label": "carrito, pago mercado pago y confirmacion"
+      "community": 7,
+      "norm_label": "carrito, pago mercado pago y confirmacion",
+      "id": "docs_etapas_07_ux_ui_mobile_carrito_pago_confirmacion"
     },
     {
       "label": "Seguimiento de pedidos en tiempo real",
@@ -3039,9 +2831,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_seguimiento_pedidos",
-      "community": 2,
-      "norm_label": "seguimiento de pedidos en tiempo real"
+      "community": 7,
+      "norm_label": "seguimiento de pedidos en tiempo real",
+      "id": "docs_etapas_07_ux_ui_mobile_seguimiento_pedidos"
     },
     {
       "label": "Servicios al carpero (solicitud en 2 taps)",
@@ -3052,9 +2844,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_servicios_carpero",
-      "community": 2,
-      "norm_label": "servicios al carpero (solicitud en 2 taps)"
+      "community": 7,
+      "norm_label": "servicios al carpero (solicitud en 2 taps)",
+      "id": "docs_etapas_07_ux_ui_mobile_servicios_carpero"
     },
     {
       "label": "Promociones (secci\u00f3n propia + transversal)",
@@ -3065,9 +2857,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_promociones",
-      "community": 2,
-      "norm_label": "promociones (seccion propia + transversal)"
+      "community": 7,
+      "norm_label": "promociones (seccion propia + transversal)",
+      "id": "docs_etapas_07_ux_ui_mobile_promociones"
     },
     {
       "label": "Cierre de estad\u00eda (resumen de consumo)",
@@ -3078,9 +2870,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_cierre_estadia",
-      "community": 2,
-      "norm_label": "cierre de estadia (resumen de consumo)"
+      "community": 7,
+      "norm_label": "cierre de estadia (resumen de consumo)",
+      "id": "docs_etapas_07_ux_ui_mobile_cierre_estadia"
     },
     {
       "label": "Estados no felices (sin conexi\u00f3n, cerrado, no disponible)",
@@ -3091,9 +2883,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_estados_no_felices",
-      "community": 2,
-      "norm_label": "estados no felices (sin conexion, cerrado, no disponible)"
+      "community": 7,
+      "norm_label": "estados no felices (sin conexion, cerrado, no disponible)",
+      "id": "docs_etapas_07_ux_ui_mobile_estados_no_felices"
     },
     {
       "label": "Tab bar de navegaci\u00f3n / mapa de navegaci\u00f3n",
@@ -3104,9 +2896,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_tab_bar_navegacion",
-      "community": 2,
-      "norm_label": "tab bar de navegacion / mapa de navegacion"
+      "community": 7,
+      "norm_label": "tab bar de navegacion / mapa de navegacion",
+      "id": "docs_etapas_07_ux_ui_mobile_tab_bar_navegacion"
     },
     {
       "label": "Flujo home\u2192pedido confirmado en \u22644 taps",
@@ -3117,9 +2909,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_flujo_4_taps",
-      "community": 2,
-      "norm_label": "flujo home\u2192pedido confirmado en \u22644 taps"
+      "community": 7,
+      "norm_label": "flujo home\u2192pedido confirmado en \u22644 taps",
+      "id": "docs_etapas_07_ux_ui_mobile_flujo_4_taps"
     },
     {
       "label": "Test white-label (sin marca EasyBeach post-selecci\u00f3n)",
@@ -3130,9 +2922,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_test_white_label",
-      "community": 2,
-      "norm_label": "test white-label (sin marca easybeach post-seleccion)"
+      "community": 7,
+      "norm_label": "test white-label (sin marca easybeach post-seleccion)",
+      "id": "docs_etapas_07_ux_ui_mobile_test_white_label"
     },
     {
       "label": "Uso de tokens del design system (etapa 06)",
@@ -3143,9 +2935,652 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "docs_etapas_07_ux_ui_mobile_design_system_tokens",
-      "community": 2,
-      "norm_label": "uso de tokens del design system (etapa 06)"
+      "community": 7,
+      "norm_label": "uso de tokens del design system (etapa 06)",
+      "id": "docs_etapas_07_ux_ui_mobile_design_system_tokens"
+    },
+    {
+      "label": "Plan de ejecuci\u00f3n EasyBeach \u2014 \u00cdndice de etapas",
+      "file_type": "document",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice",
+      "community": 4,
+      "norm_label": "plan de ejecucion easybeach \u2014 indice de etapas"
+    },
+    {
+      "label": "Objetivo rector: que los balnearios vendan m\u00e1s",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Toda decisi\u00f3n de producto y arquitectura se eval\u00faa contra este objetivo: facilitar el consumo del cliente durante su estad\u00eda (pedir sin moverse, promociones, combos, recompra) y aumentar la facturaci\u00f3n operativa en temporada.",
+      "id": "docs_etapas_00_indice_objetivo_rector",
+      "community": 7,
+      "norm_label": "objetivo rector: que los balnearios vendan mas"
+    },
+    {
+      "label": "Stack Backend: Java Spring Boot + MySQL",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_stack_backend",
+      "community": 4,
+      "norm_label": "stack backend: java spring boot + mysql"
+    },
+    {
+      "label": "Stack Mobile: React Native (Android / iOS)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_stack_mobile",
+      "community": 4,
+      "norm_label": "stack mobile: react native (android / ios)"
+    },
+    {
+      "label": "Stack Web (paneles): React / Next.js",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_stack_web",
+      "community": 4,
+      "norm_label": "stack web (paneles): react / next.js"
+    },
+    {
+      "label": "Theming white-label total",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Al seleccionar un balneario, toda la est\u00e9tica de la app cliente se transforma como si fuera del balneario; la marca EasyBeach solo aparece antes de la selecci\u00f3n y en los paneles de staff.",
+      "id": "docs_etapas_00_indice_theming_white_label",
+      "community": 6,
+      "norm_label": "theming white-label total"
+    },
+    {
+      "label": "Pagos in-app v\u00eda Mercado Pago Checkout API (marketplace sin comisi\u00f3n)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Modelo marketplace sin comisi\u00f3n de plataforma: cada balneario cobra en su propia cuenta.",
+      "id": "docs_etapas_00_indice_mercado_pago_checkout_api",
+      "community": 6,
+      "norm_label": "pagos in-app via mercado pago checkout api (marketplace sin comision)"
+    },
+    {
+      "label": "Referencia: docs/especificacion/01-vision-alcance-glosario.md",
+      "file_type": "document",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_especificacion_vision_alcance_glosario",
+      "community": 6,
+      "norm_label": "referencia: docs/especificacion/01-vision-alcance-glosario.md"
+    },
+    {
+      "label": "Etapa 01 \u2014 Visi\u00f3n, alcance MVP y glosario de dominio",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_01_vision_alcance_glosario",
+      "community": 4,
+      "norm_label": "etapa 01 \u2014 vision, alcance mvp y glosario de dominio"
+    },
+    {
+      "label": "Etapa 02 \u2014 Arquitectura general y estrategia multitenant",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_02_arquitectura_multitenant",
+      "community": 4,
+      "norm_label": "etapa 02 \u2014 arquitectura general y estrategia multitenant"
+    },
+    {
+      "label": "Etapa 03 \u2014 Modelo de datos (MySQL)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_03_modelo_de_datos",
+      "community": 4,
+      "norm_label": "etapa 03 \u2014 modelo de datos (mysql)"
+    },
+    {
+      "label": "Etapa 04 \u2014 Convenciones y contratos de API REST",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_04_contratos_api",
+      "community": 4,
+      "norm_label": "etapa 04 \u2014 convenciones y contratos de api rest"
+    },
+    {
+      "label": "Etapa 05 \u2014 Seguridad, autenticaci\u00f3n, roles y permisos",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_05_seguridad_roles",
+      "community": 4,
+      "norm_label": "etapa 05 \u2014 seguridad, autenticacion, roles y permisos"
+    },
+    {
+      "label": "Etapa 06 \u2014 Identidad visual y sistema de dise\u00f1o",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_06_identidad_visual_design_system",
+      "community": 4,
+      "norm_label": "etapa 06 \u2014 identidad visual y sistema de diseno"
+    },
+    {
+      "label": "Etapa 07 \u2014 Dise\u00f1o UX/UI app mobile (cliente)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_07_ux_ui_mobile",
+      "community": 4,
+      "norm_label": "etapa 07 \u2014 diseno ux/ui app mobile (cliente)"
+    },
+    {
+      "label": "Etapa 08 \u2014 Dise\u00f1o UX/UI web (paneles)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Las etapas de dise\u00f1o (06\u201308) pueden correr en paralelo con las de backend (09\u201315): el backend no depende del dise\u00f1o visual.",
+      "id": "docs_etapas_00_indice_etapa_08_ux_ui_web_paneles",
+      "community": 4,
+      "norm_label": "etapa 08 \u2014 diseno ux/ui web (paneles)"
+    },
+    {
+      "label": "Etapa 09 \u2014 Backend fundacional",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_09_backend_fundacional",
+      "community": 4,
+      "norm_label": "etapa 09 \u2014 backend fundacional"
+    },
+    {
+      "label": "Etapa 10 \u2014 Backend Super Admin: balnearios, planes y temporadas",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_10_backend_super_admin",
+      "community": 4,
+      "norm_label": "etapa 10 \u2014 backend super admin: balnearios, planes y temporadas"
+    },
+    {
+      "label": "Etapa 11 \u2014 Backend cat\u00e1logo y ubicaciones",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_11_backend_catalogo_ubicaciones",
+      "community": 4,
+      "norm_label": "etapa 11 \u2014 backend catalogo y ubicaciones"
+    },
+    {
+      "label": "Etapa 12 \u2014 Backend estad\u00eda activa",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_12_backend_estadia_activa",
+      "community": 4,
+      "norm_label": "etapa 12 \u2014 backend estadia activa"
+    },
+    {
+      "label": "Etapa 13 \u2014 Backend carrito, pedidos, estados y tiempo real",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_13_backend_pedidos",
+      "community": 4,
+      "norm_label": "etapa 13 \u2014 backend carrito, pedidos, estados y tiempo real"
+    },
+    {
+      "label": "Etapa 14 \u2014 Backend servicios al carpero y promociones",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_14_backend_carpero_promociones",
+      "community": 4,
+      "norm_label": "etapa 14 \u2014 backend servicios al carpero y promociones"
+    },
+    {
+      "label": "Etapa 15 \u2014 Backend reportes b\u00e1sicos",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_15_backend_reportes",
+      "community": 4,
+      "norm_label": "etapa 15 \u2014 backend reportes basicos"
+    },
+    {
+      "label": "Etapa 16 \u2014 Mobile app cliente",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_16_mobile_app_cliente",
+      "community": 4,
+      "norm_label": "etapa 16 \u2014 mobile app cliente"
+    },
+    {
+      "label": "Etapa 17 \u2014 Web: panel operativo y panel admin de balneario",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin",
+      "community": 4,
+      "norm_label": "etapa 17 \u2014 web: panel operativo y panel admin de balneario"
+    },
+    {
+      "label": "Etapa 18 \u2014 Web: panel Super Admin",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_18_web_panel_super_admin",
+      "community": 4,
+      "norm_label": "etapa 18 \u2014 web: panel super admin"
+    },
+    {
+      "label": "Etapa 19 \u2014 QA integral, seeds y datos demo",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "community": 4,
+      "norm_label": "etapa 19 \u2014 qa integral, seeds y datos demo"
+    },
+    {
+      "label": "Etapa 20 \u2014 Infraestructura, deploy y observabilidad",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_00_indice_etapa_20_infra_deploy",
+      "community": 4,
+      "norm_label": "etapa 20 \u2014 infraestructura, deploy y observabilidad"
+    },
+    {
+      "label": "Hito Especificaci\u00f3n (fin etapa 05)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Arquitectura, datos, API y seguridad definidos. Se puede empezar a construir.",
+      "id": "docs_etapas_00_indice_hito_especificacion",
+      "community": 4,
+      "norm_label": "hito especificacion (fin etapa 05)"
+    },
+    {
+      "label": "Hito Backend MVP (fin etapa 15)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "API completa operable por Postman/tests.",
+      "id": "docs_etapas_00_indice_hito_backend_mvp",
+      "community": 4,
+      "norm_label": "hito backend mvp (fin etapa 15)"
+    },
+    {
+      "label": "Hito Producto MVP (fin etapa 18)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "El cliente pide desde la app, el balneario opera desde el panel.",
+      "id": "docs_etapas_00_indice_hito_producto_mvp",
+      "community": 4,
+      "norm_label": "hito producto mvp (fin etapa 18)"
+    },
+    {
+      "label": "Hito Go-live (fin etapa 20)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Desplegado, monitoreado, con datos demo para vender la plataforma a balnearios.",
+      "id": "docs_etapas_00_indice_hito_go_live",
+      "community": 4,
+      "norm_label": "hito go-live (fin etapa 20)"
+    },
+    {
+      "label": "Etapa 08 \u2014 Dise\u00f1o UX/UI web (paneles)",
+      "file_type": "document",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_08_ux_ui_web_paneles",
+      "community": 6,
+      "norm_label": "etapa 08 \u2014 diseno ux/ui web (paneles)"
+    },
+    {
+      "label": "Entregable: docs/design/easybeach-panel-operativo/",
+      "file_type": "document",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_08_ux_ui_web_paneles_deliverable",
+      "community": 6,
+      "norm_label": "entregable: docs/design/easybeach-panel-operativo/"
+    },
+    {
+      "label": "Panel operativo (barra/cocina/carpero)",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Herramienta de trabajo bajo presi\u00f3n en temporada: la m\u00e9trica es velocidad de despacho, no belleza; dise\u00f1o responsive con tablet como dispositivo primario. Criterio de aceptaci\u00f3n: pasar un pedido al siguiente estado toma 1 interacci\u00f3n y es legible a 2 metros en una tablet.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_panel_operativo",
+      "community": 6,
+      "norm_label": "panel operativo (barra/cocina/carpero)"
+    },
+    {
+      "label": "Cola de pedidos entrantes en vivo",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Ubicaci\u00f3n de entrega bien visible, antig\u00fcedad del pedido y alerta de demora.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_cola_pedidos_en_vivo",
+      "community": 6,
+      "norm_label": "cola de pedidos entrantes en vivo"
+    },
+    {
+      "label": "Transici\u00f3n de estados en 1 click/tap",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Pensado para tablet con manos mojadas y apuro.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_transicion_estado_1_tap",
+      "community": 6,
+      "norm_label": "transicion de estados en 1 click/tap"
+    },
+    {
+      "label": "Cola de solicitudes de servicio al carpero",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_08_ux_ui_web_paneles_cola_solicitudes_servicio_carpero",
+      "community": 6,
+      "norm_label": "cola de solicitudes de servicio al carpero"
+    },
+    {
+      "label": "Bandeja de validaci\u00f3n de estad\u00edas",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Decisi\u00f3n de etapa 01: solicitudes de apertura pendientes con cliente y ubicaci\u00f3n; confirmar/rechazar en un tap.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_bandeja_validacion_estadias",
+      "community": 6,
+      "norm_label": "bandeja de validacion de estadias"
+    },
+    {
+      "label": "Sonido/notificaci\u00f3n al entrar un pedido nuevo",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_08_ux_ui_web_paneles_notificacion_pedido_nuevo",
+      "community": 6,
+      "norm_label": "sonido/notificacion al entrar un pedido nuevo"
+    },
+    {
+      "label": "Panel admin de balneario",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Los paneles de administraci\u00f3n priorizan claridad y autonom\u00eda del balneario. Todo lo configurable por balneario en el modelo de datos tiene su pantalla de administraci\u00f3n.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario",
+      "community": 6,
+      "norm_label": "panel admin de balneario"
+    },
+    {
+      "label": "Dashboard: facturaci\u00f3n, pedidos, ticket promedio, productos m\u00e1s vendidos",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Conecta directo con el objetivo 'vender m\u00e1s'.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_dashboard_facturacion",
+      "community": 7,
+      "norm_label": "dashboard: facturacion, pedidos, ticket promedio, productos mas vendidos"
+    },
+    {
+      "label": "ABM de men\u00fa (categor\u00edas, variantes, fotos, disponibilidad), ubicaciones, promociones, staff",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Productos con variantes, fotos, disponibilidad on/off r\u00e1pida; promociones con creaci\u00f3n guiada por tipo.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_abm_menu",
+      "community": 6,
+      "norm_label": "abm de menu (categorias, variantes, fotos, disponibilidad), ubicaciones, promociones, staff"
+    },
+    {
+      "label": "Configuraci\u00f3n visual white-label con preview en vivo",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Paleta, logo, tipograf\u00eda del set curado, portada, splash; preview en vivo de c\u00f3mo la ve el cliente.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_configuracion_visual_white_label",
+      "community": 6,
+      "norm_label": "configuracion visual white-label con preview en vivo"
+    },
+    {
+      "label": "Estado de vinculaci\u00f3n OAuth con Mercado Pago",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Conectar cuenta, ver estado, re-vincular; advertencia visible si no est\u00e1 conectada porque sin ella el balneario no cobra.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_vinculacion_mercado_pago",
+      "community": 6,
+      "norm_label": "estado de vinculacion oauth con mercado pago"
+    },
+    {
+      "label": "Reportes b\u00e1sicos con filtro por fecha y export",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_etapas_08_ux_ui_web_paneles_reportes_basicos",
+      "community": 6,
+      "norm_label": "reportes basicos con filtro por fecha y export"
+    },
+    {
+      "label": "Panel Super Admin",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "ABM de balnearios, planes y temporadas; activar/suspender balneario; estado de la suscripci\u00f3n por temporada. Utilitario, sin theming por tenant.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_panel_super_admin",
+      "community": 6,
+      "norm_label": "panel super admin"
+    },
+    {
+      "label": "Onboarding balneario nuevo \u2192 primer men\u00fa publicado",
+      "file_type": "concept",
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Estados vac\u00edos: balneario reci\u00e9n creado, qu\u00e9 ve el admin y qu\u00e9 le sugiere hacer primero. Criterio de aceptaci\u00f3n: el flujo est\u00e1 dise\u00f1ado de punta a punta.",
+      "id": "docs_etapas_08_ux_ui_web_paneles_onboarding_balneario_nuevo",
+      "community": 6,
+      "norm_label": "onboarding balneario nuevo \u2192 primer menu publicado"
     }
   ],
   "links": [
@@ -3290,16 +3725,6 @@
       "target": "docs_especificacion_01_vision_alcance_glosario_mercado_pago_marketplace"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_08_ux_ui_web_paneles_estado_vinculacion_mp",
-      "target": "docs_especificacion_01_vision_alcance_glosario_oauth_vinculacion_mp"
-    },
-    {
       "relation": "implements",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -3337,16 +3762,6 @@
       "source_location": null,
       "weight": 1.0,
       "source": "docs_etapas_01_vision_alcance_glosario_etapa",
-      "target": "docs_especificacion_01_vision_alcance_glosario_validacion_estadia_carpero"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_08_ux_ui_web_paneles_bandeja_validacion_estadias",
       "target": "docs_especificacion_01_vision_alcance_glosario_validacion_estadia_carpero"
     },
     {
@@ -3528,76 +3943,6 @@
       "weight": 1.0,
       "source": "docs_especificacion_01_vision_alcance_glosario_temporada_plan",
       "target": "docs_especificacion_01_vision_alcance_glosario_super_admin_actor"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_08_ux_ui_web_paneles_etapa",
-      "target": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_08_ux_ui_web_paneles_etapa",
-      "target": "docs_etapas_08_ux_ui_web_paneles_panel_operativo"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_08_ux_ui_web_paneles_etapa",
-      "target": "docs_etapas_08_ux_ui_web_paneles_panel_super_admin"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/17-web-panel-operativo-admin.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_17_web_panel_operativo_admin_etapa",
-      "target": "docs_etapas_08_ux_ui_web_paneles_etapa"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_08_ux_ui_web_paneles_panel_operativo",
-      "target": "docs_etapas_08_ux_ui_web_paneles_bandeja_validacion_estadias"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario",
-      "target": "docs_etapas_08_ux_ui_web_paneles_configuracion_visual_preview"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario",
-      "target": "docs_etapas_08_ux_ui_web_paneles_estado_vinculacion_mp"
     },
     {
       "relation": "references",
@@ -5823,126 +6168,6 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_00_indice_plan_ejecucion",
-      "target": "docs_etapas_00_indice_easybeach"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_00_indice_plan_ejecucion",
-      "target": "docs_etapas_00_indice_hitos"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_00_indice_plan_ejecucion",
-      "target": "docs_etapas_00_indice_modelo_ejecutor"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_00_indice_plan_ejecucion",
-      "target": "docs_etapas_00_indice_paralelismo_diseno_backend"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_00_indice_plan_ejecucion",
-      "target": "docs_etapas_07_ux_ui_mobile_etapa"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_00_indice_easybeach",
-      "target": "docs_etapas_00_indice_mercado_pago"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_00_indice_easybeach",
-      "target": "docs_etapas_00_indice_objetivo_rector"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_00_indice_easybeach",
-      "target": "docs_etapas_00_indice_stack_tecnologico"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/etapas/00-indice.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_00_indice_easybeach",
-      "target": "docs_etapas_00_indice_white_label"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "docs/etapas/07-ux-ui-mobile.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_07_ux_ui_mobile_flujo_4_taps",
-      "target": "docs_etapas_00_indice_objetivo_rector"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "docs/etapas/07-ux-ui-mobile.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_07_ux_ui_mobile_test_white_label",
-      "target": "docs_etapas_00_indice_white_label"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "docs/etapas/07-ux-ui-mobile.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_etapas_07_ux_ui_mobile_carrito_pago_confirmacion",
-      "target": "docs_etapas_00_indice_mercado_pago"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "docs/etapas/07-ux-ui-mobile.md",
       "source_location": null,
       "weight": 1.0,
@@ -6108,6 +6333,1256 @@
       "weight": 1.0,
       "source": "docs_etapas_07_ux_ui_mobile_onboarding_seleccion_balneario",
       "target": "docs_etapas_07_ux_ui_mobile_transicion_white_label"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "docs/etapas/07-ux-ui-mobile.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_07_ux_ui_mobile_flujo_4_taps",
+      "target": "docs_etapas_00_indice_objetivo_rector"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_01_vision_alcance_glosario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_02_arquitectura_multitenant"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_03_modelo_de_datos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_04_contratos_api"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_05_seguridad_roles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_06_identidad_visual_design_system"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_07_ux_ui_mobile"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_08_ux_ui_web_paneles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_09_backend_fundacional"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_10_backend_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_11_backend_catalogo_ubicaciones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_12_backend_estadia_activa"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_13_backend_pedidos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_14_backend_carpero_promociones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_15_backend_reportes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_16_mobile_app_cliente"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_18_web_panel_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_19_qa_seeds_demo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_etapa_20_infra_deploy"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_hito_backend_mvp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_hito_especificacion"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_hito_go_live"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_hito_producto_mvp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_mercado_pago_checkout_api"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_objetivo_rector"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_stack_backend"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_stack_mobile"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_stack_web"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice",
+      "target": "docs_etapas_00_indice_theming_white_label"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_dashboard_facturacion",
+      "target": "docs_etapas_00_indice_objetivo_rector"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_theming_white_label",
+      "target": "docs_etapas_00_indice_especificacion_vision_alcance_glosario"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 0.85,
+      "source": "docs_etapas_08_ux_ui_web_paneles_configuracion_visual_white_label",
+      "target": "docs_etapas_00_indice_theming_white_label"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_mercado_pago_checkout_api",
+      "target": "docs_etapas_00_indice_especificacion_vision_alcance_glosario"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 0.85,
+      "source": "docs_etapas_08_ux_ui_web_paneles_vinculacion_mercado_pago",
+      "target": "docs_etapas_00_indice_mercado_pago_checkout_api"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_02_arquitectura_multitenant",
+      "target": "docs_etapas_00_indice_etapa_01_vision_alcance_glosario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_03_modelo_de_datos",
+      "target": "docs_etapas_00_indice_etapa_01_vision_alcance_glosario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_06_identidad_visual_design_system",
+      "target": "docs_etapas_00_indice_etapa_01_vision_alcance_glosario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_07_ux_ui_mobile",
+      "target": "docs_etapas_00_indice_etapa_01_vision_alcance_glosario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_08_ux_ui_web_paneles",
+      "target": "docs_etapas_00_indice_etapa_01_vision_alcance_glosario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles",
+      "target": "docs_etapas_00_indice_etapa_01_vision_alcance_glosario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_03_modelo_de_datos",
+      "target": "docs_etapas_00_indice_etapa_02_arquitectura_multitenant"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_04_contratos_api",
+      "target": "docs_etapas_00_indice_etapa_02_arquitectura_multitenant"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_05_seguridad_roles",
+      "target": "docs_etapas_00_indice_etapa_02_arquitectura_multitenant"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_09_backend_fundacional",
+      "target": "docs_etapas_00_indice_etapa_02_arquitectura_multitenant"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_04_contratos_api",
+      "target": "docs_etapas_00_indice_etapa_03_modelo_de_datos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_05_seguridad_roles",
+      "target": "docs_etapas_00_indice_etapa_03_modelo_de_datos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_09_backend_fundacional",
+      "target": "docs_etapas_00_indice_etapa_03_modelo_de_datos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles",
+      "target": "docs_etapas_00_indice_etapa_03_modelo_de_datos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_09_backend_fundacional",
+      "target": "docs_etapas_00_indice_etapa_04_contratos_api"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_09_backend_fundacional",
+      "target": "docs_etapas_00_indice_etapa_05_seguridad_roles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_hito_especificacion",
+      "target": "docs_etapas_00_indice_etapa_05_seguridad_roles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_07_ux_ui_mobile",
+      "target": "docs_etapas_00_indice_etapa_06_identidad_visual_design_system"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_08_ux_ui_web_paneles",
+      "target": "docs_etapas_00_indice_etapa_06_identidad_visual_design_system"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles",
+      "target": "docs_etapas_00_indice_etapa_06_identidad_visual_design_system"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_16_mobile_app_cliente",
+      "target": "docs_etapas_00_indice_etapa_07_ux_ui_mobile"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_08_ux_ui_web_paneles",
+      "target": "docs_etapas_00_indice_etapa_09_backend_fundacional"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_08_ux_ui_web_paneles",
+      "target": "docs_etapas_08_ux_ui_web_paneles"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 0.95,
+      "source": "docs_etapas_00_indice_etapa_08_ux_ui_web_paneles",
+      "target": "docs_etapas_08_ux_ui_web_paneles_deliverable"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin",
+      "target": "docs_etapas_00_indice_etapa_08_ux_ui_web_paneles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_18_web_panel_super_admin",
+      "target": "docs_etapas_00_indice_etapa_08_ux_ui_web_paneles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_10_backend_super_admin",
+      "target": "docs_etapas_00_indice_etapa_09_backend_fundacional"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_11_backend_catalogo_ubicaciones",
+      "target": "docs_etapas_00_indice_etapa_09_backend_fundacional"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_12_backend_estadia_activa",
+      "target": "docs_etapas_00_indice_etapa_09_backend_fundacional"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_16_mobile_app_cliente",
+      "target": "docs_etapas_00_indice_etapa_09_backend_fundacional"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_09_backend_fundacional"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_20_infra_deploy",
+      "target": "docs_etapas_00_indice_etapa_09_backend_fundacional"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_11_backend_catalogo_ubicaciones",
+      "target": "docs_etapas_00_indice_etapa_10_backend_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_12_backend_estadia_activa",
+      "target": "docs_etapas_00_indice_etapa_10_backend_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_16_mobile_app_cliente",
+      "target": "docs_etapas_00_indice_etapa_10_backend_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin",
+      "target": "docs_etapas_00_indice_etapa_10_backend_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_18_web_panel_super_admin",
+      "target": "docs_etapas_00_indice_etapa_10_backend_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_10_backend_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_12_backend_estadia_activa",
+      "target": "docs_etapas_00_indice_etapa_11_backend_catalogo_ubicaciones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_13_backend_pedidos",
+      "target": "docs_etapas_00_indice_etapa_11_backend_catalogo_ubicaciones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_16_mobile_app_cliente",
+      "target": "docs_etapas_00_indice_etapa_11_backend_catalogo_ubicaciones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin",
+      "target": "docs_etapas_00_indice_etapa_11_backend_catalogo_ubicaciones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_11_backend_catalogo_ubicaciones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_13_backend_pedidos",
+      "target": "docs_etapas_00_indice_etapa_12_backend_estadia_activa"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_14_backend_carpero_promociones",
+      "target": "docs_etapas_00_indice_etapa_12_backend_estadia_activa"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_16_mobile_app_cliente",
+      "target": "docs_etapas_00_indice_etapa_12_backend_estadia_activa"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin",
+      "target": "docs_etapas_00_indice_etapa_12_backend_estadia_activa"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_12_backend_estadia_activa"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_14_backend_carpero_promociones",
+      "target": "docs_etapas_00_indice_etapa_13_backend_pedidos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_15_backend_reportes",
+      "target": "docs_etapas_00_indice_etapa_13_backend_pedidos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_16_mobile_app_cliente",
+      "target": "docs_etapas_00_indice_etapa_13_backend_pedidos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin",
+      "target": "docs_etapas_00_indice_etapa_13_backend_pedidos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_13_backend_pedidos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_15_backend_reportes",
+      "target": "docs_etapas_00_indice_etapa_14_backend_carpero_promociones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_16_mobile_app_cliente",
+      "target": "docs_etapas_00_indice_etapa_14_backend_carpero_promociones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin",
+      "target": "docs_etapas_00_indice_etapa_14_backend_carpero_promociones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_14_backend_carpero_promociones"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin",
+      "target": "docs_etapas_00_indice_etapa_15_backend_reportes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_15_backend_reportes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_hito_backend_mvp",
+      "target": "docs_etapas_00_indice_etapa_15_backend_reportes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles",
+      "target": "docs_etapas_00_indice_etapa_15_backend_reportes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_16_mobile_app_cliente"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_17_web_panel_operativo_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_19_qa_seeds_demo",
+      "target": "docs_etapas_00_indice_etapa_18_web_panel_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_hito_producto_mvp",
+      "target": "docs_etapas_00_indice_etapa_18_web_panel_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_etapa_20_infra_deploy",
+      "target": "docs_etapas_00_indice_etapa_19_qa_seeds_demo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/00-indice.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_00_indice_hito_go_live",
+      "target": "docs_etapas_00_indice_etapa_20_infra_deploy"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles",
+      "target": "docs_etapas_08_ux_ui_web_paneles_deliverable"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles",
+      "target": "docs_etapas_08_ux_ui_web_paneles_onboarding_balneario_nuevo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles",
+      "target": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles",
+      "target": "docs_etapas_08_ux_ui_web_paneles_panel_operativo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles",
+      "target": "docs_etapas_08_ux_ui_web_paneles_panel_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_deliverable",
+      "target": "docs_etapas_08_ux_ui_web_paneles_bandeja_validacion_estadias"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_deliverable",
+      "target": "docs_etapas_08_ux_ui_web_paneles_configuracion_visual_white_label"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_deliverable",
+      "target": "docs_etapas_08_ux_ui_web_paneles_onboarding_balneario_nuevo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_deliverable",
+      "target": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_deliverable",
+      "target": "docs_etapas_08_ux_ui_web_paneles_panel_operativo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_deliverable",
+      "target": "docs_etapas_08_ux_ui_web_paneles_panel_super_admin"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_deliverable",
+      "target": "docs_etapas_08_ux_ui_web_paneles_vinculacion_mercado_pago"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_operativo",
+      "target": "docs_etapas_08_ux_ui_web_paneles_bandeja_validacion_estadias"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_operativo",
+      "target": "docs_etapas_08_ux_ui_web_paneles_cola_pedidos_en_vivo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_operativo",
+      "target": "docs_etapas_08_ux_ui_web_paneles_cola_solicitudes_servicio_carpero"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_operativo",
+      "target": "docs_etapas_08_ux_ui_web_paneles_notificacion_pedido_nuevo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_operativo",
+      "target": "docs_etapas_08_ux_ui_web_paneles_transicion_estado_1_tap"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario",
+      "target": "docs_etapas_08_ux_ui_web_paneles_abm_menu"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario",
+      "target": "docs_etapas_08_ux_ui_web_paneles_configuracion_visual_white_label"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario",
+      "target": "docs_etapas_08_ux_ui_web_paneles_dashboard_facturacion"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario",
+      "target": "docs_etapas_08_ux_ui_web_paneles_reportes_basicos"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/etapas/08-ux-ui-web-paneles.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_etapas_08_ux_ui_web_paneles_panel_admin_balneario",
+      "target": "docs_etapas_08_ux_ui_web_paneles_vinculacion_mercado_pago"
     }
   ],
   "hyperedges": [
@@ -6184,5 +7659,5 @@
       "source_file": "docs/etapas/12-backend-estadia-activa.md"
     }
   ],
-  "built_at_commit": "8576e8ae5734719a98d1bc9570bba16106848029"
+  "built_at_commit": "29ac61091d2470a9a5276b7c9462ff8b84e760e4"
 }
