@@ -5,16 +5,6 @@
 - **Tipo:** diseño
 - **Depende de:** 01
 - **Puede correr en paralelo con:** 02–05 y 09–15 (el backend no la necesita)
-- **Estado: ✅ EJECUTADA** — entregables:
-  [`docs/design/tokens.md`](../design/tokens.md) (**contrato de tokens v1.0**,
-  26 tokens cerrados: el artefacto que consumen las etapas 10/16/17) y el
-  prototipo completo en
-  [`docs/design/easybeach-sistema-de-theming-white-label-1-identidad-de-plat/`](../design/easybeach-sistema-de-theming-white-label-1-identidad-de-plat/)
-  (identidad de plataforma derivada del logo, design system neutro, estrategia
-  de accesibilidad AA/AAA-playa con derivación OKLCH de pares `on-*`, set
-  curado de 4 tipografías OFL, transición de marca, y mockups de "home de
-  estadía" + "menú" validados con 3 themes opuestos: Costa Nena / MAREA /
-  Brava). Los 4 criterios de aceptación verificados en el propio entregable.
 
 ## Objetivo
 

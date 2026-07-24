@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1783444650.0155733,
-    "ast_hash": "c2bec3856702584d13a86bea017dbf87",
-    "semantic_hash": "c2bec3856702584d13a86bea017dbf87"
+    "mtime": 1784321572.7239594,
+    "ast_hash": "fbc5834f6e626b0e49cea859555de23d",
+    "semantic_hash": "fbc5834f6e626b0e49cea859555de23d"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -10,29 +10,29 @@
     "semantic_hash": "d7eb11aea730c3d0ef6ef98301afc475"
   },
   "docs/etapas/02-arquitectura-multitenant.md": {
-    "mtime": 1783444401.337723,
-    "ast_hash": "a27dcbe15470935e81a0a125c991cc68",
-    "semantic_hash": "a27dcbe15470935e81a0a125c991cc68"
+    "mtime": 1783445618.35124,
+    "ast_hash": "b521ba3d0fb0cda7f2c63e98e1d530ef",
+    "semantic_hash": "b521ba3d0fb0cda7f2c63e98e1d530ef"
   },
   "docs/etapas/03-modelo-de-datos.md": {
-    "mtime": 1783444440.1171837,
-    "ast_hash": "669b9e9123468616eefb341a73a8a1b0",
-    "semantic_hash": "669b9e9123468616eefb341a73a8a1b0"
+    "mtime": 1784249574.0560856,
+    "ast_hash": "dc0fc33ca7ebd6664b1adf8b81448236",
+    "semantic_hash": "dc0fc33ca7ebd6664b1adf8b81448236"
   },
   "docs/etapas/04-contratos-api.md": {
-    "mtime": 1783444460.0390341,
-    "ast_hash": "ac9ee7d35707cd2242a13ce680117da4",
-    "semantic_hash": "ac9ee7d35707cd2242a13ce680117da4"
+    "mtime": 1784249997.3587782,
+    "ast_hash": "279c7a2a2c2d5f760b2b16c119becf31",
+    "semantic_hash": "279c7a2a2c2d5f760b2b16c119becf31"
   },
   "docs/etapas/05-seguridad-roles.md": {
-    "mtime": 1783444481.7846668,
-    "ast_hash": "ffeb24aa9dd3a7db5868f0ae91ca82b2",
-    "semantic_hash": "ffeb24aa9dd3a7db5868f0ae91ca82b2"
+    "mtime": 1784250361.57185,
+    "ast_hash": "2e8328eeca5fd7658ce3e1f7f6166137",
+    "semantic_hash": "2e8328eeca5fd7658ce3e1f7f6166137"
   },
   "docs/etapas/06-identidad-visual-design-system.md": {
-    "mtime": 1783444307.790131,
-    "ast_hash": "f5e0a3440bd59ce17502a1a351d79953",
-    "semantic_hash": "f5e0a3440bd59ce17502a1a351d79953"
+    "mtime": 1784321570.874002,
+    "ast_hash": "552be49e4a752d1a8dab3d2f77fa1a74",
+    "semantic_hash": "552be49e4a752d1a8dab3d2f77fa1a74"
   },
   "docs/etapas/07-ux-ui-mobile.md": {
     "mtime": 1783444630.8602993,
@@ -110,13 +110,98 @@
     "semantic_hash": "b5285ecc2d5da5c552167a9ec9288ccb"
   },
   "CLAUDE.md": {
-    "mtime": 1783414517.242754,
-    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
-    "semantic_hash": "8a6643a420fdad6bfb583523bc6cef16"
+    "mtime": 1784861035.4753416,
+    "ast_hash": "8b4813f4234b59acc2c9349db7ad87b1",
+    "semantic_hash": "8b4813f4234b59acc2c9349db7ad87b1"
   },
   "docs/especificacion/01-vision-alcance-glosario.md": {
     "mtime": 1783444267.684366,
     "ast_hash": "7ba20fd26dfdd91bf0feea986f6ec25a",
     "semantic_hash": "7ba20fd26dfdd91bf0feea986f6ec25a"
+  },
+  "docs/design/easybeach-sistema-de-theming-white-label-1-identidad-de-plat/project/support.js": {
+    "mtime": 1784321369.3191285,
+    "ast_hash": "450f2a9297cd55032eb905780de3016b",
+    "semantic_hash": "450f2a9297cd55032eb905780de3016b"
+  },
+  "docs/adr/ADR-001-multitenancy-base-compartida.md": {
+    "mtime": 1783445336.1367824,
+    "ast_hash": "0a55b374c0a6ed8d5c79349a04cbf67b",
+    "semantic_hash": "0a55b374c0a6ed8d5c79349a04cbf67b"
+  },
+  "docs/adr/ADR-002-monolito-modular.md": {
+    "mtime": 1783445463.8224804,
+    "ast_hash": "fe57adb9d157a4332c9b29b0f4588dc1",
+    "semantic_hash": "fe57adb9d157a4332c9b29b0f4588dc1"
+  },
+  "docs/adr/ADR-003-tiempo-real-sse.md": {
+    "mtime": 1783445492.19636,
+    "ast_hash": "2b72b2d6ec3b2f5ede517d599b5c64a4",
+    "semantic_hash": "2b72b2d6ec3b2f5ede517d599b5c64a4"
+  },
+  "docs/adr/ADR-004-pagos-mercadopago-marketplace.md": {
+    "mtime": 1783445524.4832182,
+    "ast_hash": "b70d3da69517f6cf49c07b7ad01a02f9",
+    "semantic_hash": "b70d3da69517f6cf49c07b7ad01a02f9"
+  },
+  "docs/adr/ADR-005-theming-runtime.md": {
+    "mtime": 1783445549.8675451,
+    "ast_hash": "5c528485bd711dac7d3b7591ff07ffa2",
+    "semantic_hash": "5c528485bd711dac7d3b7591ff07ffa2"
+  },
+  "docs/api/openapi.yaml": {
+    "mtime": 1784249842.561734,
+    "ast_hash": "32ff9b8fdb63baf2e3ac2cdf8bd84723",
+    "semantic_hash": "32ff9b8fdb63baf2e3ac2cdf8bd84723"
+  },
+  "docs/design/easybeach-sistema-de-theming-white-label-1-identidad-de-plat/README.md": {
+    "mtime": 1784321338.2929146,
+    "ast_hash": "9631b9af404747a37206b7f491f0ac81",
+    "semantic_hash": "9631b9af404747a37206b7f491f0ac81"
+  },
+  "docs/design/easybeach-sistema-de-theming-white-label-1-identidad-de-plat/project/EasyBeach Etapa 06.dc.html": {
+    "mtime": 1784321361.4605057,
+    "ast_hash": "a95ddb487508cfc1867f4152a4393f8c",
+    "semantic_hash": "a95ddb487508cfc1867f4152a4393f8c"
+  },
+  "docs/design/easybeach-sistema-de-theming-white-label-1-identidad-de-plat/project/uploads/01-vision-alcance-glosario.md": {
+    "mtime": 1784321376.226146,
+    "ast_hash": "7ba20fd26dfdd91bf0feea986f6ec25a",
+    "semantic_hash": "7ba20fd26dfdd91bf0feea986f6ec25a"
+  },
+  "docs/design/easybeach-sistema-de-theming-white-label-1-identidad-de-plat/project/uploads/06-identidad-visual-design-system.md": {
+    "mtime": 1784321383.370633,
+    "ast_hash": "f5e0a3440bd59ce17502a1a351d79953",
+    "semantic_hash": "f5e0a3440bd59ce17502a1a351d79953"
+  },
+  "docs/especificacion/02-arquitectura-general.md": {
+    "mtime": 1783445606.4337077,
+    "ast_hash": "fc88e72cb473b40f504d26f37a5c86d3",
+    "semantic_hash": "fc88e72cb473b40f504d26f37a5c86d3"
+  },
+  "docs/especificacion/03-modelo-de-datos.md": {
+    "mtime": 1784249553.0891914,
+    "ast_hash": "c4048184015bc35f7aa57d4fe33fb0a4",
+    "semantic_hash": "c4048184015bc35f7aa57d4fe33fb0a4"
+  },
+  "docs/especificacion/04-contratos-api.md": {
+    "mtime": 1784249986.0888376,
+    "ast_hash": "36fede497b7af98500da22a13eeb7d2c",
+    "semantic_hash": "36fede497b7af98500da22a13eeb7d2c"
+  },
+  "docs/especificacion/05-seguridad-roles.md": {
+    "mtime": 1784250351.7017336,
+    "ast_hash": "46f39dde9078b829ca79d05e82b3775d",
+    "semantic_hash": "46f39dde9078b829ca79d05e82b3775d"
+  },
+  "docs/design/EasyBeachLogo.png": {
+    "mtime": 1784320101.5943897,
+    "ast_hash": "bb698451e173e455c7c36e8319f8b85b",
+    "semantic_hash": "bb698451e173e455c7c36e8319f8b85b"
+  },
+  "docs/design/easybeach-sistema-de-theming-white-label-1-identidad-de-plat/project/uploads/EasyBeachLogo.png": {
+    "mtime": 1784321390.3952854,
+    "ast_hash": "bb698451e173e455c7c36e8319f8b85b",
+    "semantic_hash": "bb698451e173e455c7c36e8319f8b85b"
   }
 }
