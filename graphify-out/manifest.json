@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1784999288.162552,
-    "ast_hash": "baaf45cd413a674f1055713df3781bfd",
-    "semantic_hash": "baaf45cd413a674f1055713df3781bfd"
+    "mtime": 1785000780.8838465,
+    "ast_hash": "784defc89595a2124d0bcaf1a9ab3e1a",
+    "semantic_hash": "784defc89595a2124d0bcaf1a9ab3e1a"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -55,9 +55,9 @@
     "semantic_hash": "8573dc852fdef1f4bfa99c9a626b2cae"
   },
   "docs/etapas/11-backend-catalogo-ubicaciones.md": {
-    "mtime": 1783444502.6871672,
-    "ast_hash": "e25a409b6d504b02495634f2512f8afc",
-    "semantic_hash": "e25a409b6d504b02495634f2512f8afc"
+    "mtime": 1785000770.3681169,
+    "ast_hash": "d6f6e1be028e550c900cb6ec72d6a5c7",
+    "semantic_hash": "d6f6e1be028e550c900cb6ec72d6a5c7"
   },
   "docs/etapas/12-backend-estadia-activa.md": {
     "mtime": 1783444527.5814307,
@@ -285,9 +285,9 @@
     "semantic_hash": "624abb0256931e9522f25c94188f1980"
   },
   "backend/src/main/java/com/easybeach/catalog/package-info.java": {
-    "mtime": 1784937351.4741724,
-    "ast_hash": "aad6f6be7e658633dec4303c91e26115",
-    "semantic_hash": "aad6f6be7e658633dec4303c91e26115"
+    "mtime": 1785000503.11579,
+    "ast_hash": "d782010181230fedfd29236bc306791a",
+    "semantic_hash": "d782010181230fedfd29236bc306791a"
   },
   "backend/src/main/java/com/easybeach/concierge/package-info.java": {
     "mtime": 1784937367.9657598,
@@ -475,9 +475,9 @@
     "semantic_hash": "8ff78d18da7d63d9968bfd4440d9374a"
   },
   "backend/src/main/java/com/easybeach/shared/error/ErrorCode.java": {
-    "mtime": 1784936914.34852,
-    "ast_hash": "d100417574ab95a6f99f6dd63b021d57",
-    "semantic_hash": "d100417574ab95a6f99f6dd63b021d57"
+    "mtime": 1785000095.8272462,
+    "ast_hash": "d7b177a2d7fe94a89e8e97011620f6c5",
+    "semantic_hash": "d7b177a2d7fe94a89e8e97011620f6c5"
   },
   "backend/src/main/java/com/easybeach/shared/error/GlobalExceptionHandler.java": {
     "mtime": 1784936937.5198135,
@@ -530,9 +530,9 @@
     "semantic_hash": "49a38c0c79b4d5ea35a4915c9ae0f892"
   },
   "backend/src/main/java/com/easybeach/stay/package-info.java": {
-    "mtime": 1784937354.9835918,
-    "ast_hash": "3459f98527be8ecf6cc939475ea57a01",
-    "semantic_hash": "3459f98527be8ecf6cc939475ea57a01"
+    "mtime": 1785000177.808462,
+    "ast_hash": "e1dad0129641f327da1fbd3483bfa335",
+    "semantic_hash": "e1dad0129641f327da1fbd3483bfa335"
   },
   "backend/src/main/resources/db/migration/V001__tenancy_baseline.sql": {
     "mtime": 1784936818.737976,
@@ -1000,9 +1000,9 @@
     "semantic_hash": "cd1ebce0d65dd6bd51791f0bedec2d81"
   },
   "backend/src/test/java/com/easybeach/branding/BrandingContractIntegrationTest.java": {
-    "mtime": 1784998803.1389165,
-    "ast_hash": "48a6abfdbf93af88cbf6458fdfc76105",
-    "semantic_hash": "48a6abfdbf93af88cbf6458fdfc76105"
+    "mtime": 1785000067.6516726,
+    "ast_hash": "e84fe86d73567e65981110143ae5c76d",
+    "semantic_hash": "e84fe86d73567e65981110143ae5c76d"
   },
   "backend/src/test/java/com/easybeach/platform/SuperAdminAccessControlIntegrationTest.java": {
     "mtime": 1784998803.1716044,
@@ -1023,5 +1023,195 @@
     "mtime": 1784999261.923771,
     "ast_hash": "964e9cf8d2dd9fe8e88fe8acb2092f49",
     "semantic_hash": "964e9cf8d2dd9fe8e88fe8acb2092f49"
+  },
+  "backend/src/main/java/com/easybeach/catalog/domain/CategoriaMenu.java": {
+    "mtime": 1785000247.8235953,
+    "ast_hash": "c2beb6d44bef2716fe213a13ec137449",
+    "semantic_hash": "c2beb6d44bef2716fe213a13ec137449"
+  },
+  "backend/src/main/java/com/easybeach/catalog/domain/Producto.java": {
+    "mtime": 1785000256.7634783,
+    "ast_hash": "89112b8718bd428a234a369293e9836c",
+    "semantic_hash": "89112b8718bd428a234a369293e9836c"
+  },
+  "backend/src/main/java/com/easybeach/catalog/domain/ProductoVariante.java": {
+    "mtime": 1785000266.9806283,
+    "ast_hash": "2fa1966adb6e21da62328e389e18fd5f",
+    "semantic_hash": "2fa1966adb6e21da62328e389e18fd5f"
+  },
+  "backend/src/main/java/com/easybeach/catalog/repository/CategoriaMenuRepository.java": {
+    "mtime": 1785000273.276421,
+    "ast_hash": "cf4af48129b5ca79c9a1639dbc4936c6",
+    "semantic_hash": "cf4af48129b5ca79c9a1639dbc4936c6"
+  },
+  "backend/src/main/java/com/easybeach/catalog/repository/ProductoRepository.java": {
+    "mtime": 1785000279.3577757,
+    "ast_hash": "e02a22f346b4316bc69a0206eaa5c79d",
+    "semantic_hash": "e02a22f346b4316bc69a0206eaa5c79d"
+  },
+  "backend/src/main/java/com/easybeach/catalog/repository/ProductoVarianteRepository.java": {
+    "mtime": 1785000417.6355975,
+    "ast_hash": "6bc2645b5fa13246b02dd35964e3b5ba",
+    "semantic_hash": "6bc2645b5fa13246b02dd35964e3b5ba"
+  },
+  "backend/src/main/java/com/easybeach/catalog/service/CategoriaMenuService.java": {
+    "mtime": 1785000350.773663,
+    "ast_hash": "47f764d4d2238a7f45c58931450b9e5c",
+    "semantic_hash": "47f764d4d2238a7f45c58931450b9e5c"
+  },
+  "backend/src/main/java/com/easybeach/catalog/service/MenuPublicoService.java": {
+    "mtime": 1785000425.2003715,
+    "ast_hash": "e725279608417f7a373bf1a1dea13570",
+    "semantic_hash": "e725279608417f7a373bf1a1dea13570"
+  },
+  "backend/src/main/java/com/easybeach/catalog/service/ProductoService.java": {
+    "mtime": 1785000369.3475099,
+    "ast_hash": "7239babe74f3566cf470d2844d2ec34e",
+    "semantic_hash": "7239babe74f3566cf470d2844d2ec34e"
+  },
+  "backend/src/main/java/com/easybeach/catalog/service/ProductoVarianteService.java": {
+    "mtime": 1785000386.536534,
+    "ast_hash": "661e3b2747e06d1d1f4c0a26efa46f94",
+    "semantic_hash": "661e3b2747e06d1d1f4c0a26efa46f94"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/AdminCategoriaMenuController.java": {
+    "mtime": 1785000436.0517738,
+    "ast_hash": "a1e26ac2013035ee5ffe0506eae86f81",
+    "semantic_hash": "a1e26ac2013035ee5ffe0506eae86f81"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/AdminProductoController.java": {
+    "mtime": 1785000456.314373,
+    "ast_hash": "2fa4b9f54ee198fc88019c1ab4809e63",
+    "semantic_hash": "2fa4b9f54ee198fc88019c1ab4809e63"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/AdminProductoVarianteController.java": {
+    "mtime": 1785000467.67608,
+    "ast_hash": "fd4b2a1dd9f0525d022dae09d600350b",
+    "semantic_hash": "fd4b2a1dd9f0525d022dae09d600350b"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/MenuCacheConfig.java": {
+    "mtime": 1785000492.3412385,
+    "ast_hash": "7b9c987235a514acc6b7e251f3fc5176",
+    "semantic_hash": "7b9c987235a514acc6b7e251f3fc5176"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/PublicMenuController.java": {
+    "mtime": 1785000482.983335,
+    "ast_hash": "b16cac261b9904b71c3a423184636485",
+    "semantic_hash": "b16cac261b9904b71c3a423184636485"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/CategoriaMenuRequest.java": {
+    "mtime": 1785000294.293912,
+    "ast_hash": "d13886c05c014d08ca54ae37027aa2bf",
+    "semantic_hash": "d13886c05c014d08ca54ae37027aa2bf"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/CategoriaMenuResponse.java": {
+    "mtime": 1785000298.3472433,
+    "ast_hash": "24644918c47f5cf39096f4eeb8779016",
+    "semantic_hash": "24644918c47f5cf39096f4eeb8779016"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/DisponibilidadRequest.java": {
+    "mtime": 1785000441.508614,
+    "ast_hash": "a6c02289cc047832d648ce3d7fa7bdaf",
+    "semantic_hash": "a6c02289cc047832d648ce3d7fa7bdaf"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/MenuCategoriaResponse.java": {
+    "mtime": 1785000333.7451913,
+    "ast_hash": "8111ca6e5aad6968095daba7cc22e99b",
+    "semantic_hash": "8111ca6e5aad6968095daba7cc22e99b"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/MenuProductoResponse.java": {
+    "mtime": 1785000329.2084033,
+    "ast_hash": "9e5f719ac052898c90e6fdd71fdf7de0",
+    "semantic_hash": "9e5f719ac052898c90e6fdd71fdf7de0"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/MenuVarianteResponse.java": {
+    "mtime": 1785000324.0729277,
+    "ast_hash": "b0105155555d9141dae8b8118fe0afa7",
+    "semantic_hash": "b0105155555d9141dae8b8118fe0afa7"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/ProductoRequest.java": {
+    "mtime": 1785000303.4804554,
+    "ast_hash": "3eafca4de8a590b2fdefea0585b5fe3b",
+    "semantic_hash": "3eafca4de8a590b2fdefea0585b5fe3b"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/ProductoResponse.java": {
+    "mtime": 1785000308.5657108,
+    "ast_hash": "d4b1e2f12bea931b0f496e6673584e8c",
+    "semantic_hash": "d4b1e2f12bea931b0f496e6673584e8c"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/ProductoVarianteRequest.java": {
+    "mtime": 1785000313.5861938,
+    "ast_hash": "52c49ffd7974b662eddf31b7bbe32bfd",
+    "semantic_hash": "52c49ffd7974b662eddf31b7bbe32bfd"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/dto/ProductoVarianteResponse.java": {
+    "mtime": 1785000319.2961257,
+    "ast_hash": "5c976cf875ef4a0fff48efe33fa3e027",
+    "semantic_hash": "5c976cf875ef4a0fff48efe33fa3e027"
+  },
+  "backend/src/main/java/com/easybeach/stay/domain/EstadoUbicacion.java": {
+    "mtime": 1785000154.5945108,
+    "ast_hash": "84fd7f16fd093b31e405c05ed43261d6",
+    "semantic_hash": "84fd7f16fd093b31e405c05ed43261d6"
+  },
+  "backend/src/main/java/com/easybeach/stay/domain/TipoUbicacion.java": {
+    "mtime": 1785000149.7205434,
+    "ast_hash": "22f87d7098aa5b198f2c8c55a0136884",
+    "semantic_hash": "22f87d7098aa5b198f2c8c55a0136884"
+  },
+  "backend/src/main/java/com/easybeach/stay/domain/Ubicacion.java": {
+    "mtime": 1785000165.0897555,
+    "ast_hash": "7b4a134e19b004c25390ec028eeb6cfb",
+    "semantic_hash": "7b4a134e19b004c25390ec028eeb6cfb"
+  },
+  "backend/src/main/java/com/easybeach/stay/repository/UbicacionRepository.java": {
+    "mtime": 1785000185.3179963,
+    "ast_hash": "67a3a569439623e265b4ed976cfe8aaa",
+    "semantic_hash": "67a3a569439623e265b4ed976cfe8aaa"
+  },
+  "backend/src/main/java/com/easybeach/stay/service/UbicacionService.java": {
+    "mtime": 1785000225.7968826,
+    "ast_hash": "f08f6fe5f6e079dc360f2961269da713",
+    "semantic_hash": "f08f6fe5f6e079dc360f2961269da713"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/AdminUbicacionController.java": {
+    "mtime": 1785000236.7167678,
+    "ast_hash": "e282541a087037b541d00fcc11b1e5f5",
+    "semantic_hash": "e282541a087037b541d00fcc11b1e5f5"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/dto/CambiarEstadoUbicacionRequest.java": {
+    "mtime": 1785000209.4470088,
+    "ast_hash": "40e041d32ee656ac3d0453a3841bb4ad",
+    "semantic_hash": "40e041d32ee656ac3d0453a3841bb4ad"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/dto/UbicacionRequest.java": {
+    "mtime": 1785000199.8315117,
+    "ast_hash": "612044486a876ac2a0200697eab1e961",
+    "semantic_hash": "612044486a876ac2a0200697eab1e961"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/dto/UbicacionResponse.java": {
+    "mtime": 1785000204.1220155,
+    "ast_hash": "2fc814a02e494644cb2a90bcae6a1d79",
+    "semantic_hash": "2fc814a02e494644cb2a90bcae6a1d79"
+  },
+  "backend/src/main/resources/db/migration/V006__catalogo_ubicaciones.sql": {
+    "mtime": 1785000138.0177135,
+    "ast_hash": "4be38da9f104984eace171eac1f0f7eb",
+    "semantic_hash": "4be38da9f104984eace171eac1f0f7eb"
+  },
+  "backend/src/test/java/com/easybeach/catalog/CatalogoCrossTenantIntegrationTest.java": {
+    "mtime": 1785000641.3653734,
+    "ast_hash": "b2ac6eb8ced5b3b4e1bfdd6afd77a8f0",
+    "semantic_hash": "b2ac6eb8ced5b3b4e1bfdd6afd77a8f0"
+  },
+  "backend/src/test/java/com/easybeach/catalog/CatalogoMenuIntegrationTest.java": {
+    "mtime": 1785000641.4066155,
+    "ast_hash": "30b9ae5c303755ec55e144f24838ff86",
+    "semantic_hash": "30b9ae5c303755ec55e144f24838ff86"
+  },
+  "docs/especificacion/11-backend-catalogo-ubicaciones.md": {
+    "mtime": 1785000754.1383264,
+    "ast_hash": "7bf5ddbdeedf5e045a1892cbc48b2cb2",
+    "semantic_hash": "7bf5ddbdeedf5e045a1892cbc48b2cb2"
   }
 }

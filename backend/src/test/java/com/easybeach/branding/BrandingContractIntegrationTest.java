@@ -148,7 +148,7 @@ class BrandingContractIntegrationTest extends AbstractIntegrationTest {
 
         var response = restTemplate.exchange(url("/api/v1/admin/branding/assets/LOGO"), HttpMethod.POST,
                 new HttpEntity<>(body, headers), ProblemDetail.class);
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     /** PNG 1x1 válido (magic bytes + IHDR mínimo) para tests. */

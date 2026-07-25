@@ -4,6 +4,12 @@
 - **Modelo ejecutor:** sonnet
 - **Tipo:** construcción
 - **Depende de:** 09, 10
+- **Estado: ✅ EJECUTADA** — código en [`backend/`](../../backend/) (módulo
+  `catalog` completo + `Ubicacion` del módulo `stay`), entregable en
+  [`docs/especificacion/11-backend-catalogo-ubicaciones.md`](../especificacion/11-backend-catalogo-ubicaciones.md).
+  25/25 tests, BUILD SUCCESS, sin bugs nuevos: menú público en 3 queries con
+  cache corto + ETag, disponibilidad on/off inmediata, reglas de integridad
+  reales (no diferidas), aislamiento cross-tenant probado explícitamente.
 
 ## Objetivo
 
