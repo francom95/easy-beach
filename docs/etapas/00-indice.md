@@ -48,7 +48,7 @@ la facturación operativa en temporada.
 | 06 | ✅ [Identidad visual y sistema de diseño](06-identidad-visual-design-system.md) | claude design | 01 |
 | 07 | ✅ [Diseño UX/UI app mobile (cliente)](07-ux-ui-mobile.md) | claude design | 01, 06 |
 | 08 | ✅ [Diseño UX/UI web (paneles)](08-ux-ui-web-paneles.md) | claude design | 01, 06 |
-| 09 | [Backend fundacional](09-backend-fundacional.md) | sonnet | 02, 03, 04, 05 |
+| 09 | ✅ [Backend fundacional](09-backend-fundacional.md) | sonnet | 02, 03, 04, 05 |
 | 10 | [Backend Super Admin: balnearios, planes y temporadas](10-backend-super-admin.md) | sonnet | 09 |
 | 11 | [Backend catálogo y ubicaciones](11-backend-catalogo-ubicaciones.md) | sonnet | 09, 10 |
 | 12 | [Backend estadía activa](12-backend-estadia-activa.md) | opus | 09, 10, 11 |

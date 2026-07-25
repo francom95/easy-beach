@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/easybeach?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: easybeach
+    password: easybeach_local_pw
+  jpa:
+    show-sql: false
+
+logging:
+  level:
+    com.easybeach: DEBUG

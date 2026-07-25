@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: easybeach-backend
+  jackson:
+    default-property-inclusion: non_null
+  jpa:
+    # OSIV se mantiene ON a propósito: el filtro de tenant (ver
+    # shared.tenancy.TenantFilterService) depende de que el mismo
+    # EntityManager/Session viva durante todo el request.
+    open-in-view: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    baseline-on-migrate: false
+
+server:
+  port: 8080
+  error:
+    include-message: never # el formato de error propio (RFC 7807) maneja esto
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
+
+easybeach:
+  jwt:
+    # TTLs por rol (etapa 05 §1.1). En minutos / horas.
+    access-ttl-minutes-cliente: 60
+    access-ttl-minutes-staff: 30
+    access-ttl-minutes-super-admin: 15
+    refresh-ttl-cliente: P60D
+    refresh-ttl-staff: PT12H
+    refresh-ttl-super-admin: PT8H
+    issuer: easybeach-api
+    # private-key-location / public-key-location: sin configurar en local/dev
+    # -> se genera un par RSA efímero al arrancar (ver JwtKeyProvider).
+  cors:
+    allowed-origins: "http://localhost:3000,http://localhost:19006"
+
+logging:
+  pattern:
+    console: "%d{ISO8601} %-5level [req=%X{requestId}] [bal=%X{balnearioId}] %logger{36} - %msg%n"

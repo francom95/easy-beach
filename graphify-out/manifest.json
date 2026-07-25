@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1784935809.8599317,
-    "ast_hash": "04819bab0994333da762dce4edaacf9d",
-    "semantic_hash": "04819bab0994333da762dce4edaacf9d"
+    "mtime": 1784941791.332549,
+    "ast_hash": "218cf9c6902ac86ce588f323cc7bd896",
+    "semantic_hash": "218cf9c6902ac86ce588f323cc7bd896"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -45,9 +45,9 @@
     "semantic_hash": "e57b676cfff7d5b21b339bdcd914f5e9"
   },
   "docs/etapas/09-backend-fundacional.md": {
-    "mtime": 1783408813.6377077,
-    "ast_hash": "e6d9075a559a3015a1b867795a7530e1",
-    "semantic_hash": "e6d9075a559a3015a1b867795a7530e1"
+    "mtime": 1784941782.6937973,
+    "ast_hash": "6808df6ad6a393c0aa336487cb004714",
+    "semantic_hash": "6808df6ad6a393c0aa336487cb004714"
   },
   "docs/etapas/10-backend-super-admin.md": {
     "mtime": 1783444371.5940151,
@@ -268,5 +268,365 @@
     "mtime": 1784935549.4494596,
     "ast_hash": "a95ddb487508cfc1867f4152a4393f8c",
     "semantic_hash": "a95ddb487508cfc1867f4152a4393f8c"
+  },
+  "backend/pom.xml": {
+    "mtime": 1784936778.9262557,
+    "ast_hash": "f5c40ebe7c7362b7a56b0bbd7f646566",
+    "semantic_hash": "f5c40ebe7c7362b7a56b0bbd7f646566"
+  },
+  "backend/src/main/java/com/easybeach/EasyBeachApplication.java": {
+    "mtime": 1784936850.4103582,
+    "ast_hash": "271a0b7b082893c57ce075163bfefb74",
+    "semantic_hash": "271a0b7b082893c57ce075163bfefb74"
+  },
+  "backend/src/main/java/com/easybeach/branding/package-info.java": {
+    "mtime": 1784937347.231939,
+    "ast_hash": "d34e711445f80df68b357ebdbdef5e96",
+    "semantic_hash": "d34e711445f80df68b357ebdbdef5e96"
+  },
+  "backend/src/main/java/com/easybeach/catalog/package-info.java": {
+    "mtime": 1784937351.4741724,
+    "ast_hash": "aad6f6be7e658633dec4303c91e26115",
+    "semantic_hash": "aad6f6be7e658633dec4303c91e26115"
+  },
+  "backend/src/main/java/com/easybeach/concierge/package-info.java": {
+    "mtime": 1784937367.9657598,
+    "ast_hash": "82df4dfed1b55d2001e638116ed322d2",
+    "semantic_hash": "82df4dfed1b55d2001e638116ed322d2"
+  },
+  "backend/src/main/java/com/easybeach/identity/domain/EstadoSesion.java": {
+    "mtime": 1784937005.0851932,
+    "ast_hash": "e94126ab0a9185f790efe23362bfe797",
+    "semantic_hash": "e94126ab0a9185f790efe23362bfe797"
+  },
+  "backend/src/main/java/com/easybeach/identity/domain/EstadoUsuario.java": {
+    "mtime": 1784936996.2199821,
+    "ast_hash": "f4de55fa7c2d38f567aaeddf4daec8fd",
+    "semantic_hash": "f4de55fa7c2d38f567aaeddf4daec8fd"
+  },
+  "backend/src/main/java/com/easybeach/identity/domain/Rol.java": {
+    "mtime": 1784937023.102348,
+    "ast_hash": "2e23353edfe4d00012043c1fc7564678",
+    "semantic_hash": "2e23353edfe4d00012043c1fc7564678"
+  },
+  "backend/src/main/java/com/easybeach/identity/domain/RolCodigo.java": {
+    "mtime": 1784937001.8260682,
+    "ast_hash": "5e0fc21070579531da89031500444d41",
+    "semantic_hash": "5e0fc21070579531da89031500444d41"
+  },
+  "backend/src/main/java/com/easybeach/identity/domain/SesionRefresh.java": {
+    "mtime": 1784940559.2484584,
+    "ast_hash": "2d2f73ceadad749d7d9cf47339d8da09",
+    "semantic_hash": "2d2f73ceadad749d7d9cf47339d8da09"
+  },
+  "backend/src/main/java/com/easybeach/identity/domain/TipoUsuario.java": {
+    "mtime": 1784936993.1372628,
+    "ast_hash": "c9a429831484e127fb876e6dbb5fc8c3",
+    "semantic_hash": "c9a429831484e127fb876e6dbb5fc8c3"
+  },
+  "backend/src/main/java/com/easybeach/identity/domain/Usuario.java": {
+    "mtime": 1784940554.528764,
+    "ast_hash": "5410ffb58ed40a517be4574ba8a78124",
+    "semantic_hash": "5410ffb58ed40a517be4574ba8a78124"
+  },
+  "backend/src/main/java/com/easybeach/identity/domain/UsuarioBalnearioRol.java": {
+    "mtime": 1784937031.07755,
+    "ast_hash": "8173d903b43cfcbb47dfea99058dc581",
+    "semantic_hash": "8173d903b43cfcbb47dfea99058dc581"
+  },
+  "backend/src/main/java/com/easybeach/identity/repository/RolRepository.java": {
+    "mtime": 1784937052.18758,
+    "ast_hash": "ddd5d42c325cda7b8dc7a517bca95deb",
+    "semantic_hash": "ddd5d42c325cda7b8dc7a517bca95deb"
+  },
+  "backend/src/main/java/com/easybeach/identity/repository/SesionRefreshRepository.java": {
+    "mtime": 1784937078.4645617,
+    "ast_hash": "cbfecb073aa108c50e4d926ce3f2de63",
+    "semantic_hash": "cbfecb073aa108c50e4d926ce3f2de63"
+  },
+  "backend/src/main/java/com/easybeach/identity/repository/UsuarioBalnearioRolRepository.java": {
+    "mtime": 1784937073.6727915,
+    "ast_hash": "8795b172f4f9d57c1bacab896fff0f26",
+    "semantic_hash": "8795b172f4f9d57c1bacab896fff0f26"
+  },
+  "backend/src/main/java/com/easybeach/identity/repository/UsuarioRepository.java": {
+    "mtime": 1784937048.3091266,
+    "ast_hash": "2cdc25cf5246b4a32e2820bdf6fcea9c",
+    "semantic_hash": "2cdc25cf5246b4a32e2820bdf6fcea9c"
+  },
+  "backend/src/main/java/com/easybeach/identity/security/EasyBeachUserPrincipal.java": {
+    "mtime": 1784937132.2514932,
+    "ast_hash": "a03a50119696d5dc6417a86f4c2ce5c8",
+    "semantic_hash": "a03a50119696d5dc6417a86f4c2ce5c8"
+  },
+  "backend/src/main/java/com/easybeach/identity/security/JwtAuthenticationFilter.java": {
+    "mtime": 1784937192.161636,
+    "ast_hash": "25d783ad6166333ccac7c1d9415ed80a",
+    "semantic_hash": "25d783ad6166333ccac7c1d9415ed80a"
+  },
+  "backend/src/main/java/com/easybeach/identity/security/JwtKeyProvider.java": {
+    "mtime": 1784937123.217935,
+    "ast_hash": "c4ce296074e7c63be7e56b2028a9b970",
+    "semantic_hash": "c4ce296074e7c63be7e56b2028a9b970"
+  },
+  "backend/src/main/java/com/easybeach/identity/security/JwtProperties.java": {
+    "mtime": 1784937106.5956728,
+    "ast_hash": "2ee6a02dc9b28dd61208da9b0dcec52c",
+    "semantic_hash": "2ee6a02dc9b28dd61208da9b0dcec52c"
+  },
+  "backend/src/main/java/com/easybeach/identity/security/JwtService.java": {
+    "mtime": 1784937152.1291556,
+    "ast_hash": "f867ccba2dfe324c8ead62d0bddb2336",
+    "semantic_hash": "f867ccba2dfe324c8ead62d0bddb2336"
+  },
+  "backend/src/main/java/com/easybeach/identity/security/SecurityConfig.java": {
+    "mtime": 1784940129.2592952,
+    "ast_hash": "cf60bbecb2a86a98d2b54d0844025084",
+    "semantic_hash": "cf60bbecb2a86a98d2b54d0844025084"
+  },
+  "backend/src/main/java/com/easybeach/identity/service/AuthService.java": {
+    "mtime": 1784941543.704412,
+    "ast_hash": "4ac1e75d9e1626e28036732a84e7df45",
+    "semantic_hash": "4ac1e75d9e1626e28036732a84e7df45"
+  },
+  "backend/src/main/java/com/easybeach/identity/service/SesionRefreshRevocationService.java": {
+    "mtime": 1784941520.2061386,
+    "ast_hash": "5034451ee761a144d22b07369718d726",
+    "semantic_hash": "5034451ee761a144d22b07369718d726"
+  },
+  "backend/src/main/java/com/easybeach/identity/service/UsuarioBalnearioRolService.java": {
+    "mtime": 1784937321.2928288,
+    "ast_hash": "378cab138840abb3f7e3a174f1b6e83e",
+    "semantic_hash": "378cab138840abb3f7e3a174f1b6e83e"
+  },
+  "backend/src/main/java/com/easybeach/identity/web/AuthController.java": {
+    "mtime": 1784937302.6396494,
+    "ast_hash": "26c81e66ec797224df3c9cb1613fca13",
+    "semantic_hash": "26c81e66ec797224df3c9cb1613fca13"
+  },
+  "backend/src/main/java/com/easybeach/identity/web/StaffController.java": {
+    "mtime": 1784937340.2674456,
+    "ast_hash": "b9b38ad4b7bae17152844c61079a6d4f",
+    "semantic_hash": "b9b38ad4b7bae17152844c61079a6d4f"
+  },
+  "backend/src/main/java/com/easybeach/identity/web/dto/LoginRequest.java": {
+    "mtime": 1784937231.5577755,
+    "ast_hash": "bd6e2b1b7404ced9477dada3957329ac",
+    "semantic_hash": "bd6e2b1b7404ced9477dada3957329ac"
+  },
+  "backend/src/main/java/com/easybeach/identity/web/dto/MiembroResponse.java": {
+    "mtime": 1784937324.7847977,
+    "ast_hash": "bc4b7fa6c3eaea7f09bdbf520724a0cf",
+    "semantic_hash": "bc4b7fa6c3eaea7f09bdbf520724a0cf"
+  },
+  "backend/src/main/java/com/easybeach/identity/web/dto/RefreshRequest.java": {
+    "mtime": 1784937235.355273,
+    "ast_hash": "ef001ca4b88664154504971b5eaad597",
+    "semantic_hash": "ef001ca4b88664154504971b5eaad597"
+  },
+  "backend/src/main/java/com/easybeach/identity/web/dto/RegistroClienteRequest.java": {
+    "mtime": 1784937227.4084094,
+    "ast_hash": "81ab34eee770eebb62558ce0e743bcf7",
+    "semantic_hash": "81ab34eee770eebb62558ce0e743bcf7"
+  },
+  "backend/src/main/java/com/easybeach/identity/web/dto/TokenResponse.java": {
+    "mtime": 1784937239.7267785,
+    "ast_hash": "73c951f1b943928c318426c62b8e79c8",
+    "semantic_hash": "73c951f1b943928c318426c62b8e79c8"
+  },
+  "backend/src/main/java/com/easybeach/identity/web/dto/WhoAmIResponse.java": {
+    "mtime": 1784937328.738616,
+    "ast_hash": "8363ffd459d4476c5789519a392fa004",
+    "semantic_hash": "8363ffd459d4476c5789519a392fa004"
+  },
+  "backend/src/main/java/com/easybeach/ordering/package-info.java": {
+    "mtime": 1784937358.743952,
+    "ast_hash": "fe880464b7ca09cb87a49bafa09a26da",
+    "semantic_hash": "fe880464b7ca09cb87a49bafa09a26da"
+  },
+  "backend/src/main/java/com/easybeach/payments/package-info.java": {
+    "mtime": 1784937364.099224,
+    "ast_hash": "bf6cec06cd308513fd8a693b4fcd79c5",
+    "semantic_hash": "bf6cec06cd308513fd8a693b4fcd79c5"
+  },
+  "backend/src/main/java/com/easybeach/platform/domain/Balneario.java": {
+    "mtime": 1784937089.6881578,
+    "ast_hash": "121b3518b4eb4e3a943bd0d30df6979f",
+    "semantic_hash": "121b3518b4eb4e3a943bd0d30df6979f"
+  },
+  "backend/src/main/java/com/easybeach/platform/domain/EstadoBalneario.java": {
+    "mtime": 1784937082.6178927,
+    "ast_hash": "c0d1a8fc444e13702a840d2981e62dde",
+    "semantic_hash": "c0d1a8fc444e13702a840d2981e62dde"
+  },
+  "backend/src/main/java/com/easybeach/platform/repository/BalnearioRepository.java": {
+    "mtime": 1784937093.3378427,
+    "ast_hash": "4e09dab8a88f11012286bcd22d36ba32",
+    "semantic_hash": "4e09dab8a88f11012286bcd22d36ba32"
+  },
+  "backend/src/main/java/com/easybeach/promotions/package-info.java": {
+    "mtime": 1784937371.5317564,
+    "ast_hash": "7be52e97d9cb4c336be1c4eafccc1608",
+    "semantic_hash": "7be52e97d9cb4c336be1c4eafccc1608"
+  },
+  "backend/src/main/java/com/easybeach/reporting/package-info.java": {
+    "mtime": 1784937375.3420882,
+    "ast_hash": "ff8f8aa705e79ac2deb3d8def36ebe05",
+    "semantic_hash": "ff8f8aa705e79ac2deb3d8def36ebe05"
+  },
+  "backend/src/main/java/com/easybeach/shared/audit/Auditable.java": {
+    "mtime": 1784936948.464937,
+    "ast_hash": "219ae65d873fc938f888e13636fd692d",
+    "semantic_hash": "219ae65d873fc938f888e13636fd692d"
+  },
+  "backend/src/main/java/com/easybeach/shared/audit/JpaAuditingConfig.java": {
+    "mtime": 1784936967.7455795,
+    "ast_hash": "d8d67549bc1f88b5560cb8a55799c754",
+    "semantic_hash": "d8d67549bc1f88b5560cb8a55799c754"
+  },
+  "backend/src/main/java/com/easybeach/shared/error/ApiException.java": {
+    "mtime": 1784936918.7163243,
+    "ast_hash": "8ff78d18da7d63d9968bfd4440d9374a",
+    "semantic_hash": "8ff78d18da7d63d9968bfd4440d9374a"
+  },
+  "backend/src/main/java/com/easybeach/shared/error/ErrorCode.java": {
+    "mtime": 1784936914.34852,
+    "ast_hash": "d100417574ab95a6f99f6dd63b021d57",
+    "semantic_hash": "d100417574ab95a6f99f6dd63b021d57"
+  },
+  "backend/src/main/java/com/easybeach/shared/error/GlobalExceptionHandler.java": {
+    "mtime": 1784936937.5198135,
+    "ast_hash": "3b34052a431d09df719fd9139b466913",
+    "semantic_hash": "3b34052a431d09df719fd9139b466913"
+  },
+  "backend/src/main/java/com/easybeach/shared/id/UlidGenerator.java": {
+    "mtime": 1784936860.1823325,
+    "ast_hash": "4f97582b0c63bd76147cd6f1316d5477",
+    "semantic_hash": "4f97582b0c63bd76147cd6f1316d5477"
+  },
+  "backend/src/main/java/com/easybeach/shared/json/JacksonMoneyConfig.java": {
+    "mtime": 1784936988.8571177,
+    "ast_hash": "eaa3b8feb02eae8f003268ad3293169b",
+    "semantic_hash": "eaa3b8feb02eae8f003268ad3293169b"
+  },
+  "backend/src/main/java/com/easybeach/shared/pagination/PageResponse.java": {
+    "mtime": 1784936943.1097577,
+    "ast_hash": "679db438be8e1fbdf11d1466e4f87902",
+    "semantic_hash": "679db438be8e1fbdf11d1466e4f87902"
+  },
+  "backend/src/main/java/com/easybeach/shared/tenancy/TenantContext.java": {
+    "mtime": 1784936875.37274,
+    "ast_hash": "88914f103f7e9f8b03e966117cb596e2",
+    "semantic_hash": "88914f103f7e9f8b03e966117cb596e2"
+  },
+  "backend/src/main/java/com/easybeach/shared/tenancy/TenantContextMissingException.java": {
+    "mtime": 1784936895.8701005,
+    "ast_hash": "cafc30737eb46b3e31086667ce74c278",
+    "semantic_hash": "cafc30737eb46b3e31086667ce74c278"
+  },
+  "backend/src/main/java/com/easybeach/shared/tenancy/TenantFilterService.java": {
+    "mtime": 1784936905.7358508,
+    "ast_hash": "0e06811d42eb0fd4dc01214ae29bb95d",
+    "semantic_hash": "0e06811d42eb0fd4dc01214ae29bb95d"
+  },
+  "backend/src/main/java/com/easybeach/shared/tenancy/TenantScoped.java": {
+    "mtime": 1784936884.6220493,
+    "ast_hash": "c62a820a3639f15fac1ea6bf20f83aa5",
+    "semantic_hash": "c62a820a3639f15fac1ea6bf20f83aa5"
+  },
+  "backend/src/main/java/com/easybeach/shared/web/CorsConfig.java": {
+    "mtime": 1784936982.2533848,
+    "ast_hash": "b6e0c506215d66dab770362e9c81d5fd",
+    "semantic_hash": "b6e0c506215d66dab770362e9c81d5fd"
+  },
+  "backend/src/main/java/com/easybeach/shared/web/RequestIdFilter.java": {
+    "mtime": 1784936975.8051198,
+    "ast_hash": "49a38c0c79b4d5ea35a4915c9ae0f892",
+    "semantic_hash": "49a38c0c79b4d5ea35a4915c9ae0f892"
+  },
+  "backend/src/main/java/com/easybeach/stay/package-info.java": {
+    "mtime": 1784937354.9835918,
+    "ast_hash": "3459f98527be8ecf6cc939475ea57a01",
+    "semantic_hash": "3459f98527be8ecf6cc939475ea57a01"
+  },
+  "backend/src/main/resources/db/migration/V001__tenancy_baseline.sql": {
+    "mtime": 1784936818.737976,
+    "ast_hash": "d2fe2b40ffc52ce186ef2453969436a5",
+    "semantic_hash": "d2fe2b40ffc52ce186ef2453969436a5"
+  },
+  "backend/src/main/resources/db/migration/V002__identity.sql": {
+    "mtime": 1784936835.39646,
+    "ast_hash": "8d541e9ac3a06441c0566d46608b4e69",
+    "semantic_hash": "8d541e9ac3a06441c0566d46608b4e69"
+  },
+  "backend/src/test/java/com/easybeach/EasyBeachApplicationTests.java": {
+    "mtime": 1784937630.2496781,
+    "ast_hash": "e93c985b90bf7d880a501d823e1fdd07",
+    "semantic_hash": "e93c985b90bf7d880a501d823e1fdd07"
+  },
+  "backend/src/test/java/com/easybeach/architecture/ModuleDependencyRulesTest.java": {
+    "mtime": 1784941318.072624,
+    "ast_hash": "36cbf62b42632eab190c4c8b4f44317c",
+    "semantic_hash": "36cbf62b42632eab190c4c8b4f44317c"
+  },
+  "backend/src/test/java/com/easybeach/identity/AuthFlowIntegrationTest.java": {
+    "mtime": 1784937552.7823813,
+    "ast_hash": "1d5a6ca2addc09be8f3f0dc3ede8787d",
+    "semantic_hash": "1d5a6ca2addc09be8f3f0dc3ede8787d"
+  },
+  "backend/src/test/java/com/easybeach/shared/id/UlidGeneratorTest.java": {
+    "mtime": 1784937625.110205,
+    "ast_hash": "07ab96b541e263802c25f64f462a8c27",
+    "semantic_hash": "07ab96b541e263802c25f64f462a8c27"
+  },
+  "backend/src/test/java/com/easybeach/support/AbstractIntegrationTest.java": {
+    "mtime": 1784941362.4320152,
+    "ast_hash": "38a7742a76fab7cfda77ef26e8567ac4",
+    "semantic_hash": "38a7742a76fab7cfda77ef26e8567ac4"
+  },
+  "backend/src/test/java/com/easybeach/tenancy/TenantIsolationIntegrationTest.java": {
+    "mtime": 1784937571.0688832,
+    "ast_hash": "83dbb5860c6b6de7bf38e1069a021c26",
+    "semantic_hash": "83dbb5860c6b6de7bf38e1069a021c26"
+  },
+  ".github/workflows/backend-ci.yml": {
+    "mtime": 1784939539.759134,
+    "ast_hash": "6d4b10edef19073cbce851ca778d5d32",
+    "semantic_hash": "6d4b10edef19073cbce851ca778d5d32"
+  },
+  "backend/README.md": {
+    "mtime": 1784939528.1787634,
+    "ast_hash": "ab4a88dd362ec417faa534a591372cdd",
+    "semantic_hash": "ab4a88dd362ec417faa534a591372cdd"
+  },
+  "backend/docker-compose.yml": {
+    "mtime": 1784939478.4630063,
+    "ast_hash": "a802483412e7edc300c2d74402b12417",
+    "semantic_hash": "a802483412e7edc300c2d74402b12417"
+  },
+  "backend/src/main/resources/application-dev.yml": {
+    "mtime": 1784936796.94294,
+    "ast_hash": "d092d3213ac2e58e6ef8163ebf4bddab",
+    "semantic_hash": "d092d3213ac2e58e6ef8163ebf4bddab"
+  },
+  "backend/src/main/resources/application-local.yml": {
+    "mtime": 1784936793.123562,
+    "ast_hash": "264acce8800ac8e590ddfdf261ad7a7e",
+    "semantic_hash": "264acce8800ac8e590ddfdf261ad7a7e"
+  },
+  "backend/src/main/resources/application-prod.yml": {
+    "mtime": 1784936801.3690398,
+    "ast_hash": "ee5c71ffd14c02f79828f884d3cd4e97",
+    "semantic_hash": "ee5c71ffd14c02f79828f884d3cd4e97"
+  },
+  "backend/src/main/resources/application.yml": {
+    "mtime": 1784936789.345553,
+    "ast_hash": "6a0d91e8dfd4ddf8e0b0ec38df489879",
+    "semantic_hash": "6a0d91e8dfd4ddf8e0b0ec38df489879"
+  },
+  "docs/especificacion/09-backend-fundacional.md": {
+    "mtime": 1784941775.1680915,
+    "ast_hash": "7e54a8a2e8127363e83c3f38834ce07a",
+    "semantic_hash": "7e54a8a2e8127363e83c3f38834ce07a"
   }
 }

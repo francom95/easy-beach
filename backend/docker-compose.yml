@@ -1,0 +1,21 @@
+services:
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: easybeach
+      MYSQL_USER: easybeach
+      MYSQL_PASSWORD: easybeach_local_pw
+      MYSQL_ROOT_PASSWORD: root_local_pw
+    ports:
+      - "3306:3306"
+    volumes:
+      - easybeach_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot_local_pw"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  easybeach_mysql_data:

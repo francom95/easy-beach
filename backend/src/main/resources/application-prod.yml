@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    show-sql: false
+
+easybeach:
+  jwt:
+    # Obligatorio en prod: sin estas dos variables el arranque falla (ver
+    # JwtKeyProvider) en vez de generar un par efímero como en local/dev.
+    private-key-location: ${JWT_PRIVATE_KEY_LOCATION}
+    public-key-location: ${JWT_PUBLIC_KEY_LOCATION}
+
+logging:
+  level:
+    com.easybeach: INFO
+    org.hibernate: WARN

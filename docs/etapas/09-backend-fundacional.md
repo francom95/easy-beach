@@ -4,6 +4,13 @@
 - **Modelo ejecutor:** sonnet
 - **Tipo:** construcción (primera etapa con código)
 - **Depende de:** 02, 03, 04, 05
+- **Estado: ✅ EJECUTADA** — código en [`backend/`](../../backend/),
+  entregable en [`docs/especificacion/09-backend-fundacional.md`](../especificacion/09-backend-fundacional.md).
+  13/13 tests, BUILD SUCCESS, verificado contra MySQL 8 real (Testcontainers):
+  multitenancy operativo (falla sin `TenantContext`, filtra con contexto),
+  autenticación JWT RS256 completa (registro/login/refresh rotativo con
+  detección de reuso/logout), autorización por rol, reglas de arquitectura
+  ADR-002 (ArchUnit).
 
 ## Objetivo
 
