@@ -2,6 +2,7 @@ package com.easybeach.identity.domain;
 
 import com.easybeach.shared.audit.Auditable;
 import com.easybeach.shared.id.UlidGenerator;
+import com.easybeach.shared.security.TipoUsuario;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -38,7 +39,7 @@ public class Usuario extends Auditable {
     @Column(nullable = false, length = 160)
     private String email;
 
-    @Column(name = "password_hash", nullable = false, length = 100)
+    @Column(name = "password_hash", nullable = false, length = 255)
     private String passwordHash;
 
     @Column(nullable = false, length = 120)
@@ -51,6 +52,10 @@ public class Usuario extends Auditable {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private EstadoUsuario estado = EstadoUsuario.ACTIVO;
+
+    /** Etapa 05 §1.1: obligatorio tras alta con password temporal (etapa 10). */
+    @Column(name = "debe_cambiar_password", nullable = false)
+    private boolean debeCambiarPassword = false;
 
     @PrePersist
     void prePersist() {

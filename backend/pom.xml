@@ -82,6 +82,15 @@
       <scope>runtime</scope>
     </dependency>
 
+    <!-- Argon2 real (etapa 05 §5): Spring Security's Argon2PasswordEncoder delega
+         en Bouncy Castle pero no lo trae - hay que declararlo a mano. -->
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk18on</artifactId>
+      <version>1.85</version>
+      <scope>runtime</scope>
+    </dependency>
+
     <!-- Boilerplate reduction -->
     <dependency>
       <groupId>org.projectlombok</groupId>

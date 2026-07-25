@@ -1,14 +1,18 @@
 package com.easybeach.identity.web;
 
 import com.easybeach.identity.service.AuthService;
+import com.easybeach.identity.web.dto.CambiarPasswordRequest;
 import com.easybeach.identity.web.dto.LoginRequest;
 import com.easybeach.identity.web.dto.RefreshRequest;
 import com.easybeach.identity.web.dto.RegistroClienteRequest;
 import com.easybeach.identity.web.dto.TokenResponse;
+import com.easybeach.shared.security.EasyBeachUserPrincipal;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -53,6 +57,14 @@ public class AuthController {
     @PostMapping("/logout")
     public ResponseEntity<Void> logout(@Valid @RequestBody RefreshRequest request) {
         authService.logout(request);
+        return ResponseEntity.noContent().build();
+    }
+
+    /** Requiere autenticación (a diferencia del resto de /auth/**) - ver SecurityConfig. */
+    @PutMapping("/cambiar-password")
+    public ResponseEntity<Void> cambiarPassword(@Valid @RequestBody CambiarPasswordRequest request,
+                                                 @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
+        authService.cambiarPassword(principal.usuarioPublicId(), request.passwordActual(), request.passwordNueva());
         return ResponseEntity.noContent().build();
     }
 }

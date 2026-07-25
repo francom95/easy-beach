@@ -1,5 +1,6 @@
 package com.easybeach.identity.domain;
 
+import com.easybeach.shared.security.RolCodigo;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

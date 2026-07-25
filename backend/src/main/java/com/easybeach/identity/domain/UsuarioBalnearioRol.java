@@ -14,8 +14,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Filter;
-import org.hibernate.annotations.FilterDef;
-import org.hibernate.annotations.ParamDef;
 
 /**
  * El staff pertenece a un balneario con un rol (etapa 03 §3.2). Primera
@@ -25,7 +23,6 @@ import org.hibernate.annotations.ParamDef;
 @Entity
 @Table(name = "usuario_balneario_rol")
 @TenantScoped
-@FilterDef(name = TenantScoped.FILTER_NAME, parameters = @ParamDef(name = TenantScoped.FILTER_PARAM, type = Long.class))
 @Filter(name = TenantScoped.FILTER_NAME, condition = "balneario_id = :" + TenantScoped.FILTER_PARAM)
 @Getter
 @Setter

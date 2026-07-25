@@ -4,6 +4,14 @@
 - **Modelo ejecutor:** sonnet
 - **Tipo:** construcción
 - **Depende de:** 09
+- **Estado: ✅ EJECUTADA** — código en [`backend/`](../../backend/) (módulos
+  `platform`, `branding`, `payments`), entregable en
+  [`docs/especificacion/10-backend-super-admin.md`](../especificacion/10-backend-super-admin.md).
+  20/20 tests, BUILD SUCCESS, contra MySQL 8 real: flujo completo (crear
+  balneario → vincular Mercado Pago OAuth → configurar branding → suscribir
+  a temporada → listado público → suspender/reactivar), contrato de 25
+  tokens de theming servido íntegro, autorización 401/403 correcta, upload
+  de imágenes validado por magic bytes.
 
 ## Objetivo
 

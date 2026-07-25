@@ -1,7 +1,7 @@
 package com.easybeach.identity.security;
 
-import com.easybeach.identity.domain.RolCodigo;
-import com.easybeach.identity.domain.TipoUsuario;
+import com.easybeach.shared.security.RolCodigo;
+import com.easybeach.shared.security.TipoUsuario;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.JwtException;

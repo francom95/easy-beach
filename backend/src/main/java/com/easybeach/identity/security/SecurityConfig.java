@@ -3,13 +3,15 @@ package com.easybeach.identity.security;
 import com.easybeach.identity.repository.UsuarioRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
@@ -23,9 +25,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 public class SecurityConfig {
 
+    /** Etapa 05 §5: "hash con argon2id (o bcrypt cost ≥ 12 si argon2 no está disponible)". */
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        return Argon2PasswordEncoder.defaultsForSpringSecurity_v5_8();
     }
 
     /**
@@ -47,8 +50,20 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                // Sin esto, Spring Security devuelve 403 tanto para "sin token" como para
+                // "token válido pero rol insuficiente" - etapa 05 exige distinguirlos:
+                // 401 sin credenciales válidas, 403 autenticado pero sin permiso.
+                .exceptionHandling(ex -> ex.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/auth/**").permitAll()
+                        // Auth público: registro/login/refresh/logout. cambiar-password NO está acá
+                        // a propósito - necesita autenticación (ver AuthController).
+                        .requestMatchers("/api/v1/auth/registro", "/api/v1/auth/login/**",
+                                "/api/v1/auth/refresh", "/api/v1/auth/logout").permitAll()
+                        // Navegación pública de la app cliente (etapa 04 §2: sin auth).
+                        .requestMatchers("/api/v1/balnearios/**").permitAll()
+                        .requestMatchers("/public/assets/**").permitAll()
+                        // Callback de OAuth de Mercado Pago: el navegador llega sin JWT.
+                        .requestMatchers("/api/v1/mercadopago/oauth/callback").permitAll()
                         .requestMatchers("/actuator/health/**", "/actuator/info").permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

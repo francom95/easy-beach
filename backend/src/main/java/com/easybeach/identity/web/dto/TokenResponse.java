@@ -8,6 +8,8 @@ public record TokenResponse(
         String refreshToken,
         String tipo,
         String rol,
-        Long balnearioId
+        Long balnearioId,
+        /** Etapa 05 §1.1: staff creado con password temporal debe cambiarla en el primer login. */
+        boolean debeCambiarPassword
 ) {
 }

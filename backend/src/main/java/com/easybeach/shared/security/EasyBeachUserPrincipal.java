@@ -1,7 +1,5 @@
-package com.easybeach.identity.security;
+package com.easybeach.shared.security;
 
-import com.easybeach.identity.domain.RolCodigo;
-import com.easybeach.identity.domain.TipoUsuario;
 import java.util.Collection;
 import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
@@ -11,7 +9,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 /**
  * Principal resuelto a partir de los claims del access token (etapa 05
  * §1.2). {@code balnearioId} viaja SOLO para staff - es la única fuente del
- * tenant operativo (ADR-001), nunca un parámetro de request.
+ * tenant operativo (ADR-001), nunca un parámetro de request. Vive en
+ * {@code shared} (no {@code identity}): cualquier controller de cualquier
+ * módulo necesita leer "quién llama" vía {@code @AuthenticationPrincipal}.
  */
 public class EasyBeachUserPrincipal implements UserDetails {
 

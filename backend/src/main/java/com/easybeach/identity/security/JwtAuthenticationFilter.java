@@ -1,10 +1,11 @@
 package com.easybeach.identity.security;
 
 import com.easybeach.identity.domain.EstadoUsuario;
-import com.easybeach.identity.domain.RolCodigo;
-import com.easybeach.identity.domain.TipoUsuario;
 import com.easybeach.identity.domain.Usuario;
 import com.easybeach.identity.repository.UsuarioRepository;
+import com.easybeach.shared.security.EasyBeachUserPrincipal;
+import com.easybeach.shared.security.RolCodigo;
+import com.easybeach.shared.security.TipoUsuario;
 import com.easybeach.shared.tenancy.TenantContext;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;

@@ -2,9 +2,7 @@ package com.easybeach.identity.service;
 
 import com.easybeach.identity.domain.EstadoSesion;
 import com.easybeach.identity.domain.EstadoUsuario;
-import com.easybeach.identity.domain.RolCodigo;
 import com.easybeach.identity.domain.SesionRefresh;
-import com.easybeach.identity.domain.TipoUsuario;
 import com.easybeach.identity.domain.Usuario;
 import com.easybeach.identity.domain.UsuarioBalnearioRol;
 import com.easybeach.identity.repository.SesionRefreshRepository;
@@ -18,6 +16,8 @@ import com.easybeach.identity.web.dto.TokenResponse;
 import com.easybeach.shared.error.ApiException;
 import com.easybeach.shared.error.ErrorCode;
 import com.easybeach.shared.id.UlidGenerator;
+import com.easybeach.shared.security.RolCodigo;
+import com.easybeach.shared.security.TipoUsuario;
 import java.time.Instant;
 import java.util.List;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -186,7 +186,29 @@ public class AuthService {
                 rawRefreshToken,
                 usuario.getTipo().name(),
                 rol.name(),
-                balnearioId
+                balnearioId,
+                usuario.isDebeCambiarPassword()
         );
+    }
+
+    /** Etapa 05 §1.1/§1.3: cambio de password revoca TODAS las sesiones del usuario. */
+    @Transactional
+    public void cambiarPassword(String usuarioPublicId, String passwordActual, String passwordNueva) {
+        Usuario usuario = usuarioRepository.findByPublicId(usuarioPublicId)
+                .orElseThrow(() -> new ApiException(ErrorCode.RECURSO_NO_ENCONTRADO));
+        if (!passwordEncoder.matches(passwordActual, usuario.getPasswordHash())) {
+            throw new ApiException(ErrorCode.CREDENCIALES_INVALIDAS, "La contraseña actual no coincide");
+        }
+        usuario.setPasswordHash(passwordEncoder.encode(passwordNueva));
+        usuario.setDebeCambiarPassword(false);
+        usuarioRepository.save(usuario);
+
+        Instant ahora = Instant.now();
+        List<SesionRefresh> sesionesActivas = sesionRefreshRepository.findByUsuarioIdAndEstado(usuario.getId(), EstadoSesion.ACTIVA);
+        for (SesionRefresh sesion : sesionesActivas) {
+            sesion.setEstado(EstadoSesion.REVOCADA);
+            sesion.setUpdatedAt(ahora);
+        }
+        sesionRefreshRepository.saveAll(sesionesActivas);
     }
 }

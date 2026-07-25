@@ -1,7 +1,7 @@
 package com.easybeach.identity.repository;
 
 import com.easybeach.identity.domain.Rol;
-import com.easybeach.identity.domain.RolCodigo;
+import com.easybeach.shared.security.RolCodigo;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

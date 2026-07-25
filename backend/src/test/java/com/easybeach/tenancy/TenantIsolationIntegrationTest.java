@@ -4,8 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import com.easybeach.identity.domain.EstadoUsuario;
-import com.easybeach.identity.domain.RolCodigo;
-import com.easybeach.identity.domain.TipoUsuario;
+import com.easybeach.shared.security.RolCodigo;
+import com.easybeach.shared.security.TipoUsuario;
 import com.easybeach.identity.domain.Usuario;
 import com.easybeach.identity.domain.UsuarioBalnearioRol;
 import com.easybeach.identity.repository.RolRepository;

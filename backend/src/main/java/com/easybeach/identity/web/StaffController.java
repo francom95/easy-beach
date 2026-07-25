@@ -1,10 +1,9 @@
 package com.easybeach.identity.web;
 
-import com.easybeach.identity.domain.UsuarioBalnearioRol;
-import com.easybeach.identity.security.EasyBeachUserPrincipal;
 import com.easybeach.identity.service.UsuarioBalnearioRolService;
 import com.easybeach.identity.web.dto.MiembroResponse;
 import com.easybeach.identity.web.dto.WhoAmIResponse;
+import com.easybeach.shared.security.EasyBeachUserPrincipal;
 import java.util.List;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

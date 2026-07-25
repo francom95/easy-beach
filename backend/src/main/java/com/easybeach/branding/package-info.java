@@ -4,3 +4,4 @@
  * {@code platform} y {@code shared}. Construido en la etapa 10.
  */
 package com.easybeach.branding;
+

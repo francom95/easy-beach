@@ -17,6 +17,12 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: false
+  servlet:
+    multipart:
+      # Por encima de easybeach.storage.max-size-bytes: si no, Spring rechaza
+      # el upload ANTES de que AssetStorageService llegue a validar nada.
+      max-file-size: 10MB
+      max-request-size: 10MB
 
 server:
   port: 8080
@@ -46,6 +52,20 @@ easybeach:
     # -> se genera un par RSA efímero al arrancar (ver JwtKeyProvider).
   cors:
     allowed-origins: "http://localhost:3000,http://localhost:19006"
+  storage:
+    # Fuera de src/main/resources a propósito (etapa 05 §6: "fuera del web root").
+    root-dir: "./data/assets"
+    max-size-bytes: 5242880 # 5 MB
+  mercadopago:
+    # Credenciales de la aplicación EasyBeach en MP (ADR-004) - vacías acá,
+    # obligatorias vía variables de entorno en dev/prod (ver esos perfiles).
+    client-id: ""
+    client-secret: ""
+    redirect-uri: ""
+  security:
+    # token-encryption-key: sin configurar en local/dev -> se genera una
+    # clave AES-256 efímera al arrancar (ver TokenEncryptionService).
+    token-encryption-key: ""
 
 logging:
   pattern:

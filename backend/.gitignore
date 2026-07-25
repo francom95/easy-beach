@@ -3,3 +3,7 @@ target/
 .idea/
 *.iml
 .vscode/
+
+# Storage local de assets subidos (easybeach.storage.root-dir) - generado en
+# runtime/tests, nunca contenido versionable.
+data/
