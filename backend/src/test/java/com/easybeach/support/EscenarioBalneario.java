@@ -19,6 +19,7 @@ import com.easybeach.platform.domain.EstadoTemporada;
 import com.easybeach.platform.domain.Plan;
 import com.easybeach.platform.domain.SuscripcionTemporada;
 import com.easybeach.platform.domain.Temporada;
+import com.easybeach.platform.event.BalnearioCreado;
 import com.easybeach.platform.repository.BalnearioRepository;
 import com.easybeach.platform.repository.PlanRepository;
 import com.easybeach.platform.repository.SuscripcionTemporadaRepository;
@@ -30,6 +31,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -61,6 +63,7 @@ public class EscenarioBalneario {
     private final TestRestTemplate restTemplate;
     private final BalnearioMpCredencialRepository credencialRepository;
     private final TokenEncryptionService tokenEncryptionService;
+    private final ApplicationEventPublisher eventPublisher;
 
     public EscenarioBalneario(BalnearioRepository balnearioRepository, UsuarioRepository usuarioRepository,
                                UsuarioBalnearioRolRepository usuarioBalnearioRolRepository,
@@ -69,7 +72,8 @@ public class EscenarioBalneario {
                                SuscripcionTemporadaRepository suscripcionRepository,
                                PasswordEncoder passwordEncoder, TestRestTemplate restTemplate,
                                BalnearioMpCredencialRepository credencialRepository,
-                               TokenEncryptionService tokenEncryptionService) {
+                               TokenEncryptionService tokenEncryptionService,
+                               ApplicationEventPublisher eventPublisher) {
         this.balnearioRepository = balnearioRepository;
         this.usuarioRepository = usuarioRepository;
         this.usuarioBalnearioRolRepository = usuarioBalnearioRolRepository;
@@ -81,6 +85,7 @@ public class EscenarioBalneario {
         this.restTemplate = restTemplate;
         this.credencialRepository = credencialRepository;
         this.tokenEncryptionService = tokenEncryptionService;
+        this.eventPublisher = eventPublisher;
     }
 
     public record Contexto(Long balnearioId, String slug, HttpHeaders adminHeaders,
@@ -98,6 +103,11 @@ public class EscenarioBalneario {
 
         darDeAltaSuscripcionVigente(balneario.getId());
         vincularMercadoPago(balneario.getId());
+        // Mismo evento que dispara BalnearioService.crear() en el flujo real de
+        // Super Admin (etapa 10): siembra el theme default en `branding`, que
+        // no puede llamarse directo desde acá por la regla de dependencia de
+        // ADR-002 (branding depende de platform, no al revés).
+        eventPublisher.publishEvent(new BalnearioCreado(balneario.getId()));
 
         Usuario admin = crearStaff(balneario.getId(), RolCodigo.ADMIN_BALNEARIO, "admin");
         Usuario carpero = crearStaff(balneario.getId(), RolCodigo.CARPERO, "carpero");

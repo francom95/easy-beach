@@ -5,12 +5,19 @@
       "name": "easybeach-web",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--prefix", "web"],
-      "port": 3000
+      "port": 3000,
+      "autoPort": true
     },
     {
       "name": "easybeach-backend",
       "runtimeExecutable": "mvn",
       "runtimeArgs": ["-f", "backend/pom.xml", "spring-boot:run", "-Dspring-boot.run.profiles=local"],
+      "port": 8080
+    },
+    {
+      "name": "easybeach-backend-demo",
+      "runtimeExecutable": "mvn",
+      "runtimeArgs": ["-f", "backend/pom.xml", "spring-boot:run", "-Dspring-boot.run.profiles=local,demo"],
       "port": 8080
     }
   ]

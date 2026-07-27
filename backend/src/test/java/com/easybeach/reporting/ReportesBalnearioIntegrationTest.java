@@ -293,6 +293,44 @@ class ReportesBalnearioIntegrationTest extends AbstractIntegrationTest {
         assertThat(reporteAjeno.cantidadPedidos()).isZero();
     }
 
+    /**
+     * Etapa 19 §2: todos los endpoints de este controlador resuelven el
+     * balneario exclusivamente desde {@code principal.balnearioId()} - no
+     * toman ningún id de path/query manipulable, así que no hay superficie
+     * de IDOR distinta entre ellos. {@code unAdminDeOtroBalnearioNoVeNadaDeEsteEnSusReportes}
+     * ya prueba que el filtro por tenant funciona contra {@code /ventas};
+     * estos dos casos agregan cobertura donde SÍ hay una diferencia real de
+     * código: {@code dashboard} usa un método de servicio distinto (sin
+     * rango de fechas) y {@code /csv} pasa por un {@code CsvWriter} que
+     * podría, en teoría, filtrar distinto que su contraparte JSON. Los otros
+     * 4 endpoints (productos-mas-vendidos, promociones, estadias, servicios
+     * y sus /csv) comparten exactamente el mismo mecanismo de filtro que
+     * /ventas vía {@code ReporteBalnearioService} y no se replican acá.
+     */
+    @Test
+    void unAdminDeOtroBalnearioNoVeElDashboardDeEste() {
+        EscenarioBalneario.Contexto otro = escenario.crearBalnearioOperativoConStaff("reportes-ajeno-dashboard");
+
+        DashboardResumenResponse dashboardAjeno = restTemplate.exchange(url("/api/v1/admin/reportes/dashboard"),
+                HttpMethod.GET, new HttpEntity<>(otro.adminHeaders()), DashboardResumenResponse.class).getBody();
+
+        assertThat(dashboardAjeno.facturacionHoy()).isEqualByComparingTo("0.00");
+        assertThat(dashboardAjeno.pedidosHoy()).isZero();
+        assertThat(dashboardAjeno.pedidosEnCurso()).isZero();
+    }
+
+    @Test
+    void unAdminDeOtroBalnearioNoVeNadaEnElCsvDeVentas() {
+        EscenarioBalneario.Contexto otro = escenario.crearBalnearioOperativoConStaff("reportes-ajeno-csv");
+
+        var response = restTemplate.exchange(
+                url("/api/v1/admin/reportes/ventas/csv?desde=" + hoy + "&hasta=" + hoy), HttpMethod.GET,
+                new HttpEntity<>(otro.adminHeaders()), String.class);
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isEqualTo("dia,cantidadPedidos,facturacion\r\n");
+    }
+
     @Test
     void unOperadorNoPuedeConsultarReportes() {
         var response = restTemplate.exchange(
