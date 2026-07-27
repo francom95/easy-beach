@@ -278,3 +278,69 @@ export type DashboardResumenResponse = {
   ticketPromedioHoy: string;
   pedidosEnCurso: number;
 };
+
+// ---------------------------------------------------------------- super admin (etapa 18)
+
+export type PageResponse<T> = {
+  content: T[];
+  page: number;
+  size: number;
+  totalElements: number;
+  totalPages: number;
+};
+
+export type CrearBalnearioResponse = {
+  balneario: BalnearioResponse;
+  emailAdmin: string;
+  passwordTemporalAdmin: string;
+};
+
+export type PlanResponse = {
+  id: number;
+  nombre: string;
+  descripcion: string | null;
+  precio: string;
+  activo: boolean;
+};
+
+export type EstadoTemporada = 'PLANIFICADA' | 'EN_CURSO' | 'CERRADA';
+
+export type TemporadaResponse = {
+  id: number;
+  nombre: string;
+  fechaInicio: string;
+  fechaFin: string;
+  estado: EstadoTemporada;
+};
+
+export type EstadoSuscripcion = 'PENDIENTE' | 'ACTIVA' | 'SUSPENDIDA' | 'FINALIZADA';
+
+export type SuscripcionResponse = {
+  id: number;
+  balnearioId: number;
+  planId: number;
+  temporadaId: number;
+  estado: EstadoSuscripcion;
+};
+
+export type AuditoriaResponse = {
+  id: number;
+  actorUsuarioId: number;
+  accion: string;
+  entidadTipo: string;
+  entidadId: number | null;
+  balnearioId: number | null;
+  createdAt: string;
+};
+
+export type VolumenPorBalnearioResponse = {
+  balnearioId: number;
+  balnearioNombre: string;
+  cantidadPedidos: number;
+  facturacion: string;
+};
+
+export type PlataformaReporteResponse = {
+  balneariosActivos: number;
+  volumenPorBalneario: VolumenPorBalnearioResponse[];
+};

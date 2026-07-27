@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '../store/authStore';
 import { EstadoCargando } from './EstadoCarga';
+import { rutaInicioPorRol } from '../utils/rutas';
 
 /** Guard de ruta client-side: sin cookies de servidor no hay proxy/middleware que pueda leer la sesión (vive en memoria + localStorage). */
 export function RequireAuth({ rolesPermitidos, children }: { rolesPermitidos: string[]; children: React.ReactNode }) {
@@ -18,7 +19,7 @@ export function RequireAuth({ rolesPermitidos, children }: { rolesPermitidos: st
       return;
     }
     if (rol && !rolesPermitidos.includes(rol)) {
-      router.replace(rol === 'ADMIN_BALNEARIO' ? '/admin' : '/operativo');
+      router.replace(rutaInicioPorRol(rol));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [estado, rol]);

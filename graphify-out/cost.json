@@ -83,8 +83,14 @@
       "input_tokens": 0,
       "output_tokens": 0,
       "files": 3
+    },
+    {
+      "date": "2026-07-27T14:30:00Z",
+      "input_tokens": 100000,
+      "output_tokens": 14315,
+      "files": 398
     }
   ],
-  "total_input_tokens": 0,
-  "total_output_tokens": 1132075
+  "total_input_tokens": 100000,
+  "total_output_tokens": 1146390
 }

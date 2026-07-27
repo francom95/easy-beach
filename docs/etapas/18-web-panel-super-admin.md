@@ -5,6 +5,13 @@
 - **Tipo:** construcción
 - **Depende de:** 08 (diseño), 10 (API)
 - **Puede correr en paralelo con:** 16 y 17
+- **Estado: ✅ EJECUTADA**, verificada en navegador real — código en
+  [`web/src/app/super-admin/`](../../web/src/app/super-admin/), entregable en
+  [`docs/especificacion/18-web-panel-super-admin.md`](../especificacion/18-web-panel-super-admin.md).
+  `tsc`/`eslint` limpios. Sin cambios de backend (los 5 controladores Super
+  Admin ya existían desde la etapa 10). Hallazgo: el login unificado de
+  staff necesitaba un fallback a `/auth/login/super-admin` (endpoint
+  separado por diseño, etapa 05) — resuelto del lado del cliente.
 
 ## Objetivo
 

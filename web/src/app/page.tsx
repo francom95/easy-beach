@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '../store/authStore';
 import { EstadoCargando } from '../components/EstadoCarga';
+import { rutaInicioPorRol } from '../utils/rutas';
 
 export default function Home() {
   const router = useRouter();
@@ -16,7 +17,7 @@ export default function Home() {
       router.replace('/login');
       return;
     }
-    router.replace(rol === 'ADMIN_BALNEARIO' ? '/admin' : '/operativo');
+    router.replace(rutaInicioPorRol(rol));
   }, [estado, rol, router]);
 
   return (

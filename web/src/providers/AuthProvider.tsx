@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { loginStaff, logout as logoutRequest } from '../api/auth';
+import { loginStaffOSuperAdmin, logout as logoutRequest } from '../api/auth';
 import { API_BASE_URL } from '../api/config';
 import { getAccessToken, registrarListenerSesionPerdida, setAccessToken } from '../auth/tokenHolder';
 import { borrarRefreshToken, guardarRefreshToken, leerRefreshToken } from '../auth/storage';
@@ -73,7 +73,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const value: AuthContextValue = {
     async login(email, password) {
-      const tokens = await loginStaff(email, password);
+      const tokens = await loginStaffOSuperAdmin(email, password);
       setAccessToken(tokens.accessToken);
       guardarRefreshToken(tokens.refreshToken);
       setSesion(tokens.rol, tokens.balnearioId);

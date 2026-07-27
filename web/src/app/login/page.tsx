@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '../../providers/AuthProvider';
 import { Button } from '../../components/Button';
 import { ApiError } from '../../api/ApiError';
+import { rutaInicioPorRol } from '../../utils/rutas';
 import styles from './page.module.css';
 
 export default function LoginPage() {
@@ -21,7 +22,7 @@ export default function LoginPage() {
     setCargando(true);
     try {
       const tokens = await login(email, password);
-      router.replace(tokens.rol === 'ADMIN_BALNEARIO' ? '/admin' : '/operativo');
+      router.replace(rutaInicioPorRol(tokens.rol));
     } catch (e) {
       setError(e instanceof ApiError ? e.detail : 'No pudimos iniciar sesión.');
     } finally {

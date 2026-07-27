@@ -1,0 +1,75 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titulo {
+  font-family: var(--font-display);
+  font-size: 26px;
+  margin: 0;
+}
+
+.filtro {
+  padding: 8px 12px;
+  border-radius: var(--radius-control);
+  border: 1.5px solid var(--color-border);
+  font-size: 13px;
+}
+
+.vacio {
+  color: var(--color-on-surface-muted);
+}
+
+.tablaWrap {
+  overflow-x: auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tabla th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-on-surface-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tabla td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accion {
+  background: var(--color-background);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.paginaInfo {
+  font-size: 13px;
+  color: var(--color-on-surface-muted);
+}
