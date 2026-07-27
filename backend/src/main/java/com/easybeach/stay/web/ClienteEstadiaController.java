@@ -1,6 +1,5 @@
 package com.easybeach.stay.web;
 
-import com.easybeach.identity.web.CurrentUserResolver;
 import com.easybeach.shared.security.EasyBeachUserPrincipal;
 import com.easybeach.stay.service.EstadiaService;
 import com.easybeach.stay.web.dto.CambiarUbicacionRequest;
@@ -28,43 +27,41 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClienteEstadiaController {
 
     private final EstadiaService estadiaService;
-    private final CurrentUserResolver currentUserResolver;
 
-    public ClienteEstadiaController(EstadiaService estadiaService, CurrentUserResolver currentUserResolver) {
+    public ClienteEstadiaController(EstadiaService estadiaService) {
         this.estadiaService = estadiaService;
-        this.currentUserResolver = currentUserResolver;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public EstadiaResponse solicitar(@Valid @RequestBody SolicitarEstadiaRequest request,
                                       @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return estadiaService.solicitar(currentUserResolver.resolveId(principal),
+        return estadiaService.solicitar(principal.usuarioId(),
                 request.balnearioSlug(), request.ubicacionId());
     }
 
     /** Las que ocupan cupo (pendientes o activas), en todos los balnearios. */
     @GetMapping("/vigentes")
     public List<EstadiaResponse> vigentes(@AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return estadiaService.misEstadiasVigentes(currentUserResolver.resolveId(principal));
+        return estadiaService.misEstadiasVigentes(principal.usuarioId());
     }
 
     @GetMapping("/historial")
     public List<EstadiaResponse> historial(@AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return estadiaService.miHistorial(currentUserResolver.resolveId(principal));
+        return estadiaService.miHistorial(principal.usuarioId());
     }
 
     @PutMapping("/{publicId}/ubicacion")
     public EstadiaResponse cambiarUbicacion(@PathVariable String publicId,
                                              @Valid @RequestBody CambiarUbicacionRequest request,
                                              @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return estadiaService.cambiarUbicacion(currentUserResolver.resolveId(principal), publicId,
+        return estadiaService.cambiarUbicacion(principal.usuarioId(), publicId,
                 request.ubicacionId());
     }
 
     @PostMapping("/{publicId}/cierre")
     public ResumenCierreResponse cerrar(@PathVariable String publicId,
                                          @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return estadiaService.cerrar(currentUserResolver.resolveId(principal), publicId);
+        return estadiaService.cerrar(principal.usuarioId(), publicId);
     }
 }

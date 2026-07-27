@@ -1,6 +1,5 @@
 package com.easybeach.platform.web;
 
-import com.easybeach.identity.web.CurrentUserResolver;
 import com.easybeach.platform.service.SuscripcionTemporadaService;
 import com.easybeach.platform.web.dto.CambiarEstadoSuscripcionRequest;
 import com.easybeach.platform.web.dto.SuscribirRequest;
@@ -26,19 +25,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class SuperAdminSuscripcionController {
 
     private final SuscripcionTemporadaService suscripcionService;
-    private final CurrentUserResolver currentUserResolver;
 
-    public SuperAdminSuscripcionController(SuscripcionTemporadaService suscripcionService,
-                                            CurrentUserResolver currentUserResolver) {
+    public SuperAdminSuscripcionController(SuscripcionTemporadaService suscripcionService) {
         this.suscripcionService = suscripcionService;
-        this.currentUserResolver = currentUserResolver;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public SuscripcionResponse suscribir(@PathVariable Long balnearioId, @Valid @RequestBody SuscribirRequest request,
                                           @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return suscripcionService.suscribir(currentUserResolver.resolveId(principal), balnearioId, request);
+        return suscripcionService.suscribir(principal.usuarioId(), balnearioId, request);
     }
 
     @GetMapping
@@ -50,7 +46,7 @@ public class SuperAdminSuscripcionController {
     public SuscripcionResponse cambiarEstado(@PathVariable Long balnearioId, @PathVariable Long suscripcionId,
                                               @Valid @RequestBody CambiarEstadoSuscripcionRequest request,
                                               @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return suscripcionService.cambiarEstado(currentUserResolver.resolveId(principal), balnearioId, suscripcionId,
+        return suscripcionService.cambiarEstado(principal.usuarioId(), balnearioId, suscripcionId,
                 request.estado(), request.motivo());
     }
 }

@@ -4,6 +4,14 @@
 - **Modelo ejecutor:** opus
 - **Tipo:** construcción
 - **Depende de:** 11, 12
+- **Estado: ✅ EJECUTADA** — código en [`backend/`](../../backend/) (módulos
+  `ordering`, `payments` completo, `promotions` contrato, `shared/realtime`),
+  entregable en
+  [`docs/especificacion/13-backend-pedidos.md`](../especificacion/13-backend-pedidos.md).
+  58/58 tests, BUILD SUCCESS: flujo de punta a punta, idempotencia (un pedido
+  y un solo cobro), precios calculados por el servidor, webhook de MP con
+  firma verificada e idempotente, cola operativa solo con pago aprobado, SSE
+  con fallback por polling, aislamiento cross-tenant.
 
 ## Objetivo
 

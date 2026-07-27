@@ -64,6 +64,10 @@ public class SecurityConfig {
                         .requestMatchers("/public/assets/**").permitAll()
                         // Callback de OAuth de Mercado Pago: el navegador llega sin JWT.
                         .requestMatchers("/api/v1/mercadopago/oauth/callback").permitAll()
+                        // Webhook de MP: llega servidor-a-servidor, sin JWT. Su
+                        // autenticidad la da la firma x-signature (etapa 05 §4.1),
+                        // no un token nuestro.
+                        .requestMatchers("/api/v1/mercadopago/webhook").permitAll()
                         .requestMatchers("/actuator/health/**", "/actuator/info").permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

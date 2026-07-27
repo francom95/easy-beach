@@ -1,6 +1,5 @@
 package com.easybeach.stay.web;
 
-import com.easybeach.identity.web.CurrentUserResolver;
 import com.easybeach.shared.security.EasyBeachUserPrincipal;
 import com.easybeach.stay.service.EstadiaService;
 import com.easybeach.stay.web.dto.EstadiaResponse;
@@ -27,11 +26,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class OperativoEstadiaController {
 
     private final EstadiaService estadiaService;
-    private final CurrentUserResolver currentUserResolver;
 
-    public OperativoEstadiaController(EstadiaService estadiaService, CurrentUserResolver currentUserResolver) {
+    public OperativoEstadiaController(EstadiaService estadiaService) {
         this.estadiaService = estadiaService;
-        this.currentUserResolver = currentUserResolver;
     }
 
     @GetMapping("/pendientes")
@@ -43,7 +40,7 @@ public class OperativoEstadiaController {
     public EstadiaResponse validar(@PathVariable String publicId,
                                     @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
         return estadiaService.validar(principal.balnearioId(),
-                currentUserResolver.resolveId(principal), publicId);
+                principal.usuarioId(), publicId);
     }
 
     @PostMapping("/{publicId}/rechazo")
@@ -51,6 +48,6 @@ public class OperativoEstadiaController {
                                      @Valid @RequestBody RechazarEstadiaRequest request,
                                      @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
         return estadiaService.rechazar(principal.balnearioId(),
-                currentUserResolver.resolveId(principal), publicId, request.motivo());
+                principal.usuarioId(), publicId, request.motivo());
     }
 }

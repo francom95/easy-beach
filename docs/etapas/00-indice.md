@@ -52,7 +52,7 @@ la facturación operativa en temporada.
 | 10 | ✅ [Backend Super Admin: balnearios, planes y temporadas](10-backend-super-admin.md) | sonnet | 09 |
 | 11 | ✅ [Backend catálogo y ubicaciones](11-backend-catalogo-ubicaciones.md) | sonnet | 09, 10 |
 | 12 | ✅ [Backend estadía activa](12-backend-estadia-activa.md) | opus | 09, 10, 11 |
-| 13 | [Backend carrito, pedidos, estados y tiempo real](13-backend-pedidos.md) | opus | 11, 12 |
+| 13 | ✅ [Backend carrito, pedidos, estados y tiempo real](13-backend-pedidos.md) | opus | 11, 12 |
 | 14 | [Backend servicios al carpero y promociones](14-backend-carpero-promociones.md) | sonnet | 12, 13 |
 | 15 | [Backend reportes básicos](15-backend-reportes.md) | haiku | 13, 14 |
 | 16 | [Mobile app cliente](16-mobile-app-cliente.md) | sonnet | 07, 09–14 |

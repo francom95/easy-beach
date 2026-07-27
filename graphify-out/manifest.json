@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1785113867.8115666,
-    "ast_hash": "a861db11a7dca94d5edeb67acf3bd93c",
-    "semantic_hash": "a861db11a7dca94d5edeb67acf3bd93c"
+    "mtime": 1785117104.4575386,
+    "ast_hash": "302b193a35f5e12d51e2bd145c9a9de5",
+    "semantic_hash": "302b193a35f5e12d51e2bd145c9a9de5"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -65,9 +65,9 @@
     "semantic_hash": "104959e235d15263939e07bbbfe953e6"
   },
   "docs/etapas/13-backend-pedidos.md": {
-    "mtime": 1783444568.4279964,
-    "ast_hash": "98d375899517aec418180af8e94555c3",
-    "semantic_hash": "98d375899517aec418180af8e94555c3"
+    "mtime": 1785117097.5569692,
+    "ast_hash": "80d074ee6717ca51a0b2f5e6f23df13f",
+    "semantic_hash": "80d074ee6717ca51a0b2f5e6f23df13f"
   },
   "docs/etapas/14-backend-carpero-promociones.md": {
     "mtime": 1783408910.0628607,
@@ -345,9 +345,9 @@
     "semantic_hash": "2cdc25cf5246b4a32e2820bdf6fcea9c"
   },
   "backend/src/main/java/com/easybeach/identity/security/JwtAuthenticationFilter.java": {
-    "mtime": 1784998133.455253,
-    "ast_hash": "4640252c202041dbc73436612361ea24",
-    "semantic_hash": "4640252c202041dbc73436612361ea24"
+    "mtime": 1785116854.862966,
+    "ast_hash": "9174a518d3d44913df17271054c27d9c",
+    "semantic_hash": "9174a518d3d44913df17271054c27d9c"
   },
   "backend/src/main/java/com/easybeach/identity/security/JwtKeyProvider.java": {
     "mtime": 1784937123.217935,
@@ -360,19 +360,19 @@
     "semantic_hash": "2ee6a02dc9b28dd61208da9b0dcec52c"
   },
   "backend/src/main/java/com/easybeach/identity/security/JwtService.java": {
-    "mtime": 1784998147.9095862,
-    "ast_hash": "ac780217ab489f241ca6d13371c60cb3",
-    "semantic_hash": "ac780217ab489f241ca6d13371c60cb3"
+    "mtime": 1785116835.832603,
+    "ast_hash": "be78877a33ea7e9de69d40b3ce620473",
+    "semantic_hash": "be78877a33ea7e9de69d40b3ce620473"
   },
   "backend/src/main/java/com/easybeach/identity/security/SecurityConfig.java": {
-    "mtime": 1784998692.4875102,
-    "ast_hash": "6953f2cc47c825936fcfc19d034c802b",
-    "semantic_hash": "6953f2cc47c825936fcfc19d034c802b"
+    "mtime": 1785116351.4535632,
+    "ast_hash": "6b002709b9882430d8f40fa1df499ecd",
+    "semantic_hash": "6b002709b9882430d8f40fa1df499ecd"
   },
   "backend/src/main/java/com/easybeach/identity/service/AuthService.java": {
-    "mtime": 1784998436.5699973,
-    "ast_hash": "bcf33c12478ddc1a85dc8bddd64c4fb1",
-    "semantic_hash": "bcf33c12478ddc1a85dc8bddd64c4fb1"
+    "mtime": 1785116841.1134613,
+    "ast_hash": "b0076ca59d9a2432d3418d18caa2357a",
+    "semantic_hash": "b0076ca59d9a2432d3418d18caa2357a"
   },
   "backend/src/main/java/com/easybeach/identity/service/SesionRefreshRevocationService.java": {
     "mtime": 1784941520.2061386,
@@ -425,7 +425,7 @@
     "semantic_hash": "8363ffd459d4476c5789519a392fa004"
   },
   "backend/src/main/java/com/easybeach/ordering/package-info.java": {
-    "mtime": 1784937358.743952,
+    "mtime": 1785116361.5827696,
     "ast_hash": "fe880464b7ca09cb87a49bafa09a26da",
     "semantic_hash": "fe880464b7ca09cb87a49bafa09a26da"
   },
@@ -450,9 +450,9 @@
     "semantic_hash": "4e09dab8a88f11012286bcd22d36ba32"
   },
   "backend/src/main/java/com/easybeach/promotions/package-info.java": {
-    "mtime": 1784937371.5317564,
-    "ast_hash": "7be52e97d9cb4c336be1c4eafccc1608",
-    "semantic_hash": "7be52e97d9cb4c336be1c4eafccc1608"
+    "mtime": 1785116361.6312463,
+    "ast_hash": "40d63834eb1d457dcc18cd71220c0089",
+    "semantic_hash": "40d63834eb1d457dcc18cd71220c0089"
   },
   "backend/src/main/java/com/easybeach/reporting/package-info.java": {
     "mtime": 1784937375.3420882,
@@ -565,9 +565,9 @@
     "semantic_hash": "07ab96b541e263802c25f64f462a8c27"
   },
   "backend/src/test/java/com/easybeach/support/AbstractIntegrationTest.java": {
-    "mtime": 1784998573.088128,
-    "ast_hash": "e6fd2b2f1103b26db74fa97d1c242db6",
-    "semantic_hash": "e6fd2b2f1103b26db74fa97d1c242db6"
+    "mtime": 1785116414.9269023,
+    "ast_hash": "f7b783dada4e147e1d503dd0f534d5fc",
+    "semantic_hash": "f7b783dada4e147e1d503dd0f534d5fc"
   },
   "backend/src/test/java/com/easybeach/tenancy/TenantIsolationIntegrationTest.java": {
     "mtime": 1784998218.527215,
@@ -698,11 +698,6 @@
     "mtime": 1784997404.7418413,
     "ast_hash": "68a1f343b06979af11390a289475cbd5",
     "semantic_hash": "68a1f343b06979af11390a289475cbd5"
-  },
-  "backend/src/main/java/com/easybeach/identity/web/CurrentUserResolver.java": {
-    "mtime": 1784998270.8969488,
-    "ast_hash": "82d1d93c66e2173d5fadf65c9553b07a",
-    "semantic_hash": "82d1d93c66e2173d5fadf65c9553b07a"
   },
   "backend/src/main/java/com/easybeach/identity/web/dto/CambiarPasswordRequest.java": {
     "mtime": 1784998412.2228768,
@@ -875,9 +870,9 @@
     "semantic_hash": "fccfcc5a01af8d1539de32cfa8bf11a5"
   },
   "backend/src/main/java/com/easybeach/platform/web/SuperAdminBalnearioController.java": {
-    "mtime": 1784998285.1765058,
-    "ast_hash": "ae4d0e1271a0639ffbc9f95e4046d0fe",
-    "semantic_hash": "ae4d0e1271a0639ffbc9f95e4046d0fe"
+    "mtime": 1785116878.6636803,
+    "ast_hash": "b1b11e8651f7f609ebfb7aecb6c0a78d",
+    "semantic_hash": "b1b11e8651f7f609ebfb7aecb6c0a78d"
   },
   "backend/src/main/java/com/easybeach/platform/web/SuperAdminPlanController.java": {
     "mtime": 1784998293.1109014,
@@ -885,9 +880,9 @@
     "semantic_hash": "881c6c8883d1c7bc7e1d402eeec7f1da"
   },
   "backend/src/main/java/com/easybeach/platform/web/SuperAdminSuscripcionController.java": {
-    "mtime": 1784998323.6358485,
-    "ast_hash": "55880c0a78bdb296042797a666468637",
-    "semantic_hash": "55880c0a78bdb296042797a666468637"
+    "mtime": 1785116878.5881462,
+    "ast_hash": "e0fe128888c60903a403c995a54b2abe",
+    "semantic_hash": "e0fe128888c60903a403c995a54b2abe"
   },
   "backend/src/main/java/com/easybeach/platform/web/SuperAdminTemporadaController.java": {
     "mtime": 1784998307.7087202,
@@ -965,9 +960,9 @@
     "semantic_hash": "a3ccc7a9d7a71f46b7385d4e7aeaad13"
   },
   "backend/src/main/java/com/easybeach/shared/security/EasyBeachUserPrincipal.java": {
-    "mtime": 1784998074.904574,
-    "ast_hash": "85b05afc930efdf0e6c99054e5466f6f",
-    "semantic_hash": "85b05afc930efdf0e6c99054e5466f6f"
+    "mtime": 1785116817.7013142,
+    "ast_hash": "e79168b261f717b62a545eb6a68f03a5",
+    "semantic_hash": "e79168b261f717b62a545eb6a68f03a5"
   },
   "backend/src/main/java/com/easybeach/shared/security/RolCodigo.java": {
     "mtime": 1784998065.991588,
@@ -1275,14 +1270,14 @@
     "semantic_hash": "55d24717ba565aabb2b715f8121be891"
   },
   "backend/src/main/java/com/easybeach/stay/web/ClienteEstadiaController.java": {
-    "mtime": 1785113258.8250797,
-    "ast_hash": "09a77839f221a6e40317d156565a93b4",
-    "semantic_hash": "09a77839f221a6e40317d156565a93b4"
+    "mtime": 1785116878.691371,
+    "ast_hash": "fdb3ab19ccfb1624c7520999de6610ab",
+    "semantic_hash": "fdb3ab19ccfb1624c7520999de6610ab"
   },
   "backend/src/main/java/com/easybeach/stay/web/OperativoEstadiaController.java": {
-    "mtime": 1785113270.7108574,
-    "ast_hash": "0fef3b60f7c11034960b2b73ece2bc8d",
-    "semantic_hash": "0fef3b60f7c11034960b2b73ece2bc8d"
+    "mtime": 1785116878.7224052,
+    "ast_hash": "127de9fdc2afebf771b9c866dbf231c3",
+    "semantic_hash": "127de9fdc2afebf771b9c866dbf231c3"
   },
   "backend/src/main/java/com/easybeach/stay/web/dto/CambiarUbicacionRequest.java": {
     "mtime": 1785113085.590241,
@@ -1325,13 +1320,213 @@
     "semantic_hash": "bbfdd71e1ccc00d3f85c2a133572f9e6"
   },
   "backend/src/test/java/com/easybeach/support/EscenarioBalneario.java": {
-    "mtime": 1785113652.1804116,
-    "ast_hash": "71acabc4e5ce2fce8dd843525faed7e5",
-    "semantic_hash": "71acabc4e5ce2fce8dd843525faed7e5"
+    "mtime": 1785116461.2063515,
+    "ast_hash": "a1f77c1f0e325ffffadb3328e5faada1",
+    "semantic_hash": "a1f77c1f0e325ffffadb3328e5faada1"
   },
   "docs/especificacion/12-backend-estadia-activa.md": {
     "mtime": 1785113845.8174984,
     "ast_hash": "f4c6086b8d670a8fb0b76df830fc3a86",
     "semantic_hash": "f4c6086b8d670a8fb0b76df830fc3a86"
+  },
+  "backend/src/main/java/com/easybeach/ordering/domain/EstadoPedido.java": {
+    "mtime": 1785115838.0278473,
+    "ast_hash": "c5077c0e4ff9d7d56e9af4862c86755c",
+    "semantic_hash": "c5077c0e4ff9d7d56e9af4862c86755c"
+  },
+  "backend/src/main/java/com/easybeach/ordering/domain/Pedido.java": {
+    "mtime": 1785116254.9602349,
+    "ast_hash": "8c1c3d628b37e381319a79cd3d6e694d",
+    "semantic_hash": "8c1c3d628b37e381319a79cd3d6e694d"
+  },
+  "backend/src/main/java/com/easybeach/ordering/domain/PedidoEvento.java": {
+    "mtime": 1785115879.0777092,
+    "ast_hash": "03a7ae7cbb5a38372e94554df4145b71",
+    "semantic_hash": "03a7ae7cbb5a38372e94554df4145b71"
+  },
+  "backend/src/main/java/com/easybeach/ordering/domain/PedidoItem.java": {
+    "mtime": 1785115868.6645553,
+    "ast_hash": "194843c46117e6c9fcdfaee17da34071",
+    "semantic_hash": "194843c46117e6c9fcdfaee17da34071"
+  },
+  "backend/src/main/java/com/easybeach/ordering/domain/PedidoPromocion.java": {
+    "mtime": 1785115889.190447,
+    "ast_hash": "3ea2be0316e3e7174a4793ee9fedb6c8",
+    "semantic_hash": "3ea2be0316e3e7174a4793ee9fedb6c8"
+  },
+  "backend/src/main/java/com/easybeach/ordering/repository/PedidoEventoRepository.java": {
+    "mtime": 1785116125.9437938,
+    "ast_hash": "d411b555c8261e762948e5f601705cc8",
+    "semantic_hash": "d411b555c8261e762948e5f601705cc8"
+  },
+  "backend/src/main/java/com/easybeach/ordering/repository/PedidoRepository.java": {
+    "mtime": 1785116120.340137,
+    "ast_hash": "f807871921dd855736c86b1ecb0a8f49",
+    "semantic_hash": "f807871921dd855736c86b1ecb0a8f49"
+  },
+  "backend/src/main/java/com/easybeach/ordering/service/ConsumoEstadiaDePedidos.java": {
+    "mtime": 1785116344.3885624,
+    "ast_hash": "89e53a7bb3ef31224beef0b007c77391",
+    "semantic_hash": "89e53a7bb3ef31224beef0b007c77391"
+  },
+  "backend/src/main/java/com/easybeach/ordering/service/PagoResueltoListener.java": {
+    "mtime": 1785116283.9106677,
+    "ast_hash": "a0dd8e54834753fed5e888e6ffa377a7",
+    "semantic_hash": "a0dd8e54834753fed5e888e6ffa377a7"
+  },
+  "backend/src/main/java/com/easybeach/ordering/service/PedidoService.java": {
+    "mtime": 1785116805.6640494,
+    "ast_hash": "423e7f8851a2cfb35fa78a259fe48443",
+    "semantic_hash": "423e7f8851a2cfb35fa78a259fe48443"
+  },
+  "backend/src/main/java/com/easybeach/ordering/web/ClientePedidoController.java": {
+    "mtime": 1785116878.522504,
+    "ast_hash": "afe2050f3b553c5aa8aeb62d9301c0b6",
+    "semantic_hash": "afe2050f3b553c5aa8aeb62d9301c0b6"
+  },
+  "backend/src/main/java/com/easybeach/ordering/web/OperativoPedidoController.java": {
+    "mtime": 1785116878.5666194,
+    "ast_hash": "7680d06fd1ec41ca6750d5876bd6faf5",
+    "semantic_hash": "7680d06fd1ec41ca6750d5876bd6faf5"
+  },
+  "backend/src/main/java/com/easybeach/ordering/web/PedidoMapper.java": {
+    "mtime": 1785116294.6729763,
+    "ast_hash": "681f4f943c882ecab26590db89811ab0",
+    "semantic_hash": "681f4f943c882ecab26590db89811ab0"
+  },
+  "backend/src/main/java/com/easybeach/ordering/web/dto/CrearPedidoRequest.java": {
+    "mtime": 1785116136.3970616,
+    "ast_hash": "ebdbc353fcfdf35217ddc5a26de6cbee",
+    "semantic_hash": "ebdbc353fcfdf35217ddc5a26de6cbee"
+  },
+  "backend/src/main/java/com/easybeach/ordering/web/dto/PedidoEventoResponse.java": {
+    "mtime": 1785116154.8383076,
+    "ast_hash": "942fbc648a782ffc2cae947cf001e60a",
+    "semantic_hash": "942fbc648a782ffc2cae947cf001e60a"
+  },
+  "backend/src/main/java/com/easybeach/ordering/web/dto/PedidoResponse.java": {
+    "mtime": 1785116144.7968955,
+    "ast_hash": "b029e8651813759549a61b18294cc36b",
+    "semantic_hash": "b029e8651813759549a61b18294cc36b"
+  },
+  "backend/src/main/java/com/easybeach/ordering/web/dto/TransicionPedidoRequest.java": {
+    "mtime": 1785116150.275249,
+    "ast_hash": "1037a78c9ae37b6727556706f6c2e6c8",
+    "semantic_hash": "1037a78c9ae37b6727556706f6c2e6c8"
+  },
+  "backend/src/main/java/com/easybeach/payments/MercadoPagoPaymentClient.java": {
+    "mtime": 1785115988.8706858,
+    "ast_hash": "3bdf276489af49d5160992aeee14c88d",
+    "semantic_hash": "3bdf276489af49d5160992aeee14c88d"
+  },
+  "backend/src/main/java/com/easybeach/payments/MercadoPagoPaymentClientImpl.java": {
+    "mtime": 1785116006.296749,
+    "ast_hash": "5ce746674e3bf6a42c64c4c43c02e141",
+    "semantic_hash": "5ce746674e3bf6a42c64c4c43c02e141"
+  },
+  "backend/src/main/java/com/easybeach/payments/WebhookSignatureVerifier.java": {
+    "mtime": 1785116022.7202833,
+    "ast_hash": "660a29f472aa3a2c6e1a19ca028ef4cd",
+    "semantic_hash": "660a29f472aa3a2c6e1a19ca028ef4cd"
+  },
+  "backend/src/main/java/com/easybeach/payments/domain/EstadoPago.java": {
+    "mtime": 1785115955.71671,
+    "ast_hash": "c94f95698bc449d85bbe60a96e7abeb3",
+    "semantic_hash": "c94f95698bc449d85bbe60a96e7abeb3"
+  },
+  "backend/src/main/java/com/easybeach/payments/domain/MpWebhookNotificacion.java": {
+    "mtime": 1785116895.4251761,
+    "ast_hash": "9e68a50d38661c5f616c82391a14a634",
+    "semantic_hash": "9e68a50d38661c5f616c82391a14a634"
+  },
+  "backend/src/main/java/com/easybeach/payments/domain/PedidoPago.java": {
+    "mtime": 1785115966.5856495,
+    "ast_hash": "7166f02ee5c710e18a207847f329fc5c",
+    "semantic_hash": "7166f02ee5c710e18a207847f329fc5c"
+  },
+  "backend/src/main/java/com/easybeach/payments/event/PagoResuelto.java": {
+    "mtime": 1785116052.8088276,
+    "ast_hash": "895ff19fa04177189e31bc5f6a653d0f",
+    "semantic_hash": "895ff19fa04177189e31bc5f6a653d0f"
+  },
+  "backend/src/main/java/com/easybeach/payments/repository/MpWebhookNotificacionRepository.java": {
+    "mtime": 1785116044.463084,
+    "ast_hash": "731a06a5b751bf83e038c20f1637272b",
+    "semantic_hash": "731a06a5b751bf83e038c20f1637272b"
+  },
+  "backend/src/main/java/com/easybeach/payments/repository/PedidoPagoRepository.java": {
+    "mtime": 1785116037.7735062,
+    "ast_hash": "9dec3b9bee5a039d57e592e782c96e16",
+    "semantic_hash": "9dec3b9bee5a039d57e592e782c96e16"
+  },
+  "backend/src/main/java/com/easybeach/payments/service/PagoService.java": {
+    "mtime": 1785116094.2982407,
+    "ast_hash": "8d679f98895d21d6937c62a8cbc9b275",
+    "semantic_hash": "8d679f98895d21d6937c62a8cbc9b275"
+  },
+  "backend/src/main/java/com/easybeach/payments/web/MercadoPagoWebhookController.java": {
+    "mtime": 1785116110.4979076,
+    "ast_hash": "2eeba951c4cd1952ebf080f3213d0fee",
+    "semantic_hash": "2eeba951c4cd1952ebf080f3213d0fee"
+  },
+  "backend/src/main/java/com/easybeach/promotions/CalculadoraPromociones.java": {
+    "mtime": 1785115900.7315626,
+    "ast_hash": "0c47e90e73ada705c4792f823687181d",
+    "semantic_hash": "0c47e90e73ada705c4792f823687181d"
+  },
+  "backend/src/main/java/com/easybeach/promotions/PromocionesConfig.java": {
+    "mtime": 1785115910.905661,
+    "ast_hash": "25a3c13f3490a010b7ae24db9fff7451",
+    "semantic_hash": "25a3c13f3490a010b7ae24db9fff7451"
+  },
+  "backend/src/main/java/com/easybeach/promotions/SinPromocionesCalculadora.java": {
+    "mtime": 1785115905.498381,
+    "ast_hash": "07877bb2abf659f2748216c6bbcd6e93",
+    "semantic_hash": "07877bb2abf659f2748216c6bbcd6e93"
+  },
+  "backend/src/main/java/com/easybeach/shared/realtime/CanalTiempoReal.java": {
+    "mtime": 1785115917.9809835,
+    "ast_hash": "f45ba2ceb6ecc1786898a282894e50b8",
+    "semantic_hash": "f45ba2ceb6ecc1786898a282894e50b8"
+  },
+  "backend/src/main/java/com/easybeach/shared/realtime/StreamController.java": {
+    "mtime": 1785115950.301787,
+    "ast_hash": "fdded7d3d3285bb5c621cfdbbf94d521",
+    "semantic_hash": "fdded7d3d3285bb5c621cfdbbf94d521"
+  },
+  "backend/src/main/java/com/easybeach/shared/realtime/TiempoRealService.java": {
+    "mtime": 1785115939.1569195,
+    "ast_hash": "e6c175634b7183fb9b985ce45d80b496",
+    "semantic_hash": "e6c175634b7183fb9b985ce45d80b496"
+  },
+  "backend/src/main/resources/db/migration/V008__pedidos_pagos.sql": {
+    "mtime": 1785116248.1756077,
+    "ast_hash": "609555ebd7f5ece5e9cbe8441a8a8bbe",
+    "semantic_hash": "609555ebd7f5ece5e9cbe8441a8a8bbe"
+  },
+  "backend/src/test/java/com/easybeach/ordering/PedidoFlujoIntegrationTest.java": {
+    "mtime": 1785116910.6740556,
+    "ast_hash": "7900e3b20982b57e537afc4cdaf74f31",
+    "semantic_hash": "7900e3b20982b57e537afc4cdaf74f31"
+  },
+  "backend/src/test/java/com/easybeach/payments/WebhookMercadoPagoIntegrationTest.java": {
+    "mtime": 1785116578.1867197,
+    "ast_hash": "5dabd820eca35cf651f537c25fe8562c",
+    "semantic_hash": "5dabd820eca35cf651f537c25fe8562c"
+  },
+  "backend/src/test/java/com/easybeach/payments/WebhookSignatureVerifierTest.java": {
+    "mtime": 1785116594.398706,
+    "ast_hash": "918552cac1d16ecb5d30298b1615eca8",
+    "semantic_hash": "918552cac1d16ecb5d30298b1615eca8"
+  },
+  "backend/src/test/java/com/easybeach/support/FakeMercadoPagoPaymentClient.java": {
+    "mtime": 1785116408.1279638,
+    "ast_hash": "c59fb49063839c0146cc46021086e5f4",
+    "semantic_hash": "c59fb49063839c0146cc46021086e5f4"
+  },
+  "docs/especificacion/13-backend-pedidos.md": {
+    "mtime": 1785117074.3277764,
+    "ast_hash": "b21dd8e8c623b697f50c5f97f316a8bc",
+    "semantic_hash": "b21dd8e8c623b697f50c5f97f316a8bc"
   }
 }

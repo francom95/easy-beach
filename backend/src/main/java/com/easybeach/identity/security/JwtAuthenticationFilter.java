@@ -76,7 +76,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             balnearioId = asInt != null ? asInt.longValue() : null;
         }
 
-        var principal = new EasyBeachUserPrincipal(usuarioPublicId, tipo, rol, balnearioId);
+        // El id numérico ya está en la entidad recuperada (el filtro la busca
+        // igual para verificar la baja), así que no cuesta un lookup extra.
+        var principal = new EasyBeachUserPrincipal(usuarioPublicId, usuario.get().getId(), tipo, rol, balnearioId);
         var authentication = new org.springframework.security.authentication.UsernamePasswordAuthenticationToken(
                 principal, null, principal.getAuthorities());
         authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));

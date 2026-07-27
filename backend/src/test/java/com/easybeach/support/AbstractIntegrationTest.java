@@ -26,7 +26,7 @@ import org.testcontainers.containers.MySQLContainer;
  */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-@Import(FakeMercadoPagoOAuthClient.class)
+@Import({FakeMercadoPagoOAuthClient.class, FakeMercadoPagoPaymentClient.class})
 public abstract class AbstractIntegrationTest {
 
     @ServiceConnection

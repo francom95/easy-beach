@@ -1,6 +1,5 @@
 package com.easybeach.platform.web;
 
-import com.easybeach.identity.web.CurrentUserResolver;
 import com.easybeach.platform.service.BalnearioService;
 import com.easybeach.platform.web.dto.ActualizarBalnearioRequest;
 import com.easybeach.platform.web.dto.BalnearioResponse;
@@ -31,18 +30,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class SuperAdminBalnearioController {
 
     private final BalnearioService balnearioService;
-    private final CurrentUserResolver currentUserResolver;
 
-    public SuperAdminBalnearioController(BalnearioService balnearioService, CurrentUserResolver currentUserResolver) {
+    public SuperAdminBalnearioController(BalnearioService balnearioService) {
         this.balnearioService = balnearioService;
-        this.currentUserResolver = currentUserResolver;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public CrearBalnearioResponse crear(@Valid @RequestBody CrearBalnearioRequest request,
                                          @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return balnearioService.crear(currentUserResolver.resolveId(principal), request);
+        return balnearioService.crear(principal.usuarioId(), request);
     }
 
     @PutMapping("/{id}")
@@ -64,12 +61,12 @@ public class SuperAdminBalnearioController {
     @PostMapping("/{id}/activar")
     public BalnearioResponse activar(@PathVariable Long id, @Valid @RequestBody MotivoRequest request,
                                       @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return balnearioService.activar(currentUserResolver.resolveId(principal), id, request.motivo());
+        return balnearioService.activar(principal.usuarioId(), id, request.motivo());
     }
 
     @PostMapping("/{id}/suspender")
     public BalnearioResponse suspender(@PathVariable Long id, @Valid @RequestBody MotivoRequest request,
                                         @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        return balnearioService.suspender(currentUserResolver.resolveId(principal), id, request.motivo());
+        return balnearioService.suspender(principal.usuarioId(), id, request.motivo());
     }
 }

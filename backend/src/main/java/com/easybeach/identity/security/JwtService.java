@@ -35,7 +35,8 @@ public class JwtService {
     public record AccessToken(String value, Instant expiresAt) {
     }
 
-    public AccessToken generateAccessToken(String usuarioPublicId, TipoUsuario tipo, RolCodigo rol, Long balnearioId) {
+    public AccessToken generateAccessToken(String usuarioPublicId, Long usuarioId, TipoUsuario tipo,
+                                            RolCodigo rol, Long balnearioId) {
         Instant now = Instant.now();
         Duration ttl = switch (tipo) {
             case CLIENTE -> Duration.ofMinutes(properties.getAccessTtlMinutesCliente());
@@ -47,6 +48,8 @@ public class JwtService {
         var builder = Jwts.builder()
                 .subject(usuarioPublicId)
                 .issuer(properties.getIssuer())
+                // uid: id numérico interno. Ver Javadoc de EasyBeachUserPrincipal.usuarioId().
+                .claim("uid", usuarioId)
                 .claim("tipo", tipo.name())
                 .claim("rol", rol.name())
                 .issuedAt(Date.from(now))

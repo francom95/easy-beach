@@ -16,12 +16,15 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class EasyBeachUserPrincipal implements UserDetails {
 
     private final String usuarioPublicId;
+    private final Long usuarioId;
     private final TipoUsuario tipo;
     private final RolCodigo rol;
     private final Long balnearioId;
 
-    public EasyBeachUserPrincipal(String usuarioPublicId, TipoUsuario tipo, RolCodigo rol, Long balnearioId) {
+    public EasyBeachUserPrincipal(String usuarioPublicId, Long usuarioId, TipoUsuario tipo,
+                                   RolCodigo rol, Long balnearioId) {
         this.usuarioPublicId = usuarioPublicId;
+        this.usuarioId = usuarioId;
         this.tipo = tipo;
         this.rol = rol;
         this.balnearioId = balnearioId;
@@ -29,6 +32,20 @@ public class EasyBeachUserPrincipal implements UserDetails {
 
     public String usuarioPublicId() {
         return usuarioPublicId;
+    }
+
+    /**
+     * Id numérico interno, tomado del claim {@code uid} del token. Evita que
+     * cada módulo tenga que consultar {@code identity} solo para traducir
+     * ULID → id (dependencia que ADR-002 no permite desde {@code ordering}),
+     * y ahorra un lookup a la base por request.
+     *
+     * <p>No es información sensible: el cliente ya conoce su propia identidad,
+     * el token está firmado y ningún endpoint acepta ids numéricos ajenos -
+     * todos los recursos se direccionan por {@code public_id} (ULID).
+     */
+    public Long usuarioId() {
+        return usuarioId;
     }
 
     public TipoUsuario tipo() {

@@ -169,7 +169,8 @@ public class AuthService {
 
     private TokenResponse issueTokensRotating(Usuario usuario, RolCodigo rol, Long balnearioId, String familiaId) {
         JwtService.AccessToken accessToken =
-                jwtService.generateAccessToken(usuario.getPublicId(), usuario.getTipo(), rol, balnearioId);
+                jwtService.generateAccessToken(usuario.getPublicId(), usuario.getId(), usuario.getTipo(),
+                        rol, balnearioId);
 
         String rawRefreshToken = jwtService.generateOpaqueRefreshToken();
         SesionRefresh sesion = new SesionRefresh();

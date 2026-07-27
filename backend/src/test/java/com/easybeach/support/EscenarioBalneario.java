@@ -9,6 +9,10 @@ import com.easybeach.identity.repository.UsuarioRepository;
 import com.easybeach.identity.web.dto.LoginRequest;
 import com.easybeach.identity.web.dto.RegistroClienteRequest;
 import com.easybeach.identity.web.dto.TokenResponse;
+import com.easybeach.payments.TokenEncryptionService;
+import com.easybeach.payments.domain.BalnearioMpCredencial;
+import com.easybeach.payments.domain.EstadoCredencialMp;
+import com.easybeach.payments.repository.BalnearioMpCredencialRepository;
 import com.easybeach.platform.domain.Balneario;
 import com.easybeach.platform.domain.EstadoSuscripcion;
 import com.easybeach.platform.domain.EstadoTemporada;
@@ -22,6 +26,8 @@ import com.easybeach.platform.repository.TemporadaRepository;
 import com.easybeach.shared.security.RolCodigo;
 import com.easybeach.shared.security.TipoUsuario;
 import java.math.BigDecimal;
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDate;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpHeaders;
@@ -53,13 +59,17 @@ public class EscenarioBalneario {
     private final SuscripcionTemporadaRepository suscripcionRepository;
     private final PasswordEncoder passwordEncoder;
     private final TestRestTemplate restTemplate;
+    private final BalnearioMpCredencialRepository credencialRepository;
+    private final TokenEncryptionService tokenEncryptionService;
 
     public EscenarioBalneario(BalnearioRepository balnearioRepository, UsuarioRepository usuarioRepository,
                                UsuarioBalnearioRolRepository usuarioBalnearioRolRepository,
                                RolRepository rolRepository, PlanRepository planRepository,
                                TemporadaRepository temporadaRepository,
                                SuscripcionTemporadaRepository suscripcionRepository,
-                               PasswordEncoder passwordEncoder, TestRestTemplate restTemplate) {
+                               PasswordEncoder passwordEncoder, TestRestTemplate restTemplate,
+                               BalnearioMpCredencialRepository credencialRepository,
+                               TokenEncryptionService tokenEncryptionService) {
         this.balnearioRepository = balnearioRepository;
         this.usuarioRepository = usuarioRepository;
         this.usuarioBalnearioRolRepository = usuarioBalnearioRolRepository;
@@ -69,10 +79,13 @@ public class EscenarioBalneario {
         this.suscripcionRepository = suscripcionRepository;
         this.passwordEncoder = passwordEncoder;
         this.restTemplate = restTemplate;
+        this.credencialRepository = credencialRepository;
+        this.tokenEncryptionService = tokenEncryptionService;
     }
 
     public record Contexto(Long balnearioId, String slug, HttpHeaders adminHeaders,
-                            HttpHeaders carperoHeaders, Long carperoId) {
+                            HttpHeaders carperoHeaders, Long carperoId,
+                            HttpHeaders operadorHeaders, Long operadorId) {
     }
 
     public Contexto crearBalnearioOperativoConStaff(String slugPrefix) {
@@ -84,12 +97,27 @@ public class EscenarioBalneario {
         balneario = balnearioRepository.save(balneario);
 
         darDeAltaSuscripcionVigente(balneario.getId());
+        vincularMercadoPago(balneario.getId());
 
         Usuario admin = crearStaff(balneario.getId(), RolCodigo.ADMIN_BALNEARIO, "admin");
         Usuario carpero = crearStaff(balneario.getId(), RolCodigo.CARPERO, "carpero");
+        Usuario operador = crearStaff(balneario.getId(), RolCodigo.OPERADOR, "operador");
 
         return new Contexto(balneario.getId(), slug, loginHeaders(admin.getEmail(), "/api/v1/auth/login/staff"),
-                loginHeaders(carpero.getEmail(), "/api/v1/auth/login/staff"), carpero.getId());
+                loginHeaders(carpero.getEmail(), "/api/v1/auth/login/staff"), carpero.getId(),
+                loginHeaders(operador.getEmail(), "/api/v1/auth/login/staff"), operador.getId());
+    }
+
+    /** Sin credencial MP vinculada el balneario no puede cobrar (etapa 10). */
+    private void vincularMercadoPago(Long balnearioId) {
+        BalnearioMpCredencial credencial = new BalnearioMpCredencial();
+        credencial.setBalnearioId(balnearioId);
+        credencial.setMpUserId("fake-mp-user-" + balnearioId);
+        credencial.setAccessTokenCifrado(tokenEncryptionService.encrypt("fake-access-token"));
+        credencial.setRefreshTokenCifrado(tokenEncryptionService.encrypt("fake-refresh-token"));
+        credencial.setTokenExpiraAt(Instant.now().plus(Duration.ofDays(30)));
+        credencial.setEstado(EstadoCredencialMp.VINCULADA);
+        credencialRepository.save(credencial);
     }
 
     public HttpHeaders registrarClienteYObtenerHeaders() {
