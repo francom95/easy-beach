@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1785117104.4575386,
-    "ast_hash": "302b193a35f5e12d51e2bd145c9a9de5",
-    "semantic_hash": "302b193a35f5e12d51e2bd145c9a9de5"
+    "mtime": 1785123409.4336493,
+    "ast_hash": "928472d0f54fa719562d0c972785655a",
+    "semantic_hash": "928472d0f54fa719562d0c972785655a"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -70,9 +70,9 @@
     "semantic_hash": "80d074ee6717ca51a0b2f5e6f23df13f"
   },
   "docs/etapas/14-backend-carpero-promociones.md": {
-    "mtime": 1783408910.0628607,
-    "ast_hash": "ec53ef998c37a47179a1814ba6539486",
-    "semantic_hash": "ec53ef998c37a47179a1814ba6539486"
+    "mtime": 1785123400.0664568,
+    "ast_hash": "e1d837a71714dc4f2bf5a73fa7707aa4",
+    "semantic_hash": "e1d837a71714dc4f2bf5a73fa7707aa4"
   },
   "docs/etapas/15-backend-reportes.md": {
     "mtime": 1783408925.946784,
@@ -290,9 +290,9 @@
     "semantic_hash": "d782010181230fedfd29236bc306791a"
   },
   "backend/src/main/java/com/easybeach/concierge/package-info.java": {
-    "mtime": 1784937367.9657598,
-    "ast_hash": "82df4dfed1b55d2001e638116ed322d2",
-    "semantic_hash": "82df4dfed1b55d2001e638116ed322d2"
+    "mtime": 1785122222.2461069,
+    "ast_hash": "ec6112f4a0767810254bef9c3eb4fc35",
+    "semantic_hash": "ec6112f4a0767810254bef9c3eb4fc35"
   },
   "backend/src/main/java/com/easybeach/identity/domain/EstadoSesion.java": {
     "mtime": 1784937005.0851932,
@@ -450,9 +450,9 @@
     "semantic_hash": "4e09dab8a88f11012286bcd22d36ba32"
   },
   "backend/src/main/java/com/easybeach/promotions/package-info.java": {
-    "mtime": 1785116361.6312463,
-    "ast_hash": "40d63834eb1d457dcc18cd71220c0089",
-    "semantic_hash": "40d63834eb1d457dcc18cd71220c0089"
+    "mtime": 1785122222.2632434,
+    "ast_hash": "f3eaa3cc99fb16d9cbca21ee7934f5e7",
+    "semantic_hash": "f3eaa3cc99fb16d9cbca21ee7934f5e7"
   },
   "backend/src/main/java/com/easybeach/reporting/package-info.java": {
     "mtime": 1784937375.3420882,
@@ -1055,9 +1055,9 @@
     "semantic_hash": "47f764d4d2238a7f45c58931450b9e5c"
   },
   "backend/src/main/java/com/easybeach/catalog/service/MenuPublicoService.java": {
-    "mtime": 1785000425.2003715,
-    "ast_hash": "e725279608417f7a373bf1a1dea13570",
-    "semantic_hash": "e725279608417f7a373bf1a1dea13570"
+    "mtime": 1785122139.8407376,
+    "ast_hash": "807af7125d91e009db139d7d2113e2b7",
+    "semantic_hash": "807af7125d91e009db139d7d2113e2b7"
   },
   "backend/src/main/java/com/easybeach/catalog/service/ProductoService.java": {
     "mtime": 1785000369.3475099,
@@ -1115,9 +1115,9 @@
     "semantic_hash": "8111ca6e5aad6968095daba7cc22e99b"
   },
   "backend/src/main/java/com/easybeach/catalog/web/dto/MenuProductoResponse.java": {
-    "mtime": 1785000329.2084033,
-    "ast_hash": "9e5f719ac052898c90e6fdd71fdf7de0",
-    "semantic_hash": "9e5f719ac052898c90e6fdd71fdf7de0"
+    "mtime": 1785122115.8635614,
+    "ast_hash": "1d1dfe5217c18c0dffbbd37fd1416e3f",
+    "semantic_hash": "1d1dfe5217c18c0dffbbd37fd1416e3f"
   },
   "backend/src/main/java/com/easybeach/catalog/web/dto/MenuVarianteResponse.java": {
     "mtime": 1785000324.0729277,
@@ -1335,9 +1335,9 @@
     "semantic_hash": "c5077c0e4ff9d7d56e9af4862c86755c"
   },
   "backend/src/main/java/com/easybeach/ordering/domain/Pedido.java": {
-    "mtime": 1785116254.9602349,
-    "ast_hash": "8c1c3d628b37e381319a79cd3d6e694d",
-    "semantic_hash": "8c1c3d628b37e381319a79cd3d6e694d"
+    "mtime": 1785122774.0956054,
+    "ast_hash": "f944ee9d93dfda608f5ba2972e66caac",
+    "semantic_hash": "f944ee9d93dfda608f5ba2972e66caac"
   },
   "backend/src/main/java/com/easybeach/ordering/domain/PedidoEvento.java": {
     "mtime": 1785115879.0777092,
@@ -1350,9 +1350,9 @@
     "semantic_hash": "194843c46117e6c9fcdfaee17da34071"
   },
   "backend/src/main/java/com/easybeach/ordering/domain/PedidoPromocion.java": {
-    "mtime": 1785115889.190447,
-    "ast_hash": "3ea2be0316e3e7174a4793ee9fedb6c8",
-    "semantic_hash": "3ea2be0316e3e7174a4793ee9fedb6c8"
+    "mtime": 1785122757.4395852,
+    "ast_hash": "7c843143f1c38d7e02903dab6ce67001",
+    "semantic_hash": "7c843143f1c38d7e02903dab6ce67001"
   },
   "backend/src/main/java/com/easybeach/ordering/repository/PedidoEventoRepository.java": {
     "mtime": 1785116125.9437938,
@@ -1375,9 +1375,9 @@
     "semantic_hash": "a0dd8e54834753fed5e888e6ffa377a7"
   },
   "backend/src/main/java/com/easybeach/ordering/service/PedidoService.java": {
-    "mtime": 1785116805.6640494,
-    "ast_hash": "423e7f8851a2cfb35fa78a259fe48443",
-    "semantic_hash": "423e7f8851a2cfb35fa78a259fe48443"
+    "mtime": 1785122778.3725028,
+    "ast_hash": "30a940c0303603101470658aa5a875ff",
+    "semantic_hash": "30a940c0303603101470658aa5a875ff"
   },
   "backend/src/main/java/com/easybeach/ordering/web/ClientePedidoController.java": {
     "mtime": 1785116878.522504,
@@ -1528,5 +1528,235 @@
     "mtime": 1785117074.3277764,
     "ast_hash": "b21dd8e8c623b697f50c5f97f316a8bc",
     "semantic_hash": "b21dd8e8c623b697f50c5f97f316a8bc"
+  },
+  "backend/src/main/java/com/easybeach/catalog/service/CatalogPromocionesConfig.java": {
+    "mtime": 1785122077.8478804,
+    "ast_hash": "a68928ca6fc414ed82a2ae1a89f01e27",
+    "semantic_hash": "a68928ca6fc414ed82a2ae1a89f01e27"
+  },
+  "backend/src/main/java/com/easybeach/catalog/service/PromocionesPublicasProvider.java": {
+    "mtime": 1785122067.430578,
+    "ast_hash": "1165c419371cfeb8c31292d92ab326c4",
+    "semantic_hash": "1165c419371cfeb8c31292d92ab326c4"
+  },
+  "backend/src/main/java/com/easybeach/catalog/service/SinPromocionesPublicasProvider.java": {
+    "mtime": 1785122072.232303,
+    "ast_hash": "50174e25eb651d466cdc70635a8725b8",
+    "semantic_hash": "50174e25eb651d466cdc70635a8725b8"
+  },
+  "backend/src/main/java/com/easybeach/catalog/web/PublicPromocionesController.java": {
+    "mtime": 1785122152.4656916,
+    "ast_hash": "0265bb16bccbf292b15f4819ff5f0339",
+    "semantic_hash": "0265bb16bccbf292b15f4819ff5f0339"
+  },
+  "backend/src/main/java/com/easybeach/concierge/domain/EstadoSolicitudServicio.java": {
+    "mtime": 1785121686.362536,
+    "ast_hash": "fcdf7a47b90b35327f1616380fe959b9",
+    "semantic_hash": "fcdf7a47b90b35327f1616380fe959b9"
+  },
+  "backend/src/main/java/com/easybeach/concierge/domain/SolicitudServicio.java": {
+    "mtime": 1785121780.8520324,
+    "ast_hash": "2ccdfc4dbdf0c8b9260b275df5fd9b2f",
+    "semantic_hash": "2ccdfc4dbdf0c8b9260b275df5fd9b2f"
+  },
+  "backend/src/main/java/com/easybeach/concierge/domain/TipoServicio.java": {
+    "mtime": 1785121681.135498,
+    "ast_hash": "f1f9c8fc6e4786a64fea4b398bfaddc8",
+    "semantic_hash": "f1f9c8fc6e4786a64fea4b398bfaddc8"
+  },
+  "backend/src/main/java/com/easybeach/concierge/repository/SolicitudServicioRepository.java": {
+    "mtime": 1785121710.013809,
+    "ast_hash": "c919d333313cbd3dc4b8a7e56010fe64",
+    "semantic_hash": "c919d333313cbd3dc4b8a7e56010fe64"
+  },
+  "backend/src/main/java/com/easybeach/concierge/repository/TipoServicioRepository.java": {
+    "mtime": 1785121704.2875922,
+    "ast_hash": "20bd57e5c9c3196d27e9475cf11a838d",
+    "semantic_hash": "20bd57e5c9c3196d27e9475cf11a838d"
+  },
+  "backend/src/main/java/com/easybeach/concierge/service/SolicitudServicioService.java": {
+    "mtime": 1785121798.7359622,
+    "ast_hash": "21359a54381c7cc1219ea3aeda66a862",
+    "semantic_hash": "21359a54381c7cc1219ea3aeda66a862"
+  },
+  "backend/src/main/java/com/easybeach/concierge/service/TipoServicioService.java": {
+    "mtime": 1785121740.6479607,
+    "ast_hash": "163b7c66ccc2ae3a61c1f077f58555da",
+    "semantic_hash": "163b7c66ccc2ae3a61c1f077f58555da"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/AdminTipoServicioController.java": {
+    "mtime": 1785121808.1911027,
+    "ast_hash": "e13677db41bc4e30cdaeacc5b876213c",
+    "semantic_hash": "e13677db41bc4e30cdaeacc5b876213c"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/ClienteSolicitudServicioController.java": {
+    "mtime": 1785121844.8514407,
+    "ast_hash": "e434cbf39e85816e6dcec4715d289502",
+    "semantic_hash": "e434cbf39e85816e6dcec4715d289502"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/ClienteTipoServicioController.java": {
+    "mtime": 1785123167.0182526,
+    "ast_hash": "b4d9870db7d5f04d8f45aafd35f54ea3",
+    "semantic_hash": "b4d9870db7d5f04d8f45aafd35f54ea3"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/OperativoSolicitudServicioController.java": {
+    "mtime": 1785121853.0363107,
+    "ast_hash": "ff171d4212135e9cfe4ce0125bb5865a",
+    "semantic_hash": "ff171d4212135e9cfe4ce0125bb5865a"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/SolicitudServicioMapper.java": {
+    "mtime": 1785121830.7357469,
+    "ast_hash": "af9241a23dc9a9f2b6aa4ca2d39b135f",
+    "semantic_hash": "af9241a23dc9a9f2b6aa4ca2d39b135f"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/dto/SolicitarServicioRequest.java": {
+    "mtime": 1785121721.263862,
+    "ast_hash": "c902924371e3ccc43ae5b6196a77050e",
+    "semantic_hash": "c902924371e3ccc43ae5b6196a77050e"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/dto/SolicitudServicioResponse.java": {
+    "mtime": 1785121724.6096947,
+    "ast_hash": "7abd7b10986f523dacf667182ac9820d",
+    "semantic_hash": "7abd7b10986f523dacf667182ac9820d"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/dto/TipoServicioRequest.java": {
+    "mtime": 1785121714.4016876,
+    "ast_hash": "389075740445b6e5c1aced4eaf882aac",
+    "semantic_hash": "389075740445b6e5c1aced4eaf882aac"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/dto/TipoServicioResponse.java": {
+    "mtime": 1785121717.768692,
+    "ast_hash": "09089fdde079a8ccc7b7d832a785b934",
+    "semantic_hash": "09089fdde079a8ccc7b7d832a785b934"
+  },
+  "backend/src/main/java/com/easybeach/concierge/web/dto/TransicionSolicitudRequest.java": {
+    "mtime": 1785121728.7589815,
+    "ast_hash": "0e28aabd3989916e588b9073af762430",
+    "semantic_hash": "0e28aabd3989916e588b9073af762430"
+  },
+  "backend/src/main/java/com/easybeach/promotions/domain/EstadoPromocion.java": {
+    "mtime": 1785121869.118059,
+    "ast_hash": "71733742ea1f82f3cbcd92438b6f4c65",
+    "semantic_hash": "71733742ea1f82f3cbcd92438b6f4c65"
+  },
+  "backend/src/main/java/com/easybeach/promotions/domain/Promocion.java": {
+    "mtime": 1785121886.285836,
+    "ast_hash": "8515a023216eaa190c122ac7ab838c6d",
+    "semantic_hash": "8515a023216eaa190c122ac7ab838c6d"
+  },
+  "backend/src/main/java/com/easybeach/promotions/domain/PromocionAlcance.java": {
+    "mtime": 1785121894.9701738,
+    "ast_hash": "e3edd3a3dd89f0c5990e3fb49f789813",
+    "semantic_hash": "e3edd3a3dd89f0c5990e3fb49f789813"
+  },
+  "backend/src/main/java/com/easybeach/promotions/domain/PromocionComboItem.java": {
+    "mtime": 1785121901.7425416,
+    "ast_hash": "428d07272995b45aa5d85613b8a90675",
+    "semantic_hash": "428d07272995b45aa5d85613b8a90675"
+  },
+  "backend/src/main/java/com/easybeach/promotions/domain/TipoAlcance.java": {
+    "mtime": 1785121872.3018045,
+    "ast_hash": "530dd8ea6215f8a3ed8d936af133a00a",
+    "semantic_hash": "530dd8ea6215f8a3ed8d936af133a00a"
+  },
+  "backend/src/main/java/com/easybeach/promotions/domain/TipoPromocion.java": {
+    "mtime": 1785121864.924921,
+    "ast_hash": "ef02d0081c1c382dbfa9b5dcf5ab79bb",
+    "semantic_hash": "ef02d0081c1c382dbfa9b5dcf5ab79bb"
+  },
+  "backend/src/main/java/com/easybeach/promotions/repository/PromocionAlcanceRepository.java": {
+    "mtime": 1785121911.8212285,
+    "ast_hash": "3c272dad76ab068b25e779f28f2a64df",
+    "semantic_hash": "3c272dad76ab068b25e779f28f2a64df"
+  },
+  "backend/src/main/java/com/easybeach/promotions/repository/PromocionComboItemRepository.java": {
+    "mtime": 1785121915.881364,
+    "ast_hash": "55c96a0cd6eb956075bada3a44dc9b72",
+    "semantic_hash": "55c96a0cd6eb956075bada3a44dc9b72"
+  },
+  "backend/src/main/java/com/easybeach/promotions/repository/PromocionRepository.java": {
+    "mtime": 1785121907.7153256,
+    "ast_hash": "8d98f3ea3cec68335902dd3b49ad1daf",
+    "semantic_hash": "8d98f3ea3cec68335902dd3b49ad1daf"
+  },
+  "backend/src/main/java/com/easybeach/promotions/service/PromocionCalculadoraImpl.java": {
+    "mtime": 1785121971.6954167,
+    "ast_hash": "ef116c44b7465c6ab52b4f2a8b880603",
+    "semantic_hash": "ef116c44b7465c6ab52b4f2a8b880603"
+  },
+  "backend/src/main/java/com/easybeach/promotions/service/PromocionService.java": {
+    "mtime": 1785122203.6130657,
+    "ast_hash": "329a1f187785c915bbd1cf2edb67e708",
+    "semantic_hash": "329a1f187785c915bbd1cf2edb67e708"
+  },
+  "backend/src/main/java/com/easybeach/promotions/service/PromocionesPublicasProviderImpl.java": {
+    "mtime": 1785122107.1649933,
+    "ast_hash": "c7510ea35155446a7c77a31ed09f830a",
+    "semantic_hash": "c7510ea35155446a7c77a31ed09f830a"
+  },
+  "backend/src/main/java/com/easybeach/promotions/service/VigenciaPromocionChecker.java": {
+    "mtime": 1785121933.4321227,
+    "ast_hash": "1c23186b4dc773a07a1985245856098c",
+    "semantic_hash": "1c23186b4dc773a07a1985245856098c"
+  },
+  "backend/src/main/java/com/easybeach/promotions/web/AdminPromocionController.java": {
+    "mtime": 1785122213.5192525,
+    "ast_hash": "f3fc4d5efb5ad272435f9ca45e8eefa5",
+    "semantic_hash": "f3fc4d5efb5ad272435f9ca45e8eefa5"
+  },
+  "backend/src/main/java/com/easybeach/promotions/web/dto/AlcancePromocionRequest.java": {
+    "mtime": 1785121988.7657409,
+    "ast_hash": "a3d1486fcaba68b4c4acfef043606556",
+    "semantic_hash": "a3d1486fcaba68b4c4acfef043606556"
+  },
+  "backend/src/main/java/com/easybeach/promotions/web/dto/CambiarEstadoPromocionRequest.java": {
+    "mtime": 1785122009.8613372,
+    "ast_hash": "1df47aa2de3c5b8b8bee3f110578f92d",
+    "semantic_hash": "1df47aa2de3c5b8b8bee3f110578f92d"
+  },
+  "backend/src/main/java/com/easybeach/promotions/web/dto/ComboItemRequest.java": {
+    "mtime": 1785121992.739545,
+    "ast_hash": "9aa3d5b4b6c9c5d6a82b1cc9a73ee53d",
+    "semantic_hash": "9aa3d5b4b6c9c5d6a82b1cc9a73ee53d"
+  },
+  "backend/src/main/java/com/easybeach/promotions/web/dto/PromocionRequest.java": {
+    "mtime": 1785122002.1135654,
+    "ast_hash": "8d71d42937203f0b1b1312c3f8a20182",
+    "semantic_hash": "8d71d42937203f0b1b1312c3f8a20182"
+  },
+  "backend/src/main/java/com/easybeach/promotions/web/dto/PromocionResponse.java": {
+    "mtime": 1785122006.299523,
+    "ast_hash": "5ea6ee7cab7a17e80ddafe79223f50ac",
+    "semantic_hash": "5ea6ee7cab7a17e80ddafe79223f50ac"
+  },
+  "backend/src/main/resources/db/migration/V009__servicios_carpero_promociones.sql": {
+    "mtime": 1785121776.2071052,
+    "ast_hash": "bba228d9cb4d281faebd85e8464ee3c0",
+    "semantic_hash": "bba228d9cb4d281faebd85e8464ee3c0"
+  },
+  "backend/src/test/java/com/easybeach/concierge/SolicitudServicioFlujoIntegrationTest.java": {
+    "mtime": 1785123154.440744,
+    "ast_hash": "dcbe656cc81b84fcce5de8a859e61054",
+    "semantic_hash": "dcbe656cc81b84fcce5de8a859e61054"
+  },
+  "backend/src/test/java/com/easybeach/promotions/PromocionAbmIntegrationTest.java": {
+    "mtime": 1785122358.4058218,
+    "ast_hash": "23f67f13b3d6dacdc43f4ad22e4431e8",
+    "semantic_hash": "23f67f13b3d6dacdc43f4ad22e4431e8"
+  },
+  "backend/src/test/java/com/easybeach/promotions/PromocionCalculoIntegrationTest.java": {
+    "mtime": 1785122320.1062236,
+    "ast_hash": "a509d874a448d0433186239347c7f661",
+    "semantic_hash": "a509d874a448d0433186239347c7f661"
+  },
+  "backend/src/test/java/com/easybeach/promotions/service/VigenciaPromocionCheckerTest.java": {
+    "mtime": 1785122270.7897286,
+    "ast_hash": "a0669427faf22e64b6d3c7d26c9f2c26",
+    "semantic_hash": "a0669427faf22e64b6d3c7d26c9f2c26"
+  },
+  "docs/especificacion/14-backend-carpero-promociones.md": {
+    "mtime": 1785123388.0695739,
+    "ast_hash": "52853e46389b78486f31c3242e215839",
+    "semantic_hash": "52853e46389b78486f31c3242e215839"
   }
 }

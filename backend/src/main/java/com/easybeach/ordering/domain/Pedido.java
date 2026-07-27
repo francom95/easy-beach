@@ -12,7 +12,6 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OrderBy;
 import jakarta.persistence.PrePersist;
@@ -86,8 +85,7 @@ public class Pedido extends Auditable {
     @OrderBy("id ASC")
     private List<PedidoItem> items = new ArrayList<>();
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    @JoinColumn(name = "pedido_id")
+    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @OrderBy("id ASC")
     private List<PedidoPromocion> promociones = new ArrayList<>();
 
@@ -101,6 +99,11 @@ public class Pedido extends Auditable {
     public void agregarItem(PedidoItem item) {
         item.setPedido(this);
         items.add(item);
+    }
+
+    public void agregarPromocion(PedidoPromocion promocion) {
+        promocion.setPedido(this);
+        promociones.add(promocion);
     }
 
     /** Única vía de cambio de estado; el registro en {@code pedido_evento} lo hace el service. */

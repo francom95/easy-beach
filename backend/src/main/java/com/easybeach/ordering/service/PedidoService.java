@@ -172,7 +172,7 @@ public class PedidoService {
             promo.setPromocionId(descuento.promocionId());
             promo.setNombrePromocion(descuento.nombre());
             promo.setMontoDescuento(redondear(descuento.monto()));
-            pedido.getPromociones().add(promo);
+            pedido.agregarPromocion(promo);
             descuentoTotal = descuentoTotal.add(promo.getMontoDescuento());
         }
         descuentoTotal = redondear(descuentoTotal);

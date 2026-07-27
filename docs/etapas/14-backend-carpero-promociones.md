@@ -4,6 +4,13 @@
 - **Modelo ejecutor:** sonnet
 - **Tipo:** construcción
 - **Depende de:** 12, 13
+- **Estado: ✅ EJECUTADA** — código en [`backend/`](../../backend/) (módulos
+  `concierge` y `promotions` completos), entregable en
+  [`docs/especificacion/14-backend-carpero-promociones.md`](../especificacion/14-backend-carpero-promociones.md).
+  87/87 tests, BUILD SUCCESS: servicios al carpero con tiempo real, las tres
+  promociones del MVP (descuento %, combo, happy hour) con vigencia
+  correcta por TZ, decisión de negocio confirmada (las promociones se
+  acumulan), descuento congelado en pedidos históricos.
 
 ## Objetivo
 
