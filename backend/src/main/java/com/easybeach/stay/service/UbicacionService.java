@@ -71,6 +71,21 @@ public class UbicacionService {
                 .toList();
     }
 
+    /**
+     * "Elegir ubicación" del cliente (etapa 16, S05): gap real encontrado al
+     * construir la app mobile - hasta esta etapa no existía ninguna forma de
+     * que el cliente supiera qué ubicaciones puede elegir para abrir su
+     * estadía. Público y sin tenant de sesión, como el menú de la etapa 11:
+     * el balneario ya viene resuelto por slug desde el controller.
+     */
+    @Transactional(readOnly = true)
+    public List<UbicacionResponse> listarActivas(Long balnearioId) {
+        return repository.findByBalnearioIdAndEstadoOrderByIdentificadorAsc(balnearioId, EstadoUbicacion.ACTIVA)
+                .stream()
+                .map(this::toResponse)
+                .toList();
+    }
+
     @Transactional
     public UbicacionResponse cambiarEstado(Long balnearioId, Long id, EstadoUbicacion nuevoEstado) {
         tenantFilterService.applyCurrentTenant();

@@ -6,6 +6,16 @@
 - **Depende de:** 07 (diseño), 09–14 (API)
 - **Puede arrancar** su base (proyecto, navegación, theming, auth) apenas
   existan las etapas 07 y 09, en paralelo con el resto del backend.
+- **Estado: ✅ EJECUTADA**, con verificación en dispositivo parcial — código
+  en [`mobile/`](../../mobile/) (React Native 0.86 bare, TypeScript),
+  entregable en
+  [`docs/especificacion/16-mobile-app-cliente.md`](../especificacion/16-mobile-app-cliente.md).
+  `tsc` limpio, suite backend completa verde. Hallazgo crítico: una carrera
+  real entre la promesa del theme y la navegación a S05 dejaba
+  `balnearioSlug` en `null` — encontrado en vivo contra un balneario
+  bootstrapeado en el emulador, corregido. Verificación visual completa
+  bloqueada por inestabilidad del emulador bajo carga combinada de
+  MySQL+backend+Metro en este entorno (detalle en el entregable §5).
 
 ## Objetivo
 
