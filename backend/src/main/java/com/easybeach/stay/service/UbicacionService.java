@@ -14,19 +14,22 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * ABM de ubicaciones físicas (etapa 11). "No desactivar/borrar una ubicación
- * con estadía activa" (etapa 03 §3.3) queda como comentario-hook: la entidad
- * {@code Estadia} no existe todavía (se construye en la etapa 12), que debe
- * agregar esa validación acá al implementarse.
+ * ABM de ubicaciones físicas (etapa 11). La regla "no desactivar/borrar una
+ * ubicación con estadía vigente" (etapa 03 §3.3), que la etapa 11 dejó como
+ * {@code TODO} porque {@code Estadia} no existía, está <b>implementada desde
+ * la etapa 12</b>.
  */
 @Service
 public class UbicacionService {
 
     private final UbicacionRepository repository;
+    private final EstadiaService estadiaService;
     private final TenantFilterService tenantFilterService;
 
-    public UbicacionService(UbicacionRepository repository, TenantFilterService tenantFilterService) {
+    public UbicacionService(UbicacionRepository repository, EstadiaService estadiaService,
+                             TenantFilterService tenantFilterService) {
         this.repository = repository;
+        this.estadiaService = estadiaService;
         this.tenantFilterService = tenantFilterService;
     }
 
@@ -72,7 +75,9 @@ public class UbicacionService {
     public UbicacionResponse cambiarEstado(Long balnearioId, Long id, EstadoUbicacion nuevoEstado) {
         tenantFilterService.applyCurrentTenant();
         Ubicacion ubicacion = obtenerPropia(balnearioId, id);
-        // TODO(etapa 12): rechazar INACTIVA si la ubicación tiene una estadía ACTIVA.
+        if (nuevoEstado == EstadoUbicacion.INACTIVA) {
+            exigirSinEstadiaVigente(id, "desactivar");
+        }
         ubicacion.setEstado(nuevoEstado);
         return toResponse(repository.save(ubicacion));
     }
@@ -81,9 +86,17 @@ public class UbicacionService {
     public void eliminar(Long balnearioId, Long id) {
         tenantFilterService.applyCurrentTenant();
         Ubicacion ubicacion = obtenerPropia(balnearioId, id);
-        // TODO(etapa 12): rechazar si la ubicación tiene una estadía ACTIVA.
+        exigirSinEstadiaVigente(id, "borrar");
         ubicacion.setDeletedAt(Instant.now());
         repository.save(ubicacion);
+    }
+
+    /** Etapa 03 §3.3: una ubicación con un cliente adentro no se desactiva ni se borra. */
+    private void exigirSinEstadiaVigente(Long ubicacionId, String accion) {
+        if (estadiaService.ubicacionTieneEstadiaVigente(ubicacionId)) {
+            throw new ApiException(ErrorCode.CONFLICTO_DE_ESTADO,
+                    "No se puede " + accion + " una ubicación con una estadía vigente");
+        }
     }
 
     private Ubicacion obtenerPropia(Long balnearioId, Long id) {

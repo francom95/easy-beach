@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1785000780.8838465,
-    "ast_hash": "784defc89595a2124d0bcaf1a9ab3e1a",
-    "semantic_hash": "784defc89595a2124d0bcaf1a9ab3e1a"
+    "mtime": 1785113867.8115666,
+    "ast_hash": "a861db11a7dca94d5edeb67acf3bd93c",
+    "semantic_hash": "a861db11a7dca94d5edeb67acf3bd93c"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -60,9 +60,9 @@
     "semantic_hash": "d6f6e1be028e550c900cb6ec72d6a5c7"
   },
   "docs/etapas/12-backend-estadia-activa.md": {
-    "mtime": 1783444527.5814307,
-    "ast_hash": "398c8e9df640515e1c24593c2a9cc06c",
-    "semantic_hash": "398c8e9df640515e1c24593c2a9cc06c"
+    "mtime": 1785113853.648743,
+    "ast_hash": "104959e235d15263939e07bbbfe953e6",
+    "semantic_hash": "104959e235d15263939e07bbbfe953e6"
   },
   "docs/etapas/13-backend-pedidos.md": {
     "mtime": 1783444568.4279964,
@@ -275,9 +275,9 @@
     "semantic_hash": "07e8b980808dc79b4ed04c7d051fd5ac"
   },
   "backend/src/main/java/com/easybeach/EasyBeachApplication.java": {
-    "mtime": 1784936850.4103582,
-    "ast_hash": "271a0b7b082893c57ce075163bfefb74",
-    "semantic_hash": "271a0b7b082893c57ce075163bfefb74"
+    "mtime": 1785113318.7199037,
+    "ast_hash": "c753a5730606f737f341d323412f6a55",
+    "semantic_hash": "c753a5730606f737f341d323412f6a55"
   },
   "backend/src/main/java/com/easybeach/branding/package-info.java": {
     "mtime": 1784997891.9589758,
@@ -1170,9 +1170,9 @@
     "semantic_hash": "67a3a569439623e265b4ed976cfe8aaa"
   },
   "backend/src/main/java/com/easybeach/stay/service/UbicacionService.java": {
-    "mtime": 1785000225.7968826,
-    "ast_hash": "f08f6fe5f6e079dc360f2961269da713",
-    "semantic_hash": "f08f6fe5f6e079dc360f2961269da713"
+    "mtime": 1785113297.9115992,
+    "ast_hash": "027b96c705eb8fbb8a0a56375de5f9d0",
+    "semantic_hash": "027b96c705eb8fbb8a0a56375de5f9d0"
   },
   "backend/src/main/java/com/easybeach/stay/web/AdminUbicacionController.java": {
     "mtime": 1785000236.7167678,
@@ -1213,5 +1213,125 @@
     "mtime": 1785000754.1383264,
     "ast_hash": "7bf5ddbdeedf5e045a1892cbc48b2cb2",
     "semantic_hash": "7bf5ddbdeedf5e045a1892cbc48b2cb2"
+  },
+  "backend/src/main/java/com/easybeach/stay/domain/Estadia.java": {
+    "mtime": 1785113023.6313334,
+    "ast_hash": "bceda66e473a711f1ae8e1c4c4c38d09",
+    "semantic_hash": "bceda66e473a711f1ae8e1c4c4c38d09"
+  },
+  "backend/src/main/java/com/easybeach/stay/domain/EstadiaUbicacionHistorial.java": {
+    "mtime": 1785113032.0322576,
+    "ast_hash": "7d6ec36eeaae0b3daf31bd03e6d7862d",
+    "semantic_hash": "7d6ec36eeaae0b3daf31bd03e6d7862d"
+  },
+  "backend/src/main/java/com/easybeach/stay/domain/EstadoEstadia.java": {
+    "mtime": 1785113003.23901,
+    "ast_hash": "1082686d51041755cb9b8ae49503fdfd",
+    "semantic_hash": "1082686d51041755cb9b8ae49503fdfd"
+  },
+  "backend/src/main/java/com/easybeach/stay/event/EstadiaAbierta.java": {
+    "mtime": 1785113038.8381314,
+    "ast_hash": "cf785b1e8274c792c001e4388ddd1787",
+    "semantic_hash": "cf785b1e8274c792c001e4388ddd1787"
+  },
+  "backend/src/main/java/com/easybeach/stay/event/EstadiaCerrada.java": {
+    "mtime": 1785113045.111624,
+    "ast_hash": "edd44e876cd6c9949ed1bcbc76135b90",
+    "semantic_hash": "edd44e876cd6c9949ed1bcbc76135b90"
+  },
+  "backend/src/main/java/com/easybeach/stay/repository/EstadiaRepository.java": {
+    "mtime": 1785113059.439341,
+    "ast_hash": "98e8b79b32902b75c71f76cb73abe6fd",
+    "semantic_hash": "98e8b79b32902b75c71f76cb73abe6fd"
+  },
+  "backend/src/main/java/com/easybeach/stay/repository/EstadiaUbicacionHistorialRepository.java": {
+    "mtime": 1785113066.7093887,
+    "ast_hash": "f0eaaf12d1ec480d2dc160ea794d2e1b",
+    "semantic_hash": "f0eaaf12d1ec480d2dc160ea794d2e1b"
+  },
+  "backend/src/main/java/com/easybeach/stay/service/ConsumoEstadiaProvider.java": {
+    "mtime": 1785113120.1382527,
+    "ast_hash": "150a1903b2a7497a519bed9e66b019a8",
+    "semantic_hash": "150a1903b2a7497a519bed9e66b019a8"
+  },
+  "backend/src/main/java/com/easybeach/stay/service/EstadiaExpiracionJob.java": {
+    "mtime": 1785113308.0719883,
+    "ast_hash": "fe62bb3d62f5e78340423795ab8e6d1f",
+    "semantic_hash": "fe62bb3d62f5e78340423795ab8e6d1f"
+  },
+  "backend/src/main/java/com/easybeach/stay/service/EstadiaService.java": {
+    "mtime": 1785113243.8121564,
+    "ast_hash": "2ea892acec6b7c5252af83ba9b085aca",
+    "semantic_hash": "2ea892acec6b7c5252af83ba9b085aca"
+  },
+  "backend/src/main/java/com/easybeach/stay/service/SinPedidosConsumoProvider.java": {
+    "mtime": 1785113127.1672523,
+    "ast_hash": "3072fcc12d7f79d5134c58e7b851d7c5",
+    "semantic_hash": "3072fcc12d7f79d5134c58e7b851d7c5"
+  },
+  "backend/src/main/java/com/easybeach/stay/service/StayConsumoConfig.java": {
+    "mtime": 1785113138.1937068,
+    "ast_hash": "55d24717ba565aabb2b715f8121be891",
+    "semantic_hash": "55d24717ba565aabb2b715f8121be891"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/ClienteEstadiaController.java": {
+    "mtime": 1785113258.8250797,
+    "ast_hash": "09a77839f221a6e40317d156565a93b4",
+    "semantic_hash": "09a77839f221a6e40317d156565a93b4"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/OperativoEstadiaController.java": {
+    "mtime": 1785113270.7108574,
+    "ast_hash": "0fef3b60f7c11034960b2b73ece2bc8d",
+    "semantic_hash": "0fef3b60f7c11034960b2b73ece2bc8d"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/dto/CambiarUbicacionRequest.java": {
+    "mtime": 1785113085.590241,
+    "ast_hash": "298b3e8c883b8c4b34beecd261c78fab",
+    "semantic_hash": "298b3e8c883b8c4b34beecd261c78fab"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/dto/EstadiaResponse.java": {
+    "mtime": 1785113080.2333355,
+    "ast_hash": "1ea320df11da8ca9a866610053dd9faf",
+    "semantic_hash": "1ea320df11da8ca9a866610053dd9faf"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/dto/RechazarEstadiaRequest.java": {
+    "mtime": 1785113090.7115383,
+    "ast_hash": "a705b4f31fa5974dc6d1eda94bee1704",
+    "semantic_hash": "a705b4f31fa5974dc6d1eda94bee1704"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/dto/ResumenCierreResponse.java": {
+    "mtime": 1785113098.1747985,
+    "ast_hash": "a206455f77adcc7604f781f21e52f22d",
+    "semantic_hash": "a206455f77adcc7604f781f21e52f22d"
+  },
+  "backend/src/main/java/com/easybeach/stay/web/dto/SolicitarEstadiaRequest.java": {
+    "mtime": 1785113073.8771183,
+    "ast_hash": "ece3f1535a46965c762c928317bb79b8",
+    "semantic_hash": "ece3f1535a46965c762c928317bb79b8"
+  },
+  "backend/src/main/resources/db/migration/V007__estadia.sql": {
+    "mtime": 1785112989.5237422,
+    "ast_hash": "2fede196f9651fa0ecfb7bc493b05487",
+    "semantic_hash": "2fede196f9651fa0ecfb7bc493b05487"
+  },
+  "backend/src/test/java/com/easybeach/stay/EstadiaCicloDeVidaIntegrationTest.java": {
+    "mtime": 1785113433.8587873,
+    "ast_hash": "8b017c63ab8f614d13a667b6630b7af7",
+    "semantic_hash": "8b017c63ab8f614d13a667b6630b7af7"
+  },
+  "backend/src/test/java/com/easybeach/stay/EstadiaConcurrenciaIntegrationTest.java": {
+    "mtime": 1785113494.6991985,
+    "ast_hash": "bbfdd71e1ccc00d3f85c2a133572f9e6",
+    "semantic_hash": "bbfdd71e1ccc00d3f85c2a133572f9e6"
+  },
+  "backend/src/test/java/com/easybeach/support/EscenarioBalneario.java": {
+    "mtime": 1785113652.1804116,
+    "ast_hash": "71acabc4e5ce2fce8dd843525faed7e5",
+    "semantic_hash": "71acabc4e5ce2fce8dd843525faed7e5"
+  },
+  "docs/especificacion/12-backend-estadia-activa.md": {
+    "mtime": 1785113845.8174984,
+    "ast_hash": "f4c6086b8d670a8fb0b76df830fc3a86",
+    "semantic_hash": "f4c6086b8d670a8fb0b76df830fc3a86"
   }
 }

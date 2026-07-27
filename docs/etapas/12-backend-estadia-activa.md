@@ -4,6 +4,14 @@
 - **Modelo ejecutor:** opus
 - **Tipo:** construcción
 - **Depende de:** 09, 10, 11
+- **Estado: ✅ EJECUTADA** — código en [`backend/`](../../backend/) (módulo
+  `stay` completo), entregable en
+  [`docs/especificacion/12-backend-estadia-activa.md`](../especificacion/12-backend-estadia-activa.md).
+  35/35 tests, BUILD SUCCESS: máquina de estados completa, unicidad
+  garantizada por constraint de DB (test de 8 solicitudes simultáneas → 1
+  creada, 7 conflictos), apertura en dos pasos validada por carpero,
+  expiración por TTL de 60 min. Decisiones de negocio cerradas: TTL 60 min,
+  bloquear cierre con pedidos en curso, honrar estadías al suspender.
 
 ## Objetivo
 
