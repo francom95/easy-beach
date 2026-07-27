@@ -1,4 +1,4 @@
-package com.easybeach.branding.storage;
+package com.easybeach.shared.storage;
 
 import com.easybeach.shared.error.ApiException;
 import com.easybeach.shared.error.ErrorCode;
@@ -14,7 +14,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 /**
  * Etapa 05 §6 / amenaza #11: valida tipo real (magic bytes, no extensión),
- * tamaño máximo, renombra y guarda fuera del web root.
+ * tamaño máximo, renombra y guarda fuera del web root. En {@code shared}
+ * desde la etapa 17 (movido de {@code branding}, ver Javadoc de
+ * {@link AssetStorageProperties}).
  */
 @Service
 public class AssetStorageService {
@@ -32,7 +34,21 @@ public class AssetStorageService {
     public record StoredAsset(String publicUrl) {
     }
 
-    public StoredAsset store(Long balnearioId, AssetType type, MultipartFile file) {
+    public StoredAsset storeBranding(Long balnearioId, MultipartFile file) {
+        return store(balnearioId, "branding", file);
+    }
+
+    /**
+     * Foto de producto (etapa 17): mismo storage que los assets de theming
+     * (magic bytes, tamaño máximo, fuera del web root), en su propio
+     * subdirectorio - {@code ProductoRequest} nunca tuvo forma de subir una
+     * foto, gap real encontrado al construir el panel admin.
+     */
+    public StoredAsset storeProductoFoto(Long balnearioId, MultipartFile file) {
+        return store(balnearioId, "productos", file);
+    }
+
+    private StoredAsset store(Long balnearioId, String subfolder, MultipartFile file) {
         if (file.isEmpty()) {
             throw new ApiException(ErrorCode.VALIDACION_FALLIDA, "El archivo está vacío");
         }
@@ -51,7 +67,7 @@ public class AssetStorageService {
         String extension = detectRealFormat(bytes);
 
         String fileName = UUID.randomUUID() + "." + extension;
-        Path dir = Path.of(properties.getRootDir(), "balnearios", String.valueOf(balnearioId), "branding");
+        Path dir = Path.of(properties.getRootDir(), "balnearios", String.valueOf(balnearioId), subfolder);
         Path target = dir.resolve(fileName);
         try {
             Files.createDirectories(dir);
@@ -60,7 +76,7 @@ public class AssetStorageService {
             throw new UncheckedIOException(e);
         }
 
-        String publicUrl = "/public/assets/balnearios/" + balnearioId + "/branding/" + fileName;
+        String publicUrl = "/public/assets/balnearios/" + balnearioId + "/" + subfolder + "/" + fileName;
         return new StoredAsset(publicUrl);
     }
 

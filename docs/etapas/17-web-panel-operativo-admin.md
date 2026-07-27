@@ -4,6 +4,17 @@
 - **Modelo ejecutor:** sonnet
 - **Tipo:** construcción
 - **Depende de:** 08 (diseño), 10–15 (API)
+- **Estado: ✅ EJECUTADA**, verificada en navegador real — código en
+  [`web/`](../../web/) (Next.js 16, TypeScript), entregable en
+  [`docs/especificacion/17-web-panel-operativo-admin.md`](../especificacion/17-web-panel-operativo-admin.md).
+  `tsc`/`eslint` limpios, suite backend 113/113. Hallazgo crítico: CORS
+  bloqueaba el 100% del panel (preflight `OPTIONS` rechazado con 401 por
+  Spring Security antes de que `CorsFilter` respondiera) — invisible hasta
+  ahora porque el `fetch` de React Native (mobile) nunca hace preflight;
+  corregido con un `permitAll()` explícito para el preflight. También
+  encontró y corrigió una violación real de ADR-002 (un intento de mover
+  `/staff/balneario` a `identity.web` fue rechazado en el momento por el
+  propio `ModuleDependencyRulesTest`).
 
 ## Objetivo
 

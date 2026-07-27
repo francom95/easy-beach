@@ -2,6 +2,7 @@ package com.easybeach.identity.repository;
 
 import com.easybeach.identity.domain.UsuarioBalnearioRol;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UsuarioBalnearioRolRepository extends JpaRepository<UsuarioBalnearioRol, Long> {
@@ -18,4 +19,6 @@ public interface UsuarioBalnearioRolRepository extends JpaRepository<UsuarioBaln
     List<UsuarioBalnearioRol> findByUsuarioId(Long usuarioId);
 
     List<UsuarioBalnearioRol> findByBalnearioId(Long balnearioId);
+
+    Optional<UsuarioBalnearioRol> findByUsuarioIdAndBalnearioId(Long usuarioId, Long balnearioId);
 }

@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1785159678.0342052,
-    "ast_hash": "667d483fc3daa4f916e733dad8ca94b0",
-    "semantic_hash": "667d483fc3daa4f916e733dad8ca94b0"
+    "mtime": 1785168709.2700632,
+    "ast_hash": "e48dca90f48b42d8746071b931c7f89e",
+    "semantic_hash": "e48dca90f48b42d8746071b931c7f89e"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -85,9 +85,9 @@
     "semantic_hash": "568d8e436dc7711e3641d5eeb8dc6930"
   },
   "docs/etapas/17-web-panel-operativo-admin.md": {
-    "mtime": 1783444610.9302232,
-    "ast_hash": "946491a6b02bd921d769443ffaa3277a",
-    "semantic_hash": "946491a6b02bd921d769443ffaa3277a"
+    "mtime": 1785168695.037334,
+    "ast_hash": "4754cf188aaa4962ed46229973be9f1d",
+    "semantic_hash": "4754cf188aaa4962ed46229973be9f1d"
   },
   "docs/etapas/18-web-panel-super-admin.md": {
     "mtime": 1783408975.5504816,
@@ -335,9 +335,9 @@
     "semantic_hash": "cbfecb073aa108c50e4d926ce3f2de63"
   },
   "backend/src/main/java/com/easybeach/identity/repository/UsuarioBalnearioRolRepository.java": {
-    "mtime": 1784937073.6727915,
-    "ast_hash": "8795b172f4f9d57c1bacab896fff0f26",
-    "semantic_hash": "8795b172f4f9d57c1bacab896fff0f26"
+    "mtime": 1785163605.129123,
+    "ast_hash": "ce33d1eeb0c93419f0374273d1e83646",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/identity/repository/UsuarioRepository.java": {
     "mtime": 1784937048.3091266,
@@ -365,9 +365,9 @@
     "semantic_hash": "be78877a33ea7e9de69d40b3ce620473"
   },
   "backend/src/main/java/com/easybeach/identity/security/SecurityConfig.java": {
-    "mtime": 1785116351.4535632,
-    "ast_hash": "6b002709b9882430d8f40fa1df499ecd",
-    "semantic_hash": "6b002709b9882430d8f40fa1df499ecd"
+    "mtime": 1785167094.390063,
+    "ast_hash": "3c507c4e4d9d09e6fab98ae8acba000d",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/identity/service/AuthService.java": {
     "mtime": 1785116841.1134613,
@@ -380,9 +380,9 @@
     "semantic_hash": "5034451ee761a144d22b07369718d726"
   },
   "backend/src/main/java/com/easybeach/identity/service/UsuarioBalnearioRolService.java": {
-    "mtime": 1784937321.2928288,
-    "ast_hash": "378cab138840abb3f7e3a174f1b6e83e",
-    "semantic_hash": "378cab138840abb3f7e3a174f1b6e83e"
+    "mtime": 1785163632.748527,
+    "ast_hash": "7c24891609e1be63b11f7b8261d31013",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/identity/web/AuthController.java": {
     "mtime": 1784998465.6383038,
@@ -390,9 +390,9 @@
     "semantic_hash": "a8ee8ffbad22327bbfc5826c81107503"
   },
   "backend/src/main/java/com/easybeach/identity/web/StaffController.java": {
-    "mtime": 1784998171.9384987,
-    "ast_hash": "3a1f8a921d40c1b917e3c6a4458c0c0a",
-    "semantic_hash": "3a1f8a921d40c1b917e3c6a4458c0c0a"
+    "mtime": 1785165986.438703,
+    "ast_hash": "ce20722ac9d500edaea83b53f04f8c19",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/identity/web/dto/LoginRequest.java": {
     "mtime": 1784937231.5577755,
@@ -400,9 +400,9 @@
     "semantic_hash": "bd6e2b1b7404ced9477dada3957329ac"
   },
   "backend/src/main/java/com/easybeach/identity/web/dto/MiembroResponse.java": {
-    "mtime": 1784937324.7847977,
-    "ast_hash": "bc4b7fa6c3eaea7f09bdbf520724a0cf",
-    "semantic_hash": "bc4b7fa6c3eaea7f09bdbf520724a0cf"
+    "mtime": 1785163585.8070226,
+    "ast_hash": "bc965146888f5013088b27f124104a07",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/identity/web/dto/RefreshRequest.java": {
     "mtime": 1784937235.355273,
@@ -630,29 +630,14 @@
     "semantic_hash": "676f301b4e3b2f3fe466a1e4bbcb6923"
   },
   "backend/src/main/java/com/easybeach/branding/service/ConfiguracionVisualService.java": {
-    "mtime": 1784997512.664462,
-    "ast_hash": "d8cd6a3c4f5d8e6064767435877f0c4b",
-    "semantic_hash": "d8cd6a3c4f5d8e6064767435877f0c4b"
-  },
-  "backend/src/main/java/com/easybeach/branding/storage/AssetStorageProperties.java": {
-    "mtime": 1784997455.388975,
-    "ast_hash": "1f8d9f2f41080dfcb57ddefcd74a31ca",
-    "semantic_hash": "1f8d9f2f41080dfcb57ddefcd74a31ca"
-  },
-  "backend/src/main/java/com/easybeach/branding/storage/AssetStorageService.java": {
-    "mtime": 1784997477.1912909,
-    "ast_hash": "06d15f05865213a16c27825a7c9be0ea",
-    "semantic_hash": "06d15f05865213a16c27825a7c9be0ea"
+    "mtime": 1785163940.1561065,
+    "ast_hash": "6dbb35ea866257a16decc4800b9275df",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/branding/storage/AssetType.java": {
     "mtime": 1784997462.6990554,
     "ast_hash": "2659952ac72b1c4d60f75745c92d9424",
     "semantic_hash": "2659952ac72b1c4d60f75745c92d9424"
-  },
-  "backend/src/main/java/com/easybeach/branding/storage/PublicAssetController.java": {
-    "mtime": 1784997489.4829304,
-    "ast_hash": "0c556ca07158c988d9c93d85e286b0ef",
-    "semantic_hash": "0c556ca07158c988d9c93d85e286b0ef"
   },
   "backend/src/main/java/com/easybeach/branding/theming/ColorMath.java": {
     "mtime": 1784997345.62154,
@@ -840,9 +825,9 @@
     "semantic_hash": "b2d91fbf61de453efa530a966dcd34a3"
   },
   "backend/src/main/java/com/easybeach/platform/service/BalnearioService.java": {
-    "mtime": 1784998197.7558165,
-    "ast_hash": "8f4096bb4e44b62ea3b5848310c14116",
-    "semantic_hash": "8f4096bb4e44b62ea3b5848310c14116"
+    "mtime": 1785163536.564983,
+    "ast_hash": "4bbfe3eeda9c5562007f86949be12df5",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/platform/service/PlanService.java": {
     "mtime": 1784997915.2609391,
@@ -1060,9 +1045,9 @@
     "semantic_hash": "807af7125d91e009db139d7d2113e2b7"
   },
   "backend/src/main/java/com/easybeach/catalog/service/ProductoService.java": {
-    "mtime": 1785000369.3475099,
-    "ast_hash": "7239babe74f3566cf470d2844d2ec34e",
-    "semantic_hash": "7239babe74f3566cf470d2844d2ec34e"
+    "mtime": 1785163966.2575815,
+    "ast_hash": "83b41d65d6fa8494f74431aa4859b617",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/catalog/service/ProductoVarianteService.java": {
     "mtime": 1785000386.536534,
@@ -1075,9 +1060,9 @@
     "semantic_hash": "a1e26ac2013035ee5ffe0506eae86f81"
   },
   "backend/src/main/java/com/easybeach/catalog/web/AdminProductoController.java": {
-    "mtime": 1785000456.314373,
-    "ast_hash": "2fa4b9f54ee198fc88019c1ab4809e63",
-    "semantic_hash": "2fa4b9f54ee198fc88019c1ab4809e63"
+    "mtime": 1785163981.3596635,
+    "ast_hash": "a78008a8b850fb81cc009598e1a619f9",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/catalog/web/AdminProductoVarianteController.java": {
     "mtime": 1785000467.67608,
@@ -1255,9 +1240,9 @@
     "semantic_hash": "fe62bb3d62f5e78340423795ab8e6d1f"
   },
   "backend/src/main/java/com/easybeach/stay/service/EstadiaService.java": {
-    "mtime": 1785113243.8121564,
-    "ast_hash": "2ea892acec6b7c5252af83ba9b085aca",
-    "semantic_hash": "2ea892acec6b7c5252af83ba9b085aca"
+    "mtime": 1785163720.9160175,
+    "ast_hash": "3cf1da573f15f3af88fdf568e9b6cc5e",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/stay/service/SinPedidosConsumoProvider.java": {
     "mtime": 1785113127.1672523,
@@ -1275,9 +1260,9 @@
     "semantic_hash": "fdb3ab19ccfb1624c7520999de6610ab"
   },
   "backend/src/main/java/com/easybeach/stay/web/OperativoEstadiaController.java": {
-    "mtime": 1785116878.7224052,
-    "ast_hash": "127de9fdc2afebf771b9c866dbf231c3",
-    "semantic_hash": "127de9fdc2afebf771b9c866dbf231c3"
+    "mtime": 1785163745.7100203,
+    "ast_hash": "ba6325b7a15d9ec458334069cde1896a",
+    "semantic_hash": ""
   },
   "backend/src/main/java/com/easybeach/stay/web/dto/CambiarUbicacionRequest.java": {
     "mtime": 1785113085.590241,
@@ -1310,9 +1295,9 @@
     "semantic_hash": "2fede196f9651fa0ecfb7bc493b05487"
   },
   "backend/src/test/java/com/easybeach/stay/EstadiaCicloDeVidaIntegrationTest.java": {
-    "mtime": 1785113433.8587873,
-    "ast_hash": "8b017c63ab8f614d13a667b6630b7af7",
-    "semantic_hash": "8b017c63ab8f614d13a667b6630b7af7"
+    "mtime": 1785164106.2722683,
+    "ast_hash": "2b324452ee1ab4059ef4a62a86b8207c",
+    "semantic_hash": ""
   },
   "backend/src/test/java/com/easybeach/stay/EstadiaConcurrenciaIntegrationTest.java": {
     "mtime": 1785113494.6991985,
@@ -3352,6 +3337,411 @@
   "mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png": {
     "mtime": 1785151963.5743814,
     "ast_hash": "250b231d6a4989ba507ae9b02db6b0dd",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/identity/web/AdminStaffController.java": {
+    "mtime": 1785163653.679699,
+    "ast_hash": "8482a8bde1b3bd4f3d11f14125248a7a",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/identity/web/dto/InvitarStaffRequest.java": {
+    "mtime": 1785163568.1634345,
+    "ast_hash": "af079a6db230c9172dfdbf34da5b3596",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/identity/web/dto/InvitarStaffResponse.java": {
+    "mtime": 1785163574.5176253,
+    "ast_hash": "6976c69ae8f578485e0a985835274d44",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/platform/web/AdminBalnearioController.java": {
+    "mtime": 1785163554.1913142,
+    "ast_hash": "3f34641d94c6d0be17f3110348c9ad15",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/platform/web/StaffBalnearioController.java": {
+    "mtime": 1785165996.5382905,
+    "ast_hash": "cafdfa24ff1e9d45ed869425cb0164e0",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/shared/security/PasswordTemporalGenerator.java": {
+    "mtime": 1785163504.1748312,
+    "ast_hash": "c6b3574339abf8364e22138ff1f91cc9",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/shared/storage/AssetStorageProperties.java": {
+    "mtime": 1785163879.3365905,
+    "ast_hash": "b785bae13bac95d73263c1f862ff3b86",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/shared/storage/AssetStorageService.java": {
+    "mtime": 1785163896.9140785,
+    "ast_hash": "4b2d9fde7a1af3a10544c3ca3f6e4799",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/shared/storage/PublicAssetController.java": {
+    "mtime": 1785163910.25823,
+    "ast_hash": "6807ec35952b3073bee714a242a9692b",
+    "semantic_hash": ""
+  },
+  "backend/src/main/java/com/easybeach/stay/web/dto/EstadiaPendienteResponse.java": {
+    "mtime": 1785163678.343138,
+    "ast_hash": "2ff996e7563c70e5522718afb991f78e",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/easybeach/catalog/ProductoFotoIntegrationTest.java": {
+    "mtime": 1785164211.411736,
+    "ast_hash": "f987a1dc85f3dc4d479180750ae431a9",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/easybeach/identity/AdminStaffIntegrationTest.java": {
+    "mtime": 1785164165.4945173,
+    "ast_hash": "90ff2d08db7db67688820854ac66399d",
+    "semantic_hash": ""
+  },
+  "backend/src/test/java/com/easybeach/platform/AdminBalnearioIntegrationTest.java": {
+    "mtime": 1785165686.3634634,
+    "ast_hash": "3d275ca032abeef66220a55eb06ec67c",
+    "semantic_hash": ""
+  },
+  "web/eslint.config.mjs": {
+    "mtime": 1785164590.834042,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": ""
+  },
+  "web/next-env.d.ts": {
+    "mtime": 1785166733.7633326,
+    "ast_hash": "d0f8375ae1199dc7acd3977fc33b78b8",
+    "semantic_hash": ""
+  },
+  "web/next.config.ts": {
+    "mtime": 1785164591.0520017,
+    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
+    "semantic_hash": ""
+  },
+  "web/package.json": {
+    "mtime": 1785165598.9717767,
+    "ast_hash": "223770b53d060631f8bba2c202ff083b",
+    "semantic_hash": ""
+  },
+  "web/src/api/ApiError.ts": {
+    "mtime": 1785164964.519357,
+    "ast_hash": "f9046c1050562ce8d0c1b6d8a8ed9765",
+    "semantic_hash": ""
+  },
+  "web/src/api/auth.ts": {
+    "mtime": 1785164989.8540118,
+    "ast_hash": "d002b4b54c184aa98b11d36a68d7e6c1",
+    "semantic_hash": ""
+  },
+  "web/src/api/balnearios.ts": {
+    "mtime": 1785165750.5648642,
+    "ast_hash": "8ca51c6efa7226863bf940f8e8d5cfb0",
+    "semantic_hash": ""
+  },
+  "web/src/api/branding.ts": {
+    "mtime": 1785165253.8519537,
+    "ast_hash": "d7cc31cfe9e6dd9bcf05a83c52ca7fb8",
+    "semantic_hash": ""
+  },
+  "web/src/api/catalogo.ts": {
+    "mtime": 1785165040.3761084,
+    "ast_hash": "6f3af4615efa6005d6c72b3a8689af56",
+    "semantic_hash": ""
+  },
+  "web/src/api/client.ts": {
+    "mtime": 1785165243.8390257,
+    "ast_hash": "9a633e76f0ff43cfeaf16b48678f81f1",
+    "semantic_hash": ""
+  },
+  "web/src/api/config.ts": {
+    "mtime": 1785166177.4385142,
+    "ast_hash": "1bdb1db0c02d9ba03a6299a6937cd22c",
+    "semantic_hash": ""
+  },
+  "web/src/api/estadias.ts": {
+    "mtime": 1785165097.936004,
+    "ast_hash": "38dcc0a5401c98e5c5231c070a93a461",
+    "semantic_hash": ""
+  },
+  "web/src/api/mercadopago.ts": {
+    "mtime": 1785165265.0302885,
+    "ast_hash": "9d6b16d705707ed8287fce32ae6a2761",
+    "semantic_hash": ""
+  },
+  "web/src/api/pedidos.ts": {
+    "mtime": 1785165091.1284356,
+    "ast_hash": "74f22e1dd74e7ade7ebb2dfc1efd98ee",
+    "semantic_hash": ""
+  },
+  "web/src/api/promociones.ts": {
+    "mtime": 1785165149.2935388,
+    "ast_hash": "d2b6cce62ec42795e360c3f20cf60a22",
+    "semantic_hash": ""
+  },
+  "web/src/api/reportes.ts": {
+    "mtime": 1785165330.516541,
+    "ast_hash": "f6997d3cc2ffb8d416fd42f0d3a27237",
+    "semantic_hash": ""
+  },
+  "web/src/api/servicios.ts": {
+    "mtime": 1785165067.0507045,
+    "ast_hash": "d58ccb4fceae393a5627468d0d8dfbae",
+    "semantic_hash": ""
+  },
+  "web/src/api/staff.ts": {
+    "mtime": 1785165016.8408067,
+    "ast_hash": "78ec234d22f457b32fca0b0988d23519",
+    "semantic_hash": ""
+  },
+  "web/src/api/types.ts": {
+    "mtime": 1785165312.7972305,
+    "ast_hash": "b21e28d0420095d83f34cfe8eaef57ab",
+    "semantic_hash": ""
+  },
+  "web/src/api/ubicaciones.ts": {
+    "mtime": 1785165076.4452546,
+    "ast_hash": "319ec3887e0590cef4759437d386a1d2",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/cobros/page.tsx": {
+    "mtime": 1785166532.835605,
+    "ast_hash": "33a1807e7f473feca448643d3a3f4139",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/identidad-visual/fonts.ts": {
+    "mtime": 1785166470.514283,
+    "ast_hash": "da015d6902ecc1ab296e8de1347768c9",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/identidad-visual/page.tsx": {
+    "mtime": 1785168501.8141122,
+    "ast_hash": "26bda66abf59b62f5e6989e76cd2f1b3",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/layout.tsx": {
+    "mtime": 1785166071.415545,
+    "ast_hash": "85e05c232a12f1ad09825996714a8934",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/menu/page.tsx": {
+    "mtime": 1785166228.251775,
+    "ast_hash": "d94179478add38a6523b6332694f51c0",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/page.tsx": {
+    "mtime": 1785166635.8085308,
+    "ast_hash": "b9669a299597bd6650629c4c039f65cb",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/promociones/page.tsx": {
+    "mtime": 1785166428.3055086,
+    "ast_hash": "83a4dcdd7142ca93dfba8d7ffec84489",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/reportes/page.tsx": {
+    "mtime": 1785166566.638219,
+    "ast_hash": "899f03a2acf9a6ab115d19334dc99a50",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/staff/page.tsx": {
+    "mtime": 1785166309.2978349,
+    "ast_hash": "3fd03fcdf3904658c393a342a56fc81b",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/tipos-servicio/page.tsx": {
+    "mtime": 1785166334.8038697,
+    "ast_hash": "e1e2d921dbd4a5106da8dea66c6ad7dd",
+    "semantic_hash": ""
+  },
+  "web/src/app/admin/ubicaciones/page.tsx": {
+    "mtime": 1785166369.090937,
+    "ast_hash": "3bbef7085a573c35b9302045e1473497",
+    "semantic_hash": ""
+  },
+  "web/src/app/layout.tsx": {
+    "mtime": 1785165507.0271516,
+    "ast_hash": "05b18aa18287b97a108e9bdc60453878",
+    "semantic_hash": ""
+  },
+  "web/src/app/login/page.tsx": {
+    "mtime": 1785165539.1396494,
+    "ast_hash": "4a3301e26918397048e9289c94f95cea",
+    "semantic_hash": ""
+  },
+  "web/src/app/operativo/estadias/page.tsx": {
+    "mtime": 1785165888.24309,
+    "ast_hash": "68881f9d6e1e05529a47eee0a138f804",
+    "semantic_hash": ""
+  },
+  "web/src/app/operativo/layout.tsx": {
+    "mtime": 1785165764.4342327,
+    "ast_hash": "3104102daa609cd29924960d058d0bca",
+    "semantic_hash": ""
+  },
+  "web/src/app/operativo/page.tsx": {
+    "mtime": 1785165783.8518183,
+    "ast_hash": "672bbf180deb8fa445ba9deaa54c9b1a",
+    "semantic_hash": ""
+  },
+  "web/src/app/operativo/pedidos/page.tsx": {
+    "mtime": 1785165832.6460857,
+    "ast_hash": "fa94b8a6417475560477dfa141426d26",
+    "semantic_hash": ""
+  },
+  "web/src/app/operativo/servicios/page.tsx": {
+    "mtime": 1785165860.0146487,
+    "ast_hash": "59c3642bebdc86f76593801e9268c6d6",
+    "semantic_hash": ""
+  },
+  "web/src/app/page.tsx": {
+    "mtime": 1785165522.302236,
+    "ast_hash": "6999f6716dd35ecf895441f199a662dc",
+    "semantic_hash": ""
+  },
+  "web/src/auth/storage.ts": {
+    "mtime": 1785164950.25153,
+    "ast_hash": "15a7a74c567e9654d1d9913d043f362b",
+    "semantic_hash": ""
+  },
+  "web/src/auth/tokenHolder.ts": {
+    "mtime": 1785164931.522369,
+    "ast_hash": "b68a6b516777e12d301f5628c995143d",
+    "semantic_hash": ""
+  },
+  "web/src/components/Badge.tsx": {
+    "mtime": 1785165432.1611314,
+    "ast_hash": "8e97bf41e2d6c061982256770e9778bb",
+    "semantic_hash": ""
+  },
+  "web/src/components/Button.tsx": {
+    "mtime": 1785165395.689557,
+    "ast_hash": "ad4a1e858905707d39c96490613e975d",
+    "semantic_hash": ""
+  },
+  "web/src/components/Card.tsx": {
+    "mtime": 1785165412.507313,
+    "ast_hash": "8b8463f66e5ce1a6820a122cdae3cc16",
+    "semantic_hash": ""
+  },
+  "web/src/components/EmptyState.tsx": {
+    "mtime": 1785165445.70523,
+    "ast_hash": "54323f5a2399fa0c62181514f6c3132f",
+    "semantic_hash": ""
+  },
+  "web/src/components/EstadoCarga.tsx": {
+    "mtime": 1785165457.8759508,
+    "ast_hash": "ac9e8e3abc0209c56e0a113828b67d63",
+    "semantic_hash": ""
+  },
+  "web/src/components/RequireAuth.tsx": {
+    "mtime": 1785165558.5413153,
+    "ast_hash": "885e355e2af2cd55ec3172a7c7a807fe",
+    "semantic_hash": ""
+  },
+  "web/src/components/Toast.tsx": {
+    "mtime": 1785165480.1152446,
+    "ast_hash": "8fdf58b2422f9180dbcc398ec0dea0c0",
+    "semantic_hash": ""
+  },
+  "web/src/hooks/useOperativoQueries.ts": {
+    "mtime": 1785165572.8519828,
+    "ast_hash": "5b28d9446db947b0dbe5b2d246affca3",
+    "semantic_hash": ""
+  },
+  "web/src/hooks/useOperativoRealtime.ts": {
+    "mtime": 1785165617.1286325,
+    "ast_hash": "416e42fddaa7a8104c295f4e5efe0071",
+    "semantic_hash": ""
+  },
+  "web/src/providers/AuthProvider.tsx": {
+    "mtime": 1785168535.8523786,
+    "ast_hash": "c3d4316dcc9eb57d13e8f5e5e354a63b",
+    "semantic_hash": ""
+  },
+  "web/src/providers/QueryProvider.tsx": {
+    "mtime": 1785165350.652202,
+    "ast_hash": "330f9359141e1cc8ae9d0a9eda488b60",
+    "semantic_hash": ""
+  },
+  "web/src/store/authStore.ts": {
+    "mtime": 1785165342.6759,
+    "ast_hash": "b21e51c4e0a760938959a88a214a651f",
+    "semantic_hash": ""
+  },
+  "web/src/utils/money.ts": {
+    "mtime": 1785165811.202395,
+    "ast_hash": "4b938870fa072035b6630fae41825a6b",
+    "semantic_hash": ""
+  },
+  "web/src/utils/tiempo.ts": {
+    "mtime": 1785165802.5076807,
+    "ast_hash": "e5f7444a585f6ffd2322718c3d5be3e7",
+    "semantic_hash": ""
+  },
+  "web/tsconfig.json": {
+    "mtime": 1785164591.74444,
+    "ast_hash": "ee17fd1c97c735e9f3564e3f5251f125",
+    "semantic_hash": ""
+  },
+  "docs/especificacion/17-web-panel-operativo-admin.md": {
+    "mtime": 1785168676.6439376,
+    "ast_hash": "684c068a7dc1df9e0c9d282fc80c6dfb",
+    "semantic_hash": "684c068a7dc1df9e0c9d282fc80c6dfb"
+  },
+  "web/AGENTS.md": {
+    "mtime": 1785164696.295601,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": ""
+  },
+  "web/CLAUDE.md": {
+    "mtime": 1785164696.295601,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": ""
+  },
+  "web/README.md": {
+    "mtime": 1785164590.788491,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": ""
+  },
+  "backend/data/assets/balnearios/14/productos/0099257b-3eb7-4463-8074-5fe7223a5bd9.png": {
+    "mtime": 1785164371.3607173,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": ""
+  },
+  "backend/data/assets/balnearios/14/productos/2906a997-cfd3-4f1d-9c36-1db68ffe5b74.png": {
+    "mtime": 1785165837.8234174,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": ""
+  },
+  "backend/data/assets/balnearios/14/productos/8691f1ac-9014-4d2c-91d9-bed78f5b39b9.png": {
+    "mtime": 1785168332.773636,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": ""
+  },
+  "backend/data/assets/balnearios/14/productos/e0951f25-13f0-49ed-9760-2a1a1dd25a49.png": {
+    "mtime": 1785166131.7165496,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": ""
+  },
+  "backend/data/assets/balnearios/2/branding/481f5769-8a90-4652-a1b8-d93aa977c820.png": {
+    "mtime": 1785164366.8528285,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": ""
+  },
+  "backend/data/assets/balnearios/2/branding/9455a9c8-aaef-4bac-861a-cf5389aa0e94.png": {
+    "mtime": 1785168326.1456833,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": ""
+  },
+  "backend/data/assets/balnearios/2/branding/aac675a6-dc2a-4276-ab3c-73300505d03f.png": {
+    "mtime": 1785166123.236514,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": ""
+  },
+  "backend/data/assets/balnearios/2/branding/f113e8af-da11-4192-a1ef-81b74f5f3371.png": {
+    "mtime": 1785165830.05527,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
     "semantic_hash": ""
   }
 }

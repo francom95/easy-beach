@@ -43,6 +43,7 @@ public class StaffController {
                 .map(m -> new MiembroResponse(
                         m.getUsuario().getPublicId(),
                         m.getUsuario().getNombre(),
+                        m.getUsuario().getEmail(),
                         m.getRol().getCodigo().name(),
                         m.getBalnearioId()))
                 .toList();

@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsUtils;
 
 /**
  * API stateless: sin sesión de servidor, sin CSRF (no hay cookies de sesión
@@ -55,6 +56,13 @@ public class SecurityConfig {
                 // 401 sin credenciales válidas, 403 autenticado pero sin permiso.
                 .exceptionHandling(ex -> ex.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
                 .authorizeHttpRequests(auth -> auth
+                        // El preflight CORS (OPTIONS) del navegador llega SIN el header
+                        // Authorization - nunca lo tiene, es solo la negociación previa
+                        // (etapa 17: gap real, invisible hasta que un browser real - no
+                        // mobile, cuyo fetch no hace preflight - habló con el backend).
+                        // Sin este permitAll, anyRequest().authenticated() de más abajo
+                        // rechaza el OPTIONS con 401 antes de que CorsFilter responda.
+                        .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
                         // Auth público: registro/login/refresh/logout. cambiar-password NO está acá
                         // a propósito - necesita autenticación (ver AuthController).
                         .requestMatchers("/api/v1/auth/registro", "/api/v1/auth/login/**",

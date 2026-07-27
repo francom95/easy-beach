@@ -2,7 +2,6 @@ package com.easybeach.branding.service;
 
 import com.easybeach.branding.domain.ConfiguracionVisual;
 import com.easybeach.branding.repository.ConfiguracionVisualRepository;
-import com.easybeach.branding.storage.AssetStorageService;
 import com.easybeach.branding.storage.AssetType;
 import com.easybeach.branding.theming.ThemeTokenAssembler;
 import com.easybeach.branding.theming.ThemeTokenKeys;
@@ -10,6 +9,7 @@ import com.easybeach.branding.web.dto.BrandingUpdateRequest;
 import com.easybeach.branding.web.dto.BrandingUpdateResult;
 import com.easybeach.shared.error.ApiException;
 import com.easybeach.shared.error.ErrorCode;
+import com.easybeach.shared.storage.AssetStorageService;
 import com.easybeach.shared.tenancy.TenantFilterService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -98,7 +98,7 @@ public class ConfiguracionVisualService {
         ConfiguracionVisual entidad = repository.findByBalnearioId(balnearioId)
                 .orElseThrow(() -> new ApiException(ErrorCode.RECURSO_NO_ENCONTRADO));
 
-        AssetStorageService.StoredAsset stored = assetStorageService.store(balnearioId, tipo, file);
+        AssetStorageService.StoredAsset stored = assetStorageService.storeBranding(balnearioId, file);
         Map<String, Object> tokens = fromJson(entidad.getTokens());
         tokens.put(tipo.tokenKey(), stored.publicUrl());
         entidad.setTokens(toJson(tokens));

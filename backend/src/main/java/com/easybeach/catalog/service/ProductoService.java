@@ -8,11 +8,13 @@ import com.easybeach.catalog.web.dto.ProductoRequest;
 import com.easybeach.catalog.web.dto.ProductoResponse;
 import com.easybeach.shared.error.ApiException;
 import com.easybeach.shared.error.ErrorCode;
+import com.easybeach.shared.storage.AssetStorageService;
 import com.easybeach.shared.tenancy.TenantFilterService;
 import java.time.Instant;
 import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class ProductoService {
@@ -20,12 +22,14 @@ public class ProductoService {
     private final ProductoRepository repository;
     private final CategoriaMenuRepository categoriaRepository;
     private final TenantFilterService tenantFilterService;
+    private final AssetStorageService assetStorageService;
 
     public ProductoService(ProductoRepository repository, CategoriaMenuRepository categoriaRepository,
-                            TenantFilterService tenantFilterService) {
+                            TenantFilterService tenantFilterService, AssetStorageService assetStorageService) {
         this.repository = repository;
         this.categoriaRepository = categoriaRepository;
         this.tenantFilterService = tenantFilterService;
+        this.assetStorageService = assetStorageService;
     }
 
     @Transactional
@@ -54,6 +58,16 @@ public class ProductoService {
         tenantFilterService.applyCurrentTenant();
         Producto producto = obtenerPropio(balnearioId, id);
         producto.setDisponible(disponible);
+        return toResponse(repository.save(producto));
+    }
+
+    /** Foto de producto (etapa 17): {@code ProductoRequest} nunca tuvo forma de subirla - gap real encontrado. */
+    @Transactional
+    public ProductoResponse actualizarFoto(Long balnearioId, Long id, MultipartFile file) {
+        tenantFilterService.applyCurrentTenant();
+        Producto producto = obtenerPropio(balnearioId, id);
+        AssetStorageService.StoredAsset stored = assetStorageService.storeProductoFoto(balnearioId, file);
+        producto.setFotoUrl(stored.publicUrl());
         return toResponse(repository.save(producto));
     }
 

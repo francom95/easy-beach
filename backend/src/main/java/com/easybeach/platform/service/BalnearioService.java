@@ -19,9 +19,9 @@ import com.easybeach.platform.web.dto.CrearBalnearioRequest;
 import com.easybeach.platform.web.dto.CrearBalnearioResponse;
 import com.easybeach.shared.error.ApiException;
 import com.easybeach.shared.error.ErrorCode;
+import com.easybeach.shared.security.PasswordTemporalGenerator;
 import com.easybeach.shared.security.RolCodigo;
 import com.easybeach.shared.security.TipoUsuario;
-import java.security.SecureRandom;
 import java.util.List;
 import java.util.Map;
 import org.springframework.context.ApplicationEventPublisher;
@@ -39,8 +39,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class BalnearioService {
 
-    private static final String CARACTERES_PASSWORD_TEMPORAL = "ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
-
     private final BalnearioRepository balnearioRepository;
     private final UsuarioRepository usuarioRepository;
     private final UsuarioBalnearioRolRepository usuarioBalnearioRolRepository;
@@ -49,7 +47,6 @@ public class BalnearioService {
     private final AuditoriaPlataformaService auditoriaService;
     private final PasswordEncoder passwordEncoder;
     private final ApplicationEventPublisher eventPublisher;
-    private final SecureRandom random = new SecureRandom();
 
     public BalnearioService(BalnearioRepository balnearioRepository,
                              UsuarioRepository usuarioRepository,
@@ -86,7 +83,7 @@ public class BalnearioService {
         balneario.setEstado(EstadoBalneario.ACTIVO);
         balneario = balnearioRepository.save(balneario);
 
-        String passwordTemporal = generarPasswordTemporal();
+        String passwordTemporal = PasswordTemporalGenerator.generar();
         Usuario admin = new Usuario();
         admin.setEmail(request.emailAdmin());
         admin.setNombre(request.nombreAdmin());
@@ -195,13 +192,5 @@ public class BalnearioService {
         return new BalnearioResponse(balneario.getId(), balneario.getSlug(), balneario.getNombre(),
                 balneario.getEmailContacto(), balneario.getTelefono(), balneario.getEstado().name(),
                 esOperativo(balneario.getId()));
-    }
-
-    private String generarPasswordTemporal() {
-        StringBuilder sb = new StringBuilder(12);
-        for (int i = 0; i < 12; i++) {
-            sb.append(CARACTERES_PASSWORD_TEMPORAL.charAt(random.nextInt(CARACTERES_PASSWORD_TEMPORAL.length())));
-        }
-        return sb.toString();
     }
 }

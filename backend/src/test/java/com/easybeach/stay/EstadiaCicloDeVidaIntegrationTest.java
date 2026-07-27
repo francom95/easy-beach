@@ -6,6 +6,7 @@ import com.easybeach.stay.domain.EstadoEstadia;
 import com.easybeach.stay.repository.EstadiaRepository;
 import com.easybeach.stay.service.EstadiaService;
 import com.easybeach.stay.web.dto.CambiarUbicacionRequest;
+import com.easybeach.stay.web.dto.EstadiaPendienteResponse;
 import com.easybeach.stay.web.dto.EstadiaResponse;
 import com.easybeach.stay.web.dto.RechazarEstadiaRequest;
 import com.easybeach.stay.web.dto.ResumenCierreResponse;
@@ -69,10 +70,13 @@ class EstadiaCicloDeVidaIntegrationTest extends AbstractIntegrationTest {
         assertThat(estadia.estado()).isEqualTo(EstadoEstadia.PENDIENTE_VALIDACION.name());
         assertThat(estadia.permitePedidos()).isFalse();
 
-        // 2. Aparece en la cola de validación del carpero.
-        EstadiaResponse[] pendientes = restTemplate.exchange(url("/api/v1/operativo/estadias/pendientes"),
-                HttpMethod.GET, new HttpEntity<>(ctx.carperoHeaders()), EstadiaResponse[].class).getBody();
-        assertThat(pendientes).extracting(EstadiaResponse::publicId).contains(estadia.publicId());
+        // 2. Aparece en la cola de validación del carpero, con el nombre del
+        // cliente resuelto (etapa 17: la bandeja de validación lo necesita).
+        EstadiaPendienteResponse[] pendientes = restTemplate.exchange(url("/api/v1/operativo/estadias/pendientes"),
+                HttpMethod.GET, new HttpEntity<>(ctx.carperoHeaders()), EstadiaPendienteResponse[].class).getBody();
+        assertThat(pendientes).extracting(EstadiaPendienteResponse::publicId).contains(estadia.publicId());
+        assertThat(pendientes).filteredOn(p -> p.publicId().equals(estadia.publicId()))
+                .extracting(EstadiaPendienteResponse::clienteNombre).containsExactly("Cliente de prueba");
 
         // 3. El carpero valida: ACTIVA y recién ahí se habilitan pedidos.
         EstadiaResponse validada = restTemplate.exchange(

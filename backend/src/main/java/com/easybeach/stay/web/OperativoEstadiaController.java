@@ -2,6 +2,7 @@ package com.easybeach.stay.web;
 
 import com.easybeach.shared.security.EasyBeachUserPrincipal;
 import com.easybeach.stay.service.EstadiaService;
+import com.easybeach.stay.web.dto.EstadiaPendienteResponse;
 import com.easybeach.stay.web.dto.EstadiaResponse;
 import com.easybeach.stay.web.dto.RechazarEstadiaRequest;
 import jakarta.validation.Valid;
@@ -32,7 +33,7 @@ public class OperativoEstadiaController {
     }
 
     @GetMapping("/pendientes")
-    public List<EstadiaResponse> pendientes(@AuthenticationPrincipal EasyBeachUserPrincipal principal) {
+    public List<EstadiaPendienteResponse> pendientes(@AuthenticationPrincipal EasyBeachUserPrincipal principal) {
         return estadiaService.pendientesDeValidacion(principal.balnearioId());
     }
 

@@ -1,5 +1,6 @@
 package com.easybeach.stay.service;
 
+import com.easybeach.identity.repository.UsuarioRepository;
 import com.easybeach.platform.domain.Balneario;
 import com.easybeach.platform.repository.BalnearioRepository;
 import com.easybeach.platform.service.BalnearioService;
@@ -17,6 +18,7 @@ import com.easybeach.stay.event.EstadiaCerrada;
 import com.easybeach.stay.repository.EstadiaRepository;
 import com.easybeach.stay.repository.EstadiaUbicacionHistorialRepository;
 import com.easybeach.stay.repository.UbicacionRepository;
+import com.easybeach.stay.web.dto.EstadiaPendienteResponse;
 import com.easybeach.stay.web.dto.EstadiaResponse;
 import com.easybeach.stay.web.dto.ResumenCierreResponse;
 import java.time.Duration;
@@ -54,6 +56,7 @@ public class EstadiaService {
     private final ConsumoEstadiaProvider consumoProvider;
     private final TenantFilterService tenantFilterService;
     private final ApplicationEventPublisher eventPublisher;
+    private final UsuarioRepository usuarioRepository;
 
     public EstadiaService(EstadiaRepository estadiaRepository,
                            EstadiaUbicacionHistorialRepository historialRepository,
@@ -62,7 +65,8 @@ public class EstadiaService {
                            BalnearioService balnearioService,
                            ConsumoEstadiaProvider consumoProvider,
                            TenantFilterService tenantFilterService,
-                           ApplicationEventPublisher eventPublisher) {
+                           ApplicationEventPublisher eventPublisher,
+                           UsuarioRepository usuarioRepository) {
         this.estadiaRepository = estadiaRepository;
         this.historialRepository = historialRepository;
         this.ubicacionRepository = ubicacionRepository;
@@ -71,6 +75,7 @@ public class EstadiaService {
         this.consumoProvider = consumoProvider;
         this.tenantFilterService = tenantFilterService;
         this.eventPublisher = eventPublisher;
+        this.usuarioRepository = usuarioRepository;
     }
 
     // ------------------------------------------------------------------ cliente
@@ -222,12 +227,12 @@ public class EstadiaService {
 
     /** Cola de validación del panel operativo (etapa 17), más antiguas primero. */
     @Transactional(readOnly = true)
-    public List<EstadiaResponse> pendientesDeValidacion(Long balnearioId) {
+    public List<EstadiaPendienteResponse> pendientesDeValidacion(Long balnearioId) {
         tenantFilterService.applyCurrentTenant();
         return estadiaRepository
                 .findByBalnearioIdAndEstadoOrderByFechaSolicitudAsc(balnearioId, EstadoEstadia.PENDIENTE_VALIDACION)
                 .stream()
-                .map(this::toResponseResolviendoRelaciones)
+                .map(this::toPendienteResponse)
                 .toList();
     }
 
@@ -341,6 +346,21 @@ public class EstadiaService {
             throw new ApiException(ErrorCode.RECURSO_NO_ENCONTRADO);
         }
         return estadia;
+    }
+
+    private EstadiaPendienteResponse toPendienteResponse(Estadia estadia) {
+        Ubicacion ubicacion = ubicacionRepository.findById(estadia.getUbicacionId()).orElse(null);
+        String clienteNombre = usuarioRepository.findById(estadia.getClienteId())
+                .map(com.easybeach.identity.domain.Usuario::getNombre)
+                .orElse(null);
+        return new EstadiaPendienteResponse(
+                estadia.getPublicId(),
+                estadia.getBalnearioId(),
+                estadia.getUbicacionId(),
+                Optional.ofNullable(ubicacion).map(Ubicacion::getIdentificador).orElse(null),
+                clienteNombre,
+                estadia.getEstado().name(),
+                estadia.getFechaSolicitud());
     }
 
     private EstadiaResponse toResponseResolviendoRelaciones(Estadia estadia) {
