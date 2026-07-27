@@ -3,13 +3,12 @@ package com.easybeach.promotions.service;
 import com.easybeach.promotions.domain.EstadoPromocion;
 import com.easybeach.promotions.domain.Promocion;
 import com.easybeach.promotions.domain.TipoPromocion;
+import com.easybeach.shared.time.ZonaNegocio;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Arrays;
-import java.util.Set;
 import org.springframework.stereotype.Component;
 
 /**
@@ -23,12 +22,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class VigenciaPromocionChecker {
 
-    public static final ZoneId ZONA_NEGOCIO = ZoneId.of("America/Argentina/Buenos_Aires");
-
-    private static final Set<String> CODIGOS_DIA = Set.of("LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM");
-
     public boolean estaVigenteAhora(Promocion promocion) {
-        return estaVigenteEn(promocion, ZonedDateTime.now(ZONA_NEGOCIO));
+        return estaVigenteEn(promocion, ZonedDateTime.now(ZonaNegocio.ZONE_ID));
     }
 
     /** Paquete-visible para tests: permite fijar el instante evaluado. */

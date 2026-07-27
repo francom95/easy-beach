@@ -4,6 +4,14 @@
 - **Modelo ejecutor:** haiku
 - **Tipo:** construcción
 - **Depende de:** 13, 14
+- **Estado: ✅ EJECUTADA** — código en [`backend/`](../../backend/) (módulo
+  `reporting` completo, sin dependencias de módulos de negocio), entregable
+  en [`docs/especificacion/15-backend-reportes.md`](../especificacion/15-backend-reportes.md).
+  99/99 tests, BUILD SUCCESS. Cierra el **Hito Backend MVP**. Hallazgo
+  crítico: `hibernate.jdbc.time_zone: UTC` solo protege a Hibernate — el
+  `JdbcTemplate` plano de este módulo bindeaba fechas con la zona horaria
+  de la JVM, corriendo 3 horas cada comparación en silencio; corregido con
+  literales de texto UTC en vez de `Timestamp`.
 
 ## Objetivo
 

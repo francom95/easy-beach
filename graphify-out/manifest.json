@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1785123409.4336493,
-    "ast_hash": "928472d0f54fa719562d0c972785655a",
-    "semantic_hash": "928472d0f54fa719562d0c972785655a"
+    "mtime": 1785127173.9210372,
+    "ast_hash": "fbd67e8edf469872fdd1e9dd31af4a6e",
+    "semantic_hash": "fbd67e8edf469872fdd1e9dd31af4a6e"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -75,9 +75,9 @@
     "semantic_hash": "e1d837a71714dc4f2bf5a73fa7707aa4"
   },
   "docs/etapas/15-backend-reportes.md": {
-    "mtime": 1783408925.946784,
-    "ast_hash": "8da3f926f9f8101d58ae0467ee9fe245",
-    "semantic_hash": "8da3f926f9f8101d58ae0467ee9fe245"
+    "mtime": 1785127158.4578967,
+    "ast_hash": "aa7de9e4c90803583e8a2d6cb6eb87b9",
+    "semantic_hash": "aa7de9e4c90803583e8a2d6cb6eb87b9"
   },
   "docs/etapas/16-mobile-app-cliente.md": {
     "mtime": 1783444634.2155704,
@@ -455,9 +455,9 @@
     "semantic_hash": "f3eaa3cc99fb16d9cbca21ee7934f5e7"
   },
   "backend/src/main/java/com/easybeach/reporting/package-info.java": {
-    "mtime": 1784937375.3420882,
-    "ast_hash": "ff8f8aa705e79ac2deb3d8def36ebe05",
-    "semantic_hash": "ff8f8aa705e79ac2deb3d8def36ebe05"
+    "mtime": 1785124940.3991385,
+    "ast_hash": "158ff8c97c405768d8b81aa2a1c808b0",
+    "semantic_hash": "158ff8c97c405768d8b81aa2a1c808b0"
   },
   "backend/src/main/java/com/easybeach/shared/audit/Auditable.java": {
     "mtime": 1784936948.464937,
@@ -1320,9 +1320,9 @@
     "semantic_hash": "bbfdd71e1ccc00d3f85c2a133572f9e6"
   },
   "backend/src/test/java/com/easybeach/support/EscenarioBalneario.java": {
-    "mtime": 1785116461.2063515,
-    "ast_hash": "a1f77c1f0e325ffffadb3328e5faada1",
-    "semantic_hash": "a1f77c1f0e325ffffadb3328e5faada1"
+    "mtime": 1785125029.8374166,
+    "ast_hash": "f5d3a855156d73ab15d551c458e72f61",
+    "semantic_hash": "f5d3a855156d73ab15d551c458e72f61"
   },
   "docs/especificacion/12-backend-estadia-activa.md": {
     "mtime": 1785113845.8174984,
@@ -1695,9 +1695,9 @@
     "semantic_hash": "c7510ea35155446a7c77a31ed09f830a"
   },
   "backend/src/main/java/com/easybeach/promotions/service/VigenciaPromocionChecker.java": {
-    "mtime": 1785121933.4321227,
-    "ast_hash": "1c23186b4dc773a07a1985245856098c",
-    "semantic_hash": "1c23186b4dc773a07a1985245856098c"
+    "mtime": 1785124607.7283766,
+    "ast_hash": "582a70f967f25e8be87367df231e1c19",
+    "semantic_hash": "582a70f967f25e8be87367df231e1c19"
   },
   "backend/src/main/java/com/easybeach/promotions/web/AdminPromocionController.java": {
     "mtime": 1785122213.5192525,
@@ -1750,13 +1750,143 @@
     "semantic_hash": "a509d874a448d0433186239347c7f661"
   },
   "backend/src/test/java/com/easybeach/promotions/service/VigenciaPromocionCheckerTest.java": {
-    "mtime": 1785122270.7897286,
-    "ast_hash": "a0669427faf22e64b6d3c7d26c9f2c26",
-    "semantic_hash": "a0669427faf22e64b6d3c7d26c9f2c26"
+    "mtime": 1785124621.7201705,
+    "ast_hash": "ca03434ac7ec2d9125c3b1beb9cabaf4",
+    "semantic_hash": "ca03434ac7ec2d9125c3b1beb9cabaf4"
   },
   "docs/especificacion/14-backend-carpero-promociones.md": {
     "mtime": 1785123388.0695739,
     "ast_hash": "52853e46389b78486f31c3242e215839",
     "semantic_hash": "52853e46389b78486f31c3242e215839"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/AperturasPorDiaResponse.java": {
+    "mtime": 1785124645.8453698,
+    "ast_hash": "c3caed3d3c990e83ba5f77f447f94469",
+    "semantic_hash": "c3caed3d3c990e83ba5f77f447f94469"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/DashboardResumenResponse.java": {
+    "mtime": 1785124829.4262202,
+    "ast_hash": "eb7b84bbdfe6ea70967ec87776659869",
+    "semantic_hash": "eb7b84bbdfe6ea70967ec87776659869"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/EstadiasReporteResponse.java": {
+    "mtime": 1785124653.1611881,
+    "ast_hash": "26f8a70e41404bbcb9705a908f9e5009",
+    "semantic_hash": "26f8a70e41404bbcb9705a908f9e5009"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/PlataformaReporteResponse.java": {
+    "mtime": 1785124680.1480715,
+    "ast_hash": "848210b076b9cb475e924f6833e3597a",
+    "semantic_hash": "848210b076b9cb475e924f6833e3597a"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/ProductoVendidoResponse.java": {
+    "mtime": 1785124636.6556425,
+    "ast_hash": "009aed4f7935127cd17476bbefb6dd21",
+    "semantic_hash": "009aed4f7935127cd17476bbefb6dd21"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/PromocionRendimientoResponse.java": {
+    "mtime": 1785124641.9473262,
+    "ast_hash": "56f2e6f85a7e0b60e44607b843a10ada",
+    "semantic_hash": "56f2e6f85a7e0b60e44607b843a10ada"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/ServiciosReporteResponse.java": {
+    "mtime": 1785124663.9633293,
+    "ast_hash": "91822a05a8fc1704ef37f142c2b37ccc",
+    "semantic_hash": "91822a05a8fc1704ef37f142c2b37ccc"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/SolicitudesPorTipoResponse.java": {
+    "mtime": 1785124657.2398238,
+    "ast_hash": "2effd8a8939ce50a98b87e8c35800c39",
+    "semantic_hash": "2effd8a8939ce50a98b87e8c35800c39"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/VentasPorDiaResponse.java": {
+    "mtime": 1785124626.6641297,
+    "ast_hash": "cc615393d6df2003841792bb8cefb373",
+    "semantic_hash": "cc615393d6df2003841792bb8cefb373"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/VentasReporteResponse.java": {
+    "mtime": 1785124632.2530859,
+    "ast_hash": "97a4c6e945f8a7517e053ff8225d160b",
+    "semantic_hash": "97a4c6e945f8a7517e053ff8225d160b"
+  },
+  "backend/src/main/java/com/easybeach/reporting/dto/VolumenPorBalnearioResponse.java": {
+    "mtime": 1785124675.2437732,
+    "ast_hash": "44866c35233da511165732ec61b82142",
+    "semantic_hash": "44866c35233da511165732ec61b82142"
+  },
+  "backend/src/main/java/com/easybeach/reporting/repository/EstadiaReportingRepository.java": {
+    "mtime": 1785126387.2571738,
+    "ast_hash": "7bcb8b482aca8d43c75063254039072b",
+    "semantic_hash": "7bcb8b482aca8d43c75063254039072b"
+  },
+  "backend/src/main/java/com/easybeach/reporting/repository/PedidoReportingRepository.java": {
+    "mtime": 1785126373.4193373,
+    "ast_hash": "8d4a7466dd616c396e38320d60045c07",
+    "semantic_hash": "8d4a7466dd616c396e38320d60045c07"
+  },
+  "backend/src/main/java/com/easybeach/reporting/repository/PlataformaReportingRepository.java": {
+    "mtime": 1785124787.2260294,
+    "ast_hash": "1c139862c53462b4251d09e494a0cbe3",
+    "semantic_hash": "1c139862c53462b4251d09e494a0cbe3"
+  },
+  "backend/src/main/java/com/easybeach/reporting/repository/ServicioReportingRepository.java": {
+    "mtime": 1785126400.7384422,
+    "ast_hash": "1d560dc237c892c10cfa338681b77eb6",
+    "semantic_hash": "1d560dc237c892c10cfa338681b77eb6"
+  },
+  "backend/src/main/java/com/easybeach/reporting/service/RangoFechasUtil.java": {
+    "mtime": 1785124799.7488866,
+    "ast_hash": "2efd307b3c97678ef14fd5502659aabb",
+    "semantic_hash": "2efd307b3c97678ef14fd5502659aabb"
+  },
+  "backend/src/main/java/com/easybeach/reporting/service/ReporteBalnearioService.java": {
+    "mtime": 1785124845.361971,
+    "ast_hash": "e870c6eeef021d7fa691ed697d1de59b",
+    "semantic_hash": "e870c6eeef021d7fa691ed697d1de59b"
+  },
+  "backend/src/main/java/com/easybeach/reporting/service/ReportePlataformaService.java": {
+    "mtime": 1785124867.883373,
+    "ast_hash": "46ae0f0d3ed5582fe3c6abed1568ee19",
+    "semantic_hash": "46ae0f0d3ed5582fe3c6abed1568ee19"
+  },
+  "backend/src/main/java/com/easybeach/reporting/web/AdminReporteController.java": {
+    "mtime": 1785124919.5053153,
+    "ast_hash": "d8d2193b84d49a47eecd6bd40e82f5b4",
+    "semantic_hash": "d8d2193b84d49a47eecd6bd40e82f5b4"
+  },
+  "backend/src/main/java/com/easybeach/reporting/web/CsvWriter.java": {
+    "mtime": 1785124876.647821,
+    "ast_hash": "69801b45f1d93890d2ec5b2469afe525",
+    "semantic_hash": "69801b45f1d93890d2ec5b2469afe525"
+  },
+  "backend/src/main/java/com/easybeach/reporting/web/SuperAdminReporteController.java": {
+    "mtime": 1785124928.9956112,
+    "ast_hash": "b601d460b628e76a07af42e873c3cb14",
+    "semantic_hash": "b601d460b628e76a07af42e873c3cb14"
+  },
+  "backend/src/main/java/com/easybeach/shared/time/ZonaNegocio.java": {
+    "mtime": 1785124596.509408,
+    "ast_hash": "509b1ca034f0dcf2ee4d51b856280753",
+    "semantic_hash": "509b1ca034f0dcf2ee4d51b856280753"
+  },
+  "backend/src/test/java/com/easybeach/reporting/ReportesBalnearioIntegrationTest.java": {
+    "mtime": 1785126823.621811,
+    "ast_hash": "63037fb5059efb77317a54aaebe93804",
+    "semantic_hash": "63037fb5059efb77317a54aaebe93804"
+  },
+  "backend/src/test/java/com/easybeach/reporting/ReportesPlataformaIntegrationTest.java": {
+    "mtime": 1785126422.9914858,
+    "ast_hash": "09694c9feeaab5d14abf36953470e21a",
+    "semantic_hash": "09694c9feeaab5d14abf36953470e21a"
+  },
+  "backend/src/test/java/com/easybeach/reporting/ReportesZonaHorariaIntegrationTest.java": {
+    "mtime": 1785126414.7373943,
+    "ast_hash": "111d7a20e1a3ac8f9f0974111a239849",
+    "semantic_hash": "111d7a20e1a3ac8f9f0974111a239849"
+  },
+  "docs/especificacion/15-backend-reportes.md": {
+    "mtime": 1785127145.887269,
+    "ast_hash": "8bf3b5075724c79702ba5cadff107cec",
+    "semantic_hash": "8bf3b5075724c79702ba5cadff107cec"
   }
 }

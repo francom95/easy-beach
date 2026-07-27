@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import com.easybeach.promotions.domain.EstadoPromocion;
 import com.easybeach.promotions.domain.Promocion;
 import com.easybeach.promotions.domain.TipoPromocion;
+import com.easybeach.shared.time.ZonaNegocio;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -29,7 +30,7 @@ class VigenciaPromocionCheckerTest {
     }
 
     private ZonedDateTime enBuenosAires(String isoLocal) {
-        return ZonedDateTime.of(java.time.LocalDateTime.parse(isoLocal), VigenciaPromocionChecker.ZONA_NEGOCIO);
+        return ZonedDateTime.of(java.time.LocalDateTime.parse(isoLocal), ZonaNegocio.ZONE_ID);
     }
 
     @Test

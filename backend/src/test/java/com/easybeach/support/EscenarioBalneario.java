@@ -127,6 +127,13 @@ public class EscenarioBalneario {
         return loginHeaders(email, "/api/v1/auth/login/cliente");
     }
 
+    /**
+     * Reutiliza la temporada {@code EN_CURSO} si ya existe una en este
+     * contexto de test, en vez de crear una por balneario: en producción hay
+     * UNA temporada compartida por todos los balnearios (etapa 03 §3.1), y
+     * el reporte de plataforma (etapa 15) asume exactamente eso al buscar
+     * "la" temporada en curso.
+     */
     private void darDeAltaSuscripcionVigente(Long balnearioId) {
         Plan plan = new Plan();
         plan.setNombre("Plan de prueba " + System.nanoTime());
@@ -134,12 +141,16 @@ public class EscenarioBalneario {
         plan.setActivo(true);
         plan = planRepository.save(plan);
 
-        Temporada temporada = new Temporada();
-        temporada.setNombre("Temporada de prueba " + System.nanoTime());
-        temporada.setFechaInicio(LocalDate.now().minusDays(1));
-        temporada.setFechaFin(LocalDate.now().plusMonths(3));
-        temporada.setEstado(EstadoTemporada.EN_CURSO);
-        temporada = temporadaRepository.save(temporada);
+        Temporada temporada = temporadaRepository.findByEstado(EstadoTemporada.EN_CURSO).stream()
+                .findFirst()
+                .orElseGet(() -> {
+                    Temporada nueva = new Temporada();
+                    nueva.setNombre("Temporada de prueba " + System.nanoTime());
+                    nueva.setFechaInicio(LocalDate.now().minusDays(1));
+                    nueva.setFechaFin(LocalDate.now().plusMonths(3));
+                    nueva.setEstado(EstadoTemporada.EN_CURSO);
+                    return temporadaRepository.save(nueva);
+                });
 
         SuscripcionTemporada suscripcion = new SuscripcionTemporada();
         suscripcion.setBalnearioId(balnearioId);

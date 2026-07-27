@@ -54,7 +54,7 @@ la facturación operativa en temporada.
 | 12 | ✅ [Backend estadía activa](12-backend-estadia-activa.md) | opus | 09, 10, 11 |
 | 13 | ✅ [Backend carrito, pedidos, estados y tiempo real](13-backend-pedidos.md) | opus | 11, 12 |
 | 14 | ✅ [Backend servicios al carpero y promociones](14-backend-carpero-promociones.md) | sonnet | 12, 13 |
-| 15 | [Backend reportes básicos](15-backend-reportes.md) | haiku | 13, 14 |
+| 15 | ✅ [Backend reportes básicos](15-backend-reportes.md) | haiku | 13, 14 |
 | 16 | [Mobile app cliente](16-mobile-app-cliente.md) | sonnet | 07, 09–14 |
 | 17 | [Web: panel operativo y panel admin de balneario](17-web-panel-operativo-admin.md) | sonnet | 08, 10–15 |
 | 18 | [Web: panel Super Admin](18-web-panel-super-admin.md) | haiku | 08, 10 |
@@ -65,7 +65,7 @@ la facturación operativa en temporada.
 
 1. **Hito Especificación** (fin etapa 05): arquitectura, datos, API y seguridad
    definidos. Se puede empezar a construir.
-2. **Hito Backend MVP** (fin etapa 15): API completa operable por Postman/tests.
+2. ✅ **Hito Backend MVP** (fin etapa 15): API completa operable por Postman/tests.
 3. **Hito Producto MVP** (fin etapa 18): cliente pide desde la app, el balneario
    opera desde el panel.
 4. **Hito Go-live** (fin etapa 20): desplegado, monitoreado, con datos demo para
