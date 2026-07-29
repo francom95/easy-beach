@@ -1,0 +1,56 @@
+# Etapa 20 - alertas minimas (docs/etapas/20-infra-deploy.md §5): API caida,
+# tasa de errores, latencia del menu publico, espacio en disco. Verificadas
+# con `promtool test rules ops/alerts_test.yml` - ver ops/README.md.
+groups:
+  - name: easybeach-minimas
+    rules:
+      - alert: BackendCaido
+        expr: up{job="easybeach-backend"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "El backend de EasyBeach no responde al scrape de Prometheus"
+          description: "up == 0 durante al menos 1 minuto para el job easybeach-backend."
+
+      - alert: TasaDeErroresAlta
+        # Proporcion de respuestas 5xx sobre el total en los ultimos 5 minutos.
+        expr: |
+          (
+            sum(rate(http_server_requests_seconds_count{job="easybeach-backend", outcome="SERVER_ERROR"}[5m]))
+            /
+            sum(rate(http_server_requests_seconds_count{job="easybeach-backend"}[5m]))
+          ) > 0.05
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Mas del 5% de las respuestas son 5xx"
+          description: "Tasa de error 5xx sostenida por 5 minutos - revisar logs del backend."
+
+      - alert: LatenciaMenuPublicoAlta
+        # http_server_requests_seconds es un Timer (summary, no histograma) -
+        # se usa sum/count para la latencia PROMEDIO del endpoint mas
+        # consultado de la plataforma (PublicMenuController).
+        expr: |
+          (
+            sum(rate(http_server_requests_seconds_sum{job="easybeach-backend", uri="/api/v1/balnearios/{slug}/menu"}[5m]))
+            /
+            sum(rate(http_server_requests_seconds_count{job="easybeach-backend", uri="/api/v1/balnearios/{slug}/menu"}[5m]))
+          ) > 0.8
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "El menu publico esta respondiendo lento"
+          description: "Latencia promedio > 800ms sostenida por 5 minutos en GET /api/v1/balnearios/{slug}/menu."
+
+      - alert: EspacioEnDiscoBajo
+        expr: |
+          (disk_free_bytes{job="easybeach-backend", path="/app/."} / disk_total_bytes{job="easybeach-backend", path="/app/."}) < 0.15
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Menos del 15% de espacio libre en disco"
+          description: "disk_free_bytes/disk_total_bytes por debajo del 15% durante 10 minutos - los backups y logs pueden llenar el disco."

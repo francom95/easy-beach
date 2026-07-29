@@ -1,0 +1,33 @@
+# Etapa 20: staging no existía como profile - la etapa 19 lo asume
+# ("todas las superficies desplegadas juntas en un entorno de staging") y el
+# OpenAPI ya declara `staging.api.easybeach.com.ar` como server, pero nadie
+# había creado este archivo. Mismos secretos-por-env-var que prod (paridad de
+# configuración, criterio de esta etapa) - la diferencia real es el nivel de
+# log (DEBUG, para poder diagnosticar durante el QA de la etapa 19) y que
+# corre contra su propia base de datos, separada de producción.
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    show-sql: false
+
+easybeach:
+  jwt:
+    private-key-location: ${JWT_PRIVATE_KEY_LOCATION:}
+    public-key-location: ${JWT_PUBLIC_KEY_LOCATION:}
+  security:
+    token-encryption-key: ${TOKEN_ENCRYPTION_KEY}
+  mercadopago:
+    client-id: ${MERCADOPAGO_CLIENT_ID:}
+    client-secret: ${MERCADOPAGO_CLIENT_SECRET:}
+    redirect-uri: ${MERCADOPAGO_REDIRECT_URI:}
+  storage:
+    root-dir: ${ASSET_STORAGE_ROOT_DIR:/var/easybeach/assets}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS}
+
+logging:
+  level:
+    com.easybeach: DEBUG

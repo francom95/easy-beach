@@ -1,0 +1,22 @@
+# Etapa 20 - routing minimo de Alertmanager. El receiver "default" esta
+# vacio a proposito: un email/webhook real requiere credenciales de un
+# proveedor (SMTP, Slack, PagerDuty, etc.) que solo un humano puede dar de
+# alta. Completar `email_configs`/`webhook_configs` aca (o via el .env del
+# host + variables ${VAR} que Alertmanager tambien soporta) antes de
+# depender de esto para alertar de verdad.
+route:
+  receiver: default
+  group_by: ["alertname"]
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 4h
+
+receivers:
+  - name: default
+    # Ejemplo de destino real (comentado - completar y descomentar):
+    # email_configs:
+    #   - to: "oncall@easybeach.com.ar"
+    #     from: "alertmanager@easybeach.com.ar"
+    #     smarthost: "smtp.proveedor.com:587"
+    #     auth_username: "..."
+    #     auth_password: "..."

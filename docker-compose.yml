@@ -1,0 +1,90 @@
+# Etapa 20 - topologia de staging/produccion (backend + mysql + web + proxy
+# con TLS automatico). Mismo compose para ambos entornos, distinto .env
+# (paridad de configuracion, criterio de esta etapa) - ver .env.example.
+#
+# Uso:
+#   cp .env.example .env   # completar con los valores reales del entorno
+#   docker compose build --build-arg NEXT_PUBLIC_API_BASE_URL=https://${API_DOMAIN}/api/v1
+#   docker compose up -d
+#
+# docker-compose.yml de desarrollo local (solo mysql, sin build de imagenes)
+# sigue viviendo aparte en backend/docker-compose.yml - no se tocan entre si.
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: easybeach
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    volumes:
+      - easybeach_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    # Sin puerto publicado al host: solo backend/backup lo alcanzan por la
+    # red interna de Compose. En dev local (backend/docker-compose.yml) si se
+    # publica, porque ahi hace falta conectar desde fuera del contenedor.
+
+  backend:
+    build:
+      context: ./backend
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
+      DB_URL: jdbc:mysql://mysql:3306/easybeach?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      # Rutas DENTRO del contenedor - el volumen de abajo monta el directorio
+      # real del host ahi. No confundir con JWT_KEYS_HOST_DIR (esa si es
+      # una ruta del host, en el .env).
+      JWT_PRIVATE_KEY_LOCATION: /var/easybeach/jwt-keys/private.pem
+      JWT_PUBLIC_KEY_LOCATION: /var/easybeach/jwt-keys/public.pem
+      TOKEN_ENCRYPTION_KEY: ${TOKEN_ENCRYPTION_KEY}
+      MERCADOPAGO_CLIENT_ID: ${MERCADOPAGO_CLIENT_ID}
+      MERCADOPAGO_CLIENT_SECRET: ${MERCADOPAGO_CLIENT_SECRET}
+      MERCADOPAGO_REDIRECT_URI: ${MERCADOPAGO_REDIRECT_URI}
+      CORS_ALLOWED_ORIGINS: https://${WEB_DOMAIN}
+      ASSET_STORAGE_ROOT_DIR: /var/easybeach/assets
+    volumes:
+      - easybeach_assets:/var/easybeach/assets
+      - ${JWT_KEYS_HOST_DIR:-./secrets/jwt}:/var/easybeach/jwt-keys:ro
+
+  web:
+    build:
+      context: ./web
+      args:
+        NEXT_PUBLIC_API_BASE_URL: https://${API_DOMAIN}/api/v1
+    restart: unless-stopped
+    depends_on:
+      - backend
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      API_DOMAIN: ${API_DOMAIN}
+      WEB_DOMAIN: ${WEB_DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - backend
+      - web
+
+volumes:
+  easybeach_mysql_data:
+  easybeach_assets:
+  caddy_data:
+  caddy_config:

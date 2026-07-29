@@ -7,8 +7,13 @@ graphify-out/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
 # Secrets / env files (Mercado Pago credentials, DB creds, etc. once they exist)
 .env
 .env.*
+!.env.example
 *.pem
 *.key
+secrets/
+
+# Dumps generados por scripts/backup-db.sh (nunca al repo)
+backups/
 
 # OS cruft
 Thumbs.db

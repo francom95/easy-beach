@@ -1,0 +1,30 @@
+# Etapa 20 - stack de monitoreo OPCIONAL (Prometheus + Alertmanager). No se
+# bundlea en docker-compose.yml a proposito: ADR-006 elige minimizar el
+# footprint fuera de temporada para un VPS chico - agregar 2 servicios mas
+# que corren siempre no es gratis en RAM/CPU. Se levanta como overlay:
+#
+#   docker compose -f docker-compose.yml -f docker-compose.monitoring.yml up -d
+#
+# Las reglas que corren aca son las mismas que se verifican localmente con
+# `promtool test rules ops/alerts_test.yml` (ver ops/README.md) - no hay
+# divergencia entre "lo que se prueba" y "lo que corre en el VPS".
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    restart: unless-stopped
+    volumes:
+      - ./ops/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./ops/alerts.yml:/etc/prometheus/alerts.yml:ro
+      - easybeach_prometheus_data:/prometheus
+    depends_on:
+      - backend
+
+  alertmanager:
+    image: prom/alertmanager:latest
+    restart: unless-stopped
+    volumes:
+      - ./ops/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+
+volumes:
+  easybeach_prometheus_data:

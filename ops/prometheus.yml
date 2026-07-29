@@ -1,0 +1,23 @@
+# Etapa 20 - scrape config para el stack de monitoreo opcional
+# (docker-compose.monitoring.yml). El job_name "easybeach-backend" es el que
+# referencian las reglas de ops/alerts.yml - si se cambia aca, hay que
+# actualizar alerts.yml (y ops/alerts_test.yml) en conjunto.
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - /etc/prometheus/alerts.yml
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - alertmanager:9093
+
+scrape_configs:
+  - job_name: easybeach-backend
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets:
+          - backend:8080

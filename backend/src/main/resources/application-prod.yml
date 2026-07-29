@@ -22,6 +22,14 @@ easybeach:
     redirect-uri: ${MERCADOPAGO_REDIRECT_URI}
   storage:
     root-dir: ${ASSET_STORAGE_ROOT_DIR:/var/easybeach/assets}
+  cors:
+    # Etapa 20 (hallazgo real): sin este override, prod heredaba el default
+    # de application.yml ("http://localhost:3000,http://localhost:19006") -
+    # un deploy real habría bloqueado por CORS al propio panel web servido
+    # desde el dominio de producción, el mismo tipo de falla crítica que la
+    # etapa 17 ya encontró una vez (preflight rechazado antes de llegar al
+    # negocio).
+    allowed-origins: ${CORS_ALLOWED_ORIGINS}
 
 logging:
   level:

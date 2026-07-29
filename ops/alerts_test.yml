@@ -1,0 +1,73 @@
+# Etapa 20 - prueba controlada de las 4 alertas minimas (unit test de
+# promtool, no requiere un Prometheus corriendo). Correr con:
+#   docker run --rm -v "$PWD/ops:/ops" prom/prometheus promtool test rules /ops/alerts_test.yml
+rule_files:
+  - alerts.yml
+
+evaluation_interval: 1m
+
+tests:
+  - interval: 1m
+    input_series:
+      - series: 'up{job="easybeach-backend"}'
+        values: "1 1 0 0 0 0 0"
+    alert_rule_test:
+      - eval_time: 4m
+        alertname: BackendCaido
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+              job: easybeach-backend
+            exp_annotations:
+              summary: "El backend de EasyBeach no responde al scrape de Prometheus"
+              description: "up == 0 durante al menos 1 minuto para el job easybeach-backend."
+
+  - interval: 1m
+    input_series:
+      - series: 'http_server_requests_seconds_count{job="easybeach-backend", outcome="SERVER_ERROR"}'
+        values: "0+10x15"
+      - series: 'http_server_requests_seconds_count{job="easybeach-backend", outcome="SUCCESS"}'
+        values: "0+10x15"
+    alert_rule_test:
+      - eval_time: 10m
+        alertname: TasaDeErroresAlta
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+            exp_annotations:
+              summary: "Mas del 5% de las respuestas son 5xx"
+              description: "Tasa de error 5xx sostenida por 5 minutos - revisar logs del backend."
+
+  - interval: 1m
+    input_series:
+      - series: 'http_server_requests_seconds_sum{job="easybeach-backend", uri="/api/v1/balnearios/{slug}/menu"}'
+        values: "0+1.6x15"
+      - series: 'http_server_requests_seconds_count{job="easybeach-backend", uri="/api/v1/balnearios/{slug}/menu"}'
+        values: "0+1x15"
+    alert_rule_test:
+      - eval_time: 10m
+        alertname: LatenciaMenuPublicoAlta
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+            exp_annotations:
+              summary: "El menu publico esta respondiendo lento"
+              description: "Latencia promedio > 800ms sostenida por 5 minutos en GET /api/v1/balnearios/{slug}/menu."
+
+  - interval: 1m
+    input_series:
+      - series: 'disk_total_bytes{job="easybeach-backend", path="/app/."}'
+        values: "1000000000x16"
+      - series: 'disk_free_bytes{job="easybeach-backend", path="/app/."}'
+        values: "500000000x5 100000000x11"
+    alert_rule_test:
+      - eval_time: 16m
+        alertname: EspacioEnDiscoBajo
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+              job: easybeach-backend
+              path: "/app/."
+            exp_annotations:
+              summary: "Menos del 15% de espacio libre en disco"
+              description: "disk_free_bytes/disk_total_bytes por debajo del 15% durante 10 minutos - los backups y logs pueden llenar el disco."

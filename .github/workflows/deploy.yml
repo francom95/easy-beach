@@ -1,0 +1,59 @@
+name: deploy
+
+# Disparo manual unicamente: no hay servidor real todavia (ver ADR-006), asi
+# que este pipeline documenta COMO se deployaria una vez que exista un VPS,
+# pero nadie deberia poder correrlo sin querer. Cuando el VPS exista, un
+# mantenedor dispara esto a mano eligiendo el entorno.
+#
+# Pre-requisitos que un humano tiene que crear (no automatizable desde aca):
+#   1. El VPS de staging/produccion (ver docs/adr/ADR-006-hosting-y-deploy.md)
+#      con Docker + Docker Compose instalados, el repo clonado, y un .env
+#      real completado a partir de .env.example (secrets/jwt/, TOKEN_ENCRYPTION_KEY,
+#      credenciales de Mercado Pago, etc. - nunca en este repo).
+#   2. En GitHub: Settings > Environments > crear "staging" y "production",
+#      cada uno con:
+#        - Required reviewers (aprobacion manual antes de que corra el job)
+#        - Secrets: DEPLOY_HOST, DEPLOY_USER, DEPLOY_SSH_KEY (clave privada
+#          SSH con acceso al VPS), DEPLOY_PATH (carpeta del repo en el VPS)
+#
+# Por que SSH + git pull + compose build en el VPS, y no un registry de
+# imagenes (GHCR/Docker Hub): ADR-006 elige VPS+Compose especificamente por
+# simplicidad para un monolito unico y equipo chico - agregar un registry
+# séria una capa de infraestructura mas para mantener sin necesidad real a
+# esta escala. Si el tamaño del equipo/infra crece, migrar a build-and-push
+# es la extension natural de este mismo pipeline.
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Entorno a deployar"
+        required: true
+        type: choice
+        options:
+          - staging
+          - production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      # Nota: este pipeline no vuelve a correr los tests - confía en que
+      # backend-ci.yml/web-ci.yml ya corrieron en verde sobre este commit
+      # (branch protection en `master` debería exigirlo antes del merge).
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -euo pipefail
+            cd "${{ secrets.DEPLOY_PATH }}"
+            git fetch origin master
+            git checkout master
+            git reset --hard origin/master
+            docker compose build
+            docker compose up -d
+            docker compose ps

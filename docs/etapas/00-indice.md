@@ -59,7 +59,7 @@ la facturación operativa en temporada.
 | 17 | ✅ [Web: panel operativo y panel admin de balneario](17-web-panel-operativo-admin.md) | sonnet | 08, 10–15 |
 | 18 | ✅ [Web: panel Super Admin](18-web-panel-super-admin.md) | haiku | 08, 10 |
 | 19 | ✅ [QA integral, seeds y datos demo](19-qa-seeds-demo.md) | sonnet | 09–18 |
-| 20 | [Infraestructura, deploy y observabilidad](20-infra-deploy.md) | sonnet | 09; cierre tras 19 |
+| 20 | ✅ [Infraestructura, deploy y observabilidad](20-infra-deploy.md) | sonnet | 09; cierre tras 19 |
 
 ## Hitos
 

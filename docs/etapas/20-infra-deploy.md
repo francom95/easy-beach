@@ -5,6 +5,17 @@
 - **Tipo:** construcción
 - **Depende de:** 09 (puede arrancar apenas exista backend); cierre final tras 19
 
+## Estado: ✅ EJECUTADA
+
+Ver [`docs/especificacion/20-infra-deploy.md`](../especificacion/20-infra-deploy.md)
+para el detalle completo. Resumen: Dockerfiles + docker-compose verificados
+con un `docker compose up` real (2 bugs reales encontrados y arreglados: JWT
+key loading, healthcheck IPv4/IPv6 de `web`); CI extendido (web-ci, deploy
+manual-gatillado, doc de mobile signing); backup/restore de DB probado de
+verdad; alertas mínimas verificadas con `promtool` en una prueba controlada;
+runbook de incidentes; documento de escalado estacional. Suite backend:
+151/151.
+
 ## Objetivo
 
 Llevar EasyBeach a producción de forma operable por un equipo chico: entornos,

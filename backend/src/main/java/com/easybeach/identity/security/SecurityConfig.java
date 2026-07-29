@@ -76,7 +76,12 @@ public class SecurityConfig {
                         // autenticidad la da la firma x-signature (etapa 05 §4.1),
                         // no un token nuestro.
                         .requestMatchers("/api/v1/mercadopago/webhook").permitAll()
-                        .requestMatchers("/actuator/health/**", "/actuator/info").permitAll()
+                        // /actuator/prometheus lo scrapea Prometheus, que no tiene JWT -
+                        // permitAll acá es seguro porque Caddyfile NO expone /actuator/**
+                        // al dominio público (etapa 20): sólo es alcanzable dentro de la
+                        // red interna de docker-compose.
+                        .requestMatchers("/actuator/health/**", "/actuator/info", "/actuator/prometheus")
+                        .permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();

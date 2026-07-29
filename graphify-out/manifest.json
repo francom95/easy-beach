@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1785341095.1906319,
-    "ast_hash": "ffdd71d035243312864e701fa094aab4",
-    "semantic_hash": "ffdd71d035243312864e701fa094aab4"
+    "mtime": 1785345325.9867792,
+    "ast_hash": "1d439fc6f704ff52e0f979a090850e7d",
+    "semantic_hash": "1d439fc6f704ff52e0f979a090850e7d"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -100,9 +100,9 @@
     "semantic_hash": "222bcce2e197b333171a7e0eaf10b510"
   },
   "docs/etapas/20-infra-deploy.md": {
-    "mtime": 1783409013.812636,
-    "ast_hash": "1c7c246015da1eb603544e6bdf312ddb",
-    "semantic_hash": "1c7c246015da1eb603544e6bdf312ddb"
+    "mtime": 1785345316.2301762,
+    "ast_hash": "e3423edd6e22f89e1aa2d24cc496484b",
+    "semantic_hash": "e3423edd6e22f89e1aa2d24cc496484b"
   },
   ".claude/settings.json": {
     "mtime": 1783414517.259598,
@@ -270,9 +270,9 @@
     "semantic_hash": "a95ddb487508cfc1867f4152a4393f8c"
   },
   "backend/pom.xml": {
-    "mtime": 1784999105.4961047,
-    "ast_hash": "07e8b980808dc79b4ed04c7d051fd5ac",
-    "semantic_hash": "07e8b980808dc79b4ed04c7d051fd5ac"
+    "mtime": 1785344075.9781733,
+    "ast_hash": "dfbe89a0c6b72abc279ae23df4319a45",
+    "semantic_hash": "dfbe89a0c6b72abc279ae23df4319a45"
   },
   "backend/src/main/java/com/easybeach/EasyBeachApplication.java": {
     "mtime": 1785113318.7199037,
@@ -350,9 +350,9 @@
     "semantic_hash": "9174a518d3d44913df17271054c27d9c"
   },
   "backend/src/main/java/com/easybeach/identity/security/JwtKeyProvider.java": {
-    "mtime": 1784937123.217935,
-    "ast_hash": "c4ce296074e7c63be7e56b2028a9b970",
-    "semantic_hash": "c4ce296074e7c63be7e56b2028a9b970"
+    "mtime": 1785343205.4676032,
+    "ast_hash": "7970fa49315e9a5ee2579d6d1be6028b",
+    "semantic_hash": "7970fa49315e9a5ee2579d6d1be6028b"
   },
   "backend/src/main/java/com/easybeach/identity/security/JwtProperties.java": {
     "mtime": 1784937106.5956728,
@@ -365,9 +365,9 @@
     "semantic_hash": "be78877a33ea7e9de69d40b3ce620473"
   },
   "backend/src/main/java/com/easybeach/identity/security/SecurityConfig.java": {
-    "mtime": 1785167094.390063,
-    "ast_hash": "3c507c4e4d9d09e6fab98ae8acba000d",
-    "semantic_hash": "3c507c4e4d9d09e6fab98ae8acba000d"
+    "mtime": 1785344271.1163225,
+    "ast_hash": "f9fed6e9a95b8491beab0059d65c1135",
+    "semantic_hash": "f9fed6e9a95b8491beab0059d65c1135"
   },
   "backend/src/main/java/com/easybeach/identity/service/AuthService.java": {
     "mtime": 1785116841.1134613,
@@ -600,14 +600,14 @@
     "semantic_hash": "264acce8800ac8e590ddfdf261ad7a7e"
   },
   "backend/src/main/resources/application-prod.yml": {
-    "mtime": 1784998528.1535568,
-    "ast_hash": "130982e83d10109158cf4a9480b78e29",
-    "semantic_hash": "130982e83d10109158cf4a9480b78e29"
+    "mtime": 1785342463.0132346,
+    "ast_hash": "ca718d720f75143c955ffc0e4c09e5cf",
+    "semantic_hash": "ca718d720f75143c955ffc0e4c09e5cf"
   },
   "backend/src/main/resources/application.yml": {
-    "mtime": 1784998512.7336354,
-    "ast_hash": "42e23ffac1e6a9e5968f3b467e8939a0",
-    "semantic_hash": "42e23ffac1e6a9e5968f3b467e8939a0"
+    "mtime": 1785344079.8843102,
+    "ast_hash": "ca7c62f6af69226b1e7a0084855b7a36",
+    "semantic_hash": "ca7c62f6af69226b1e7a0084855b7a36"
   },
   "docs/especificacion/09-backend-fundacional.md": {
     "mtime": 1784941775.1680915,
@@ -3415,9 +3415,9 @@
     "semantic_hash": "d0f8375ae1199dc7acd3977fc33b78b8"
   },
   "web/next.config.ts": {
-    "mtime": 1785164591.0520017,
-    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
-    "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
+    "mtime": 1785342352.3936298,
+    "ast_hash": "631f8aa2a26560c174a9dd75856d1483",
+    "semantic_hash": "631f8aa2a26560c174a9dd75856d1483"
   },
   "web/package.json": {
     "mtime": 1785165598.9717767,
@@ -4183,5 +4183,95 @@
     "mtime": 1785191973.9942677,
     "ast_hash": "89353ca631775fac934ec8f558038096",
     "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/src/test/java/com/easybeach/identity/security/JwtKeyProviderTest.java": {
+    "mtime": 1785343246.7064705,
+    "ast_hash": "1792dac834b967db1dfa341e10918ba6",
+    "semantic_hash": "1792dac834b967db1dfa341e10918ba6"
+  },
+  "scripts/backup-db.sh": {
+    "mtime": 1785343917.1105306,
+    "ast_hash": "2528a506af4b9506435dfe9052e33999",
+    "semantic_hash": "2528a506af4b9506435dfe9052e33999"
+  },
+  "scripts/restore-db.sh": {
+    "mtime": 1785343923.5754948,
+    "ast_hash": "2b6f86b8ac359dc3cf6c557a0c1d82bb",
+    "semantic_hash": "2b6f86b8ac359dc3cf6c557a0c1d82bb"
+  },
+  ".github/workflows/deploy.yml": {
+    "mtime": 1785343823.2818036,
+    "ast_hash": "b51d1e4a1bc984b571856b7432537a0f",
+    "semantic_hash": "b51d1e4a1bc984b571856b7432537a0f"
+  },
+  ".github/workflows/web-ci.yml": {
+    "mtime": 1785343596.5577476,
+    "ast_hash": "44eb8336639141d1bb7cd2c56cb23a58",
+    "semantic_hash": "44eb8336639141d1bb7cd2c56cb23a58"
+  },
+  "backend/src/main/resources/application-staging.yml": {
+    "mtime": 1785342432.151674,
+    "ast_hash": "f8c04524c39deecbe0f9e8812b7f55d6",
+    "semantic_hash": "f8c04524c39deecbe0f9e8812b7f55d6"
+  },
+  "docker-compose.monitoring.yml": {
+    "mtime": 1785344653.954796,
+    "ast_hash": "e71a320cdedc83600ba42fc2f532d30f",
+    "semantic_hash": "e71a320cdedc83600ba42fc2f532d30f"
+  },
+  "docker-compose.yml": {
+    "mtime": 1785342510.014489,
+    "ast_hash": "253796a9db7d2f0a18cf8fe6ca34375b",
+    "semantic_hash": "253796a9db7d2f0a18cf8fe6ca34375b"
+  },
+  "docs/adr/ADR-006-hosting-y-deploy.md": {
+    "mtime": 1785342307.615219,
+    "ast_hash": "0ee9ce6eac2445e4b8b0caacfab38f5f",
+    "semantic_hash": "0ee9ce6eac2445e4b8b0caacfab38f5f"
+  },
+  "docs/deploy/mobile-build-y-publicacion.md": {
+    "mtime": 1785343859.624015,
+    "ast_hash": "f9f7a6d2f5ba2b3cf8756750e4f6bbfa",
+    "semantic_hash": "f9f7a6d2f5ba2b3cf8756750e4f6bbfa"
+  },
+  "docs/deploy/runbook-incidentes.md": {
+    "mtime": 1785344885.8623621,
+    "ast_hash": "6910c73568c13b8f658ace79b93d68fe",
+    "semantic_hash": "6910c73568c13b8f658ace79b93d68fe"
+  },
+  "docs/especificacion/20-escalado-estacional.md": {
+    "mtime": 1785344954.1012075,
+    "ast_hash": "830ad40a6bc8dc241c0d8e5c01366e7d",
+    "semantic_hash": "830ad40a6bc8dc241c0d8e5c01366e7d"
+  },
+  "docs/especificacion/20-infra-deploy.md": {
+    "mtime": 1785345310.3254035,
+    "ast_hash": "c9a9ac932d2215171b66111ded57dfbc",
+    "semantic_hash": "c9a9ac932d2215171b66111ded57dfbc"
+  },
+  "ops/README.md": {
+    "mtime": 1785344864.6587706,
+    "ast_hash": "c2acd124b181507f4a0db3608d06d272",
+    "semantic_hash": "c2acd124b181507f4a0db3608d06d272"
+  },
+  "ops/alertmanager.yml": {
+    "mtime": 1785344644.7567515,
+    "ast_hash": "e18cecad260a73177a7b5ae8095234c5",
+    "semantic_hash": "e18cecad260a73177a7b5ae8095234c5"
+  },
+  "ops/alerts.yml": {
+    "mtime": 1785344544.0902548,
+    "ast_hash": "b36f22f05c8f9616b33f6bdc757d0483",
+    "semantic_hash": "b36f22f05c8f9616b33f6bdc757d0483"
+  },
+  "ops/alerts_test.yml": {
+    "mtime": 1785344622.7088249,
+    "ast_hash": "293b5cc385f7b604f5ed7599dcfbe2b6",
+    "semantic_hash": "293b5cc385f7b604f5ed7599dcfbe2b6"
+  },
+  "ops/prometheus.yml": {
+    "mtime": 1785344637.8177419,
+    "ast_hash": "50f6db163ec2f4ccdb5b92f178aaea83",
+    "semantic_hash": "50f6db163ec2f4ccdb5b92f178aaea83"
   }
 }

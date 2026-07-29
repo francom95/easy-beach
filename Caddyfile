@@ -1,0 +1,18 @@
+# Etapa 20 - proxy reverso con TLS automatico (Let's Encrypt via Caddy).
+# {$VAR} es la sintaxis propia de Caddy para leer variables de entorno del
+# PROCESO de Caddy en tiempo de carga - las inyecta el servicio `caddy` del
+# docker-compose.yml (API_DOMAIN/WEB_DOMAIN vienen del .env del host).
+
+{$API_DOMAIN} {
+	# /actuator/** (metricas Prometheus, health con detalle) no se expone al
+	# dominio publico - Prometheus lo scrapea directo a backend:8080 dentro
+	# de la red interna de docker-compose, sin pasar por Caddy.
+	respond /actuator/* 404
+	reverse_proxy backend:8080
+	encode gzip
+}
+
+{$WEB_DOMAIN} {
+	reverse_proxy web:3000
+	encode gzip
+}

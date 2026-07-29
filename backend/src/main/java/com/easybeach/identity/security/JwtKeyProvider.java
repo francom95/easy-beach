@@ -46,10 +46,28 @@ public class JwtKeyProvider {
                     (java.security.interfaces.RSAPublicKey) pair.getPublic());
         }
         ResourceLoader loader = new DefaultResourceLoader();
-        PrivateKey privateKey = readPrivateKey(loader.getResource(properties.getPrivateKeyLocation()));
-        PublicKey publicKey = readPublicKey(loader.getResource(properties.getPublicKeyLocation()));
+        PrivateKey privateKey = readPrivateKey(loader.getResource(asResourceLocation(properties.getPrivateKeyLocation())));
+        PublicKey publicKey = readPublicKey(loader.getResource(asResourceLocation(properties.getPublicKeyLocation())));
         return new JwtKeyPair((java.security.interfaces.RSAPrivateKey) privateKey,
                 (java.security.interfaces.RSAPublicKey) publicKey);
+    }
+
+    /**
+     * {@link DefaultResourceLoader} trata cualquier location sin un scheme
+     * reconocido ("classpath:", "file:", "http(s):") como un ClassPathResource
+     * - una ruta absoluta de filesystem como "/var/easybeach/jwt-keys/private.pem"
+     * (el caso real de docker-compose.yml) se resolvía silenciosamente contra el
+     * classpath en vez del filesystem, y fallaba con FileNotFoundException.
+     * Este método hace que rutas de filesystem sin scheme se interpreten como
+     * "file:" por default, preservando cualquier scheme explícito que ya tenga.
+     */
+    private static String asResourceLocation(String location) {
+        for (String scheme : new String[] {"classpath:", "file:", "http:", "https:"}) {
+            if (location.startsWith(scheme)) {
+                return location;
+            }
+        }
+        return "file:" + location;
     }
 
     private PrivateKey readPrivateKey(Resource resource) throws IOException, NoSuchAlgorithmException, InvalidKeySpecException {

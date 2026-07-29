@@ -1,0 +1,47 @@
+name: web-ci
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "web/**"
+      - ".github/workflows/web-ci.yml"
+  pull_request:
+    paths:
+      - "web/**"
+      - ".github/workflows/web-ci.yml"
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      # No hay suite de tests unitarios en este proyecto todavia (ver
+      # docs/especificacion/20-infra-deploy.md) - build real es la
+      # verificacion mas fuerte disponible: falla ante cualquier error de
+      # tipos/import no detectado por lint o tsc, y es el mismo build que
+      # corre el Dockerfile de produccion.
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_BASE_URL: https://api.easybeach.com.ar/api/v1
