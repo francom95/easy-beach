@@ -84,8 +84,8 @@ export default function PedidosPage() {
                       <ul className={styles.items}>
                         {pedido.items.map((item, i) => (
                           <li key={i}>
-                            {item.cantidad}× {item.productoNombre}
-                            {item.varianteNombre ? ` (${item.varianteNombre})` : ''}
+                            {item.cantidad}× {item.nombreProducto}
+                            {item.nombreVariante ? ` (${item.nombreVariante})` : ''}
                           </li>
                         ))}
                       </ul>

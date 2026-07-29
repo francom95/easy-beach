@@ -3,6 +3,7 @@ package com.easybeach.support;
 import com.easybeach.payments.MercadoPagoPaymentClient;
 import java.math.BigDecimal;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -30,6 +31,7 @@ public class FakeMercadoPagoPaymentClient {
         private volatile boolean rechazarProximo = false;
         private volatile boolean dejarPendiente = false;
         private final Map<String, MercadoPagoPaymentClient.EstadoMp> estadoPorPago = new ConcurrentHashMap<>();
+        private final Set<String> consultasQueFallan = ConcurrentHashMap.newKeySet();
 
         public void rechazarProximoPago() {
             this.rechazarProximo = true;
@@ -43,6 +45,14 @@ public class FakeMercadoPagoPaymentClient {
         /** Fija el estado que devolverá {@code consultarPago} (lo que el webhook va a leer). */
         public void definirEstadoDe(String mpPaymentId, MercadoPagoPaymentClient.EstadoMp estado) {
             estadoPorPago.put(mpPaymentId, estado);
+        }
+
+        /**
+         * Hace que {@code consultarPago} tire una excepción para ese pago:
+         * simula la cuenta de MP de un balneario caída o su token vencido.
+         */
+        public void fallarConsultaDe(String mpPaymentId) {
+            consultasQueFallan.add(mpPaymentId);
         }
 
         public int cobrosRealizados() {
@@ -59,6 +69,7 @@ public class FakeMercadoPagoPaymentClient {
             rechazarProximo = false;
             dejarPendiente = false;
             estadoPorPago.clear();
+            consultasQueFallan.clear();
         }
     }
 
@@ -93,6 +104,9 @@ public class FakeMercadoPagoPaymentClient {
 
             @Override
             public ResultadoPago consultarPago(String accessTokenBalneario, String mpPaymentId) {
+                if (control.consultasQueFallan.contains(mpPaymentId)) {
+                    throw new IllegalStateException("Fake: Mercado Pago no responde para " + mpPaymentId);
+                }
                 EstadoMp estado = control.estadoPorPago.getOrDefault(mpPaymentId, EstadoMp.APPROVED);
                 return new ResultadoPago(mpPaymentId, estado, "fake_" + estado, "visa", null);
             }

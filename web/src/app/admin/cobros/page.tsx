@@ -17,8 +17,8 @@ export default function CobrosPage() {
 
   const iniciarMut = useMutation({
     mutationFn: iniciarVinculacionMp,
-    onSuccess: ({ url }) => {
-      popupRef.current = window.open(url, 'mp-oauth', 'width=520,height=680');
+    onSuccess: ({ urlAutorizacion }) => {
+      popupRef.current = window.open(urlAutorizacion, 'mp-oauth', 'width=520,height=680');
     },
     onError: () => mostrar('No pudimos iniciar la vinculación con Mercado Pago', 'error'),
   });

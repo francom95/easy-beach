@@ -17,6 +17,7 @@ import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.time.Instant;
+import java.util.List;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -132,45 +133,56 @@ public class PagoService {
         MercadoPagoPaymentClient.ResultadoPago real =
                 paymentClient.consultarPago(accessTokenDe(pago.getBalnearioId()), mpPaymentId);
 
-        EstadoPago nuevoEstado = mapEstado(real.estado());
-        if (pago.getEstado() == nuevoEstado) {
-            notificacion.setProcesado(true);
-            notificacion.setResultado("SIN_CAMBIO");
-            webhookRepository.save(notificacion);
-            return false;
-        }
-        // Un pago ya resuelto no vuelve atrás por una notificación fuera de orden.
-        if (pago.getEstado() == EstadoPago.APROBADO && nuevoEstado == EstadoPago.PENDIENTE) {
-            notificacion.setProcesado(true);
-            notificacion.setResultado("IGNORADO_FUERA_DE_ORDEN");
-            webhookRepository.save(notificacion);
-            return false;
-        }
-
-        // El monto real debe coincidir con lo que registramos: si MP dice otra
-        // cosa, no se confirma el pedido.
-        if (nuevoEstado == EstadoPago.APROBADO && real.monto() != null
-                && real.monto().compareTo(pago.getMonto()) != 0) {
-            log.error("Monto de MP ({}) distinto al del pedido ({}) para payment {}",
-                    real.monto(), pago.getMonto(), mpPaymentId);
-            notificacion.setProcesado(true);
-            notificacion.setResultado("MONTO_INCONSISTENTE");
-            webhookRepository.save(notificacion);
-            return false;
-        }
-
-        pago.setEstado(nuevoEstado);
-        pago.setMpStatusDetail(real.statusDetail());
-        pagoRepository.save(pago);
+        ResultadoConciliacion resultado = aplicarEstadoReal(pago, real);
 
         notificacion.setProcesado(true);
-        notificacion.setResultado(nuevoEstado.name());
+        notificacion.setResultado(resultado == ResultadoConciliacion.ACTUALIZADO
+                ? pago.getEstado().name()
+                : resultado.name());
         webhookRepository.save(notificacion);
 
-        if (nuevoEstado == EstadoPago.APROBADO || nuevoEstado == EstadoPago.RECHAZADO) {
-            publicarResolucion(pago);
+        return resultado == ResultadoConciliacion.ACTUALIZADO;
+    }
+
+    /**
+     * Pagos que siguen PENDIENTE pasado el margen: o el webhook nunca llegó
+     * (MP reintenta, pero puede rendirse) o llegó y falló. Cross-tenant a
+     * propósito - lo corre {@code PagoReconciliacionJob}, no un request, así
+     * que no se aplica el filtro de tenant (mismo criterio que el job de
+     * expiración de estadías).
+     *
+     * <p>Devuelve ids y no entidades: cada pago se concilia en su propia
+     * transacción, así una llamada fallida a MP no arrastra al resto del lote.
+     */
+    @Transactional(readOnly = true)
+    public List<Long> idsDePagosPendientesDesde(Instant limite) {
+        return pagoRepository.findByEstadoAndCreatedAtBefore(EstadoPago.PENDIENTE, limite)
+                .stream()
+                .map(PedidoPago::getId)
+                .toList();
+    }
+
+    /**
+     * Reconsulta a MP el estado real de un pago pendiente y lo aplica con las
+     * mismas invariantes que el webhook (no retrocede un pago resuelto, no
+     * confirma si el monto no coincide, publica {@link PagoResuelto} al
+     * resolverse). Es lo que hace que un webhook perdido no deje al pedido
+     * pagado sin llegar nunca a la cocina.
+     */
+    @Transactional
+    public ResultadoConciliacion conciliarPago(Long pagoId) {
+        PedidoPago pago = pagoRepository.findById(pagoId).orElse(null);
+        if (pago == null || pago.getEstado() != EstadoPago.PENDIENTE) {
+            // Puede haberse resuelto por webhook entre el listado y este punto.
+            return ResultadoConciliacion.SIN_CAMBIO;
         }
-        return true;
+        if (pago.getMpPaymentId() == null) {
+            // Nunca llegó a crearse del lado de MP: no hay nada que reconsultar.
+            return ResultadoConciliacion.SIN_CAMBIO;
+        }
+        MercadoPagoPaymentClient.ResultadoPago real =
+                paymentClient.consultarPago(accessTokenDe(pago.getBalnearioId()), pago.getMpPaymentId());
+        return aplicarEstadoReal(pago, real);
     }
 
     /** Cancelación por el local de un pedido ya cobrado (ADR-004). */
@@ -186,6 +198,53 @@ public class PagoService {
     @Transactional(readOnly = true)
     public boolean tienePagoAprobado(Long pedidoId) {
         return pagoRepository.existsByPedidoIdAndEstado(pedidoId, EstadoPago.APROBADO);
+    }
+
+    /**
+     * Aplica sobre el pago local el estado que MP reporta como real. Lo
+     * comparten el webhook y el job de reconciliación a propósito: son dos
+     * puertas de entrada al mismo hecho ("MP dice que este pago está así"), y
+     * las invariantes de plata no pueden divergir entre una y otra.
+     */
+    private ResultadoConciliacion aplicarEstadoReal(PedidoPago pago,
+                                                     MercadoPagoPaymentClient.ResultadoPago real) {
+        EstadoPago nuevoEstado = mapEstado(real.estado());
+        if (pago.getEstado() == nuevoEstado) {
+            return ResultadoConciliacion.SIN_CAMBIO;
+        }
+        // Un pago ya resuelto no vuelve atrás por una notificación fuera de orden.
+        if (pago.getEstado() == EstadoPago.APROBADO && nuevoEstado == EstadoPago.PENDIENTE) {
+            return ResultadoConciliacion.IGNORADO_FUERA_DE_ORDEN;
+        }
+        // El monto real debe coincidir con lo que registramos: si MP dice otra
+        // cosa, no se confirma el pedido.
+        if (nuevoEstado == EstadoPago.APROBADO && real.monto() != null
+                && real.monto().compareTo(pago.getMonto()) != 0) {
+            log.error("Monto de MP ({}) distinto al del pedido ({}) para payment {}",
+                    real.monto(), pago.getMonto(), pago.getMpPaymentId());
+            return ResultadoConciliacion.MONTO_INCONSISTENTE;
+        }
+
+        pago.setEstado(nuevoEstado);
+        pago.setMpStatusDetail(real.statusDetail());
+        pagoRepository.save(pago);
+
+        if (nuevoEstado == EstadoPago.APROBADO || nuevoEstado == EstadoPago.RECHAZADO) {
+            publicarResolucion(pago);
+        }
+        return ResultadoConciliacion.ACTUALIZADO;
+    }
+
+    /** Qué pasó al contrastar un pago local contra el estado real en MP. */
+    public enum ResultadoConciliacion {
+        /** MP reporta lo mismo que ya teníamos. */
+        SIN_CAMBIO,
+        /** Notificación atrasada que pretendía retroceder un pago aprobado. */
+        IGNORADO_FUERA_DE_ORDEN,
+        /** MP aprobó un monto distinto al del pedido: no se confirma. */
+        MONTO_INCONSISTENTE,
+        /** El pago cambió de estado y se propagó al pedido. */
+        ACTUALIZADO
     }
 
     private void publicarResolucion(PedidoPago pago) {

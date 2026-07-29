@@ -124,11 +124,21 @@ export type EstadiaResponse = {
 
 export type EstadoPedido = 'CREADO' | 'PAGO_PENDIENTE' | 'PAGO_RECHAZADO' | 'CONFIRMADO' | 'EN_PREPARACION' | 'EN_CAMINO' | 'ENTREGADO' | 'CANCELADO';
 
+// Los nombres tienen que coincidir exactos con PedidoResponse.java: no hay
+// NamingStrategy en el backend, asi que cualquier divergencia llega como
+// undefined en runtime sin que TypeScript lo note (la cola de pedidos
+// mostraba "2x undefined" por tener estos dos campos invertidos).
 export type PedidoItemResponse = {
-  productoNombre: string;
-  varianteNombre: string | null;
-  cantidad: number;
+  nombreProducto: string;
+  nombreVariante: string | null;
   precioUnitario: string;
+  cantidad: number;
+  subtotalLinea: string;
+};
+
+export type PedidoPromocionAplicadaResponse = {
+  nombre: string;
+  montoDescuento: string;
 };
 
 export type PedidoResponse = {
@@ -140,16 +150,17 @@ export type PedidoResponse = {
   descuentoTotal: string;
   total: string;
   items: PedidoItemResponse[];
-  promociones: string[];
+  promociones: PedidoPromocionAplicadaResponse[];
   motivoCancelacion: string | null;
   createdAt: string;
 };
 
 export type PedidoEventoResponse = {
-  estado: string;
-  actor: string | null;
+  estadoAnterior: string | null;
+  estadoNuevo: string;
+  actorTipo: string | null;
   motivo: string | null;
-  createdAt: string;
+  momento: string;
 };
 
 // ---------------------------------------------------------------- servicios
@@ -225,7 +236,9 @@ export type EstadoVinculacionResponse = {
 };
 
 export type IniciarVinculacionResponse = {
-  url: string;
+  // Nombre exacto de IniciarVinculacionResponse.java: llamarlo `url` hacia que
+  // window.open() recibiera undefined y abriera about:blank.
+  urlAutorizacion: string;
 };
 
 // ---------------------------------------------------------------- reportes
