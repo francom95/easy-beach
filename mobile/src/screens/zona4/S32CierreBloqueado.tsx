@@ -23,7 +23,7 @@ const CANCELABLES_POR_CLIENTE = ['CREADO', 'PAGO_PENDIENTE', 'PAGO_RECHAZADO'];
  * todavía se puede (antes de CONFIRMADO) para destrabar el cierre.
  */
 export function S32CierreBloqueado({navigation}: RootScreenProps<'S32CierreBloqueado'>) {
-  const {tokens, spacing, typeScale} = useTheme();
+  const {tokens, spacing} = useTheme();
   const estadia = useStayStore(s => s.estadia)!;
 
   const pedidosQuery = useQuery({

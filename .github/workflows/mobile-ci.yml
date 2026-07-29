@@ -1,0 +1,49 @@
+name: mobile-ci
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "mobile/**"
+      - ".github/workflows/mobile-ci.yml"
+  pull_request:
+    paths:
+      - "mobile/**"
+      - ".github/workflows/mobile-ci.yml"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      # Corre en jest con los modulos nativos mockeados (ver jest.setup.js):
+      # verifica que todo el arbol de la app se importe y renderice sin romper.
+      # No reemplaza una prueba en dispositivo real, pero atrapa el tipo de
+      # rotura de imports/providers que antes solo se veia al abrir la app.
+      - name: Test
+        run: npm test
+
+      # El build nativo de Android (assembleRelease/bundleRelease) NO corre aca:
+      # necesita el keystore de firma, que es un secret real que solo un humano
+      # puede dar de alta (ver docs/deploy/mobile-build-y-publicacion.md).
+      # Este job verifica todo lo que se puede verificar sin credenciales.

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Image, Pressable, ScrollView, Text, View} from 'react-native';
+import {Image, Pressable, ScrollView, Text} from 'react-native';
 import {useQuery} from '@tanstack/react-query';
 import {ScreenContainer} from '../../components/ScreenContainer';
 import {Button} from '../../components/Button';

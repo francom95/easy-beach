@@ -19,7 +19,7 @@ const DURACION_CELEBRACION_MS = 3000;
  * falta agregar).
  */
 export function S07EstadiaActiva({navigation}: RootScreenProps<'S07EstadiaActiva'>) {
-  const {tokens, spacing, typeScale} = useTheme();
+  const {tokens, spacing} = useTheme();
   const estadia = useStayStore(s => s.estadia);
   const cantidadEnCarrito = useCartStore(s => s.cantidadTotal());
 

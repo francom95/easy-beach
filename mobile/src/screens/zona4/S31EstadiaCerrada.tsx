@@ -17,7 +17,7 @@ import type {RootScreenProps} from '../../navigation/types';
  */
 export function S31EstadiaCerrada({route, navigation}: RootScreenProps<'S31EstadiaCerrada'>) {
   const {resumen} = route.params;
-  const {tokens, spacing, typeScale, volverAMarcaEasyBeach} = useTheme();
+  const {tokens, spacing, volverAMarcaEasyBeach} = useTheme();
   const balnearioNombre = useStayStore(s => s.balnearioNombre);
   const volverASelectorDeBalnearios = useStayStore(s => s.volverASelectorDeBalnearios);
   const vaciarCarrito = useCartStore(s => s.vaciar);

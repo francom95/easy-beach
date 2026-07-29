@@ -93,7 +93,7 @@ export async function apiRequest<T>(path: string, opciones: Opciones = {}): Prom
         headers,
         body: body !== undefined ? JSON.stringify(body) : undefined,
       });
-    } catch (e) {
+    } catch {
       throw new ApiError(null, 0, true);
     }
     return response;

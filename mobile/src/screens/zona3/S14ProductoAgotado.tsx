@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import {ScreenContainer} from '../../components/ScreenContainer';
 import {Button} from '../../components/Button';
 import {StateRow} from '../../components/StateRow';
