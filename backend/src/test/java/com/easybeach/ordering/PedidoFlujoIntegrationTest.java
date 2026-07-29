@@ -142,6 +142,16 @@ class PedidoFlujoIntegrationTest extends AbstractIntegrationTest {
         PedidoResponse[] colaFinal = restTemplate.exchange(url("/api/v1/operativo/pedidos/cola"), HttpMethod.GET,
                 new HttpEntity<>(ctx.operadorHeaders()), PedidoResponse[].class).getBody();
         assertThat(colaFinal).extracting(PedidoResponse::publicId).doesNotContain(pedido.publicId());
+
+        // Etapa 19 (QA, hallazgo real): el historial operativo NO debe depender
+        // de que el pedido siga en la cola activa - el operador tiene que poder
+        // revisar qué pasó con un pedido ya entregado (auditoría/reclamos).
+        var historialOperativo = restTemplate.exchange(
+                url("/api/v1/operativo/pedidos/" + pedido.publicId() + "/historial"), HttpMethod.GET,
+                new HttpEntity<>(ctx.operadorHeaders()), PedidoEventoResponse[].class);
+        assertThat(historialOperativo.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(historialOperativo.getBody()).extracting(PedidoEventoResponse::estadoNuevo)
+                .containsSubsequence("CREADO", "CONFIRMADO", "EN_PREPARACION", "EN_CAMINO", "ENTREGADO");
     }
 
     @Test

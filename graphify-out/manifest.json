@@ -1,8 +1,8 @@
 {
   "docs/etapas/00-indice.md": {
-    "mtime": 1785172177.5911477,
-    "ast_hash": "151207b446e9c9648f6b69027897ec0a",
-    "semantic_hash": "151207b446e9c9648f6b69027897ec0a"
+    "mtime": 1785341095.1906319,
+    "ast_hash": "ffdd71d035243312864e701fa094aab4",
+    "semantic_hash": "ffdd71d035243312864e701fa094aab4"
   },
   "docs/etapas/01-vision-alcance-glosario.md": {
     "mtime": 1783444647.0354693,
@@ -95,9 +95,9 @@
     "semantic_hash": "4b9672e26480433424f0eb2a84d5809d"
   },
   "docs/etapas/19-qa-seeds-demo.md": {
-    "mtime": 1783444665.4862666,
-    "ast_hash": "01b6939f8689b01d6922de44ab172e4b",
-    "semantic_hash": "01b6939f8689b01d6922de44ab172e4b"
+    "mtime": 1785341090.5320795,
+    "ast_hash": "222bcce2e197b333171a7e0eaf10b510",
+    "semantic_hash": "222bcce2e197b333171a7e0eaf10b510"
   },
   "docs/etapas/20-infra-deploy.md": {
     "mtime": 1783409013.812636,
@@ -480,9 +480,9 @@
     "semantic_hash": "d7b177a2d7fe94a89e8e97011620f6c5"
   },
   "backend/src/main/java/com/easybeach/shared/error/GlobalExceptionHandler.java": {
-    "mtime": 1784936937.5198135,
-    "ast_hash": "3b34052a431d09df719fd9139b466913",
-    "semantic_hash": "3b34052a431d09df719fd9139b466913"
+    "mtime": 1785327804.9169607,
+    "ast_hash": "b46362e8201246340d53ff22b3b3e7b9",
+    "semantic_hash": "b46362e8201246340d53ff22b3b3e7b9"
   },
   "backend/src/main/java/com/easybeach/shared/id/UlidGenerator.java": {
     "mtime": 1784936860.1823325,
@@ -1305,9 +1305,9 @@
     "semantic_hash": "bbfdd71e1ccc00d3f85c2a133572f9e6"
   },
   "backend/src/test/java/com/easybeach/support/EscenarioBalneario.java": {
-    "mtime": 1785125029.8374166,
-    "ast_hash": "f5d3a855156d73ab15d551c458e72f61",
-    "semantic_hash": "f5d3a855156d73ab15d551c458e72f61"
+    "mtime": 1785190335.5960233,
+    "ast_hash": "0744adead6aeba9f14ad1d639a3eb604",
+    "semantic_hash": "0744adead6aeba9f14ad1d639a3eb604"
   },
   "docs/especificacion/12-backend-estadia-activa.md": {
     "mtime": 1785113845.8174984,
@@ -1360,19 +1360,19 @@
     "semantic_hash": "a0dd8e54834753fed5e888e6ffa377a7"
   },
   "backend/src/main/java/com/easybeach/ordering/service/PedidoService.java": {
-    "mtime": 1785122778.3725028,
-    "ast_hash": "30a940c0303603101470658aa5a875ff",
-    "semantic_hash": "30a940c0303603101470658aa5a875ff"
+    "mtime": 1785331746.814511,
+    "ast_hash": "57a8f7021a3bd81c3dbea34fcdf86a00",
+    "semantic_hash": "57a8f7021a3bd81c3dbea34fcdf86a00"
   },
   "backend/src/main/java/com/easybeach/ordering/web/ClientePedidoController.java": {
-    "mtime": 1785116878.522504,
-    "ast_hash": "afe2050f3b553c5aa8aeb62d9301c0b6",
-    "semantic_hash": "afe2050f3b553c5aa8aeb62d9301c0b6"
+    "mtime": 1785326237.3108604,
+    "ast_hash": "dad477416f31f955bf6203e2a739900f",
+    "semantic_hash": "dad477416f31f955bf6203e2a739900f"
   },
   "backend/src/main/java/com/easybeach/ordering/web/OperativoPedidoController.java": {
-    "mtime": 1785116878.5666194,
-    "ast_hash": "7680d06fd1ec41ca6750d5876bd6faf5",
-    "semantic_hash": "7680d06fd1ec41ca6750d5876bd6faf5"
+    "mtime": 1785324787.7608683,
+    "ast_hash": "a767e2a93d0d67f1081f29b277f72d85",
+    "semantic_hash": "a767e2a93d0d67f1081f29b277f72d85"
   },
   "backend/src/main/java/com/easybeach/ordering/web/PedidoMapper.java": {
     "mtime": 1785116294.6729763,
@@ -1490,9 +1490,9 @@
     "semantic_hash": "609555ebd7f5ece5e9cbe8441a8a8bbe"
   },
   "backend/src/test/java/com/easybeach/ordering/PedidoFlujoIntegrationTest.java": {
-    "mtime": 1785116910.6740556,
-    "ast_hash": "7900e3b20982b57e537afc4cdaf74f31",
-    "semantic_hash": "7900e3b20982b57e537afc4cdaf74f31"
+    "mtime": 1785324822.0040524,
+    "ast_hash": "27cbacaeddf6700ee319df930e1b5ebe",
+    "semantic_hash": "27cbacaeddf6700ee319df930e1b5ebe"
   },
   "backend/src/test/java/com/easybeach/payments/WebhookMercadoPagoIntegrationTest.java": {
     "mtime": 1785116578.1867197,
@@ -1855,9 +1855,9 @@
     "semantic_hash": "509b1ca034f0dcf2ee4d51b856280753"
   },
   "backend/src/test/java/com/easybeach/reporting/ReportesBalnearioIntegrationTest.java": {
-    "mtime": 1785126823.621811,
-    "ast_hash": "63037fb5059efb77317a54aaebe93804",
-    "semantic_hash": "63037fb5059efb77317a54aaebe93804"
+    "mtime": 1785189836.1302612,
+    "ast_hash": "5b6bc00be7774e2ae823b8117304a87b",
+    "semantic_hash": "5b6bc00be7774e2ae823b8117304a87b"
   },
   "backend/src/test/java/com/easybeach/reporting/ReportesPlataformaIntegrationTest.java": {
     "mtime": 1785126422.9914858,
@@ -3745,9 +3745,9 @@
     "semantic_hash": "93ca32a536da1698ea979f183679af29"
   },
   ".claude/launch.json": {
-    "mtime": 1785171791.241856,
-    "ast_hash": "877bb54587bd9f68ae3a0e63c396bc66",
-    "semantic_hash": "877bb54587bd9f68ae3a0e63c396bc66"
+    "mtime": 1785192095.1221662,
+    "ast_hash": "ef10ef33ec2e13599e10d3b00196f160",
+    "semantic_hash": "ef10ef33ec2e13599e10d3b00196f160"
   },
   "web/src/api/superAdmin.ts": {
     "mtime": 1785170572.3467548,
@@ -3793,5 +3793,395 @@
     "mtime": 1785172148.9846227,
     "ast_hash": "def079d624b751cbbbd8280cfb850909",
     "semantic_hash": "def079d624b751cbbbd8280cfb850909"
+  },
+  "backend/src/main/java/com/easybeach/DemoDataSeeder.java": {
+    "mtime": 1785191893.2353923,
+    "ast_hash": "6c7a6cff13108ed83db7c6217c81a068",
+    "semantic_hash": "6c7a6cff13108ed83db7c6217c81a068"
+  },
+  "backend/src/test/java/com/easybeach/concierge/SolicitudServicioConcurrenciaIntegrationTest.java": {
+    "mtime": 1785325628.9899924,
+    "ast_hash": "5bfa9e729ac512d8bb960d181e3dc516",
+    "semantic_hash": "5bfa9e729ac512d8bb960d181e3dc516"
+  },
+  "backend/src/test/java/com/easybeach/ordering/PedidoConcurrenciaIntegrationTest.java": {
+    "mtime": 1785331791.0999799,
+    "ast_hash": "1acac793b6d51a4b1f03917839e1b2b7",
+    "semantic_hash": "1acac793b6d51a4b1f03917839e1b2b7"
+  },
+  "backend/src/test/java/com/easybeach/security/CrossTenantAdminAbmIntegrationTest.java": {
+    "mtime": 1785190106.031754,
+    "ast_hash": "c29695df7c40c721d038161a93ce947f",
+    "semantic_hash": "c29695df7c40c721d038161a93ce947f"
+  },
+  "backend/src/test/java/com/easybeach/security/CrossTenantClienteIntegrationTest.java": {
+    "mtime": 1785189742.2300785,
+    "ast_hash": "38a17d00e5bd80566283e1a136b4c7a8",
+    "semantic_hash": "38a17d00e5bd80566283e1a136b4c7a8"
+  },
+  "backend/src/test/java/com/easybeach/security/CrossTenantOperativoIntegrationTest.java": {
+    "mtime": 1785189706.7208903,
+    "ast_hash": "93f0946c5bbf4915e4781bad69a21bc1",
+    "semantic_hash": "93f0946c5bbf4915e4781bad69a21bc1"
+  },
+  "backend/src/test/java/com/easybeach/security/EscalacionRolIntegrationTest.java": {
+    "mtime": 1785189778.9462826,
+    "ast_hash": "cafc85a3a5709ced84325c66bf511151",
+    "semantic_hash": "cafc85a3a5709ced84325c66bf511151"
+  },
+  "docs/especificacion/19-qa-seeds-demo.md": {
+    "mtime": 1785341082.133717,
+    "ast_hash": "99c241c1b04e4f5febfc4aa60fa41a66",
+    "semantic_hash": "99c241c1b04e4f5febfc4aa60fa41a66"
+  },
+  "backend/data/assets/balnearios/14/productos/85e13103-f555-4d6c-9abf-248fc31a9546.png": {
+    "mtime": 1785190535.6435227,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": "93ca32a536da1698ea979f183679af29"
+  },
+  "backend/data/assets/balnearios/14/productos/b2ad8f1f-4cd8-4b7e-a8aa-f4becb917c08.png": {
+    "mtime": 1785340651.4938455,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": "93ca32a536da1698ea979f183679af29"
+  },
+  "backend/data/assets/balnearios/14/productos/c604ac8a-3c44-4ab2-a54b-3e53bac1d11a.png": {
+    "mtime": 1785192359.8301084,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": "93ca32a536da1698ea979f183679af29"
+  },
+  "backend/data/assets/balnearios/1/productos/034f2fce-33a2-4b18-9fac-13fa763e2745.png": {
+    "mtime": 1785191324.852073,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/03a3bfa5-b827-4ee9-926a-255c8cee1ce4.png": {
+    "mtime": 1785191410.7926843,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/07cc8461-6b77-467b-9431-398de6302191.png": {
+    "mtime": 1785191372.2379823,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/106571b4-89f6-4a4b-9101-f9e741ee79d4.png": {
+    "mtime": 1785191711.0820892,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/1121f33e-6fdd-499b-84c3-ba0ad48e610a.png": {
+    "mtime": 1785191962.03604,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/12ee544e-8c2f-4c76-acf0-cda602838363.png": {
+    "mtime": 1785191325.0096393,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/18f30210-2130-4c46-9b26-36e61ab775ea.png": {
+    "mtime": 1785191526.6192143,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/1c38c435-cde7-44a0-8bd9-1e0a180b3b78.png": {
+    "mtime": 1785191710.8998418,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/24630359-b5cf-403a-8c0f-97c648ec2baf.png": {
+    "mtime": 1785191372.0411954,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/24ebc5ab-8757-43e6-8138-96490c9d32d2.png": {
+    "mtime": 1785191526.4377244,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/27514bc6-d513-44dd-be2e-b214de009a2c.png": {
+    "mtime": 1785191410.4640553,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/29811545-ede5-460c-b8b1-ff892831fab1.png": {
+    "mtime": 1785191324.6817868,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/312f7d6e-3e84-406f-8cf7-2ca43417b5ea.png": {
+    "mtime": 1785191711.0394473,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/31b569d8-1338-42ef-ab71-fc2ee6521f0c.png": {
+    "mtime": 1785191711.1577842,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/3329ef26-ea1a-46e2-9599-78a4257930e6.png": {
+    "mtime": 1785191711.1140778,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/3967b39f-4266-4193-9cb3-8bfb221208e5.png": {
+    "mtime": 1785191324.890267,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/5242a329-066c-4a7b-a44e-a5da30b6a36d.png": {
+    "mtime": 1785191410.672459,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/53ceb845-f708-4599-81c1-2b7c2a6d20a1.png": {
+    "mtime": 1785191410.3563254,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/5c306307-0b6d-4284-a607-a9e5132e746d.png": {
+    "mtime": 1785191962.3081648,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/63ac5528-738e-4637-a230-dc65635ee00d.png": {
+    "mtime": 1785191526.4786172,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/65c23a73-4b47-4a5b-8bb5-cbfcd7517daf.png": {
+    "mtime": 1785191962.2470338,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/67513214-cfe6-4c9e-abad-fe915252ac03.png": {
+    "mtime": 1785191372.133661,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/67ef0f88-7946-4767-bc8c-7a81cfa6a5e4.png": {
+    "mtime": 1785191526.667815,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/6954186c-69b6-4413-97eb-bb9d521c21b9.png": {
+    "mtime": 1785191372.2696924,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/6dd11fd4-51bb-4b10-8e17-dd7b549213d7.png": {
+    "mtime": 1785191371.9628935,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/6f6cda51-79d2-48ae-8ca2-e7a135dccedd.png": {
+    "mtime": 1785191710.9434326,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/73a6df6c-9129-4fa3-b604-43e5a5296773.png": {
+    "mtime": 1785191526.8181398,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/807d90e9-154c-4eba-8ebb-6c3553d0cd28.png": {
+    "mtime": 1785191962.5045273,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/9119640a-01cb-493b-808a-7d923b953bef.png": {
+    "mtime": 1785191526.5085497,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/9e80a5e5-423c-4fd2-a6b8-64e8e76e1ff2.png": {
+    "mtime": 1785191324.757514,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/a0569fc2-4c23-4d1e-bef1-cd651d0b80da.png": {
+    "mtime": 1785191410.418711,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/a0963047-94c0-4ca3-b662-fd5b3bb13539.png": {
+    "mtime": 1785191710.853917,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/a9b74810-2da1-498f-ada3-43d397eb7d76.png": {
+    "mtime": 1785191526.7709162,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/abaef424-80d3-4137-a960-4ef2d80e817c.png": {
+    "mtime": 1785191526.7123027,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/b88314b7-2e57-4f9a-8572-9c601386ecfe.png": {
+    "mtime": 1785191962.4495912,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/bce41295-7317-4a5e-9b82-b8bfb57f683b.png": {
+    "mtime": 1785191410.7453837,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/c952a8da-3060-43b6-aa6c-72f838f1097f.png": {
+    "mtime": 1785191324.7235403,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/c9fa6194-dcfb-4059-bd16-38d190054c28.png": {
+    "mtime": 1785191324.9297976,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/ca576057-b48f-4cdd-b875-6faad5dffa31.png": {
+    "mtime": 1785191410.62113,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/cd86dfb9-e69e-438f-9563-23a9be9600ac.png": {
+    "mtime": 1785191962.097948,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/d428f5f0-e44c-48de-a4c0-bf455707ba9a.png": {
+    "mtime": 1785191961.97402,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/d5a725c7-fe01-4b6f-9633-294f0a2a0cf2.png": {
+    "mtime": 1785191962.3668149,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/d8813419-1707-4bc7-96a6-285e2ecb0e80.png": {
+    "mtime": 1785191372.1931612,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/e221aa5b-1d5a-458a-89ff-703d66fa4ec6.png": {
+    "mtime": 1785191372.1651568,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/e762a385-6ede-4dd8-9ecb-58a117d75853.png": {
+    "mtime": 1785191324.9775033,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/f13e92e8-b431-41a9-b6b2-1b375730190d.png": {
+    "mtime": 1785191372.0003674,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/f7d6b86f-d20d-4be2-8179-8bf3edc127a4.png": {
+    "mtime": 1785191410.5758584,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/1/productos/fd37b4d2-4fdc-4670-9654-3b3e1e6f039b.png": {
+    "mtime": 1785191711.1870096,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/branding/8b708cf9-5a03-423e-a78a-2361a335820e.png": {
+    "mtime": 1785190528.7212226,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": "93ca32a536da1698ea979f183679af29"
+  },
+  "backend/data/assets/balnearios/2/branding/900dbfd8-c0a5-46ab-8f6c-e2f788aa45c2.png": {
+    "mtime": 1785192352.1225102,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": "93ca32a536da1698ea979f183679af29"
+  },
+  "backend/data/assets/balnearios/2/branding/cc55dee0-d0f3-439d-8c8f-774e4fcf510d.png": {
+    "mtime": 1785340645.7764733,
+    "ast_hash": "93ca32a536da1698ea979f183679af29",
+    "semantic_hash": "93ca32a536da1698ea979f183679af29"
+  },
+  "backend/data/assets/balnearios/2/productos/0830b38e-597a-438b-ba2a-9ece338cd7f2.png": {
+    "mtime": 1785191973.8574367,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/0992475c-c0a5-43d6-849f-746dcc366814.png": {
+    "mtime": 1785191717.7459216,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/18c05100-6071-4087-a945-db197396ad60.png": {
+    "mtime": 1785191717.7666993,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/23825176-d6ae-4183-b87d-257b8a0e8113.png": {
+    "mtime": 1785191717.6260643,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/3694564c-5baf-4d8b-809d-3900f6386b7b.png": {
+    "mtime": 1785191717.6500804,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/3a9f720f-1fb0-44de-a57e-d9e852a56a1b.png": {
+    "mtime": 1785191974.0853338,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/3e37d850-c2a4-4794-ba8c-0276f5c73e86.png": {
+    "mtime": 1785191973.7851665,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/617444f0-d94f-4b77-a76e-f0a2f3893efb.png": {
+    "mtime": 1785191974.128911,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/99a46201-d420-4f5a-8180-05e44792be3f.png": {
+    "mtime": 1785191717.7207992,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/9c3d56ee-36be-41a3-8d39-7f3dce6bd7c6.png": {
+    "mtime": 1785191717.826066,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/a0d8dfbe-680b-495c-81d8-ba71ae454eba.png": {
+    "mtime": 1785191974.0294554,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/a3d8586b-f6e8-4813-81ff-db72a3c7698d.png": {
+    "mtime": 1785191717.6724946,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/a7cac828-1cdb-48f1-abaf-536a686bdde8.png": {
+    "mtime": 1785191973.9539046,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/d924b668-eced-40f9-880d-e85de6fe0d0a.png": {
+    "mtime": 1785191973.8212948,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/dc139873-00ab-4124-8296-020976440e53.png": {
+    "mtime": 1785191717.7975657,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
+  },
+  "backend/data/assets/balnearios/2/productos/fa9a56a1-5389-4452-905e-c5c4184cc010.png": {
+    "mtime": 1785191973.9942677,
+    "ast_hash": "89353ca631775fac934ec8f558038096",
+    "semantic_hash": "89353ca631775fac934ec8f558038096"
   }
 }

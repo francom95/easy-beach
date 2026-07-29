@@ -190,9 +190,25 @@ public class PedidoService {
         } catch (DataIntegrityViolationException e) {
             // Carrera de dos reintentos simultáneos con la misma clave: gana el
             // UK, y el perdedor devuelve el pedido que ya existe.
+            //
+            // Etapa 19 (QA, intento de fix real revertido): se probó aislar
+            // este insert en su propia transacción REQUIRES_NEW para blindar
+            // el fallback contra la sesión de Hibernate que queda en estado
+            // indefinido tras un flush fallido - pero el resto de este método
+            // (registrarEvento, aplicarTransicion, iniciarPago) sigue
+            // trabajando sobre `pedido` en la sesión de ESTE método, y una vez
+            // que el insert vive en OTRA transacción/EntityManager, `pedido`
+            // vuelve detached para esta sesión: eso rompía la creación NORMAL
+            // (sin ninguna carrera) con un StaleObjectStateException al
+            // primer save() posterior. Se revirtió: bajo una carrera realmente
+            // simultánea (poco común - en la práctica el segundo reintento
+            // casi siempre llega después de que el primero ya commiteó, y
+            // entra por el chequeo `existente.isPresent()` de arriba, no por
+            // acá) el perdedor puede ver una excepción cruda de Hibernate acá
+            // en vez de la respuesta idempotente esperada. Documentado como
+            // hallazgo de backlog, no bloqueante.
             return pedidoRepository.findByBalnearioIdAndIdempotencyKey(balnearioId, idempotencyKey)
-                    .orElseThrow(() -> new ApiException(ErrorCode.CONFLICTO_DE_ESTADO,
-                            "No se pudo crear el pedido"));
+                    .orElseThrow(() -> new ApiException(ErrorCode.CONFLICTO_DE_ESTADO, "No se pudo crear el pedido"));
         }
         registrarEvento(pedido, null, EstadoPedido.CREADO, null, "CLIENTE", null);
 
@@ -293,7 +309,17 @@ public class PedidoService {
         return eventoRepository.findByPedidoIdOrderByCreatedAtAsc(pedidoId);
     }
 
-    private Pedido obtenerDelBalneario(Long balnearioId, String publicId) {
+    /**
+     * Etapa 19 (QA): antes era privado y solo lo usaba {@code transicionarPorStaff}
+     * - el endpoint de historial operativo resolvía el pedido filtrando
+     * {@link #colaOperativa}, que a propósito excluye estados terminales
+     * (ENTREGADO/CANCELADO). Resultado real encontrado en vivo: en cuanto un
+     * pedido se entregaba, el staff perdía para siempre la posibilidad de ver
+     * su historial. Se expone público para que el controller pueda buscar
+     * por publicId+balneario sin pasar por la cola activa.
+     */
+    @Transactional(readOnly = true)
+    public Pedido obtenerDelBalneario(Long balnearioId, String publicId) {
         return pedidoRepository.findByPublicId(publicId)
                 .filter(p -> p.getBalnearioId().equals(balnearioId))
                 .orElseThrow(() -> new ApiException(ErrorCode.RECURSO_NO_ENCONTRADO));

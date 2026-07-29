@@ -57,14 +57,17 @@ public class OperativoPedidoController {
                 com.easybeach.ordering.domain.EstadoPedido.CANCELADO, request.motivo()));
     }
 
+    /**
+     * Busca por publicId+balneario directo, NO por {@link PedidoService#colaOperativa}:
+     * esa cola excluye a propósito los estados terminales (ENTREGADO/CANCELADO),
+     * así que filtrar el historial a través de ella significaba perder el
+     * historial de un pedido para siempre en cuanto se entregaba o cancelaba
+     * (hallazgo real de QA, etapa 19).
+     */
     @GetMapping("/{publicId}/historial")
     public List<PedidoEventoResponse> historial(@PathVariable String publicId,
                                                  @AuthenticationPrincipal EasyBeachUserPrincipal principal) {
-        var pedido = pedidoService.colaOperativa(principal.balnearioId()).stream()
-                .filter(p -> p.getPublicId().equals(publicId))
-                .findFirst()
-                .orElseThrow(() -> new com.easybeach.shared.error.ApiException(
-                        com.easybeach.shared.error.ErrorCode.RECURSO_NO_ENCONTRADO));
+        var pedido = pedidoService.obtenerDelBalneario(principal.balnearioId(), publicId);
         return pedidoService.historial(pedido.getId()).stream().map(mapper::toResponse).toList();
     }
 }

@@ -4,6 +4,15 @@
 - **Modelo ejecutor:** sonnet
 - **Tipo:** construcción / verificación
 - **Depende de:** 09–18
+- **Estado: ✅ EJECUTADA**, verificada contra el backend real corriendo (no
+  solo tests) — entregable en
+  [`docs/especificacion/19-qa-seeds-demo.md`](../especificacion/19-qa-seeds-demo.md).
+  Cero hallazgos cross-tenant abiertos (35 tests nuevos). Seeds:
+  `DemoDataSeeder` (`@Profile("demo")`). 2 bugs reales de concurrencia
+  encontrados y corregidos (historial de pedido inaccesible tras entrega;
+  deadlock/stale-state devolvía 500 en vez de 409); 1 hallazgo de
+  idempotencia bajo carrera genuina documentado en backlog (intento de fix
+  revertido por riesgo de regresión mayor). Suite completa: 150/150.
 
 ## Objetivo
 

@@ -38,6 +38,8 @@ public class ClientePedidoController {
     /**
      * {@code Idempotency-Key} es OBLIGATORIO (etapa 04 §1.6): la conexión en
      * la playa es mala y el reintento no debe duplicar ni pedido ni cobro.
+     * Ver {@link PedidoService#crear} para cómo se defiende la carrera real
+     * entre dos reintentos simultáneos con la misma clave (etapa 19, QA).
      */
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

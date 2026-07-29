@@ -6,6 +6,9 @@ import java.net.URI;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.hibernate.StaleStateException;
+import org.springframework.dao.CannotAcquireLockException;
+import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.security.access.AccessDeniedException;
@@ -55,6 +58,31 @@ public class GlobalExceptionHandler {
     public ProblemDetail handleTenantMissing(TenantContextMissingException ex, HttpServletRequest request) {
         log.error("TenantContext ausente en operación tenant-scoped", ex);
         return build(ErrorCode.ERROR_INESPERADO, "Error interno de resolución de tenant", request, null);
+    }
+
+    /**
+     * Etapa 19 (QA, hallazgo real de concurrencia): dos transiciones de
+     * pedido genuinamente simultáneas sobre la misma fila pueden chocar de
+     * dos formas distintas según qué gane la carrera - InnoDB detecta un
+     * deadlock real ({@link CannotAcquireLockException}), o Hibernate
+     * detecta al hacer merge/commit que la fila ya fue tocada por la otra
+     * transacción ({@link OptimisticLockingFailureException} cuando Spring
+     * llega a traducirla, o {@link StaleStateException} crudo de Hibernate
+     * cuando la detección ocurre recién en el flush de commit - fuera del
+     * límite del repositorio que Spring intercepta para traducir - pese a
+     * que {@code Pedido} no tiene {@code @Version} explícito). Sin este handler,
+     * la transacción perdedora le mostraba al staff un 500 ERROR_INESPERADO
+     * en vez de un 409 accionable ("otro cambio ya se aplicó, actualizá la
+     * pantalla"). Ninguno de los dos casos es corrupción de datos real (la
+     * fila queda consistente en ambos), pero el error que veía el operador
+     * no reflejaba lo que pasó de verdad.
+     */
+    @ExceptionHandler({CannotAcquireLockException.class, OptimisticLockingFailureException.class,
+            StaleStateException.class})
+    public ProblemDetail handleConflictoDeConcurrencia(Exception ex, HttpServletRequest request) {
+        return build(ErrorCode.CONFLICTO_DE_ESTADO,
+                "Otro cambio ya se aplicó sobre este recurso al mismo tiempo - actualizá la pantalla y volvé a intentar",
+                request, null);
     }
 
     @ExceptionHandler(Exception.class)
